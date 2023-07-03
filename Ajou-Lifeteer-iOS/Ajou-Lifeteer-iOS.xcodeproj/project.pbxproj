@@ -18,6 +18,40 @@
 		A39294EA2A52CBE400436A4F /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = A39294E92A52CBE400436A4F /* Then */; };
 		A39294ED2A52CBF200436A4F /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = A39294EC2A52CBF200436A4F /* Lottie */; };
 		A39294F02A52CBFF00436A4F /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = A39294EF2A52CBFF00436A4F /* FSCalendar */; };
+		A39295312A52D60200436A4F /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = A39295302A52D60200436A4F /* .gitkeep */; };
+		A39295332A52D67100436A4F /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = A39295322A52D67100436A4F /* .gitkeep */; };
+		A39295352A52D68300436A4F /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = A39295342A52D68300436A4F /* .gitkeep */; };
+		A39295372A52D68F00436A4F /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = A39295362A52D68F00436A4F /* .gitkeep */; };
+		A39295392A52D69800436A4F /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = A39295382A52D69800436A4F /* .gitkeep */; };
+		A392953B2A52D6A900436A4F /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = A392953A2A52D6A900436A4F /* .gitkeep */; };
+		A392953D2A52D6B300436A4F /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = A392953C2A52D6B300436A4F /* .gitkeep */; };
+		A392953F2A52D6BE00436A4F /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = A392953E2A52D6BE00436A4F /* .gitkeep */; };
+		A39295412A52D6CE00436A4F /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = A39295402A52D6CE00436A4F /* .gitkeep */; };
+		A39295432A52D6D600436A4F /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = A39295422A52D6D600436A4F /* .gitkeep */; };
+		A39295452A52D6DE00436A4F /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = A39295442A52D6DE00436A4F /* .gitkeep */; };
+		A39295472A52D6E600436A4F /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = A39295462A52D6E600436A4F /* .gitkeep */; };
+		A39295492A52D6ED00436A4F /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = A39295482A52D6ED00436A4F /* .gitkeep */; };
+		A392954B2A52D6F400436A4F /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = A392954A2A52D6F400436A4F /* .gitkeep */; };
+		A392954D2A52D6FB00436A4F /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = A392954C2A52D6FB00436A4F /* .gitkeep */; };
+		A392954F2A52D70300436A4F /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = A392954E2A52D70300436A4F /* .gitkeep */; };
+		A39295512A52D70B00436A4F /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = A39295502A52D70B00436A4F /* .gitkeep */; };
+		A39295532A52D71100436A4F /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = A39295522A52D71100436A4F /* .gitkeep */; };
+		A39295552A52D71900436A4F /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = A39295542A52D71900436A4F /* .gitkeep */; };
+		A39295572A52D72100436A4F /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = A39295562A52D72100436A4F /* .gitkeep */; };
+		A39295592A52D72800436A4F /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = A39295582A52D72800436A4F /* .gitkeep */; };
+		A392955B2A52D73200436A4F /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = A392955A2A52D73200436A4F /* .gitkeep */; };
+		A392955D2A52D73800436A4F /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = A392955C2A52D73800436A4F /* .gitkeep */; };
+		A392955F2A52D73F00436A4F /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = A392955E2A52D73F00436A4F /* .gitkeep */; };
+		A39295612A52D74A00436A4F /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = A39295602A52D74A00436A4F /* .gitkeep */; };
+		A39295632A52D75200436A4F /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = A39295622A52D75200436A4F /* .gitkeep */; };
+		A39295652A52D75A00436A4F /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = A39295642A52D75A00436A4F /* .gitkeep */; };
+		A39295672A52D76200436A4F /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = A39295662A52D76200436A4F /* .gitkeep */; };
+		A39295692A52D76D00436A4F /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = A39295682A52D76D00436A4F /* .gitkeep */; };
+		A392956B2A52D77800436A4F /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = A392956A2A52D77800436A4F /* .gitkeep */; };
+		A392956D2A52D78500436A4F /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = A392956C2A52D78500436A4F /* .gitkeep */; };
+		A392956F2A52D78E00436A4F /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = A392956E2A52D78E00436A4F /* .gitkeep */; };
+		A39295712A52D7AD00436A4F /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = A39295702A52D7AD00436A4F /* .gitkeep */; };
+		A39295732A52D7B800436A4F /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = A39295722A52D7B800436A4F /* .gitkeep */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +62,40 @@
 		A39294D42A52C91D00436A4F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A39294D72A52C91D00436A4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A39294D92A52C91D00436A4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A39295302A52D60200436A4F /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		A39295322A52D67100436A4F /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		A39295342A52D68300436A4F /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		A39295362A52D68F00436A4F /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		A39295382A52D69800436A4F /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		A392953A2A52D6A900436A4F /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		A392953C2A52D6B300436A4F /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		A392953E2A52D6BE00436A4F /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		A39295402A52D6CE00436A4F /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		A39295422A52D6D600436A4F /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		A39295442A52D6DE00436A4F /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		A39295462A52D6E600436A4F /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		A39295482A52D6ED00436A4F /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		A392954A2A52D6F400436A4F /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		A392954C2A52D6FB00436A4F /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		A392954E2A52D70300436A4F /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		A39295502A52D70B00436A4F /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		A39295522A52D71100436A4F /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		A39295542A52D71900436A4F /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		A39295562A52D72100436A4F /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		A39295582A52D72800436A4F /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		A392955A2A52D73200436A4F /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		A392955C2A52D73800436A4F /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		A392955E2A52D73F00436A4F /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		A39295602A52D74A00436A4F /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		A39295622A52D75200436A4F /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		A39295642A52D75A00436A4F /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		A39295662A52D76200436A4F /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		A39295682A52D76D00436A4F /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		A392956A2A52D77800436A4F /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		A392956C2A52D78500436A4F /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		A392956E2A52D78E00436A4F /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		A39295702A52D7AD00436A4F /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		A39295722A52D7B800436A4F /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,14 +134,440 @@
 		A39294CA2A52C91C00436A4F /* Ajou-Lifeteer-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				A39294CB2A52C91C00436A4F /* AppDelegate.swift */,
-				A39294CD2A52C91C00436A4F /* SceneDelegate.swift */,
+				A39294F12A52D08300436A4F /* Global */,
+				A39294F22A52D08E00436A4F /* Network */,
+				A39294F32A52D0A200436A4F /* Presentation */,
 				A39294CF2A52C91C00436A4F /* ViewController.swift */,
-				A39294D42A52C91D00436A4F /* Assets.xcassets */,
-				A39294D62A52C91D00436A4F /* LaunchScreen.storyboard */,
 				A39294D92A52C91D00436A4F /* Info.plist */,
 			);
 			path = "Ajou-Lifeteer-iOS";
+			sourceTree = "<group>";
+		};
+		A39294F12A52D08300436A4F /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				A39294FE2A52D12A00436A4F /* UIComponents */,
+				A39294FD2A52D12200436A4F /* Literal */,
+				A39294FC2A52D11B00436A4F /* Resource */,
+				A39294F92A52D0FD00436A4F /* Supports */,
+				A39294F82A52D0EE00436A4F /* Extension */,
+				A39294F72A52D0E500436A4F /* Utils */,
+				A39294F62A52D0DE00436A4F /* Protocols */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
+		A39294F22A52D08E00436A4F /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				A392950A2A52D27000436A4F /* Foundation */,
+				A39295092A52D26A00436A4F /* Dto */,
+				A39295082A52D26300436A4F /* Service */,
+				A39295072A52D25A00436A4F /* Router */,
+				A39295062A52D25200436A4F /* Model */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		A39294F32A52D0A200436A4F /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				A39295162A52D2FE00436A4F /* Splash */,
+				A39295152A52D2F700436A4F /* SignIn */,
+				A39295142A52D2F000436A4F /* Landing */,
+				A39295132A52D2ED00436A4F /* TabBar */,
+				A392950F2A52D2B200436A4F /* MindSet */,
+				A392950E2A52D2AC00436A4F /* RecordWill */,
+				A392950C2A52D29600436A4F /* Diary */,
+				A392950B2A52D28E00436A4F /* MyPage */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		A39294F62A52D0DE00436A4F /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				A39295402A52D6CE00436A4F /* .gitkeep */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		A39294F72A52D0E500436A4F /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A39295052A52D1D300436A4F /* LTUtils */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		A39294F82A52D0EE00436A4F /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A39295012A52D17700436A4F /* UIKit+ */,
+				A39295032A52D19100436A4F /* Foundation+ */,
+				A39295042A52D19F00436A4F /* Combine+ */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		A39294F92A52D0FD00436A4F /* Supports */ = {
+			isa = PBXGroup;
+			children = (
+				A39294CB2A52C91C00436A4F /* AppDelegate.swift */,
+				A39294CD2A52C91C00436A4F /* SceneDelegate.swift */,
+				A39294D62A52C91D00436A4F /* LaunchScreen.storyboard */,
+			);
+			path = Supports;
+			sourceTree = "<group>";
+		};
+		A39294FC2A52D11B00436A4F /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				A39294D42A52C91D00436A4F /* Assets.xcassets */,
+				A39295002A52D14A00436A4F /* Fonts */,
+				A39294FF2A52D14100436A4F /* Lottie */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		A39294FD2A52D12200436A4F /* Literal */ = {
+			isa = PBXGroup;
+			children = (
+				A39295322A52D67100436A4F /* .gitkeep */,
+			);
+			path = Literal;
+			sourceTree = "<group>";
+		};
+		A39294FE2A52D12A00436A4F /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				A39295302A52D60200436A4F /* .gitkeep */,
+			);
+			path = UIComponents;
+			sourceTree = "<group>";
+		};
+		A39294FF2A52D14100436A4F /* Lottie */ = {
+			isa = PBXGroup;
+			children = (
+				A39295362A52D68F00436A4F /* .gitkeep */,
+			);
+			path = Lottie;
+			sourceTree = "<group>";
+		};
+		A39295002A52D14A00436A4F /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				A39295342A52D68300436A4F /* .gitkeep */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		A39295012A52D17700436A4F /* UIKit+ */ = {
+			isa = PBXGroup;
+			children = (
+				A39295382A52D69800436A4F /* .gitkeep */,
+			);
+			path = "UIKit+";
+			sourceTree = "<group>";
+		};
+		A39295032A52D19100436A4F /* Foundation+ */ = {
+			isa = PBXGroup;
+			children = (
+				A392953A2A52D6A900436A4F /* .gitkeep */,
+			);
+			path = "Foundation+";
+			sourceTree = "<group>";
+		};
+		A39295042A52D19F00436A4F /* Combine+ */ = {
+			isa = PBXGroup;
+			children = (
+				A392953C2A52D6B300436A4F /* .gitkeep */,
+			);
+			path = "Combine+";
+			sourceTree = "<group>";
+		};
+		A39295052A52D1D300436A4F /* LTUtils */ = {
+			isa = PBXGroup;
+			children = (
+				A392953E2A52D6BE00436A4F /* .gitkeep */,
+			);
+			path = LTUtils;
+			sourceTree = "<group>";
+		};
+		A39295062A52D25200436A4F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A39295542A52D71900436A4F /* .gitkeep */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A39295072A52D25A00436A4F /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				A39295522A52D71100436A4F /* .gitkeep */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		A39295082A52D26300436A4F /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				A39295502A52D70B00436A4F /* .gitkeep */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		A39295092A52D26A00436A4F /* Dto */ = {
+			isa = PBXGroup;
+			children = (
+				A392952F2A52D42000436A4F /* DefaultDto */,
+				A392952E2A52D41900436A4F /* UserDto */,
+				A392952D2A52D40E00436A4F /* MindSetDto */,
+				A392952C2A52D40300436A4F /* DiaryDto */,
+				A392952B2A52D3FA00436A4F /* MyPageDto */,
+				A392952A2A52D3EA00436A4F /* VoiceDto */,
+			);
+			path = Dto;
+			sourceTree = "<group>";
+		};
+		A392950A2A52D27000436A4F /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				A39295422A52D6D600436A4F /* .gitkeep */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		A392950B2A52D28E00436A4F /* MyPage */ = {
+			isa = PBXGroup;
+			children = (
+				A39295292A52D38A00436A4F /* Views */,
+				A39295282A52D38700436A4F /* VC */,
+			);
+			path = MyPage;
+			sourceTree = "<group>";
+		};
+		A392950C2A52D29600436A4F /* Diary */ = {
+			isa = PBXGroup;
+			children = (
+				A39295272A52D38300436A4F /* Views */,
+				A39295252A52D37B00436A4F /* VC */,
+			);
+			path = Diary;
+			sourceTree = "<group>";
+		};
+		A392950E2A52D2AC00436A4F /* RecordWill */ = {
+			isa = PBXGroup;
+			children = (
+				A39295242A52D37800436A4F /* Views */,
+				A39295222A52D36F00436A4F /* VC */,
+			);
+			path = RecordWill;
+			sourceTree = "<group>";
+		};
+		A392950F2A52D2B200436A4F /* MindSet */ = {
+			isa = PBXGroup;
+			children = (
+				A39295212A52D36C00436A4F /* Views */,
+				A392951F2A52D36100436A4F /* VC */,
+			);
+			path = MindSet;
+			sourceTree = "<group>";
+		};
+		A39295132A52D2ED00436A4F /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				A39295622A52D75200436A4F /* .gitkeep */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		A39295142A52D2F000436A4F /* Landing */ = {
+			isa = PBXGroup;
+			children = (
+				A392951E2A52D33C00436A4F /* Views */,
+				A392951D2A52D33800436A4F /* VC */,
+			);
+			path = Landing;
+			sourceTree = "<group>";
+		};
+		A39295152A52D2F700436A4F /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				A392951C2A52D33400436A4F /* Views */,
+				A392951A2A52D32900436A4F /* VC */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		A39295162A52D2FE00436A4F /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				A39295192A52D32400436A4F /* Views */,
+				A39295182A52D32100436A4F /* VC */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		A39295182A52D32100436A4F /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				A39295582A52D72800436A4F /* .gitkeep */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		A39295192A52D32400436A4F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A39295562A52D72100436A4F /* .gitkeep */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A392951A2A52D32900436A4F /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				A392955C2A52D73800436A4F /* .gitkeep */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		A392951C2A52D33400436A4F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A392955A2A52D73200436A4F /* .gitkeep */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A392951D2A52D33800436A4F /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				A392955E2A52D73F00436A4F /* .gitkeep */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		A392951E2A52D33C00436A4F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A39295602A52D74A00436A4F /* .gitkeep */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A392951F2A52D36100436A4F /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				A39295642A52D75A00436A4F /* .gitkeep */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		A39295212A52D36C00436A4F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A39295662A52D76200436A4F /* .gitkeep */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A39295222A52D36F00436A4F /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				A392956A2A52D77800436A4F /* .gitkeep */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		A39295242A52D37800436A4F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A39295682A52D76D00436A4F /* .gitkeep */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A39295252A52D37B00436A4F /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				A392956E2A52D78E00436A4F /* .gitkeep */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		A39295272A52D38300436A4F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A392956C2A52D78500436A4F /* .gitkeep */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A39295282A52D38700436A4F /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				A39295722A52D7B800436A4F /* .gitkeep */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		A39295292A52D38A00436A4F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A39295702A52D7AD00436A4F /* .gitkeep */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A392952A2A52D3EA00436A4F /* VoiceDto */ = {
+			isa = PBXGroup;
+			children = (
+				A392954E2A52D70300436A4F /* .gitkeep */,
+			);
+			path = VoiceDto;
+			sourceTree = "<group>";
+		};
+		A392952B2A52D3FA00436A4F /* MyPageDto */ = {
+			isa = PBXGroup;
+			children = (
+				A392954C2A52D6FB00436A4F /* .gitkeep */,
+			);
+			path = MyPageDto;
+			sourceTree = "<group>";
+		};
+		A392952C2A52D40300436A4F /* DiaryDto */ = {
+			isa = PBXGroup;
+			children = (
+				A392954A2A52D6F400436A4F /* .gitkeep */,
+			);
+			path = DiaryDto;
+			sourceTree = "<group>";
+		};
+		A392952D2A52D40E00436A4F /* MindSetDto */ = {
+			isa = PBXGroup;
+			children = (
+				A39295482A52D6ED00436A4F /* .gitkeep */,
+			);
+			path = MindSetDto;
+			sourceTree = "<group>";
+		};
+		A392952E2A52D41900436A4F /* UserDto */ = {
+			isa = PBXGroup;
+			children = (
+				A39295462A52D6E600436A4F /* .gitkeep */,
+			);
+			path = UserDto;
+			sourceTree = "<group>";
+		};
+		A392952F2A52D42000436A4F /* DefaultDto */ = {
+			isa = PBXGroup;
+			children = (
+				A39295442A52D6DE00436A4F /* .gitkeep */,
+			);
+			path = DefaultDto;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,8 +644,42 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A39295652A52D75A00436A4F /* .gitkeep in Resources */,
+				A39295312A52D60200436A4F /* .gitkeep in Resources */,
 				A39294D82A52C91D00436A4F /* LaunchScreen.storyboard in Resources */,
+				A39295732A52D7B800436A4F /* .gitkeep in Resources */,
+				A392955D2A52D73800436A4F /* .gitkeep in Resources */,
+				A39295612A52D74A00436A4F /* .gitkeep in Resources */,
+				A39295412A52D6CE00436A4F /* .gitkeep in Resources */,
+				A392954F2A52D70300436A4F /* .gitkeep in Resources */,
+				A39295512A52D70B00436A4F /* .gitkeep in Resources */,
+				A39295432A52D6D600436A4F /* .gitkeep in Resources */,
+				A39295552A52D71900436A4F /* .gitkeep in Resources */,
+				A39295352A52D68300436A4F /* .gitkeep in Resources */,
+				A392956F2A52D78E00436A4F /* .gitkeep in Resources */,
+				A39295532A52D71100436A4F /* .gitkeep in Resources */,
+				A392953D2A52D6B300436A4F /* .gitkeep in Resources */,
+				A39295372A52D68F00436A4F /* .gitkeep in Resources */,
 				A39294D52A52C91D00436A4F /* Assets.xcassets in Resources */,
+				A39295452A52D6DE00436A4F /* .gitkeep in Resources */,
+				A39295572A52D72100436A4F /* .gitkeep in Resources */,
+				A39295332A52D67100436A4F /* .gitkeep in Resources */,
+				A39295692A52D76D00436A4F /* .gitkeep in Resources */,
+				A392955B2A52D73200436A4F /* .gitkeep in Resources */,
+				A392953F2A52D6BE00436A4F /* .gitkeep in Resources */,
+				A392954D2A52D6FB00436A4F /* .gitkeep in Resources */,
+				A39295592A52D72800436A4F /* .gitkeep in Resources */,
+				A39295392A52D69800436A4F /* .gitkeep in Resources */,
+				A392956D2A52D78500436A4F /* .gitkeep in Resources */,
+				A392955F2A52D73F00436A4F /* .gitkeep in Resources */,
+				A39295712A52D7AD00436A4F /* .gitkeep in Resources */,
+				A39295492A52D6ED00436A4F /* .gitkeep in Resources */,
+				A392953B2A52D6A900436A4F /* .gitkeep in Resources */,
+				A39295472A52D6E600436A4F /* .gitkeep in Resources */,
+				A39295672A52D76200436A4F /* .gitkeep in Resources */,
+				A392954B2A52D6F400436A4F /* .gitkeep in Resources */,
+				A39295632A52D75200436A4F /* .gitkeep in Resources */,
+				A392956B2A52D77800436A4F /* .gitkeep in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
