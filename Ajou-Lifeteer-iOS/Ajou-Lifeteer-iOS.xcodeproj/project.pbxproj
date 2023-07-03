@@ -10,9 +10,14 @@
 		A39294CC2A52C91C00436A4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39294CB2A52C91C00436A4F /* AppDelegate.swift */; };
 		A39294CE2A52C91C00436A4F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39294CD2A52C91C00436A4F /* SceneDelegate.swift */; };
 		A39294D02A52C91C00436A4F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39294CF2A52C91C00436A4F /* ViewController.swift */; };
-		A39294D32A52C91C00436A4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A39294D12A52C91C00436A4F /* Main.storyboard */; };
 		A39294D52A52C91D00436A4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A39294D42A52C91D00436A4F /* Assets.xcassets */; };
 		A39294D82A52C91D00436A4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A39294D62A52C91D00436A4F /* LaunchScreen.storyboard */; };
+		A39294E12A52CBBF00436A4F /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = A39294E02A52CBBF00436A4F /* Moya */; };
+		A39294E42A52CBCC00436A4F /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = A39294E32A52CBCC00436A4F /* Kingfisher */; };
+		A39294E72A52CBD900436A4F /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = A39294E62A52CBD900436A4F /* SnapKit */; };
+		A39294EA2A52CBE400436A4F /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = A39294E92A52CBE400436A4F /* Then */; };
+		A39294ED2A52CBF200436A4F /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = A39294EC2A52CBF200436A4F /* Lottie */; };
+		A39294F02A52CBFF00436A4F /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = A39294EF2A52CBFF00436A4F /* FSCalendar */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,7 +25,6 @@
 		A39294CB2A52C91C00436A4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A39294CD2A52C91C00436A4F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A39294CF2A52C91C00436A4F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A39294D22A52C91C00436A4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A39294D42A52C91D00436A4F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A39294D72A52C91D00436A4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A39294D92A52C91D00436A4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -31,6 +35,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A39294ED2A52CBF200436A4F /* Lottie in Frameworks */,
+				A39294F02A52CBFF00436A4F /* FSCalendar in Frameworks */,
+				A39294E72A52CBD900436A4F /* SnapKit in Frameworks */,
+				A39294E42A52CBCC00436A4F /* Kingfisher in Frameworks */,
+				A39294E12A52CBBF00436A4F /* Moya in Frameworks */,
+				A39294EA2A52CBE400436A4F /* Then in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,7 +69,6 @@
 				A39294CB2A52C91C00436A4F /* AppDelegate.swift */,
 				A39294CD2A52C91C00436A4F /* SceneDelegate.swift */,
 				A39294CF2A52C91C00436A4F /* ViewController.swift */,
-				A39294D12A52C91C00436A4F /* Main.storyboard */,
 				A39294D42A52C91D00436A4F /* Assets.xcassets */,
 				A39294D62A52C91D00436A4F /* LaunchScreen.storyboard */,
 				A39294D92A52C91D00436A4F /* Info.plist */,
@@ -83,6 +92,14 @@
 			dependencies = (
 			);
 			name = "Ajou-Lifeteer-iOS";
+			packageProductDependencies = (
+				A39294E02A52CBBF00436A4F /* Moya */,
+				A39294E32A52CBCC00436A4F /* Kingfisher */,
+				A39294E62A52CBD900436A4F /* SnapKit */,
+				A39294E92A52CBE400436A4F /* Then */,
+				A39294EC2A52CBF200436A4F /* Lottie */,
+				A39294EF2A52CBFF00436A4F /* FSCalendar */,
+			);
 			productName = "Ajou-Lifeteer-iOS";
 			productReference = A39294C82A52C91C00436A4F /* Ajou-Lifeteer-iOS.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +128,14 @@
 				Base,
 			);
 			mainGroup = A39294BF2A52C91C00436A4F;
+			packageReferences = (
+				A39294DF2A52CBBF00436A4F /* XCRemoteSwiftPackageReference "Moya" */,
+				A39294E22A52CBCC00436A4F /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				A39294E52A52CBD900436A4F /* XCRemoteSwiftPackageReference "SnapKit" */,
+				A39294E82A52CBE400436A4F /* XCRemoteSwiftPackageReference "Then" */,
+				A39294EB2A52CBF200436A4F /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				A39294EE2A52CBFF00436A4F /* XCRemoteSwiftPackageReference "FSCalendar" */,
+			);
 			productRefGroup = A39294C92A52C91C00436A4F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,7 +152,6 @@
 			files = (
 				A39294D82A52C91D00436A4F /* LaunchScreen.storyboard in Resources */,
 				A39294D52A52C91D00436A4F /* Assets.xcassets in Resources */,
-				A39294D32A52C91C00436A4F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,14 +171,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		A39294D12A52C91C00436A4F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A39294D22A52C91C00436A4F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A39294D62A52C91D00436A4F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -358,6 +374,90 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A39294DF2A52CBBF00436A4F /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.0;
+			};
+		};
+		A39294E22A52CBCC00436A4F /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+		A39294E52A52CBD900436A4F /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		A39294E82A52CBE400436A4F /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+		A39294EB2A52CBF200436A4F /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+		A39294EE2A52CBFF00436A4F /* XCRemoteSwiftPackageReference "FSCalendar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/WenchaoD/FSCalendar.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A39294E02A52CBBF00436A4F /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A39294DF2A52CBBF00436A4F /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+		A39294E32A52CBCC00436A4F /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A39294E22A52CBCC00436A4F /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		A39294E62A52CBD900436A4F /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A39294E52A52CBD900436A4F /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		A39294E92A52CBE400436A4F /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A39294E82A52CBE400436A4F /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
+		A39294EC2A52CBF200436A4F /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A39294EB2A52CBF200436A4F /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+		A39294EF2A52CBFF00436A4F /* FSCalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A39294EE2A52CBFF00436A4F /* XCRemoteSwiftPackageReference "FSCalendar" */;
+			productName = FSCalendar;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A39294C02A52C91C00436A4F /* Project object */;
 }
