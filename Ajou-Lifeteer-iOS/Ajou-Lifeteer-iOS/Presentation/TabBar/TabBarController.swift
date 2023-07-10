@@ -64,8 +64,6 @@ extension TabBarController {
                                                              rootViewController: MypageMainVC())
 
         viewControllers = [mindSetHomeNVC, diaryMainNVC, recordedWillMainNVC, mypageMainNVC]
-        
-        
     }
     
     private func setUpperLine() {
