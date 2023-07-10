@@ -1,0 +1,16 @@
+disabled_rules:
+  - trailing_whitespace
+  - identifier_name
+  - line_length
+  - type_name
+  - legacy_constructor
+  - unused_setter_value
+
+included:
+  - Lifeteer-iOS
+excluded:
+  # AppDelegate, SceneDelegate file 무시
+  - Lifeteer-iOS/Global/Supports/AppDelegate.swift
+  - Lifeteer-iOS/Global/Supports/SceneDelegate.swift
+
+force_cast: warning
