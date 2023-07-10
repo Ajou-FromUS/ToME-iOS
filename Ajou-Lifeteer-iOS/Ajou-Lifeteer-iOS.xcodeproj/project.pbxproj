@@ -55,6 +55,7 @@
 		A3CF55F42A5BCB7300D19F00 /* UserDefaultKeyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CF55F32A5BCB7300D19F00 /* UserDefaultKeyList.swift */; };
 		A3CF55F62A5BCB8A00D19F00 /* UserDefaultWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CF55F52A5BCB8A00D19F00 /* UserDefaultWrapper.swift */; };
 		A3E4D2FB2A5BDAAA00C7611C /* ColorLiterals.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E4D2FA2A5BDAAA00C7611C /* ColorLiterals.swift */; };
+		A3E4D3012A5BDB9200C7611C /* FontLiterals.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E4D3002A5BDB9200C7611C /* FontLiterals.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -139,6 +140,11 @@
 		A3CF55F52A5BCB8A00D19F00 /* UserDefaultWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultWrapper.swift; sourceTree = "<group>"; };
 		A3CF55F82A5BD2C700D19F00 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		A3E4D2FA2A5BDAAA00C7611C /* ColorLiterals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorLiterals.swift; sourceTree = "<group>"; };
+		A3E4D2FC2A5BDB2C00C7611C /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
+		A3E4D2FD2A5BDB2C00C7611C /* GmarketSansLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GmarketSansLight.otf; sourceTree = "<group>"; };
+		A3E4D2FE2A5BDB2C00C7611C /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
+		A3E4D2FF2A5BDB2D00C7611C /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
+		A3E4D3002A5BDB9200C7611C /* FontLiterals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontLiterals.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -297,6 +303,7 @@
 			children = (
 				A39295322A52D67100436A4F /* .gitkeep */,
 				A3E4D2FA2A5BDAAA00C7611C /* ColorLiterals.swift */,
+				A3E4D3002A5BDB9200C7611C /* FontLiterals.swift */,
 			);
 			path = Literal;
 			sourceTree = "<group>";
@@ -320,6 +327,10 @@
 		A39295002A52D14A00436A4F /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				A3E4D2FD2A5BDB2C00C7611C /* GmarketSansLight.otf */,
+				A3E4D2FC2A5BDB2C00C7611C /* Pretendard-Bold.otf */,
+				A3E4D2FE2A5BDB2C00C7611C /* Pretendard-Medium.otf */,
+				A3E4D2FF2A5BDB2D00C7611C /* Pretendard-Regular.otf */,
 				A39295342A52D68300436A4F /* .gitkeep */,
 			);
 			path = Fonts;
@@ -768,6 +779,7 @@
 				A3CF55E82A5BCAED00D19F00 /* makeVibrate.swift in Sources */,
 				A3CF55C82A5BC93900D19F00 /* String+.swift in Sources */,
 				A3CF55BE2A5BC8C600D19F00 /* UIDevice+.swift in Sources */,
+				A3E4D3012A5BDB9200C7611C /* FontLiterals.swift in Sources */,
 				A3CF55C62A5BC92900D19F00 /* Result+.swift in Sources */,
 				A3CF55C42A5BC91500D19F00 /* Encodable+.swift in Sources */,
 				A3CF55B22A5BC18E00D19F00 /* UITabBar+.swift in Sources */,
