@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A30667152A5C0178006E7B9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A39294D42A52C91D00436A4F /* Assets.xcassets */; };
 		A30667172A5C070F006E7B9F /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30667162A5C070F006E7B9F /* CustomNavigationBar.swift */; };
+		A30667192A5C0DFB006E7B9F /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30667182A5C0DFB006E7B9F /* CustomButton.swift */; };
 		A39294CC2A52C91C00436A4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39294CB2A52C91C00436A4F /* AppDelegate.swift */; };
 		A39294CE2A52C91C00436A4F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39294CD2A52C91C00436A4F /* SceneDelegate.swift */; };
 		A39294D02A52C91C00436A4F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39294CF2A52C91C00436A4F /* ViewController.swift */; };
@@ -68,6 +69,7 @@
 
 /* Begin PBXFileReference section */
 		A30667162A5C070F006E7B9F /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
+		A30667182A5C0DFB006E7B9F /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		A39294C82A52C91C00436A4F /* Ajou-Lifeteer-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ajou-Lifeteer-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A39294CB2A52C91C00436A4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A39294CD2A52C91C00436A4F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -329,6 +331,7 @@
 			children = (
 				A39295302A52D60200436A4F /* .gitkeep */,
 				A30667162A5C070F006E7B9F /* CustomNavigationBar.swift */,
+				A30667182A5C0DFB006E7B9F /* CustomButton.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -840,6 +843,7 @@
 				A3E4D30D2A5BF09000C7611C /* MypageMainVC.swift in Sources */,
 				A39294CE2A52C91C00436A4F /* SceneDelegate.swift in Sources */,
 				A3CF55AA2A5BBEF700D19F00 /* UIView+.swift in Sources */,
+				A30667192A5C0DFB006E7B9F /* CustomButton.swift in Sources */,
 				A3CF55C02A5BC8DB00D19F00 /* UIColor+.swift in Sources */,
 				A3CF55E02A5BCA9500D19F00 /* getClassName.swift in Sources */,
 				A3CF55C22A5BC8FD00D19F00 /* UIButton+.swift in Sources */,

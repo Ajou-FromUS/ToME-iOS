@@ -14,9 +14,7 @@ import Then
 enum NaviType {
     case backButton // 뒤로가기 버튼
     case backButtonWithTitle // 뒤로가기 버튼 + 중앙 타이틀
-    case menuButtonWithTitle // 메뉴 버튼 + 중앙 타이틀
-    case menuButtonWithBI // 메뉴 버튼 + BI
-    case buttonsWithTitle // 뒤로가기 버튼 + 중앙 타이틀 + 메뉴 버튼
+    case buttonsWithTitle // 뒤로가기 버튼 + 중앙 타이틀
     case onlyBI // BI만 존재
     case onlyTitle // Title만 존재
 }
@@ -34,7 +32,6 @@ final class CustomNavigationBar: UIView {
     
     private let centerTitleLabel = UILabel()
     private let backButton = UIButton()
-    private let menuButton = UIButton()
     private let mindSetBIImageView = UIImageView()
     
     // MARK: - initialization
@@ -57,7 +54,6 @@ final class CustomNavigationBar: UIView {
 extension CustomNavigationBar {
     private func setAddTarget() {
         self.backButton.addTarget(self, action: #selector(popToPreviousVC), for: .touchUpInside)
-        self.menuButton.addTarget(self, action: #selector(pushToUserMenuMainVC), for: .touchUpInside)
     }
     
     @discardableResult
@@ -77,18 +73,6 @@ extension CustomNavigationBar {
         }
         return self
     }
-    
-    @discardableResult
-    func resetMenuButtonAction(_ closure: (() -> Void)? = nil) -> Self {
-        self.menuButtonClosure = closure
-        self.menuButton.removeTarget(self, action: nil, for: .touchUpInside)
-        if closure != nil {
-            self.menuButton.addTarget(self, action: #selector(menuButtonDidTap), for: .touchUpInside)
-        } else {
-            self.setAddTarget()
-        }
-        return self
-    }
 }
 
 // MARK: - @objc Function
@@ -98,17 +82,8 @@ extension CustomNavigationBar {
         self.vc?.navigationController?.popViewController(animated: true)
     }
     
-    @objc private func pushToUserMenuMainVC() {
-        let userMenuMainVC = UserMenuMainVC()
-        self.vc?.navigationController?.pushViewController(userMenuMainVC, animated: true)
-    }
-    
     @objc private func backButtonDidTap() {
         self.backButtonClosure?()
-    }
-    
-    @objc private func menuButtonDidTap() {
-        self.menuButtonClosure?()
     }
 }
 
@@ -132,15 +107,8 @@ extension CustomNavigationBar {
         case .backButtonWithTitle:
             setTitleUI()
             backButton.setImage(ImageLiterals.icBack, for: .normal)
-        case .menuButtonWithTitle:
-            setTitleUI()
-            menuButton.setImage(ImageLiterals.icMenu, for: .normal)
-        case .menuButtonWithBI:
-            menuButton.setImage(ImageLiterals.icMenu, for: .normal)
-            mindSetBIImageView.image = ImageLiterals.icMindsetBI
         case .buttonsWithTitle:
             setTitleUI()
-            menuButton.setImage(ImageLiterals.icMenu, for: .normal)
             backButton.setImage(ImageLiterals.icBack, for: .normal)
         case .onlyBI:
             mindSetBIImageView.image = ImageLiterals.icMindsetBI
@@ -155,10 +123,6 @@ extension CustomNavigationBar {
             setBackButtonLayout()
         case .backButtonWithTitle:
             setBackButtonWithTitleLayout()
-        case .menuButtonWithTitle:
-            setMenuButtonWithTitleLayout()
-        case .menuButtonWithBI:
-            setMenuButtonWithBILayout()
         case .buttonsWithTitle:
             setButtonsWithTitleLayout()
         case .onlyBI:
@@ -195,55 +159,14 @@ extension CustomNavigationBar {
         }
     }
     
-    private func setMenuButtonWithTitleLayout() {
-        self.addSubviews(menuButton, centerTitleLabel)
-        
-        menuButton.snp.makeConstraints { make in
-            make.bottom.equalToSuperview().inset(17)
-            make.trailing.equalToSuperview().inset(20)
-            make.height.equalTo(20)
-            make.width.equalTo(24)
-        }
-        
-        centerTitleLabel.snp.makeConstraints { make in
-            make.centerX.equalToSuperview()
-            make.bottom.equalToSuperview().inset(12)
-        }
-    }
-    
-    private func setMenuButtonWithBILayout() {
-        self.addSubviews(menuButton, mindSetBIImageView)
-        
-        menuButton.snp.makeConstraints { make in
-            make.bottom.equalToSuperview().inset(17)
-            make.trailing.equalToSuperview().inset(20)
-            make.height.equalTo(20)
-            make.width.equalTo(24)
-        }
-        
-        mindSetBIImageView.snp.makeConstraints { make in
-            make.centerX.equalToSuperview()
-            make.bottom.equalToSuperview().inset(11)
-            make.height.equalTo(31)
-            make.width.equalTo(43)
-        }
-    }
-    
     private func setButtonsWithTitleLayout() {
-        self.addSubviews(backButton, menuButton, mindSetBIImageView, centerTitleLabel)
+        self.addSubviews(backButton, mindSetBIImageView, centerTitleLabel)
         
         backButton.snp.makeConstraints { make in
             make.bottom.equalToSuperview().inset(16)
             make.leading.equalToSuperview().inset(20)
             make.height.equalTo(22)
             make.width.equalTo(11)
-        }
-        
-        menuButton.snp.makeConstraints { make in
-            make.bottom.equalToSuperview().inset(17)
-            make.trailing.equalToSuperview().inset(20)
-            make.height.equalTo(20)
-            make.width.equalTo(24)
         }
         
         mindSetBIImageView.snp.makeConstraints { make in
@@ -279,4 +202,3 @@ extension CustomNavigationBar {
         }
     }
 }
-
