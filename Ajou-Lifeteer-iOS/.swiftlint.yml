@@ -7,10 +7,11 @@ disabled_rules:
   - unused_setter_value
 
 included:
-  - Lifeteer-iOS
+  - Ajou-Lifeteer-iOS
 excluded:
   # AppDelegate, SceneDelegate file 무시
-  - Lifeteer-iOS/Global/Supports/AppDelegate.swift
-  - Lifeteer-iOS/Global/Supports/SceneDelegate.swift
+  - Ajou-Lifeteer-iOS/Global/Supports/AppDelegate.swift
+  - Ajou-Lifeteer-iOS/Global/Supports/SceneDelegate.swift
 
 force_cast: warning
+

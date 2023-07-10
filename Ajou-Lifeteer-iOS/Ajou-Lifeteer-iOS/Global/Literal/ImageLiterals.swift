@@ -44,6 +44,8 @@ enum ImageLiterals {
     static var icMoodSoso: UIImage { .load(named: "ic_mood_soso") }
     static var icMoodTooBad: UIImage { .load(named: "ic_mood_too_bad") }
     static var icMoodVeryGood: UIImage { .load(named: "ic_mood_very_good") }
+    static var icMypageFill: UIImage { .load(named: "ic_mypage_fill") }
+    static var icMypage: UIImage { .load(named: "ic_mypage") }
     static var icPencil: UIImage { .load(named: "ic_pencil") }
     static var icPeople: UIImage { .load(named: "ic_people") }
     static var icPlus: UIImage { .load(named: "ic_plus") }
@@ -91,4 +93,3 @@ extension UIImage {
         return image
     }
 }
-
