@@ -54,6 +54,7 @@
 		A3CF55F22A5BCB5800D19F00 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CF55F12A5BCB5800D19F00 /* Toast.swift */; };
 		A3CF55F42A5BCB7300D19F00 /* UserDefaultKeyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CF55F32A5BCB7300D19F00 /* UserDefaultKeyList.swift */; };
 		A3CF55F62A5BCB8A00D19F00 /* UserDefaultWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CF55F52A5BCB8A00D19F00 /* UserDefaultWrapper.swift */; };
+		A3E4D2FB2A5BDAAA00C7611C /* ColorLiterals.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E4D2FA2A5BDAAA00C7611C /* ColorLiterals.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -137,6 +138,7 @@
 		A3CF55F32A5BCB7300D19F00 /* UserDefaultKeyList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultKeyList.swift; sourceTree = "<group>"; };
 		A3CF55F52A5BCB8A00D19F00 /* UserDefaultWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultWrapper.swift; sourceTree = "<group>"; };
 		A3CF55F82A5BD2C700D19F00 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		A3E4D2FA2A5BDAAA00C7611C /* ColorLiterals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorLiterals.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -294,6 +296,7 @@
 			isa = PBXGroup;
 			children = (
 				A39295322A52D67100436A4F /* .gitkeep */,
+				A3E4D2FA2A5BDAAA00C7611C /* ColorLiterals.swift */,
 			);
 			path = Literal;
 			sourceTree = "<group>";
@@ -774,6 +777,7 @@
 				A3CF55EA2A5BCB0000D19F00 /* setImage.swift in Sources */,
 				A3CF55E62A5BCAD800D19F00 /* makeAlert.swift in Sources */,
 				A3CF55A82A5BBED200D19F00 /* UIViewController+.swift in Sources */,
+				A3E4D2FB2A5BDAAA00C7611C /* ColorLiterals.swift in Sources */,
 				A3CF55EC2A5BCB1400D19F00 /* setRootViewController.swift in Sources */,
 				A3CF55D62A5BCA0A00D19F00 /* adjusted+.swift in Sources */,
 				A3CF55BA2A5BC88D00D19F00 /* UIImage+.swift in Sources */,
