@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A30667152A5C0178006E7B9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A39294D42A52C91D00436A4F /* Assets.xcassets */; };
+		A30667172A5C070F006E7B9F /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30667162A5C070F006E7B9F /* CustomNavigationBar.swift */; };
+		A30667192A5C0DFB006E7B9F /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30667182A5C0DFB006E7B9F /* CustomButton.swift */; };
+		A306671D2A5C1689006E7B9F /* CustomAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A306671C2A5C1689006E7B9F /* CustomAlertVC.swift */; };
+		A34478DE2A69164A002F1981 /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = A34478DA2A69164A002F1981 /* Pretendard-Regular.otf */; };
+		A34478DF2A69164A002F1981 /* GmarketSansLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = A34478DB2A69164A002F1981 /* GmarketSansLight.otf */; };
+		A34478E02A69164A002F1981 /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = A34478DC2A69164A002F1981 /* Pretendard-Medium.otf */; };
+		A34478E12A69164A002F1981 /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A34478DD2A69164A002F1981 /* Pretendard-Bold.otf */; };
 		A39294CC2A52C91C00436A4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39294CB2A52C91C00436A4F /* AppDelegate.swift */; };
 		A39294CE2A52C91C00436A4F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39294CD2A52C91C00436A4F /* SceneDelegate.swift */; };
 		A39294D02A52C91C00436A4F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39294CF2A52C91C00436A4F /* ViewController.swift */; };
@@ -54,9 +62,24 @@
 		A3CF55F22A5BCB5800D19F00 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CF55F12A5BCB5800D19F00 /* Toast.swift */; };
 		A3CF55F42A5BCB7300D19F00 /* UserDefaultKeyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CF55F32A5BCB7300D19F00 /* UserDefaultKeyList.swift */; };
 		A3CF55F62A5BCB8A00D19F00 /* UserDefaultWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CF55F52A5BCB8A00D19F00 /* UserDefaultWrapper.swift */; };
+		A3E4D2FB2A5BDAAA00C7611C /* ColorLiterals.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E4D2FA2A5BDAAA00C7611C /* ColorLiterals.swift */; };
+		A3E4D3012A5BDB9200C7611C /* FontLiterals.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E4D3002A5BDB9200C7611C /* FontLiterals.swift */; };
+		A3E4D3032A5BE90500C7611C /* ImageLiterals.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E4D3022A5BE90500C7611C /* ImageLiterals.swift */; };
+		A3E4D3052A5BEEB200C7611C /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E4D3042A5BEEB200C7611C /* TabBarController.swift */; };
+		A3E4D3072A5BF04300C7611C /* MindSetHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E4D3062A5BF04300C7611C /* MindSetHomeVC.swift */; };
+		A3E4D3092A5BF05E00C7611C /* DiaryMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E4D3082A5BF05E00C7611C /* DiaryMainVC.swift */; };
+		A3E4D30B2A5BF07F00C7611C /* RecordedWillMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E4D30A2A5BF07F00C7611C /* RecordedWillMainVC.swift */; };
+		A3E4D30D2A5BF09000C7611C /* MypageMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E4D30C2A5BF09000C7611C /* MypageMainVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A30667162A5C070F006E7B9F /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
+		A30667182A5C0DFB006E7B9F /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		A306671C2A5C1689006E7B9F /* CustomAlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertVC.swift; sourceTree = "<group>"; };
+		A34478DA2A69164A002F1981 /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Pretendard-Regular.otf"; path = "../../../../../../2022-Lifeteer-iOS/Lifeteer-iOS/Lifeteer-iOS/Global/Resource/Fonts/Pretendard-Regular.otf"; sourceTree = "<group>"; };
+		A34478DB2A69164A002F1981 /* GmarketSansLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = GmarketSansLight.otf; path = "../../../../../../2022-Lifeteer-iOS/Lifeteer-iOS/Lifeteer-iOS/Global/Resource/Fonts/GmarketSansLight.otf"; sourceTree = "<group>"; };
+		A34478DC2A69164A002F1981 /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Pretendard-Medium.otf"; path = "../../../../../../2022-Lifeteer-iOS/Lifeteer-iOS/Lifeteer-iOS/Global/Resource/Fonts/Pretendard-Medium.otf"; sourceTree = "<group>"; };
+		A34478DD2A69164A002F1981 /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Pretendard-Bold.otf"; path = "../../../../../../2022-Lifeteer-iOS/Lifeteer-iOS/Lifeteer-iOS/Global/Resource/Fonts/Pretendard-Bold.otf"; sourceTree = "<group>"; };
 		A39294C82A52C91C00436A4F /* Ajou-Lifeteer-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ajou-Lifeteer-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A39294CB2A52C91C00436A4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A39294CD2A52C91C00436A4F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -137,6 +160,14 @@
 		A3CF55F32A5BCB7300D19F00 /* UserDefaultKeyList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultKeyList.swift; sourceTree = "<group>"; };
 		A3CF55F52A5BCB8A00D19F00 /* UserDefaultWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultWrapper.swift; sourceTree = "<group>"; };
 		A3CF55F82A5BD2C700D19F00 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		A3E4D2FA2A5BDAAA00C7611C /* ColorLiterals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorLiterals.swift; sourceTree = "<group>"; };
+		A3E4D3002A5BDB9200C7611C /* FontLiterals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontLiterals.swift; sourceTree = "<group>"; };
+		A3E4D3022A5BE90500C7611C /* ImageLiterals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLiterals.swift; sourceTree = "<group>"; };
+		A3E4D3042A5BEEB200C7611C /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		A3E4D3062A5BF04300C7611C /* MindSetHomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindSetHomeVC.swift; sourceTree = "<group>"; };
+		A3E4D3082A5BF05E00C7611C /* DiaryMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryMainVC.swift; sourceTree = "<group>"; };
+		A3E4D30A2A5BF07F00C7611C /* RecordedWillMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordedWillMainVC.swift; sourceTree = "<group>"; };
+		A3E4D30C2A5BF09000C7611C /* MypageMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageMainVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -294,6 +325,9 @@
 			isa = PBXGroup;
 			children = (
 				A39295322A52D67100436A4F /* .gitkeep */,
+				A3E4D2FA2A5BDAAA00C7611C /* ColorLiterals.swift */,
+				A3E4D3002A5BDB9200C7611C /* FontLiterals.swift */,
+				A3E4D3022A5BE90500C7611C /* ImageLiterals.swift */,
 			);
 			path = Literal;
 			sourceTree = "<group>";
@@ -302,6 +336,9 @@
 			isa = PBXGroup;
 			children = (
 				A39295302A52D60200436A4F /* .gitkeep */,
+				A30667162A5C070F006E7B9F /* CustomNavigationBar.swift */,
+				A30667182A5C0DFB006E7B9F /* CustomButton.swift */,
+				A306671C2A5C1689006E7B9F /* CustomAlertVC.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -317,6 +354,10 @@
 		A39295002A52D14A00436A4F /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				A34478DB2A69164A002F1981 /* GmarketSansLight.otf */,
+				A34478DD2A69164A002F1981 /* Pretendard-Bold.otf */,
+				A34478DC2A69164A002F1981 /* Pretendard-Medium.otf */,
+				A34478DA2A69164A002F1981 /* Pretendard-Regular.otf */,
 				A39295342A52D68300436A4F /* .gitkeep */,
 			);
 			path = Fonts;
@@ -459,6 +500,7 @@
 			isa = PBXGroup;
 			children = (
 				A39295622A52D75200436A4F /* .gitkeep */,
+				A3E4D3042A5BEEB200C7611C /* TabBarController.swift */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -542,6 +584,7 @@
 			isa = PBXGroup;
 			children = (
 				A39295642A52D75A00436A4F /* .gitkeep */,
+				A3E4D3062A5BF04300C7611C /* MindSetHomeVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -558,6 +601,7 @@
 			isa = PBXGroup;
 			children = (
 				A392956A2A52D77800436A4F /* .gitkeep */,
+				A3E4D30A2A5BF07F00C7611C /* RecordedWillMainVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -574,6 +618,7 @@
 			isa = PBXGroup;
 			children = (
 				A392956E2A52D78E00436A4F /* .gitkeep */,
+				A3E4D3082A5BF05E00C7611C /* DiaryMainVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -590,6 +635,7 @@
 			isa = PBXGroup;
 			children = (
 				A39295722A52D7B800436A4F /* .gitkeep */,
+				A3E4D30C2A5BF09000C7611C /* MypageMainVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -660,6 +706,7 @@
 				A3CF55F72A5BD26200D19F00 /* SwiftLint Script */,
 				A39294C42A52C91C00436A4F /* Sources */,
 				A39294C52A52C91C00436A4F /* Frameworks */,
+				A30667142A5C0170006E7B9F /* Resources */,
 			);
 			buildRules = (
 			);
@@ -719,6 +766,21 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		A30667142A5C0170006E7B9F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A30667152A5C0178006E7B9F /* Assets.xcassets in Resources */,
+				A34478E12A69164A002F1981 /* Pretendard-Bold.otf in Resources */,
+				A34478DF2A69164A002F1981 /* GmarketSansLight.otf in Resources */,
+				A34478DE2A69164A002F1981 /* Pretendard-Regular.otf in Resources */,
+				A34478E02A69164A002F1981 /* Pretendard-Medium.otf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXShellScriptBuildPhase section */
 		A3CF55F72A5BD26200D19F00 /* SwiftLint Script */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -748,16 +810,22 @@
 				A3CF55D82A5BCA1F00D19F00 /* applyShadow.swift in Sources */,
 				A3CF55E22A5BCAA700D19F00 /* JsonCoder.swift in Sources */,
 				A3CF55D02A5BC99E00D19F00 /* Publisher+Driver.swift in Sources */,
+				A3E4D3052A5BEEB200C7611C /* TabBarController.swift in Sources */,
+				A3E4D3092A5BF05E00C7611C /* DiaryMainVC.swift in Sources */,
 				A39294D02A52C91C00436A4F /* ViewController.swift in Sources */,
 				A3CF55F42A5BCB7300D19F00 /* UserDefaultKeyList.swift in Sources */,
+				A3E4D3032A5BE90500C7611C /* ImageLiterals.swift in Sources */,
 				A3CF55B42A5BC1A700D19F00 /* UISwitch+.swift in Sources */,
 				A3CF55B02A5BC01200D19F00 /* UITableView+.swift in Sources */,
 				A3CF55F62A5BCB8A00D19F00 /* UserDefaultWrapper.swift in Sources */,
+				A3E4D3072A5BF04300C7611C /* MindSetHomeVC.swift in Sources */,
 				A3CF55DC2A5BCA5C00D19F00 /* calculateStatusBarHeight.swift in Sources */,
 				A3CF55AC2A5BBF1000D19F00 /* UITextView+.swift in Sources */,
+				A30667172A5C070F006E7B9F /* CustomNavigationBar.swift in Sources */,
 				A3CF55AE2A5BBF2400D19F00 /* UITextField+.swift in Sources */,
 				A3CF55CE2A5BC97100D19F00 /* CancelBag.swift in Sources */,
 				A3CF55EE2A5BCB2F00D19F00 /* setStatusBarBackgroundColor.swift in Sources */,
+				A306671D2A5C1689006E7B9F /* CustomAlertVC.swift in Sources */,
 				A3CF55D42A5BC9F400D19F00 /* addToolBar.swift in Sources */,
 				A3CF55D22A5BC9CD00D19F00 /* Publisher+UIControl.swift in Sources */,
 				A3CF55F22A5BCB5800D19F00 /* Toast.swift in Sources */,
@@ -765,6 +833,7 @@
 				A3CF55E82A5BCAED00D19F00 /* makeVibrate.swift in Sources */,
 				A3CF55C82A5BC93900D19F00 /* String+.swift in Sources */,
 				A3CF55BE2A5BC8C600D19F00 /* UIDevice+.swift in Sources */,
+				A3E4D3012A5BDB9200C7611C /* FontLiterals.swift in Sources */,
 				A3CF55C62A5BC92900D19F00 /* Result+.swift in Sources */,
 				A3CF55C42A5BC91500D19F00 /* Encodable+.swift in Sources */,
 				A3CF55B22A5BC18E00D19F00 /* UITabBar+.swift in Sources */,
@@ -773,7 +842,9 @@
 				A39294CC2A52C91C00436A4F /* AppDelegate.swift in Sources */,
 				A3CF55EA2A5BCB0000D19F00 /* setImage.swift in Sources */,
 				A3CF55E62A5BCAD800D19F00 /* makeAlert.swift in Sources */,
+				A3E4D30B2A5BF07F00C7611C /* RecordedWillMainVC.swift in Sources */,
 				A3CF55A82A5BBED200D19F00 /* UIViewController+.swift in Sources */,
+				A3E4D2FB2A5BDAAA00C7611C /* ColorLiterals.swift in Sources */,
 				A3CF55EC2A5BCB1400D19F00 /* setRootViewController.swift in Sources */,
 				A3CF55D62A5BCA0A00D19F00 /* adjusted+.swift in Sources */,
 				A3CF55BA2A5BC88D00D19F00 /* UIImage+.swift in Sources */,
@@ -781,8 +852,10 @@
 				A3CF55F02A5BCB4400D19F00 /* setTextLineHeight.swift in Sources */,
 				A3CF55DA2A5BCA4400D19F00 /* calculatePastTime.swift in Sources */,
 				A3CF55CA2A5BC94A00D19F00 /* URL+.swift in Sources */,
+				A3E4D30D2A5BF09000C7611C /* MypageMainVC.swift in Sources */,
 				A39294CE2A52C91C00436A4F /* SceneDelegate.swift in Sources */,
 				A3CF55AA2A5BBEF700D19F00 /* UIView+.swift in Sources */,
+				A30667192A5C0DFB006E7B9F /* CustomButton.swift in Sources */,
 				A3CF55C02A5BC8DB00D19F00 /* UIColor+.swift in Sources */,
 				A3CF55E02A5BCA9500D19F00 /* getClassName.swift in Sources */,
 				A3CF55C22A5BC8FD00D19F00 /* UIButton+.swift in Sources */,
@@ -929,8 +1002,9 @@
 				INFOPLIST_FILE = "Ajou-Lifeteer-iOS/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -957,8 +1031,9 @@
 				INFOPLIST_FILE = "Ajou-Lifeteer-iOS/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
