@@ -15,6 +15,7 @@
 		A34478DF2A69164A002F1981 /* GmarketSansLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = A34478DB2A69164A002F1981 /* GmarketSansLight.otf */; };
 		A34478E02A69164A002F1981 /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = A34478DC2A69164A002F1981 /* Pretendard-Medium.otf */; };
 		A34478E12A69164A002F1981 /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A34478DD2A69164A002F1981 /* Pretendard-Bold.otf */; };
+		A34478E32A698554002F1981 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34478E22A698554002F1981 /* SplashVC.swift */; };
 		A39294CC2A52C91C00436A4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39294CB2A52C91C00436A4F /* AppDelegate.swift */; };
 		A39294CE2A52C91C00436A4F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39294CD2A52C91C00436A4F /* SceneDelegate.swift */; };
 		A39294D02A52C91C00436A4F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39294CF2A52C91C00436A4F /* ViewController.swift */; };
@@ -80,6 +81,7 @@
 		A34478DB2A69164A002F1981 /* GmarketSansLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = GmarketSansLight.otf; path = "../../../../../../2022-Lifeteer-iOS/Lifeteer-iOS/Lifeteer-iOS/Global/Resource/Fonts/GmarketSansLight.otf"; sourceTree = "<group>"; };
 		A34478DC2A69164A002F1981 /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Pretendard-Medium.otf"; path = "../../../../../../2022-Lifeteer-iOS/Lifeteer-iOS/Lifeteer-iOS/Global/Resource/Fonts/Pretendard-Medium.otf"; sourceTree = "<group>"; };
 		A34478DD2A69164A002F1981 /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Pretendard-Bold.otf"; path = "../../../../../../2022-Lifeteer-iOS/Lifeteer-iOS/Lifeteer-iOS/Global/Resource/Fonts/Pretendard-Bold.otf"; sourceTree = "<group>"; };
+		A34478E22A698554002F1981 /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
 		A39294C82A52C91C00436A4F /* Ajou-Lifeteer-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ajou-Lifeteer-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A39294CB2A52C91C00436A4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A39294CD2A52C91C00436A4F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -536,6 +538,7 @@
 			isa = PBXGroup;
 			children = (
 				A39295582A52D72800436A4F /* .gitkeep */,
+				A34478E22A698554002F1981 /* SplashVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -841,6 +844,7 @@
 				A3CF55B82A5BC87500D19F00 /* UILabel+.swift in Sources */,
 				A39294CC2A52C91C00436A4F /* AppDelegate.swift in Sources */,
 				A3CF55EA2A5BCB0000D19F00 /* setImage.swift in Sources */,
+				A34478E32A698554002F1981 /* SplashVC.swift in Sources */,
 				A3CF55E62A5BCAD800D19F00 /* makeAlert.swift in Sources */,
 				A3E4D30B2A5BF07F00C7611C /* RecordedWillMainVC.swift in Sources */,
 				A3CF55A82A5BBED200D19F00 /* UIViewController+.swift in Sources */,
