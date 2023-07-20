@@ -19,12 +19,14 @@ final class SplashVC: UIViewController {
     }
     
     private let subTitleLabel = UILabel().then {
+        $0.alpha = 0
         $0.text = "마음을 정리하는 시간,"
         $0.font = .b1
         $0.textColor = .mainGreen
     }
     
     private let titleLabel = UILabel().then {
+        $0.alpha = 0
         $0.text = "마음짓기"
         $0.font = .h0
         $0.textColor = .mainGreen
@@ -37,13 +39,35 @@ final class SplashVC: UIViewController {
         setUI()
         setLayout()
         setNavigationBar()
-        checkDidSignIn()
+        setLogoAnimation()
     }
 }
 
 // MARK: - Methods
 
 extension SplashVC {
+    
+    /// setting animation
+
+    private func setLogoAnimation() {
+        UIView.animate(withDuration: 0.7, delay: 0.5, options: .curveEaseOut, animations: {
+            self.logoImageView.transform = CGAffineTransform(translationX: 0, y: -65)
+        }, completion: { _ in
+            self.setLabelsAnimation()
+        })
+    }
+    
+    private func setLabelsAnimation() {
+        UIView.animate(withDuration: 0.5, animations: {
+            self.subTitleLabel.alpha = 1.0
+            self.titleLabel.alpha = 1.0
+        }, completion: { _ in
+            self.checkDidSignIn()
+        })
+    }
+    
+    /// animation 이후 탭바 컨트롤러로 이동
+     
     private func checkDidSignIn() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             self.pushToTabBarController()
@@ -73,13 +97,13 @@ extension SplashVC {
         view.addSubviews(logoImageView, subTitleLabel, titleLabel)
         
         logoImageView.snp.makeConstraints { make in
-            make.top.equalTo(view.safeAreaLayoutGuide).offset(305)
-            make.leading.trailing.equalTo(view.safeAreaLayoutGuide).inset(136)
-            make.height.equalTo(logoImageView.snp.width).multipliedBy(0.7)
+            make.center.equalToSuperview()
+            make.width.equalTo(103)
+            make.height.equalTo(73)
         }
         
         subTitleLabel.snp.makeConstraints { make in
-            make.top.equalTo(logoImageView.snp.bottom).offset(36)
+            make.top.equalTo(view.safeAreaLayoutGuide).offset(370)
             make.centerX.equalToSuperview()
         }
         
