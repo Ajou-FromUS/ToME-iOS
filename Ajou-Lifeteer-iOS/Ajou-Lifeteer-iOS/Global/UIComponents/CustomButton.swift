@@ -40,8 +40,8 @@ extension CustomButton {
     
     /// 버튼의 Title 변경
     @discardableResult
-    public func changeTitle(attributedString: NSAttributedString) -> Self {
-        self.setAttributedTitle(attributedString, for: .normal)
+    public func changeTitle(string: String) -> Self {
+        self.setTitle(string, for: .normal)
         return self
     }
     
@@ -96,14 +96,14 @@ extension CustomButton {
             self.layer.borderWidth = 1
             self.layer.borderColor = UIColor.mainGreen.cgColor
             self.setBackgroundColor(.clear, for: .normal)
+            self.setTitleColor(.mainGreen, for: .normal)
             self.setAttributedTitle(
                 NSAttributedString(
                     string: title,
-                    attributes: [.font: UIFont.b3, .foregroundColor: UIColor.mainGreen]
+                    attributes: [.font: UIFont.h6, .foregroundColor: UIColor.mainGreen]
                 ),
                 for: .normal
             )
-            
         case .selectWeather:
             self.setBackgroundColor(.mainGreen, for: .normal)
             self.setBackgroundColor(.disabledFill, for: .disabled)
