@@ -26,6 +26,7 @@ final class LandingPageMainVC: UIViewController {
     }
     
     private let searchIntoMindSetButton = CustomButton(title: "마음짓기 알아보기", type: .fillWithGreen)
+    
     private let mainAnimationView: LottieAnimationView = .init(name: "LandingMain")
 
     // MARK: - View Life Cycle
@@ -48,8 +49,8 @@ extension LandingPageMainVC {
     }
 
     private func pushToFirstDetailLandingPageVC() {
-        let firstDetailLandingPageVC = FirstDetailLandingPageVC()
-        self.navigationController?.pushViewController(firstDetailLandingPageVC, animated: true)
+        let detailLandingPageVC = DetailLandingPageVC()
+        self.navigationController?.pushViewController(detailLandingPageVC, animated: true)
     }
     
     private func setNavigationBar() {

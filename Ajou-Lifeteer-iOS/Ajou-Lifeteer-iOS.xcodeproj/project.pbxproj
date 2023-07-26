@@ -25,6 +25,10 @@
 		A34478F12A7175D9002F1981 /* RecordWillSleeping.json in Resources */ = {isa = PBXBuildFile; fileRef = A34478EC2A7175D9002F1981 /* RecordWillSleeping.json */; };
 		A34478F32A717679002F1981 /* LandingPageMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34478F22A717679002F1981 /* LandingPageMainVC.swift */; };
 		A34478F52A717777002F1981 /* FirstDetailLandingPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34478F42A717777002F1981 /* FirstDetailLandingPageVC.swift */; };
+		A34478F82A7178B7002F1981 /* DetailLandingPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34478F72A7178B7002F1981 /* DetailLandingPageVC.swift */; };
+		A34478FA2A7178FB002F1981 /* SecondDetailLandingPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34478F92A7178FB002F1981 /* SecondDetailLandingPageVC.swift */; };
+		A34478FC2A71790D002F1981 /* ThirdDetailLandingPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34478FB2A71790D002F1981 /* ThirdDetailLandingPageVC.swift */; };
+		A34478FE2A71794D002F1981 /* LastDetailLandingPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34478FD2A71794D002F1981 /* LastDetailLandingPageVC.swift */; };
 		A39294CC2A52C91C00436A4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39294CB2A52C91C00436A4F /* AppDelegate.swift */; };
 		A39294CE2A52C91C00436A4F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39294CD2A52C91C00436A4F /* SceneDelegate.swift */; };
 		A39294D02A52C91C00436A4F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39294CF2A52C91C00436A4F /* ViewController.swift */; };
@@ -100,6 +104,10 @@
 		A34478EC2A7175D9002F1981 /* RecordWillSleeping.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RecordWillSleeping.json; sourceTree = "<group>"; };
 		A34478F22A717679002F1981 /* LandingPageMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPageMainVC.swift; sourceTree = "<group>"; };
 		A34478F42A717777002F1981 /* FirstDetailLandingPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstDetailLandingPageVC.swift; sourceTree = "<group>"; };
+		A34478F72A7178B7002F1981 /* DetailLandingPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailLandingPageVC.swift; sourceTree = "<group>"; };
+		A34478F92A7178FB002F1981 /* SecondDetailLandingPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondDetailLandingPageVC.swift; sourceTree = "<group>"; };
+		A34478FB2A71790D002F1981 /* ThirdDetailLandingPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdDetailLandingPageVC.swift; sourceTree = "<group>"; };
+		A34478FD2A71794D002F1981 /* LastDetailLandingPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastDetailLandingPageVC.swift; sourceTree = "<group>"; };
 		A39294C82A52C91C00436A4F /* Ajou-Lifeteer-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ajou-Lifeteer-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A39294CB2A52C91C00436A4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A39294CD2A52C91C00436A4F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -597,7 +605,11 @@
 			children = (
 				A392955E2A52D73F00436A4F /* .gitkeep */,
 				A34478F22A717679002F1981 /* LandingPageMainVC.swift */,
+				A34478F72A7178B7002F1981 /* DetailLandingPageVC.swift */,
 				A34478F42A717777002F1981 /* FirstDetailLandingPageVC.swift */,
+				A34478F92A7178FB002F1981 /* SecondDetailLandingPageVC.swift */,
+				A34478FB2A71790D002F1981 /* ThirdDetailLandingPageVC.swift */,
+				A34478FD2A71794D002F1981 /* LastDetailLandingPageVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -849,8 +861,10 @@
 				A3E4D3052A5BEEB200C7611C /* TabBarController.swift in Sources */,
 				A3E4D3092A5BF05E00C7611C /* DiaryMainVC.swift in Sources */,
 				A39294D02A52C91C00436A4F /* ViewController.swift in Sources */,
+				A34478FA2A7178FB002F1981 /* SecondDetailLandingPageVC.swift in Sources */,
 				A3CF55F42A5BCB7300D19F00 /* UserDefaultKeyList.swift in Sources */,
 				A3E4D3032A5BE90500C7611C /* ImageLiterals.swift in Sources */,
+				A34478FE2A71794D002F1981 /* LastDetailLandingPageVC.swift in Sources */,
 				A3CF55B42A5BC1A700D19F00 /* UISwitch+.swift in Sources */,
 				A34478F32A717679002F1981 /* LandingPageMainVC.swift in Sources */,
 				A3CF55B02A5BC01200D19F00 /* UITableView+.swift in Sources */,
@@ -871,6 +885,7 @@
 				A3CF55E42A5BCABD00D19F00 /* LoadingIndicator.swift in Sources */,
 				A3CF55E82A5BCAED00D19F00 /* makeVibrate.swift in Sources */,
 				A3CF55C82A5BC93900D19F00 /* String+.swift in Sources */,
+				A34478FC2A71790D002F1981 /* ThirdDetailLandingPageVC.swift in Sources */,
 				A3CF55BE2A5BC8C600D19F00 /* UIDevice+.swift in Sources */,
 				A3E4D3012A5BDB9200C7611C /* FontLiterals.swift in Sources */,
 				A3CF55C62A5BC92900D19F00 /* Result+.swift in Sources */,
@@ -888,6 +903,7 @@
 				A3CF55EC2A5BCB1400D19F00 /* setRootViewController.swift in Sources */,
 				A3CF55D62A5BCA0A00D19F00 /* adjusted+.swift in Sources */,
 				A3CF55BA2A5BC88D00D19F00 /* UIImage+.swift in Sources */,
+				A34478F82A7178B7002F1981 /* DetailLandingPageVC.swift in Sources */,
 				A3CF55B62A5BC86100D19F00 /* UIStackView+.swift in Sources */,
 				A3CF55F02A5BCB4400D19F00 /* setTextLineHeight.swift in Sources */,
 				A3CF55DA2A5BCA4400D19F00 /* calculatePastTime.swift in Sources */,
