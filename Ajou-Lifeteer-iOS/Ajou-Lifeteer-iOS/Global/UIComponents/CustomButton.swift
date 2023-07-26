@@ -54,13 +54,13 @@ extension CustomButton {
     
     /// 버튼의 backgroundColor, textColor 변경
     @discardableResult
-    public func setColor(bgColor: UIColor, disableColor: UIColor) -> Self {
+    public func setColor(bgColor: UIColor, disableColor: UIColor, titleColor: UIColor) -> Self {
         self.setBackgroundColor(bgColor, for: .normal)
         self.setBackgroundColor(disableColor, for: .disabled)
         self.setAttributedTitle(
             NSAttributedString(
                 string: self.titleLabel?.text ?? "",
-                attributes: [.font: UIFont.h6, .foregroundColor: UIColor.mainGreen]),
+                attributes: [.font: UIFont.h6, .foregroundColor: titleColor]),
             for: .normal)
         
         return self

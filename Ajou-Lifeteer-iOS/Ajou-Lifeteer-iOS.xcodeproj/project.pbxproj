@@ -16,6 +16,8 @@
 		A34478E02A69164A002F1981 /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = A34478DC2A69164A002F1981 /* Pretendard-Medium.otf */; };
 		A34478E12A69164A002F1981 /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A34478DD2A69164A002F1981 /* Pretendard-Bold.otf */; };
 		A34478E32A698554002F1981 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34478E22A698554002F1981 /* SplashVC.swift */; };
+		A34478E52A698D82002F1981 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34478E42A698D82002F1981 /* SignInVC.swift */; };
+		A34478E72A698DBF002F1981 /* SignInKakaoDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34478E62A698DBF002F1981 /* SignInKakaoDetailVC.swift */; };
 		A39294CC2A52C91C00436A4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39294CB2A52C91C00436A4F /* AppDelegate.swift */; };
 		A39294CE2A52C91C00436A4F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39294CD2A52C91C00436A4F /* SceneDelegate.swift */; };
 		A39294D02A52C91C00436A4F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39294CF2A52C91C00436A4F /* ViewController.swift */; };
@@ -82,6 +84,8 @@
 		A34478DC2A69164A002F1981 /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Pretendard-Medium.otf"; path = "../../../../../../2022-Lifeteer-iOS/Lifeteer-iOS/Lifeteer-iOS/Global/Resource/Fonts/Pretendard-Medium.otf"; sourceTree = "<group>"; };
 		A34478DD2A69164A002F1981 /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Pretendard-Bold.otf"; path = "../../../../../../2022-Lifeteer-iOS/Lifeteer-iOS/Lifeteer-iOS/Global/Resource/Fonts/Pretendard-Bold.otf"; sourceTree = "<group>"; };
 		A34478E22A698554002F1981 /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
+		A34478E42A698D82002F1981 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
+		A34478E62A698DBF002F1981 /* SignInKakaoDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInKakaoDetailVC.swift; sourceTree = "<group>"; };
 		A39294C82A52C91C00436A4F /* Ajou-Lifeteer-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ajou-Lifeteer-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A39294CB2A52C91C00436A4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A39294CD2A52C91C00436A4F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -555,6 +559,8 @@
 			isa = PBXGroup;
 			children = (
 				A392955C2A52D73800436A4F /* .gitkeep */,
+				A34478E42A698D82002F1981 /* SignInVC.swift */,
+				A34478E62A698DBF002F1981 /* SignInKakaoDetailVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -812,6 +818,7 @@
 			files = (
 				A3CF55D82A5BCA1F00D19F00 /* applyShadow.swift in Sources */,
 				A3CF55E22A5BCAA700D19F00 /* JsonCoder.swift in Sources */,
+				A34478E52A698D82002F1981 /* SignInVC.swift in Sources */,
 				A3CF55D02A5BC99E00D19F00 /* Publisher+Driver.swift in Sources */,
 				A3E4D3052A5BEEB200C7611C /* TabBarController.swift in Sources */,
 				A3E4D3092A5BF05E00C7611C /* DiaryMainVC.swift in Sources */,
@@ -824,6 +831,7 @@
 				A3E4D3072A5BF04300C7611C /* MindSetHomeVC.swift in Sources */,
 				A3CF55DC2A5BCA5C00D19F00 /* calculateStatusBarHeight.swift in Sources */,
 				A3CF55AC2A5BBF1000D19F00 /* UITextView+.swift in Sources */,
+				A34478E72A698DBF002F1981 /* SignInKakaoDetailVC.swift in Sources */,
 				A30667172A5C070F006E7B9F /* CustomNavigationBar.swift in Sources */,
 				A3CF55AE2A5BBF2400D19F00 /* UITextField+.swift in Sources */,
 				A3CF55CE2A5BC97100D19F00 /* CancelBag.swift in Sources */,
