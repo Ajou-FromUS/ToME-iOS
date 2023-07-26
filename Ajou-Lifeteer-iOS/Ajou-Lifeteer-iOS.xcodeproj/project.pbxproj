@@ -23,6 +23,8 @@
 		A34478EF2A7175D9002F1981 /* recordWillRunningPerson.json in Resources */ = {isa = PBXBuildFile; fileRef = A34478EA2A7175D9002F1981 /* recordWillRunningPerson.json */; };
 		A34478F02A7175D9002F1981 /* RecordWillTimeAdmin.json in Resources */ = {isa = PBXBuildFile; fileRef = A34478EB2A7175D9002F1981 /* RecordWillTimeAdmin.json */; };
 		A34478F12A7175D9002F1981 /* RecordWillSleeping.json in Resources */ = {isa = PBXBuildFile; fileRef = A34478EC2A7175D9002F1981 /* RecordWillSleeping.json */; };
+		A34478F32A717679002F1981 /* LandingPageMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34478F22A717679002F1981 /* LandingPageMainVC.swift */; };
+		A34478F52A717777002F1981 /* FirstDetailLandingPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34478F42A717777002F1981 /* FirstDetailLandingPageVC.swift */; };
 		A39294CC2A52C91C00436A4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39294CB2A52C91C00436A4F /* AppDelegate.swift */; };
 		A39294CE2A52C91C00436A4F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39294CD2A52C91C00436A4F /* SceneDelegate.swift */; };
 		A39294D02A52C91C00436A4F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39294CF2A52C91C00436A4F /* ViewController.swift */; };
@@ -96,6 +98,8 @@
 		A34478EA2A7175D9002F1981 /* recordWillRunningPerson.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = recordWillRunningPerson.json; sourceTree = "<group>"; };
 		A34478EB2A7175D9002F1981 /* RecordWillTimeAdmin.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RecordWillTimeAdmin.json; sourceTree = "<group>"; };
 		A34478EC2A7175D9002F1981 /* RecordWillSleeping.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RecordWillSleeping.json; sourceTree = "<group>"; };
+		A34478F22A717679002F1981 /* LandingPageMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPageMainVC.swift; sourceTree = "<group>"; };
+		A34478F42A717777002F1981 /* FirstDetailLandingPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstDetailLandingPageVC.swift; sourceTree = "<group>"; };
 		A39294C82A52C91C00436A4F /* Ajou-Lifeteer-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ajou-Lifeteer-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A39294CB2A52C91C00436A4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A39294CD2A52C91C00436A4F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -592,6 +596,8 @@
 			isa = PBXGroup;
 			children = (
 				A392955E2A52D73F00436A4F /* .gitkeep */,
+				A34478F22A717679002F1981 /* LandingPageMainVC.swift */,
+				A34478F42A717777002F1981 /* FirstDetailLandingPageVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -846,6 +852,7 @@
 				A3CF55F42A5BCB7300D19F00 /* UserDefaultKeyList.swift in Sources */,
 				A3E4D3032A5BE90500C7611C /* ImageLiterals.swift in Sources */,
 				A3CF55B42A5BC1A700D19F00 /* UISwitch+.swift in Sources */,
+				A34478F32A717679002F1981 /* LandingPageMainVC.swift in Sources */,
 				A3CF55B02A5BC01200D19F00 /* UITableView+.swift in Sources */,
 				A3CF55F62A5BCB8A00D19F00 /* UserDefaultWrapper.swift in Sources */,
 				A3E4D3072A5BF04300C7611C /* MindSetHomeVC.swift in Sources */,
@@ -856,6 +863,7 @@
 				A3CF55AE2A5BBF2400D19F00 /* UITextField+.swift in Sources */,
 				A3CF55CE2A5BC97100D19F00 /* CancelBag.swift in Sources */,
 				A3CF55EE2A5BCB2F00D19F00 /* setStatusBarBackgroundColor.swift in Sources */,
+				A34478F52A717777002F1981 /* FirstDetailLandingPageVC.swift in Sources */,
 				A306671D2A5C1689006E7B9F /* CustomAlertVC.swift in Sources */,
 				A3CF55D42A5BC9F400D19F00 /* addToolBar.swift in Sources */,
 				A3CF55D22A5BC9CD00D19F00 /* Publisher+UIControl.swift in Sources */,
