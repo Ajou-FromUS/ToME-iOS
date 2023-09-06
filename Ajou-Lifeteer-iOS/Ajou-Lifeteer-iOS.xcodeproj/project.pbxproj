@@ -29,6 +29,9 @@
 		A34478FA2A7178FB002F1981 /* SecondDetailLandingPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34478F92A7178FB002F1981 /* SecondDetailLandingPageVC.swift */; };
 		A34478FC2A71790D002F1981 /* ThirdDetailLandingPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34478FB2A71790D002F1981 /* ThirdDetailLandingPageVC.swift */; };
 		A34478FE2A71794D002F1981 /* LastDetailLandingPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34478FD2A71794D002F1981 /* LastDetailLandingPageVC.swift */; };
+		A344EE012AA8E81100FD2AAA /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A344EE002AA8E81100FD2AAA /* Pretendard-SemiBold.otf */; };
+		A344EE032AA8E87700FD2AAA /* Coiny-Cyrillic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A344EE022AA8E87700FD2AAA /* Coiny-Cyrillic.ttf */; };
+		A344EE052AA8E94300FD2AAA /* YdestreetL.otf in Resources */ = {isa = PBXBuildFile; fileRef = A344EE042AA8E94300FD2AAA /* YdestreetL.otf */; };
 		A39294CC2A52C91C00436A4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39294CB2A52C91C00436A4F /* AppDelegate.swift */; };
 		A39294CE2A52C91C00436A4F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39294CD2A52C91C00436A4F /* SceneDelegate.swift */; };
 		A39294D02A52C91C00436A4F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39294CF2A52C91C00436A4F /* ViewController.swift */; };
@@ -108,6 +111,9 @@
 		A34478F92A7178FB002F1981 /* SecondDetailLandingPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondDetailLandingPageVC.swift; sourceTree = "<group>"; };
 		A34478FB2A71790D002F1981 /* ThirdDetailLandingPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdDetailLandingPageVC.swift; sourceTree = "<group>"; };
 		A34478FD2A71794D002F1981 /* LastDetailLandingPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastDetailLandingPageVC.swift; sourceTree = "<group>"; };
+		A344EE002AA8E81100FD2AAA /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
+		A344EE022AA8E87700FD2AAA /* Coiny-Cyrillic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Coiny-Cyrillic.ttf"; sourceTree = "<group>"; };
+		A344EE042AA8E94300FD2AAA /* YdestreetL.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = YdestreetL.otf; sourceTree = "<group>"; };
 		A39294C82A52C91C00436A4F /* Ajou-Lifeteer-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ajou-Lifeteer-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A39294CB2A52C91C00436A4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A39294CD2A52C91C00436A4F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -390,7 +396,10 @@
 				A34478DB2A69164A002F1981 /* GmarketSansLight.otf */,
 				A34478DD2A69164A002F1981 /* Pretendard-Bold.otf */,
 				A34478DC2A69164A002F1981 /* Pretendard-Medium.otf */,
+				A344EE002AA8E81100FD2AAA /* Pretendard-SemiBold.otf */,
 				A34478DA2A69164A002F1981 /* Pretendard-Regular.otf */,
+				A344EE022AA8E87700FD2AAA /* Coiny-Cyrillic.ttf */,
+				A344EE042AA8E94300FD2AAA /* YdestreetL.otf */,
 				A39295342A52D68300436A4F /* .gitkeep */,
 			);
 			path = Fonts;
@@ -813,13 +822,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A344EE012AA8E81100FD2AAA /* Pretendard-SemiBold.otf in Resources */,
 				A34478F02A7175D9002F1981 /* RecordWillTimeAdmin.json in Resources */,
 				A34478F12A7175D9002F1981 /* RecordWillSleeping.json in Resources */,
 				A30667152A5C0178006E7B9F /* Assets.xcassets in Resources */,
 				A34478E12A69164A002F1981 /* Pretendard-Bold.otf in Resources */,
+				A344EE052AA8E94300FD2AAA /* YdestreetL.otf in Resources */,
 				A34478EE2A7175D9002F1981 /* LandingMain.json in Resources */,
 				A34478EF2A7175D9002F1981 /* recordWillRunningPerson.json in Resources */,
 				A34478DF2A69164A002F1981 /* GmarketSansLight.otf in Resources */,
+				A344EE032AA8E87700FD2AAA /* Coiny-Cyrillic.ttf in Resources */,
 				A34478DE2A69164A002F1981 /* Pretendard-Regular.otf in Resources */,
 				A34478E02A69164A002F1981 /* Pretendard-Medium.otf in Resources */,
 				A34478ED2A7175D9002F1981 /* LandingDontHurry.json in Resources */,
