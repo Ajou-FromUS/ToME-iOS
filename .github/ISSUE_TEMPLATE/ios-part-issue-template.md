@@ -1,6 +1,6 @@
 ---
 name: iOS Part Issue Template
-about: "\U0001F34E Lifeteer-iOS 이슈 템플릿입니다."
+about: "\U0001F34E ToME-iOS 이슈 템플릿입니다."
 title: "[Feat] 작업 내용"
 labels: ''
 assignees: ''
