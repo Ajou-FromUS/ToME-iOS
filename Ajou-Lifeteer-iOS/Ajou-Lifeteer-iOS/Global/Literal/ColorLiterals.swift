@@ -8,36 +8,68 @@
 import UIKit
 
 extension UIColor {
-    static var mainGreen: UIColor {
-        return UIColor(hex: "#62AA7F")
+    static var mainColor: UIColor {
+        return UIColor(hex: "#5072EE")
     }
     
-    static var errorRed: UIColor {
-        return UIColor(hex: "#BA1A1A")
+    static var sub1: UIColor {
+        return UIColor(hex: "#ABBDFF")
     }
     
-    static var mainBackground: UIColor {
-        return UIColor(hex: "#FFFFFF")
+    static var sub2: UIColor {
+        return UIColor(hex: "#E8EDFF")
     }
     
-    static var textbox: UIColor {
-        return UIColor(hex: "#F6F6F6")
+    static var snackBackground: UIColor {
+        return UIColor(hex: "#FFF1DA")
     }
     
-    static var mainBlack: UIColor {
+    static var snackStroke: UIColor {
+        return UIColor(hex: "#FFC09C")
+    }
+    
+    static var snackText: UIColor {
+        return UIColor(hex: "#FF6454")
+    }
+    
+    static var disabled1: UIColor {
+        return UIColor(hex: "#D9D9D9")
+    }
+    
+    static var disabled2: UIColor {
+        return UIColor(hex: "#F1F1F1")
+    }
+    
+    static var font1: UIColor {
         return UIColor(hex: "#232323")
     }
     
-    static var disabledFill: UIColor {
-        return UIColor(hex: "#E3E3E3")
+    static var font2: UIColor {
+        return UIColor(hex: "#686868")
     }
     
-    static var disabledText: UIColor {
-        return UIColor(hex: "#A1A1A1")
+    static var font3: UIColor {
+        return UIColor(hex: "#A9A9A9")
     }
     
-    static var kakaoTalkYellow: UIColor {
+    static var font4: UIColor {
+        return UIColor(hex: "#FFFFFF")
+    }
+    
+    static var back1: UIColor {
+        return UIColor(hex: "#FCFCFC")
+    }
+    
+    static var alarmRed: UIColor {
+        return UIColor(hex: "#FF5151")
+    }
+    
+    static var kakaoYellow: UIColor {
         return UIColor(hex: "#FFE500")
+    }
+    
+    static var appleBlack: UIColor {
+        return UIColor(hex: "#232323")
     }
 }
 
@@ -58,4 +90,3 @@ extension UIColor {
                   blue: CGFloat(rgbValue & 0x0000FF) / 255.0, alpha: alpha)
     }
 }
-
