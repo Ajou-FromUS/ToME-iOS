@@ -7,7 +7,10 @@
 		<string>Pretendard-Bold.otf</string>
 		<string>Pretendard-Medium.otf</string>
 		<string>Pretendard-Regular.otf</string>
+		<string>Pretendard-SemiBold.otf</string>
 		<string>GmarketSansLight.otf</string>
+		<string>Coiny-Cyrillic.ttf</string>
+		<string>YdestreetL.otf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>

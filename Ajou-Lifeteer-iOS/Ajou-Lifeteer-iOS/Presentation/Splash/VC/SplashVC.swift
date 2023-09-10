@@ -15,21 +15,21 @@ final class SplashVC: UIViewController {
     // MARK: - UI Components
     
     private let logoImageView = UIImageView().then {
-        $0.image = ImageLiterals.icMindsetBI
+        $0.image = ImageLiterals.archiveIcStart
     }
     
     private let subTitleLabel = UILabel().then {
         $0.alpha = 0
         $0.text = "마음을 정리하는 시간,"
-        $0.font = .b1
-        $0.textColor = .mainGreen
+        $0.font = .body1
+        $0.textColor = .mainColor
     }
     
     private let titleLabel = UILabel().then {
         $0.alpha = 0
         $0.text = "마음짓기"
-        $0.font = .h0
-        $0.textColor = .mainGreen
+        $0.font = .body1
+        $0.textColor = .mainColor
     }
     
     // MARK: - View Life Cycle

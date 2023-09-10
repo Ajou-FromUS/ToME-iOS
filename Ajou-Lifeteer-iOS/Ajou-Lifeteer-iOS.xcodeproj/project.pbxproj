@@ -18,17 +18,15 @@
 		A34478E32A698554002F1981 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34478E22A698554002F1981 /* SplashVC.swift */; };
 		A34478E52A698D82002F1981 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34478E42A698D82002F1981 /* SignInVC.swift */; };
 		A34478E72A698DBF002F1981 /* SignInKakaoDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34478E62A698DBF002F1981 /* SignInKakaoDetailVC.swift */; };
-		A34478ED2A7175D9002F1981 /* LandingDontHurry.json in Resources */ = {isa = PBXBuildFile; fileRef = A34478E82A7175D9002F1981 /* LandingDontHurry.json */; };
-		A34478EE2A7175D9002F1981 /* LandingMain.json in Resources */ = {isa = PBXBuildFile; fileRef = A34478E92A7175D9002F1981 /* LandingMain.json */; };
-		A34478EF2A7175D9002F1981 /* recordWillRunningPerson.json in Resources */ = {isa = PBXBuildFile; fileRef = A34478EA2A7175D9002F1981 /* recordWillRunningPerson.json */; };
-		A34478F02A7175D9002F1981 /* RecordWillTimeAdmin.json in Resources */ = {isa = PBXBuildFile; fileRef = A34478EB2A7175D9002F1981 /* RecordWillTimeAdmin.json */; };
-		A34478F12A7175D9002F1981 /* RecordWillSleeping.json in Resources */ = {isa = PBXBuildFile; fileRef = A34478EC2A7175D9002F1981 /* RecordWillSleeping.json */; };
 		A34478F32A717679002F1981 /* LandingPageMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34478F22A717679002F1981 /* LandingPageMainVC.swift */; };
 		A34478F52A717777002F1981 /* FirstDetailLandingPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34478F42A717777002F1981 /* FirstDetailLandingPageVC.swift */; };
 		A34478F82A7178B7002F1981 /* DetailLandingPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34478F72A7178B7002F1981 /* DetailLandingPageVC.swift */; };
 		A34478FA2A7178FB002F1981 /* SecondDetailLandingPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34478F92A7178FB002F1981 /* SecondDetailLandingPageVC.swift */; };
 		A34478FC2A71790D002F1981 /* ThirdDetailLandingPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34478FB2A71790D002F1981 /* ThirdDetailLandingPageVC.swift */; };
 		A34478FE2A71794D002F1981 /* LastDetailLandingPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34478FD2A71794D002F1981 /* LastDetailLandingPageVC.swift */; };
+		A344EE012AA8E81100FD2AAA /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A344EE002AA8E81100FD2AAA /* Pretendard-SemiBold.otf */; };
+		A344EE032AA8E87700FD2AAA /* Coiny-Cyrillic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A344EE022AA8E87700FD2AAA /* Coiny-Cyrillic.ttf */; };
+		A344EE052AA8E94300FD2AAA /* YdestreetL.otf in Resources */ = {isa = PBXBuildFile; fileRef = A344EE042AA8E94300FD2AAA /* YdestreetL.otf */; };
 		A39294CC2A52C91C00436A4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39294CB2A52C91C00436A4F /* AppDelegate.swift */; };
 		A39294CE2A52C91C00436A4F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39294CD2A52C91C00436A4F /* SceneDelegate.swift */; };
 		A39294D02A52C91C00436A4F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39294CF2A52C91C00436A4F /* ViewController.swift */; };
@@ -97,17 +95,15 @@
 		A34478E22A698554002F1981 /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
 		A34478E42A698D82002F1981 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		A34478E62A698DBF002F1981 /* SignInKakaoDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInKakaoDetailVC.swift; sourceTree = "<group>"; };
-		A34478E82A7175D9002F1981 /* LandingDontHurry.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LandingDontHurry.json; sourceTree = "<group>"; };
-		A34478E92A7175D9002F1981 /* LandingMain.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LandingMain.json; sourceTree = "<group>"; };
-		A34478EA2A7175D9002F1981 /* recordWillRunningPerson.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = recordWillRunningPerson.json; sourceTree = "<group>"; };
-		A34478EB2A7175D9002F1981 /* RecordWillTimeAdmin.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RecordWillTimeAdmin.json; sourceTree = "<group>"; };
-		A34478EC2A7175D9002F1981 /* RecordWillSleeping.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RecordWillSleeping.json; sourceTree = "<group>"; };
 		A34478F22A717679002F1981 /* LandingPageMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPageMainVC.swift; sourceTree = "<group>"; };
 		A34478F42A717777002F1981 /* FirstDetailLandingPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstDetailLandingPageVC.swift; sourceTree = "<group>"; };
 		A34478F72A7178B7002F1981 /* DetailLandingPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailLandingPageVC.swift; sourceTree = "<group>"; };
 		A34478F92A7178FB002F1981 /* SecondDetailLandingPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondDetailLandingPageVC.swift; sourceTree = "<group>"; };
 		A34478FB2A71790D002F1981 /* ThirdDetailLandingPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdDetailLandingPageVC.swift; sourceTree = "<group>"; };
 		A34478FD2A71794D002F1981 /* LastDetailLandingPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastDetailLandingPageVC.swift; sourceTree = "<group>"; };
+		A344EE002AA8E81100FD2AAA /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
+		A344EE022AA8E87700FD2AAA /* Coiny-Cyrillic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Coiny-Cyrillic.ttf"; sourceTree = "<group>"; };
+		A344EE042AA8E94300FD2AAA /* YdestreetL.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = YdestreetL.otf; sourceTree = "<group>"; };
 		A39294C82A52C91C00436A4F /* Ajou-Lifeteer-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ajou-Lifeteer-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A39294CB2A52C91C00436A4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A39294CD2A52C91C00436A4F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -374,11 +370,6 @@
 		A39294FF2A52D14100436A4F /* Lottie */ = {
 			isa = PBXGroup;
 			children = (
-				A34478E82A7175D9002F1981 /* LandingDontHurry.json */,
-				A34478E92A7175D9002F1981 /* LandingMain.json */,
-				A34478EA2A7175D9002F1981 /* recordWillRunningPerson.json */,
-				A34478EC2A7175D9002F1981 /* RecordWillSleeping.json */,
-				A34478EB2A7175D9002F1981 /* RecordWillTimeAdmin.json */,
 				A39295362A52D68F00436A4F /* .gitkeep */,
 			);
 			path = Lottie;
@@ -390,7 +381,10 @@
 				A34478DB2A69164A002F1981 /* GmarketSansLight.otf */,
 				A34478DD2A69164A002F1981 /* Pretendard-Bold.otf */,
 				A34478DC2A69164A002F1981 /* Pretendard-Medium.otf */,
+				A344EE002AA8E81100FD2AAA /* Pretendard-SemiBold.otf */,
 				A34478DA2A69164A002F1981 /* Pretendard-Regular.otf */,
+				A344EE022AA8E87700FD2AAA /* Coiny-Cyrillic.ttf */,
+				A344EE042AA8E94300FD2AAA /* YdestreetL.otf */,
 				A39295342A52D68300436A4F /* .gitkeep */,
 			);
 			path = Fonts;
@@ -813,16 +807,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A34478F02A7175D9002F1981 /* RecordWillTimeAdmin.json in Resources */,
-				A34478F12A7175D9002F1981 /* RecordWillSleeping.json in Resources */,
+				A344EE012AA8E81100FD2AAA /* Pretendard-SemiBold.otf in Resources */,
 				A30667152A5C0178006E7B9F /* Assets.xcassets in Resources */,
 				A34478E12A69164A002F1981 /* Pretendard-Bold.otf in Resources */,
-				A34478EE2A7175D9002F1981 /* LandingMain.json in Resources */,
-				A34478EF2A7175D9002F1981 /* recordWillRunningPerson.json in Resources */,
+				A344EE052AA8E94300FD2AAA /* YdestreetL.otf in Resources */,
 				A34478DF2A69164A002F1981 /* GmarketSansLight.otf in Resources */,
+				A344EE032AA8E87700FD2AAA /* Coiny-Cyrillic.ttf in Resources */,
 				A34478DE2A69164A002F1981 /* Pretendard-Regular.otf in Resources */,
 				A34478E02A69164A002F1981 /* Pretendard-Medium.otf in Resources */,
-				A34478ED2A7175D9002F1981 /* LandingDontHurry.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

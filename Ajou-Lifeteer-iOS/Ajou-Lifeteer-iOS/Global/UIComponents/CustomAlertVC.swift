@@ -28,15 +28,15 @@ final class CustomAlertVC: UIViewController {
     }
     
     private let titleLabel = UILabel().then {
-        $0.font = .h5
-        $0.textColor = .mainBlack
+        $0.font = .body1
+        $0.textColor = .appleBlack
         $0.numberOfLines = 0
         $0.textAlignment = .center
     }
     
     private let descriptionLabel = UILabel().then {
-        $0.font = .h7
-        $0.textColor = .disabledText
+        $0.font = .body2
+        $0.textColor = .disabled1
         $0.numberOfLines = 0
         $0.textAlignment = .center
     }
@@ -46,7 +46,7 @@ final class CustomAlertVC: UIViewController {
     private lazy var borderWithoutBGCButton = CustomButton(title: String(), type: .borderWithoutBGC)
     
     private let quitButton = UIImageView().then {
-        $0.image = ImageLiterals.icX
+        $0.image = ImageLiterals.diaryImgAlbum
     }
     
     // MARK: - initialization
@@ -102,7 +102,7 @@ extension CustomAlertVC {
 
 extension CustomAlertVC {
     private func setUI() {
-        view.backgroundColor = .mainBlack.withAlphaComponent(0.8)
+        view.backgroundColor = .appleBlack.withAlphaComponent(0.8)
         containerView.backgroundColor = .white
     }
     

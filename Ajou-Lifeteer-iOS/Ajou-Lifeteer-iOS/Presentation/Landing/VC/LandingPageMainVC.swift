@@ -18,7 +18,7 @@ final class LandingPageMainVC: UIViewController {
     private let titleLabel = UILabel().then {
         $0.text = "타인에게 나는, \n나에게 타인은 \n어떤 존재였나요?"
         $0.numberOfLines = 3
-        let attrString = NSMutableAttributedString(string: $0.text!, attributes: [.font: UIFont.landingPageTitleFont, .foregroundColor: UIColor.mainBlack])
+        let attrString = NSMutableAttributedString(string: $0.text!, attributes: [.font: UIFont.body1, .foregroundColor: UIColor.appleBlack])
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineSpacing = 12
         attrString.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: NSMakeRange(0, attrString.length))

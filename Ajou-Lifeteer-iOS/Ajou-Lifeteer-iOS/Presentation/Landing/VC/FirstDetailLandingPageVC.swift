@@ -16,14 +16,14 @@ final class FirstDetailLandingPageVC: UIViewController {
     
     private let titleLabel = UILabel().then {
         $0.text = "마음짓기"
-        $0.textColor = .mainBlack
-        $0.font = .h0
+        $0.textColor = .appleBlack
+        $0.font = .body1
     }
     
     private let subTitleLabel = UILabel().then {
         $0.text = "회고록, 너무 어렵게 느껴지시나요?\n 어렵지 않게 백문백답 형식으로 작성해보아요."
         $0.numberOfLines = 2
-        let attrString = NSMutableAttributedString(string: $0.text!, attributes: [.font: UIFont.b2, .foregroundColor: UIColor.disabledText])
+        let attrString = NSMutableAttributedString(string: $0.text!, attributes: [.font: UIFont.body1, .foregroundColor: UIColor.disabled1])
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.alignment = .center
         paragraphStyle.lineSpacing = 7
@@ -32,7 +32,7 @@ final class FirstDetailLandingPageVC: UIViewController {
     }
 
     private let landingPageImageView = UIImageView().then {
-        $0.image = ImageLiterals.imgLandingPage1
+        $0.image = ImageLiterals.introImgCalender
     }
     
     // MARK: - View Life Cycle

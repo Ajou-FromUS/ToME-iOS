@@ -11,23 +11,21 @@ final class TabBarController: UITabBarController {
     
     // MARK: - Properties
     
-    private var upperLineView: UIView!
-    private let spacing: CGFloat = 15
+    let titleSpacing: UIOffset = UIOffset(horizontal: 0, vertical: -3)
     
     // MARK: - View Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setDelegate()
         setUI()
         setTabBarControllers()
-        setUpperLine()
+
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
-        tabBar.frame.size.height = 92
+        tabBar.frame.size.height = 100
         tabBar.frame.origin.y = view.frame.height - 92
     }
 }
@@ -35,52 +33,45 @@ final class TabBarController: UITabBarController {
 // MARK: - Methods
 
 extension TabBarController {
-    private func setDelegate() {
-        self.delegate = self
-    }
     
     private func setUI() {
-        tabBar.backgroundColor = .mainBackground
-        tabBar.unselectedItemTintColor = .disabledText
-        tabBar.tintColor = .mainGreen
+        let appearance = UITabBarItem.appearance()
+        let attributes: [NSAttributedString.Key: Any] = [
+            NSAttributedString.Key.font: UIFont.tabbar,
+            NSAttributedString.Key.foregroundColor: UIColor.font1
+        ]
+        appearance.setTitleTextAttributes(attributes, for: .normal)
+        
+        tabBar.backgroundColor = .font4
+        tabBar.layer.cornerRadius = 15
+        tabBar.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        tabBar.unselectedItemTintColor = .disabled1
     }
     
     private func setTabBarControllers() {
-        let mindSetHomeNVC = templateNavigationController(title: "마음짓기",
-                                                          unselectedImage: ImageLiterals.icMindset,
-                                                          selectedImage: ImageLiterals.icMindsetFill,
+        let mindSetHomeNVC = templateNavigationController(title: "홈",
+                                                          unselectedImage: ImageLiterals.homeIcHome.withRenderingMode(.alwaysOriginal),
+                                                          selectedImage: ImageLiterals.homeIcHomeFill.withRenderingMode(.alwaysOriginal),
                                                           rootViewController: MindSetHomeVC())
-        let diaryMainNVC = templateNavigationController(title: "일기",
-                                                        unselectedImage: ImageLiterals.icDiary,
-                                                        selectedImage: ImageLiterals.icDiaryFill,
+        let diaryMainNVC = templateNavigationController(title: "아카이브",
+                                                        unselectedImage: ImageLiterals.homeIcArchive.withRenderingMode(.alwaysOriginal),
+                                                        selectedImage: ImageLiterals.homeIcArchiveFill.withRenderingMode(.alwaysOriginal),
                                                         rootViewController: DiaryMainVC())
-        let recordedWillMainNVC = templateNavigationController(title: "음성유언",
-                                                               unselectedImage: ImageLiterals.icRecordedWill,
-                                                               selectedImage: ImageLiterals.icRecordedWillFill,
+        let recordedWillMainNVC = templateNavigationController(title: "일기",
+                                                               unselectedImage: ImageLiterals.homeIcDiary.withRenderingMode(.alwaysOriginal),
+                                                               selectedImage: ImageLiterals.homeIcDiaryFill.withRenderingMode(.alwaysOriginal),
                                                                rootViewController: RecordedWillMainVC())
-        let mypageMainNVC = templateNavigationController(title: "마이페이지",
-                                                             unselectedImage: ImageLiterals.icMypage,
-                                                             selectedImage: ImageLiterals.icMypageFill,
+        let mypageMainNVC = templateNavigationController(title: "ToME",
+                                                         unselectedImage: ImageLiterals.homeIcConversation.withRenderingMode(.alwaysOriginal),
+                                                         selectedImage: ImageLiterals.homeIcConversationFill.withRenderingMode(.alwaysOriginal),
                                                              rootViewController: MypageMainVC())
-
+        
+        /// 탭바 아이템과 타이틀 간의 간격 조정
+        for tabBarInfo in [mindSetHomeNVC, diaryMainNVC, recordedWillMainNVC, mypageMainNVC] {
+            tabBarInfo.tabBarItem.titlePositionAdjustment = titleSpacing
+        }
+        
         viewControllers = [mindSetHomeNVC, diaryMainNVC, recordedWillMainNVC, mypageMainNVC]
-    }
-    
-    private func setUpperLine() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-            self.addTabBarIndicatorView(index: 0, isFirstTime: true)
-        }
-    }
-    
-    /// Add tabbar item indicator upper line
-    private func addTabBarIndicatorView(index: Int, isFirstTime: Bool = false) {
-        guard let tabView = tabBar.items?[index].value(forKey: "view") as? UIView else { return }
-        if !isFirstTime {
-            upperLineView.removeFromSuperview()
-        }
-        upperLineView = UIView(frame: CGRect(x: tabView.frame.minX + spacing, y: tabView.frame.minY + 0.1, width: tabView.frame.size.width - spacing * 2, height: 2))
-        upperLineView.backgroundColor = .mainGreen
-        tabBar.addSubview(upperLineView)
     }
     
     private func templateNavigationController(title: String, unselectedImage: UIImage?, selectedImage: UIImage?, rootViewController: UIViewController) -> UINavigationController {
@@ -90,13 +81,5 @@ extension TabBarController {
         nav.tabBarItem.selectedImage = selectedImage
         nav.navigationBar.isHidden = true
         return nav
-    }
-}
-
-// MARK: - UITabBarControllerDelegate
-
-extension TabBarController: UITabBarControllerDelegate {
-    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
-        addTabBarIndicatorView(index: self.selectedIndex)
     }
 }

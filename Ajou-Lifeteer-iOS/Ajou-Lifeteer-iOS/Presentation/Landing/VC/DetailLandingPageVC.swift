@@ -63,8 +63,8 @@ extension DetailLandingPageVC {
         pageControl = UIPageControl.appearance()
         pageControl.numberOfPages = pageDataViewControllers.count
         pageControl.currentPage = 0
-        pageControl.pageIndicatorTintColor = .disabledFill
-        pageControl.currentPageIndicatorTintColor = .mainGreen
+        pageControl.pageIndicatorTintColor = .disabled1
+        pageControl.currentPageIndicatorTintColor = .mainColor
         pageControl.backgroundColor = .clear
         pageControl.backgroundStyle = .minimal
         

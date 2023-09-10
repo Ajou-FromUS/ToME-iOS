@@ -17,12 +17,12 @@ final class SignInKaKaoDetailVC: UIViewController {
     // MARK: - UI Components
     
     private lazy var kakaoSimpleLoginButton = CustomButton(title: "카카오톡으로 간편 로그인", type: .fillWithGreen).then {
-        $0.setColor(bgColor: UIColor(hex: "FEE600"), disableColor: .disabledFill, titleColor: .mainBlack)
+        $0.setColor(bgColor: UIColor(hex: "FEE600"), disableColor: .disabled1, titleColor: .appleBlack)
     }
         
     private let kakaoOtherAccountLoginButton = UIButton(type: .system).then {
         $0.setTitle("다른 카카오 계정으로 로그인", for: .normal)
-        $0.titleLabel?.font = .h6
+        $0.titleLabel?.font = .body1
         $0.setTitleColor(.white, for: .normal)
         $0.setBackgroundColor(.clear, for: .normal)
         $0.layer.cornerRadius = 7
@@ -31,14 +31,14 @@ final class SignInKaKaoDetailVC: UIViewController {
     }
     
     private lazy var closeButton = UIButton(type: .system).then {
-        $0.setImage(ImageLiterals.icKakaoClose, for: .normal)
+        $0.setImage(ImageLiterals.diaryImgAlbum, for: .normal)
         $0.tintColor = UIColor.white
         $0.addTarget(self, action: #selector(touchUpCloseImageView), for: .touchUpInside)
     }
     
     private let loginLabel = UILabel().then {
         $0.text = "Login"
-        $0.font = .hLogin
+        $0.font = .body1
         $0.textColor = .white
     }
     
