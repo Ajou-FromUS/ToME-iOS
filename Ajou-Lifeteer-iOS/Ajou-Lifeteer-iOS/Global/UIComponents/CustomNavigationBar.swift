@@ -37,7 +37,10 @@ final class CustomNavigationBar: UIView {
     private let backButton = UIButton()
     private let mindSetBIImageView = UIImageView()
     
-    private let logoLabel = UILabel()
+    private let logoLabel = UILabel().then {
+        $0.text = "ToME"
+    }
+    
     private let missionButton = UIButton()
     private let mypageButton = UIButton()
     
@@ -65,7 +68,20 @@ extension CustomNavigationBar {
     
     @discardableResult
     func setUserName(_ name: String) -> Self {
-        self.centerTitleLabel.text = "\(name)님,\n어서오세요!"
+        self.centerTitleLabel.numberOfLines = 0
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineSpacing = 6
+
+        let attributedText = NSAttributedString(
+            string: "\(name)님,\n어서오세요!",
+            attributes: [
+                NSAttributedString.Key.paragraphStyle: paragraphStyle,
+                NSAttributedString.Key.font: UIFont.title1,
+                NSAttributedString.Key.foregroundColor: UIColor.font1
+            ]
+        )
+        
+        self.centerTitleLabel.attributedText = attributedText
         return self
     }
     
@@ -244,7 +260,7 @@ extension CustomNavigationBar {
         }
         
         logoLabel.snp.makeConstraints { make in
-            make.bottom.equalTo(centerTitleLabel.snp.top).offset(11)
+            make.bottom.equalTo(centerTitleLabel.snp.top).offset(-11)
             make.leading.equalTo(centerTitleLabel.snp.leading)
         }
         
@@ -255,8 +271,8 @@ extension CustomNavigationBar {
         }
         
         missionButton.snp.makeConstraints { make in
-            make.trailing.equalTo(mypageButton.snp.leading).inset(16)
-            make.bottom.equalTo(missionButton.snp.bottom)
+            make.trailing.equalTo(mypageButton.snp.leading).offset(-16)
+            make.bottom.equalTo(mypageButton.snp.bottom)
             make.width.height.equalTo(32)
         }
     }

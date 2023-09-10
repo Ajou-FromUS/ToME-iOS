@@ -14,12 +14,13 @@ final class HomeMainVC: UIViewController {
     
     // MARK: - UI Components
     
-    private lazy var naviBar = CustomNavigationBar(self, type: .home)
+    private lazy var naviBar = CustomNavigationBar(self, type: .home).setUserName("몽이누나")
     
     // MARK: - View Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tabBarController?.tabBar.isHidden = false
         setUI()
         setLayout()
     }
@@ -29,10 +30,16 @@ final class HomeMainVC: UIViewController {
 
 extension HomeMainVC {
     private func setUI() {
-        view.backgroundColor = .back1
+        view.backgroundColor = .blue
     }
     
     private func setLayout() {
-        view.addSubViews(
+        view.addSubviews(naviBar)
+        
+        naviBar.snp.makeConstraints { make in
+            make.top.equalToSuperview()
+            make.leading.trailing.equalTo(view.safeAreaLayoutGuide)
+            make.height.equalTo(179)
+        }
     }
 }
