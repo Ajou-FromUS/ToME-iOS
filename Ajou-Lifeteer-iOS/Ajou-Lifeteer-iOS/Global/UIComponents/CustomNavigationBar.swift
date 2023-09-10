@@ -70,7 +70,7 @@ extension CustomNavigationBar {
     func setUserName(_ name: String) -> Self {
         self.centerTitleLabel.numberOfLines = 0
         let paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.lineSpacing = 6
+        paragraphStyle.lineSpacing = 5
 
         let attributedText = NSAttributedString(
             string: "\(name)님,\n어서오세요!",

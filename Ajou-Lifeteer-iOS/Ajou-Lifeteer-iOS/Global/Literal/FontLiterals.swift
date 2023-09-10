@@ -68,6 +68,10 @@ extension UIFont {
         return UIFont.font(.pretendardMedium, ofSize: 12)
     }
     
+    @nonobjc class var snack: UIFont {
+        return UIFont.font(.pretendardMedium, ofSize: 10)
+    }
+    
     @nonobjc class var logo: UIFont {
         return UIFont.font(.yDestreetL, ofSize: 12)
     }
