@@ -71,6 +71,10 @@ extension UIColor {
     static var appleBlack: UIColor {
         return UIColor(hex: "#232323")
     }
+    
+    static var snack: UIColor {
+        return UIColor(hex: "#787878")
+    }
 }
 
 extension UIColor {

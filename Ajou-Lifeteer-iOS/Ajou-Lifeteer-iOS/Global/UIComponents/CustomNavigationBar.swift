@@ -12,11 +12,14 @@ import Then
 
 @frozen
 enum NaviType {
+    /// 나중에 필요없는 코드 삭제할 것!!!!!!
     case backButton // 뒤로가기 버튼
     case backButtonWithTitle // 뒤로가기 버튼 + 중앙 타이틀
     case buttonsWithTitle // 뒤로가기 버튼 + 중앙 타이틀
     case onlyBI // BI만 존재
     case onlyTitle // Title만 존재
+    
+    case home // 홈에 존재하는 네비바
 }
 
 final class CustomNavigationBar: UIView {
@@ -33,6 +36,13 @@ final class CustomNavigationBar: UIView {
     private let centerTitleLabel = UILabel()
     private let backButton = UIButton()
     private let mindSetBIImageView = UIImageView()
+    
+    private let logoLabel = UILabel().then {
+        $0.text = "ToME"
+    }
+    
+    private let missionButton = UIButton()
+    private let mypageButton = UIButton()
     
     // MARK: - initialization
     
@@ -54,6 +64,25 @@ final class CustomNavigationBar: UIView {
 extension CustomNavigationBar {
     private func setAddTarget() {
         self.backButton.addTarget(self, action: #selector(popToPreviousVC), for: .touchUpInside)
+    }
+    
+    @discardableResult
+    func setUserName(_ name: String) -> Self {
+        self.centerTitleLabel.numberOfLines = 0
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineSpacing = 5
+
+        let attributedText = NSAttributedString(
+            string: "\(name)님,\n어서오세요!",
+            attributes: [
+                NSAttributedString.Key.paragraphStyle: paragraphStyle,
+                NSAttributedString.Key.font: UIFont.title1,
+                NSAttributedString.Key.foregroundColor: UIColor.font1
+            ]
+        )
+        
+        self.centerTitleLabel.attributedText = attributedText
+        return self
     }
     
     @discardableResult
@@ -96,9 +125,24 @@ extension CustomNavigationBar {
         centerTitleLabel.isHidden = false
     }
     
+    private func setHomeUI() {
+        logoLabel.font = .logo
+        logoLabel.textColor = .font1
+        logoLabel.isHidden = false
+        
+        centerTitleLabel.font = .title1
+        centerTitleLabel.textColor = .font1
+        centerTitleLabel.textAlignment = .left
+        centerTitleLabel.isHidden = false
+        
+        missionButton.setImage(ImageLiterals.homeBtnMission, for: .normal)
+        mypageButton.setImage(ImageLiterals.homeBtnMypage, for: .normal)
+    }
+    
     private func setUI(_ type: NaviType) {
         self.naviType = type
         self.backgroundColor = .back1
+        self.layer.cornerRadius = 15
         
         switch type {
         case .backButton:
@@ -114,6 +158,9 @@ extension CustomNavigationBar {
             mindSetBIImageView.image = ImageLiterals.introIcCheck
         case .onlyTitle:
             setTitleUI()
+            
+        case .home:
+            setHomeUI()
         }
     }
     
@@ -129,6 +176,8 @@ extension CustomNavigationBar {
             setOnlyBILayout()
         case .onlyTitle:
             setOnlyTitleLayout()
+        case .home:
+            setHomeLayout()
         }
     }
     
@@ -199,6 +248,32 @@ extension CustomNavigationBar {
         centerTitleLabel.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.bottom.equalToSuperview().inset(12)
+        }
+    }
+    
+    private func setHomeLayout() {
+        self.addSubviews(logoLabel, centerTitleLabel, missionButton, mypageButton)
+        
+        centerTitleLabel.snp.makeConstraints { make in
+            make.bottom.equalToSuperview().inset(18)
+            make.leading.equalToSuperview().inset(27)
+        }
+        
+        logoLabel.snp.makeConstraints { make in
+            make.bottom.equalTo(centerTitleLabel.snp.top).offset(-11)
+            make.leading.equalTo(centerTitleLabel.snp.leading)
+        }
+        
+        mypageButton.snp.makeConstraints { make in
+            make.trailing.equalToSuperview().inset(27)
+            make.bottom.equalToSuperview().inset(54)
+            make.width.height.equalTo(32)
+        }
+        
+        missionButton.snp.makeConstraints { make in
+            make.trailing.equalTo(mypageButton.snp.leading).offset(-16)
+            make.bottom.equalTo(mypageButton.snp.bottom)
+            make.width.height.equalTo(32)
         }
     }
 }

@@ -49,10 +49,10 @@ extension TabBarController {
     }
     
     private func setTabBarControllers() {
-        let mindSetHomeNVC = templateNavigationController(title: "홈",
+        let homeMainNVC = templateNavigationController(title: "홈",
                                                           unselectedImage: ImageLiterals.homeIcHome.withRenderingMode(.alwaysOriginal),
                                                           selectedImage: ImageLiterals.homeIcHomeFill.withRenderingMode(.alwaysOriginal),
-                                                          rootViewController: MindSetHomeVC())
+                                                          rootViewController: HomeMainVC())
         let diaryMainNVC = templateNavigationController(title: "아카이브",
                                                         unselectedImage: ImageLiterals.homeIcArchive.withRenderingMode(.alwaysOriginal),
                                                         selectedImage: ImageLiterals.homeIcArchiveFill.withRenderingMode(.alwaysOriginal),
@@ -67,11 +67,11 @@ extension TabBarController {
                                                              rootViewController: MypageMainVC())
         
         /// 탭바 아이템과 타이틀 간의 간격 조정
-        for tabBarInfo in [mindSetHomeNVC, diaryMainNVC, recordedWillMainNVC, mypageMainNVC] {
+        for tabBarInfo in [homeMainNVC, diaryMainNVC, recordedWillMainNVC, mypageMainNVC] {
             tabBarInfo.tabBarItem.titlePositionAdjustment = titleSpacing
         }
         
-        viewControllers = [mindSetHomeNVC, diaryMainNVC, recordedWillMainNVC, mypageMainNVC]
+        viewControllers = [homeMainNVC, diaryMainNVC, recordedWillMainNVC, mypageMainNVC]
     }
     
     private func templateNavigationController(title: String, unselectedImage: UIImage?, selectedImage: UIImage?, rootViewController: UIViewController) -> UINavigationController {
