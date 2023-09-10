@@ -78,7 +78,7 @@
 		A3E4D3012A5BDB9200C7611C /* FontLiterals.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E4D3002A5BDB9200C7611C /* FontLiterals.swift */; };
 		A3E4D3032A5BE90500C7611C /* ImageLiterals.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E4D3022A5BE90500C7611C /* ImageLiterals.swift */; };
 		A3E4D3052A5BEEB200C7611C /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E4D3042A5BEEB200C7611C /* TabBarController.swift */; };
-		A3E4D3072A5BF04300C7611C /* MindSetHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E4D3062A5BF04300C7611C /* MindSetHomeVC.swift */; };
+		A3E4D3072A5BF04300C7611C /* HomeMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E4D3062A5BF04300C7611C /* HomeMainVC.swift */; };
 		A3E4D3092A5BF05E00C7611C /* DiaryMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E4D3082A5BF05E00C7611C /* DiaryMainVC.swift */; };
 		A3E4D30B2A5BF07F00C7611C /* RecordedWillMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E4D30A2A5BF07F00C7611C /* RecordedWillMainVC.swift */; };
 		A3E4D30D2A5BF09000C7611C /* MypageMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E4D30C2A5BF09000C7611C /* MypageMainVC.swift */; };
@@ -188,7 +188,7 @@
 		A3E4D3002A5BDB9200C7611C /* FontLiterals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontLiterals.swift; sourceTree = "<group>"; };
 		A3E4D3022A5BE90500C7611C /* ImageLiterals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLiterals.swift; sourceTree = "<group>"; };
 		A3E4D3042A5BEEB200C7611C /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
-		A3E4D3062A5BF04300C7611C /* MindSetHomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindSetHomeVC.swift; sourceTree = "<group>"; };
+		A3E4D3062A5BF04300C7611C /* HomeMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMainVC.swift; sourceTree = "<group>"; };
 		A3E4D3082A5BF05E00C7611C /* DiaryMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryMainVC.swift; sourceTree = "<group>"; };
 		A3E4D30A2A5BF07F00C7611C /* RecordedWillMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordedWillMainVC.swift; sourceTree = "<group>"; };
 		A3E4D30C2A5BF09000C7611C /* MypageMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageMainVC.swift; sourceTree = "<group>"; };
@@ -273,7 +273,7 @@
 				A39295152A52D2F700436A4F /* SignIn */,
 				A39295142A52D2F000436A4F /* Landing */,
 				A39295132A52D2ED00436A4F /* TabBar */,
-				A392950F2A52D2B200436A4F /* MindSet */,
+				A392950F2A52D2B200436A4F /* Home */,
 				A392950E2A52D2AC00436A4F /* RecordWill */,
 				A392950C2A52D29600436A4F /* Diary */,
 				A392950B2A52D28E00436A4F /* MyPage */,
@@ -514,13 +514,13 @@
 			path = RecordWill;
 			sourceTree = "<group>";
 		};
-		A392950F2A52D2B200436A4F /* MindSet */ = {
+		A392950F2A52D2B200436A4F /* Home */ = {
 			isa = PBXGroup;
 			children = (
 				A39295212A52D36C00436A4F /* Views */,
 				A392951F2A52D36100436A4F /* VC */,
 			);
-			path = MindSet;
+			path = Home;
 			sourceTree = "<group>";
 		};
 		A39295132A52D2ED00436A4F /* TabBar */ = {
@@ -620,7 +620,7 @@
 			isa = PBXGroup;
 			children = (
 				A39295642A52D75A00436A4F /* .gitkeep */,
-				A3E4D3062A5BF04300C7611C /* MindSetHomeVC.swift */,
+				A3E4D3062A5BF04300C7611C /* HomeMainVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -861,7 +861,7 @@
 				A34478F32A717679002F1981 /* LandingPageMainVC.swift in Sources */,
 				A3CF55B02A5BC01200D19F00 /* UITableView+.swift in Sources */,
 				A3CF55F62A5BCB8A00D19F00 /* UserDefaultWrapper.swift in Sources */,
-				A3E4D3072A5BF04300C7611C /* MindSetHomeVC.swift in Sources */,
+				A3E4D3072A5BF04300C7611C /* HomeMainVC.swift in Sources */,
 				A3CF55DC2A5BCA5C00D19F00 /* calculateStatusBarHeight.swift in Sources */,
 				A3CF55AC2A5BBF1000D19F00 /* UITextView+.swift in Sources */,
 				A34478E72A698DBF002F1981 /* SignInKakaoDetailVC.swift in Sources */,
