@@ -16,14 +16,14 @@ final class ThirdDetailLandingPageVC: UIViewController {
     
     private let titleLabel = UILabel().then {
         $0.text = "음성유언 시뮬레이션"
-        $0.textColor = .mainBlack
-        $0.font = .h0
+        $0.textColor = .mainColor
+        $0.font = .body1
     }
     
     private let subTitleLabel = UILabel().then {
         $0.text = "음성유언, 미리 연습하고 녹음해요.\n필수정보 하나하나 차근히 배워봐요."
         $0.numberOfLines = 2
-        let attrString = NSMutableAttributedString(string: $0.text!, attributes: [.font: UIFont.b2, .foregroundColor: UIColor.disabledText])
+        let attrString = NSMutableAttributedString(string: $0.text!, attributes: [.font: UIFont.body1, .foregroundColor: UIColor.disabled1])
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.alignment = .center
         paragraphStyle.lineSpacing = 7
@@ -32,7 +32,7 @@ final class ThirdDetailLandingPageVC: UIViewController {
     }
     
     private let landingPageImageView = UIImageView().then {
-        $0.image = ImageLiterals.imgLandingPage3
+        $0.image = ImageLiterals.diaryImgCalender
     }
 
     // MARK: - View Life Cycle

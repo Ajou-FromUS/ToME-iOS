@@ -13,7 +13,7 @@ import Then
 class ViewController: UIViewController {
     
     private let image =  UIImageView().then {
-        $0.image = ImageLiterals.icAddPhoto
+        $0.image = ImageLiterals.homeIcDiary
     }
 
     override func viewDidLoad() {

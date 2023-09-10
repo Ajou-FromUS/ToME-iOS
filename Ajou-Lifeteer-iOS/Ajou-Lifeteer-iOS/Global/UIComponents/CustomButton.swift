@@ -60,7 +60,7 @@ extension CustomButton {
         self.setAttributedTitle(
             NSAttributedString(
                 string: self.titleLabel?.text ?? "",
-                attributes: [.font: UIFont.h6, .foregroundColor: titleColor]),
+                attributes: [.font: UIFont.body1, .foregroundColor: titleColor]),
             for: .normal)
         
         return self
@@ -75,49 +75,49 @@ extension CustomButton {
         
         switch type {
         case .fillWithGreen:
-            self.setBackgroundColor(.mainGreen, for: .normal)
-            self.setBackgroundColor(.disabledFill, for: .disabled)
+            self.setBackgroundColor(.alarmRed, for: .normal)
+            self.setBackgroundColor(.appleBlack, for: .disabled)
             self.setAttributedTitle(
                 NSAttributedString(
                     string: title,
-                    attributes: [.font: UIFont.h6, .foregroundColor: UIColor.mainBackground]
+                    attributes: [.font: UIFont.body1, .foregroundColor: UIColor.alarmRed]
                 ),
                 for: .normal
             )
             self.setAttributedTitle(
                 NSAttributedString(
                     string: title,
-                    attributes: [.font: UIFont.h6, .foregroundColor: UIColor.disabledText]
+                    attributes: [.font: UIFont.body1, .foregroundColor: UIColor.disabled1]
                 ),
                 for: .disabled
             )
 
         case .borderWithoutBGC:
             self.layer.borderWidth = 1
-            self.layer.borderColor = UIColor.mainGreen.cgColor
+            self.layer.borderColor = UIColor.mainColor.cgColor
             self.setBackgroundColor(.clear, for: .normal)
-            self.setTitleColor(.mainGreen, for: .normal)
+            self.setTitleColor(.mainColor, for: .normal)
             self.setAttributedTitle(
                 NSAttributedString(
                     string: title,
-                    attributes: [.font: UIFont.h6, .foregroundColor: UIColor.mainGreen]
+                    attributes: [.font: UIFont.body1, .foregroundColor: UIColor.mainColor]
                 ),
                 for: .normal
             )
         case .selectWeather:
-            self.setBackgroundColor(.mainGreen, for: .normal)
-            self.setBackgroundColor(.disabledFill, for: .disabled)
+            self.setBackgroundColor(.mainColor, for: .normal)
+            self.setBackgroundColor(.disabled1, for: .disabled)
             self.setAttributedTitle(
                 NSAttributedString(
                     string: title,
-                    attributes: [.font: UIFont.b3, .foregroundColor: UIColor.mainBackground]
+                    attributes: [.font: UIFont.body1, .foregroundColor: UIColor.mainColor]
                 ),
                 for: .normal
             )
             self.setAttributedTitle(
                 NSAttributedString(
                     string: title,
-                    attributes: [.font: UIFont.b3, .foregroundColor: UIColor.disabledText]
+                    attributes: [.font: UIFont.body1, .foregroundColor: UIColor.disabled1]
                 ),
                 for: .disabled
             )

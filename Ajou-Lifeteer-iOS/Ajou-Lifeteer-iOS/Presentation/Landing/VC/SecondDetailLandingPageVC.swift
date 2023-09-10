@@ -16,14 +16,14 @@ final class SecondDetailLandingPageVC: UIViewController {
     
     private let titleLabel = UILabel().then {
         $0.text = "일기"
-        $0.textColor = .mainBlack
-        $0.font = .h0
+        $0.textColor = .appleBlack
+        $0.font = .body1
     }
     
     private let subTitleLabel = UILabel().then {
         $0.text = "오늘 하루는 어땠나요? 날씨, 감정,\n그리고 일상까지 쉽게 담아봐요."
         $0.numberOfLines = 2
-        let attrString = NSMutableAttributedString(string: $0.text!, attributes: [.font: UIFont.b2, .foregroundColor: UIColor.disabledText])
+        let attrString = NSMutableAttributedString(string: $0.text!, attributes: [.font: UIFont.body1, .foregroundColor: UIColor.disabled1])
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.alignment = .center
         paragraphStyle.lineSpacing = 7
@@ -32,7 +32,7 @@ final class SecondDetailLandingPageVC: UIViewController {
     }
 
     private let landingPageImageView = UIImageView().then {
-        $0.image = ImageLiterals.imgLandingPage2
+        $0.image = ImageLiterals.diaryImgAlbum
     }
     
     // MARK: - View Life Cycle

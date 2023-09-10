@@ -91,27 +91,27 @@ extension CustomNavigationBar {
 
 extension CustomNavigationBar {
     private func setTitleUI() {
-        centerTitleLabel.font = .b0
-        centerTitleLabel.textColor = .mainBlack
+        centerTitleLabel.font = .body1
+        centerTitleLabel.textColor = .mainColor
         centerTitleLabel.isHidden = false
     }
     
     private func setUI(_ type: NaviType) {
         self.naviType = type
-        self.backgroundColor = .mainBackground
+        self.backgroundColor = .back1
         
         switch type {
         case .backButton:
             backButton.isHidden = false
-            backButton.setImage(ImageLiterals.icBack, for: .normal)
+            backButton.setImage(ImageLiterals.introIcCheck, for: .normal)
         case .backButtonWithTitle:
             setTitleUI()
-            backButton.setImage(ImageLiterals.icBack, for: .normal)
+            backButton.setImage(ImageLiterals.introIcCheck, for: .normal)
         case .buttonsWithTitle:
             setTitleUI()
-            backButton.setImage(ImageLiterals.icBack, for: .normal)
+            backButton.setImage(ImageLiterals.introIcCheck, for: .normal)
         case .onlyBI:
-            mindSetBIImageView.image = ImageLiterals.icMindsetBI
+            mindSetBIImageView.image = ImageLiterals.introIcCheck
         case .onlyTitle:
             setTitleUI()
         }

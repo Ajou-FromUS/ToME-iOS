@@ -15,26 +15,26 @@ final class SignInVC: UIViewController {
     // MARK: - UI Components
     
     private let logoImageView = UIImageView().then {
-        $0.image = ImageLiterals.icMindsetBI
+        $0.image = ImageLiterals.diaryImgAlbum
     }
     
     private let subTitleLabel = UILabel().then {
         $0.text = "마음을 정리하는 시간,"
-        $0.font = .b1
-        $0.textColor = .mainGreen
+        $0.font = .body1
+        $0.textColor = .mainColor
     }
     
     private let titleLabel = UILabel().then {
         $0.text = "마음짓기"
-        $0.font = .h0
-        $0.textColor = .mainGreen
+        $0.font = .body1
+        $0.textColor = .mainColor
     }
     
     private let visitantButton = UIButton().then {
         let titleString = NSMutableAttributedString(string: "회원가입 없이 둘러보기")
         let attributes: [NSAttributedString.Key: Any] = [
-            .foregroundColor: UIColor.disabledText,
-            .font: UIFont.b2
+            .foregroundColor: UIColor.disabled1,
+            .font: UIFont.body1
         ]
         titleString.addAttributes(attributes, range: NSRange(location: 0, length: titleString.length))
         titleString.addAttribute(.underlineStyle,
@@ -44,11 +44,11 @@ final class SignInVC: UIViewController {
     }
 
     private lazy var kakaoLoginButton = CustomButton(title: "카카오톡으로 시작하기", type: .fillWithGreen).then {
-        $0.setColor(bgColor: UIColor(hex: "FEE600"), disableColor: .disabledFill, titleColor: .mainBlack)
+        $0.setColor(bgColor: UIColor(hex: "FEE600"), disableColor: .disabled1, titleColor: .mainColor)
     }
     
     private lazy var appleLoginButton = CustomButton(title: "Apple로 로그인", type: .fillWithGreen).then {
-        $0.setColor(bgColor: .mainBlack, disableColor: .disabledFill, titleColor: .white)
+        $0.setColor(bgColor: .mainColor, disableColor: .disabled1, titleColor: .white)
     }
     
     // MARK: - View Life Cycle
