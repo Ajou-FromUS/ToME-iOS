@@ -15,39 +15,38 @@ final class HomeMainVC: UIViewController {
     // MARK: - UI Components
     
     private lazy var naviBar = CustomNavigationBar(self, type: .home).setUserName("몽이누나")
+    
     private let levelContainerView = UIView().then {
         $0.layer.cornerRadius = 8
     }
+    
     private let levelLabel = UILabel().then {
         $0.text = "Lv. 응애"
         $0.font = .subTitle2
         $0.textColor = .font1
     }
+    
     private let levelIconLabel = UILabel().then {
         $0.text = "\u{1F37C}"
         $0.font = .subTitle2
     }
-    private lazy var levelProgressBar = UIProgressView(progressViewStyle: .bar).then {
-        $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.setProgress(0.3, animated: false)
-        $0.progressTintColor = .mainColor
-        $0.trackTintColor = .sub2
-        $0.layer.cornerRadius = 4
-        $0.clipsToBounds = true
-        $0.layer.sublayers![1].cornerRadius = 4
-        $0.subviews[1].clipsToBounds = true
-    }
+    
+    private lazy var levelProgressBar = CustomProgressView(progress: 0.3)
+    
     private let menuButton = UIButton().then {
         $0.setImage(ImageLiterals.homeIcMenu, for: .normal)
     }
+    
     private let snackLabel = UILabel().then {
         $0.text = "티오의 과자"
         $0.font = .snack
         $0.textColor = .snack
     }
+    
     private let snackImageView = UIImageView().then {
         $0.image = ImageLiterals.homeIcMenuSnack
     }
+    
     private let messageLabel = UILabel().then {
         $0.numberOfLines = 0
         let paragraphStyle = NSMutableParagraphStyle()
@@ -65,14 +64,18 @@ final class HomeMainVC: UIViewController {
         
         $0.attributedText = attributedText
     }
+    
     private let messageBubbleImageView = UIImageView().then {
         $0.image = ImageLiterals.diaryImgSpeachBubble
     }
+    
     private let characterImageView = UIImageView()
+    
     private let emojiBubbleLabel = UILabel().then {
         $0.text = "\u{1F618}"
         $0.font = .title1
     }
+    
     private let emojiBubbleImageView = UIImageView().then {
         $0.image = ImageLiterals.diaryImgEmoSpeachBubble
     }

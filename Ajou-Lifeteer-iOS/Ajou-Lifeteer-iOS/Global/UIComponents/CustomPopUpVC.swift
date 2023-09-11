@@ -33,7 +33,7 @@ final class CustomPopUpVC: UIViewController {
     
     init(title: String, type: popUpType) {
         super.init(nibName: nil, bundle: nil)
-        setLayout(type)
+        //setLayout(type)
     }
     
     required init?(coder: NSCoder) {
