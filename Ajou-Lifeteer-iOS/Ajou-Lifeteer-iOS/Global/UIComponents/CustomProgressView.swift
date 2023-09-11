@@ -7,9 +7,6 @@
 
 import UIKit
 
-import SnapKit
-import Then
-
 final class CustomProgressView: UIProgressView {
 
     // MARK: - Initialize
@@ -38,4 +35,3 @@ extension CustomProgressView {
         self.subviews[1].clipsToBounds = true
     }
 }
-
