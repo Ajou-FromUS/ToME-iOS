@@ -27,6 +27,7 @@
 		A344EE012AA8E81100FD2AAA /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A344EE002AA8E81100FD2AAA /* Pretendard-SemiBold.otf */; };
 		A344EE032AA8E87700FD2AAA /* Coiny-Cyrillic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A344EE022AA8E87700FD2AAA /* Coiny-Cyrillic.ttf */; };
 		A344EE052AA8E94300FD2AAA /* YdestreetL.otf in Resources */ = {isa = PBXBuildFile; fileRef = A344EE042AA8E94300FD2AAA /* YdestreetL.otf */; };
+		A36B36942AAF643E0008E9F2 /* CustomPopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36B36932AAF643E0008E9F2 /* CustomPopUpVC.swift */; };
 		A39294CC2A52C91C00436A4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39294CB2A52C91C00436A4F /* AppDelegate.swift */; };
 		A39294CE2A52C91C00436A4F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39294CD2A52C91C00436A4F /* SceneDelegate.swift */; };
 		A39294D02A52C91C00436A4F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39294CF2A52C91C00436A4F /* ViewController.swift */; };
@@ -104,6 +105,7 @@
 		A344EE002AA8E81100FD2AAA /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
 		A344EE022AA8E87700FD2AAA /* Coiny-Cyrillic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Coiny-Cyrillic.ttf"; sourceTree = "<group>"; };
 		A344EE042AA8E94300FD2AAA /* YdestreetL.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = YdestreetL.otf; sourceTree = "<group>"; };
+		A36B36932AAF643E0008E9F2 /* CustomPopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPopUpVC.swift; sourceTree = "<group>"; };
 		A39294C82A52C91C00436A4F /* Ajou-Lifeteer-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ajou-Lifeteer-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A39294CB2A52C91C00436A4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A39294CD2A52C91C00436A4F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -363,6 +365,7 @@
 				A30667162A5C070F006E7B9F /* CustomNavigationBar.swift */,
 				A30667182A5C0DFB006E7B9F /* CustomButton.swift */,
 				A306671C2A5C1689006E7B9F /* CustomAlertVC.swift */,
+				A36B36932AAF643E0008E9F2 /* CustomPopUpVC.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -896,6 +899,7 @@
 				A3CF55D62A5BCA0A00D19F00 /* adjusted+.swift in Sources */,
 				A3CF55BA2A5BC88D00D19F00 /* UIImage+.swift in Sources */,
 				A34478F82A7178B7002F1981 /* DetailLandingPageVC.swift in Sources */,
+				A36B36942AAF643E0008E9F2 /* CustomPopUpVC.swift in Sources */,
 				A3CF55B62A5BC86100D19F00 /* UIStackView+.swift in Sources */,
 				A3CF55F02A5BCB4400D19F00 /* setTextLineHeight.swift in Sources */,
 				A3CF55DA2A5BCA4400D19F00 /* calculatePastTime.swift in Sources */,
