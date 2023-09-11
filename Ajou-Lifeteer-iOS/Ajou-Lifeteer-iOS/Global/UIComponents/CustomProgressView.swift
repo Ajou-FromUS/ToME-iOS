@@ -26,7 +26,7 @@ final class CustomProgressView: UIProgressView {
 extension CustomProgressView {
     private func setUI(_ progress: Float) {
         self.translatesAutoresizingMaskIntoConstraints = false
-        self.setProgress(progress, animated: false)
+        self.setProgress(progress, animated: true)
         self.progressTintColor = .mainColor
         self.trackTintColor = .sub2
         self.layer.cornerRadius = 4

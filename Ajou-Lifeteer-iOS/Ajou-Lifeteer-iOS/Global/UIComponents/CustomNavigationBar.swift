@@ -64,6 +64,7 @@ final class CustomNavigationBar: UIView {
 extension CustomNavigationBar {
     private func setAddTarget() {
         self.backButton.addTarget(self, action: #selector(popToPreviousVC), for: .touchUpInside)
+        self.missionButton.addTarget(self, action: #selector(missionButtonDidTap), for: .touchUpInside)
     }
     
     @discardableResult
@@ -113,6 +114,12 @@ extension CustomNavigationBar {
     
     @objc private func backButtonDidTap() {
         self.backButtonClosure?()
+    }
+    
+    @objc private func missionButtonDidTap() {
+        let missionVC = CustomPopUpVC(type: .todaysMission)
+        missionVC.modalPresentationStyle = .overFullScreen
+        vc?.present(missionVC, animated: false)
     }
 }
 

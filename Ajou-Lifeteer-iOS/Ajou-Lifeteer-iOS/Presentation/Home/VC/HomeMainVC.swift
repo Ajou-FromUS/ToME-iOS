@@ -60,6 +60,15 @@ final class HomeMainVC: UIViewController {
         self.tabBarController?.tabBar.isHidden = false
         setUI()
         setLayout()
+        setAddTarget()
+    }
+}
+
+// MARK: - Methods
+
+extension HomeMainVC {
+    private func setAddTarget() {
+        
     }
 }
 
