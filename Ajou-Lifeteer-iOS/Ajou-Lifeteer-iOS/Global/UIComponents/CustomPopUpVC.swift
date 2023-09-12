@@ -23,6 +23,12 @@ final class CustomPopUpVC: UIViewController {
 
     // MARK: - UI Components
     
+    private let blurEffect = UIBlurEffect(style: .light)
+    
+    private lazy var visualEffectView = UIVisualEffectView(effect: blurEffect).then {
+        $0.frame = self.view.frame
+    }
+    
     private let containerView = UIView().then {
         $0.layer.cornerRadius = 10
         $0.layer.borderColor = UIColor.disabled1.cgColor
@@ -80,6 +86,13 @@ extension CustomPopUpVC {
     private func setAddTarget() {
         self.popUpCloseButton.addTarget(self, action: #selector(popUpCloseButtonDidTap), for: .touchUpInside)
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        if let touch = touches.first, touch.view == self.visualEffectView {
+            dismiss(animated: false)
+        }
+    }
 }
 
 // MARK: - @objc Function
@@ -96,11 +109,10 @@ extension CustomPopUpVC {
     private func setUI() {
         self.containerView.backgroundColor = .white
         self.characterImageView.backgroundColor = .mainColor
-        setBlurEffect()
     }
     
     private func setLayout(_ type: popUpType) {
-        view.addSubviews(containerView, popUpCloseButton)
+        view.addSubviews(visualEffectView, containerView, popUpCloseButton)
         
         containerView.snp.makeConstraints { make in
             make.centerX.centerY.equalToSuperview()
@@ -171,12 +183,5 @@ extension CustomPopUpVC {
             make.bottom.equalToSuperview().inset(17)
             make.height.equalTo(186)
         }
-    }
-    
-    private func setBlurEffect() {
-        let blurEffect = UIBlurEffect(style: .light)
-        let visualEffectView = UIVisualEffectView(effect: blurEffect)
-        visualEffectView.frame = view.frame
-        view.addSubview(visualEffectView)
     }
 }
