@@ -30,7 +30,7 @@ final class DetailLandingPageVC: UIViewController {
     
     private var pageControl = UIPageControl()
     
-    private let startMindSetButton = CustomButton(title: "마음짓기 시작하기", type: .fillWithGreen)
+    private let startMindSetButton = CustomButton(title: "마음짓기 시작하기", type: .fillWithBlue)
     
     // MARK: - View Life Cycle
     

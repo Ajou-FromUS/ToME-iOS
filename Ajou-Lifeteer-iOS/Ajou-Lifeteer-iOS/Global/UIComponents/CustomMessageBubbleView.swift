@@ -96,4 +96,3 @@ extension CustomMessageBubbleView {
         self.messageLabel.attributedText = attributedText
     }
 }
-

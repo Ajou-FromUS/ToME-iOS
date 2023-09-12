@@ -25,7 +25,7 @@ final class LandingPageMainVC: UIViewController {
         $0.attributedText = attrString
     }
     
-    private let searchIntoMindSetButton = CustomButton(title: "마음짓기 알아보기", type: .fillWithGreen)
+    private let searchIntoMindSetButton = CustomButton(title: "마음짓기 알아보기", type: .fillWithBlue)
     
     private let mainAnimationView: LottieAnimationView = .init(name: "LandingMain")
 

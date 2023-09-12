@@ -16,8 +16,10 @@ final class HomeMainVC: UIViewController {
     
     private lazy var naviBar = CustomNavigationBar(self, type: .home).setUserName("몽이누나")
     
-    private let levelContainerView = UIView().then {
+    private lazy var levelContainerView = UIView().then {
         $0.layer.cornerRadius = 8
+        let tap = UITapGestureRecognizer(target: self, action: #selector(touchUpLevelContainerView))
+        $0.addGestureRecognizer(tap)
     }
     
     private let levelLabel = UILabel().then {
@@ -64,10 +66,28 @@ final class HomeMainVC: UIViewController {
     }
 }
 
+// MARK: - @objc Function
+
+extension HomeMainVC {
+    @objc private func touchUpLevelContainerView() {
+        pushToCharacterLevelPopUpVC()
+    }
+}
 // MARK: - Methods
 
 extension HomeMainVC {
     private func setAddTarget() {
+
+    }
+    
+    private func pushToCharacterLevelPopUpVC() {
+        let characterLevelPopUpVC = CustomPopUpVC(type: .characterlevel,
+                                                  title: "티오의 레벨",
+                                                  subTitle: "미션을 열심히 수행하여 티오를 키워보세요!",
+                                                  level: nil,
+                                                  levelName: "응애")
+        characterLevelPopUpVC.modalPresentationStyle = .overFullScreen
+        self.present(characterLevelPopUpVC, animated: false)
         
     }
 }

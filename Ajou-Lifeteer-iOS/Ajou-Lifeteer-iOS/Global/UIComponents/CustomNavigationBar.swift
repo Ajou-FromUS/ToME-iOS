@@ -117,7 +117,11 @@ extension CustomNavigationBar {
     }
     
     @objc private func missionButtonDidTap() {
-        let missionVC = CustomPopUpVC(type: .todaysMission)
+        let missionVC = CustomPopUpVC(type: .todaysMission,
+                                      title: "오늘의 미션",
+                                      subTitle: "티오의 성장까지",
+                                      level: 300,
+                                      levelName: nil)
         missionVC.modalPresentationStyle = .overFullScreen
         vc?.present(missionVC, animated: false)
     }
