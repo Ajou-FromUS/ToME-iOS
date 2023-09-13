@@ -14,6 +14,7 @@ import Then
 enum BubbleType {
     case onlyMessage
     case emoji
+    case rectangular
 }
 
 final class CustomMessageBubbleView: UIView {
@@ -28,8 +29,17 @@ final class CustomMessageBubbleView: UIView {
         $0.image = ImageLiterals.diaryImgEmoSpeachBubble
     }
     
+    private let rectangularBubbleImageView = UIImageView().then {
+        $0.image = ImageLiterals.archiveImgMessage
+    }
+    
     private let emojiBubbleLabel = UILabel().then {
         $0.font = .title1
+    }
+    
+    private let rectangularBubbleLabel = UILabel().then {
+        $0.font = .title3
+        $0.textColor = .font1
     }
     
     private let messageLabel = UILabel()
@@ -74,6 +84,19 @@ extension CustomMessageBubbleView {
             
             emojiBubbleLabel.snp.makeConstraints { make in
                 make.centerX.centerY.equalToSuperview()
+            }
+        case .rectangular:
+            self.rectangularBubbleLabel.text = message
+            
+            self.addSubviews(rectangularBubbleImageView, rectangularBubbleLabel)
+            
+            rectangularBubbleImageView.snp.makeConstraints { make in
+                make.edges.equalToSuperview()
+            }
+            
+            rectangularBubbleLabel.snp.makeConstraints { make in
+                make.centerX.equalToSuperview()
+                make.centerY.equalToSuperview().offset(5)
             }
         }
     }
