@@ -7,23 +7,38 @@
 
 import UIKit
 
+import SnapKit
+import Then
+
 final class ArchiveMainVC: UIViewController {
 
+    // MARK: - UI Components
+    
+    private lazy var naviBar = CustomNavigationBar(self, type: .singleTitle).setTitle("아카이브")
+    
+    // MARK: - View Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUI()
+        setLayout()
+    }
+}
 
-        // Do any additional setup after loading the view.
+// MARK: - UI & Layout
+
+extension ArchiveMainVC {
+    private func setUI() {
+        view.backgroundColor = .black
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func setLayout() {
+        view.addSubviews(naviBar)
+        
+        naviBar.snp.makeConstraints { make in
+            make.top.equalToSuperview()
+            make.leading.trailing.equalTo(view.safeAreaLayoutGuide)
+            make.height.equalTo(142)
+        }
     }
-    */
-
 }
