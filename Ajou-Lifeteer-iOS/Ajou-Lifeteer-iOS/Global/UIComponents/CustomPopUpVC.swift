@@ -232,7 +232,6 @@ extension CustomPopUpVC {
             make.centerX.equalToSuperview()
             make.leading.trailing.equalToSuperview().inset(17)
             make.bottom.equalToSuperview().inset(17)
-            make.height.equalTo(186)
         }
     }
      
