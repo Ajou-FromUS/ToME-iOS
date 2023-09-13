@@ -20,6 +20,10 @@ final class ArchiveMainVC: UIViewController {
     
     private lazy var messageBubbleView = CustomMessageBubbleView(message: "나를\n돌아볼 시간...", type: .onlyMessage)
     
+    private lazy var rectangularMessageBubbleView = CustomMessageBubbleView(message: "오늘의 아카이브를 작성해볼까요?", type: .rectangular)
+    
+    private lazy var writeArchiveButton = CustomButton(title: "작성하러 가기", type: .edgeRound)
+    
     // MARK: - View Life Cycle
     
     override func viewDidLoad() {
@@ -38,7 +42,7 @@ extension ArchiveMainVC {
     }
     
     private func setLayout() {
-        view.addSubviews(naviBar, characterImageView, messageBubbleView)
+        view.addSubviews(naviBar, characterImageView, messageBubbleView, rectangularMessageBubbleView, writeArchiveButton)
         
         naviBar.snp.makeConstraints { make in
             make.top.equalToSuperview()
@@ -58,6 +62,18 @@ extension ArchiveMainVC {
             make.trailing.equalTo(characterImageView.snp.trailing).offset(76)
             make.width.equalTo(95)
             make.height.equalTo(50)
+        }
+        
+        rectangularMessageBubbleView.snp.makeConstraints { make in
+            make.top.equalTo(characterImageView.snp.bottom).offset(30)
+            make.leading.trailing.equalToSuperview().inset(27)
+            make.height.equalTo(84)
+        }
+        
+        writeArchiveButton.snp.makeConstraints { make in
+            make.top.equalTo(rectangularMessageBubbleView.snp.bottom).offset(32)
+            make.leading.trailing.equalToSuperview().inset(90)
+            make.height.equalTo(46)
         }
     }
 }
