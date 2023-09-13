@@ -85,7 +85,7 @@
 		A3E4D3052A5BEEB200C7611C /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E4D3042A5BEEB200C7611C /* TabBarController.swift */; };
 		A3E4D3072A5BF04300C7611C /* HomeMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E4D3062A5BF04300C7611C /* HomeMainVC.swift */; };
 		A3E4D3092A5BF05E00C7611C /* DiaryMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E4D3082A5BF05E00C7611C /* DiaryMainVC.swift */; };
-		A3E4D30B2A5BF07F00C7611C /* RecordedWillMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E4D30A2A5BF07F00C7611C /* RecordedWillMainVC.swift */; };
+		A3E4D30B2A5BF07F00C7611C /* ArchiveMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E4D30A2A5BF07F00C7611C /* ArchiveMainVC.swift */; };
 		A3E4D30D2A5BF09000C7611C /* MypageMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E4D30C2A5BF09000C7611C /* MypageMainVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -200,7 +200,7 @@
 		A3E4D3042A5BEEB200C7611C /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		A3E4D3062A5BF04300C7611C /* HomeMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMainVC.swift; sourceTree = "<group>"; };
 		A3E4D3082A5BF05E00C7611C /* DiaryMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryMainVC.swift; sourceTree = "<group>"; };
-		A3E4D30A2A5BF07F00C7611C /* RecordedWillMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordedWillMainVC.swift; sourceTree = "<group>"; };
+		A3E4D30A2A5BF07F00C7611C /* ArchiveMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveMainVC.swift; sourceTree = "<group>"; };
 		A3E4D30C2A5BF09000C7611C /* MypageMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageMainVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -652,7 +652,7 @@
 			isa = PBXGroup;
 			children = (
 				A392956A2A52D77800436A4F /* .gitkeep */,
-				A3E4D30A2A5BF07F00C7611C /* RecordedWillMainVC.swift */,
+				A3E4D30A2A5BF07F00C7611C /* ArchiveMainVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -907,7 +907,7 @@
 				A3CF55EA2A5BCB0000D19F00 /* setImage.swift in Sources */,
 				A34478E32A698554002F1981 /* SplashVC.swift in Sources */,
 				A3CF55E62A5BCAD800D19F00 /* makeAlert.swift in Sources */,
-				A3E4D30B2A5BF07F00C7611C /* RecordedWillMainVC.swift in Sources */,
+				A3E4D30B2A5BF07F00C7611C /* ArchiveMainVC.swift in Sources */,
 				A3CF55A82A5BBED200D19F00 /* UIViewController+.swift in Sources */,
 				A3E4D2FB2A5BDAAA00C7611C /* ColorLiterals.swift in Sources */,
 				A3CF55EC2A5BCB1400D19F00 /* setRootViewController.swift in Sources */,
