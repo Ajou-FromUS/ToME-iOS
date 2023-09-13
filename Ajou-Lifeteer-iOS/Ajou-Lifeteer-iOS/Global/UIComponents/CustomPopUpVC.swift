@@ -60,7 +60,7 @@ final class CustomPopUpVC: UIViewController {
     private let explainLevelLabel = UILabel().then {
         $0.numberOfLines = 0
         let paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.lineSpacing = 5
+        paragraphStyle.lineSpacing = 4
         paragraphStyle.alignment = .center
         let attributedText = NSAttributedString(
             string: "티오의 가장 어린 모습입니다.\n쑥스러움이 많아 혼잣말을 자주 해요.",

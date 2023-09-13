@@ -31,6 +31,7 @@
 		A36B36962AAF66A40008E9F2 /* CustomProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36B36952AAF66A40008E9F2 /* CustomProgressView.swift */; };
 		A36B36982AAF68720008E9F2 /* CustomMessageBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36B36972AAF68720008E9F2 /* CustomMessageBubbleView.swift */; };
 		A36B369A2AAF79750008E9F2 /* MissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36B36992AAF79750008E9F2 /* MissionView.swift */; };
+		A36B369C2AB068CA0008E9F2 /* ToMETimeFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36B369B2AB068CA0008E9F2 /* ToMETimeFormatter.swift */; };
 		A39294CC2A52C91C00436A4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39294CB2A52C91C00436A4F /* AppDelegate.swift */; };
 		A39294CE2A52C91C00436A4F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39294CD2A52C91C00436A4F /* SceneDelegate.swift */; };
 		A39294D02A52C91C00436A4F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39294CF2A52C91C00436A4F /* ViewController.swift */; };
@@ -112,6 +113,7 @@
 		A36B36952AAF66A40008E9F2 /* CustomProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgressView.swift; sourceTree = "<group>"; };
 		A36B36972AAF68720008E9F2 /* CustomMessageBubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMessageBubbleView.swift; sourceTree = "<group>"; };
 		A36B36992AAF79750008E9F2 /* MissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionView.swift; sourceTree = "<group>"; };
+		A36B369B2AB068CA0008E9F2 /* ToMETimeFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToMETimeFormatter.swift; sourceTree = "<group>"; };
 		A39294C82A52C91C00436A4F /* Ajou-Lifeteer-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ajou-Lifeteer-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A39294CB2A52C91C00436A4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A39294CD2A52C91C00436A4F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -449,6 +451,7 @@
 			isa = PBXGroup;
 			children = (
 				A392953E2A52D6BE00436A4F /* .gitkeep */,
+				A36B369B2AB068CA0008E9F2 /* ToMETimeFormatter.swift */,
 			);
 			path = LTUtils;
 			sourceTree = "<group>";
@@ -866,6 +869,7 @@
 				A3E4D3092A5BF05E00C7611C /* DiaryMainVC.swift in Sources */,
 				A39294D02A52C91C00436A4F /* ViewController.swift in Sources */,
 				A34478FA2A7178FB002F1981 /* SecondDetailLandingPageVC.swift in Sources */,
+				A36B369C2AB068CA0008E9F2 /* ToMETimeFormatter.swift in Sources */,
 				A3CF55F42A5BCB7300D19F00 /* UserDefaultKeyList.swift in Sources */,
 				A3E4D3032A5BE90500C7611C /* ImageLiterals.swift in Sources */,
 				A34478FE2A71794D002F1981 /* LastDetailLandingPageVC.swift in Sources */,

@@ -20,6 +20,7 @@ enum NaviType {
     case onlyTitle // Title만 존재
     
     case home // 홈에 존재하는 네비바
+    case singleTitle // 타이틀이 한줄인 네비바
 }
 
 final class CustomNavigationBar: UIView {
@@ -88,6 +89,7 @@ extension CustomNavigationBar {
     
     @discardableResult
     func setTitle(_ title: String) -> Self {
+        self.centerTitleLabel.font = .title2
         self.centerTitleLabel.text = title
         return self
     }
@@ -169,8 +171,9 @@ extension CustomNavigationBar {
             mindSetBIImageView.image = ImageLiterals.introIcCheck
         case .onlyTitle:
             setTitleUI()
-            
         case .home:
+            setHomeUI()
+        case .singleTitle:
             setHomeUI()
         }
     }
@@ -189,6 +192,24 @@ extension CustomNavigationBar {
             setOnlyTitleLayout()
         case .home:
             setHomeLayout()
+            
+            mypageButton.snp.makeConstraints { make in
+                make.bottom.equalToSuperview().inset(54)
+            }
+            
+            missionButton.snp.makeConstraints { make in
+                make.bottom.equalTo(mypageButton.snp.bottom)
+            }
+        case .singleTitle:
+            setHomeLayout()
+            
+            mypageButton.snp.makeConstraints { make in
+                make.bottom.equalToSuperview().inset(17)
+            }
+            
+            missionButton.snp.makeConstraints { make in
+                make.bottom.equalTo(mypageButton.snp.bottom)
+            }
         }
     }
     
@@ -271,19 +292,17 @@ extension CustomNavigationBar {
         }
         
         logoLabel.snp.makeConstraints { make in
-            make.bottom.equalTo(centerTitleLabel.snp.top).offset(-11)
+            make.top.equalToSuperview().offset(65)
             make.leading.equalTo(centerTitleLabel.snp.leading)
         }
         
         mypageButton.snp.makeConstraints { make in
             make.trailing.equalToSuperview().inset(27)
-            make.bottom.equalToSuperview().inset(54)
             make.width.height.equalTo(32)
         }
         
         missionButton.snp.makeConstraints { make in
             make.trailing.equalTo(mypageButton.snp.leading).offset(-16)
-            make.bottom.equalTo(mypageButton.snp.bottom)
             make.width.height.equalTo(32)
         }
     }
