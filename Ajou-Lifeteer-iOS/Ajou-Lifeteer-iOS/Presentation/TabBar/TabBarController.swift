@@ -53,25 +53,25 @@ extension TabBarController {
                                                           unselectedImage: ImageLiterals.homeIcHome.withRenderingMode(.alwaysOriginal),
                                                           selectedImage: ImageLiterals.homeIcHomeFill.withRenderingMode(.alwaysOriginal),
                                                           rootViewController: HomeMainVC())
-        let diaryMainNVC = templateNavigationController(title: "아카이브",
+        let recordedWillMainNVC = templateNavigationController(title: "아카이브",
                                                         unselectedImage: ImageLiterals.homeIcArchive.withRenderingMode(.alwaysOriginal),
                                                         selectedImage: ImageLiterals.homeIcArchiveFill.withRenderingMode(.alwaysOriginal),
-                                                        rootViewController: DiaryMainVC())
-        let recordedWillMainNVC = templateNavigationController(title: "일기",
+                                                        rootViewController: RecordedWillMainVC())
+        let diaryMainNVC = templateNavigationController(title: "일기",
                                                                unselectedImage: ImageLiterals.homeIcDiary.withRenderingMode(.alwaysOriginal),
                                                                selectedImage: ImageLiterals.homeIcDiaryFill.withRenderingMode(.alwaysOriginal),
-                                                               rootViewController: RecordedWillMainVC())
+                                                               rootViewController: DiaryMainVC())
         let mypageMainNVC = templateNavigationController(title: "ToME",
                                                          unselectedImage: ImageLiterals.homeIcConversation.withRenderingMode(.alwaysOriginal),
                                                          selectedImage: ImageLiterals.homeIcConversationFill.withRenderingMode(.alwaysOriginal),
                                                              rootViewController: MypageMainVC())
         
         /// 탭바 아이템과 타이틀 간의 간격 조정
-        for tabBarInfo in [homeMainNVC, diaryMainNVC, recordedWillMainNVC, mypageMainNVC] {
+        for tabBarInfo in [homeMainNVC, recordedWillMainNVC, diaryMainNVC, mypageMainNVC] {
             tabBarInfo.tabBarItem.titlePositionAdjustment = titleSpacing
         }
         
-        viewControllers = [homeMainNVC, diaryMainNVC, recordedWillMainNVC, mypageMainNVC]
+        viewControllers = [homeMainNVC, recordedWillMainNVC, diaryMainNVC, mypageMainNVC]
     }
     
     private func templateNavigationController(title: String, unselectedImage: UIImage?, selectedImage: UIImage?, rootViewController: UIViewController) -> UINavigationController {

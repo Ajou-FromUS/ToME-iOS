@@ -41,7 +41,7 @@ final class CustomAlertVC: UIViewController {
         $0.textAlignment = .center
     }
     
-    private lazy var fillWithGreenButton = CustomButton(title: String(), type: .fillWithGreen)
+    private lazy var fillWithGreenButton = CustomButton(title: String(), type: .fillWithBlue)
     
     private lazy var borderWithoutBGCButton = CustomButton(title: String(), type: .borderWithoutBGC)
     

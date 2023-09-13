@@ -41,11 +41,11 @@ extension UIFont {
     }
     
     @nonobjc class var body2: UIFont {
-        return UIFont.font(.pretendardSemiBold, ofSize: 12)
+        return UIFont.font(.pretendardMedium, ofSize: 12)
     }
     
     @nonobjc class var body3: UIFont {
-        return UIFont.font(.pretendardSemiBold, ofSize: 10)
+        return UIFont.font(.pretendardMedium, ofSize: 10)
     }
     
     @nonobjc class var diaryYear: UIFont {

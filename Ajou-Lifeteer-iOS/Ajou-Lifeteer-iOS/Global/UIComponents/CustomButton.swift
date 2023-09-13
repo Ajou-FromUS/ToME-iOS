@@ -9,7 +9,7 @@ import UIKit
 
 @frozen
 enum BtnType {
-    case fillWithGreen  // 초록 버튼
+    case fillWithBlue  // 파란 버튼
     case borderWithoutBGC   // 배경 없이 테두리만 있는 버튼
     case selectWeather  // 날씨 버튼
 }
@@ -74,20 +74,20 @@ extension CustomButton {
         self.layer.cornerRadius = 5
         
         switch type {
-        case .fillWithGreen:
-            self.setBackgroundColor(.alarmRed, for: .normal)
-            self.setBackgroundColor(.appleBlack, for: .disabled)
+        case .fillWithBlue:
+            self.setBackgroundColor(.mainColor, for: .normal)
+            self.setBackgroundColor(.disabled1, for: .disabled)
             self.setAttributedTitle(
                 NSAttributedString(
                     string: title,
-                    attributes: [.font: UIFont.body1, .foregroundColor: UIColor.alarmRed]
+                    attributes: [.font: UIFont.body1, .foregroundColor: UIColor.font4]
                 ),
                 for: .normal
             )
             self.setAttributedTitle(
                 NSAttributedString(
                     string: title,
-                    attributes: [.font: UIFont.body1, .foregroundColor: UIColor.disabled1]
+                    attributes: [.font: UIFont.body1, .foregroundColor: UIColor.font3]
                 ),
                 for: .disabled
             )

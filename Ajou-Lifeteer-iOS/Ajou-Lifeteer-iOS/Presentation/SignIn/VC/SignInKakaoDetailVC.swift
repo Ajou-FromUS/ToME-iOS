@@ -16,7 +16,7 @@ final class SignInKaKaoDetailVC: UIViewController {
     
     // MARK: - UI Components
     
-    private lazy var kakaoSimpleLoginButton = CustomButton(title: "카카오톡으로 간편 로그인", type: .fillWithGreen).then {
+    private lazy var kakaoSimpleLoginButton = CustomButton(title: "카카오톡으로 간편 로그인", type: .fillWithBlue).then {
         $0.setColor(bgColor: UIColor(hex: "FEE600"), disableColor: .disabled1, titleColor: .appleBlack)
     }
         

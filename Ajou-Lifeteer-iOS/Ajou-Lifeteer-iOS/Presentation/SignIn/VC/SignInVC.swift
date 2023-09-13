@@ -43,11 +43,11 @@ final class SignInVC: UIViewController {
         $0.setAttributedTitle(titleString, for: .normal)
     }
 
-    private lazy var kakaoLoginButton = CustomButton(title: "카카오톡으로 시작하기", type: .fillWithGreen).then {
+    private lazy var kakaoLoginButton = CustomButton(title: "카카오톡으로 시작하기", type: .fillWithBlue).then {
         $0.setColor(bgColor: UIColor(hex: "FEE600"), disableColor: .disabled1, titleColor: .mainColor)
     }
     
-    private lazy var appleLoginButton = CustomButton(title: "Apple로 로그인", type: .fillWithGreen).then {
+    private lazy var appleLoginButton = CustomButton(title: "Apple로 로그인", type: .fillWithBlue).then {
         $0.setColor(bgColor: .mainColor, disableColor: .disabled1, titleColor: .white)
     }
     

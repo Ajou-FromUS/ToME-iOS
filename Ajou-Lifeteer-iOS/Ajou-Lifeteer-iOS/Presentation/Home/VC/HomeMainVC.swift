@@ -15,67 +15,45 @@ final class HomeMainVC: UIViewController {
     // MARK: - UI Components
     
     private lazy var naviBar = CustomNavigationBar(self, type: .home).setUserName("몽이누나")
-    private let levelContainerView = UIView().then {
+    
+    private lazy var levelContainerView = UIView().then {
         $0.layer.cornerRadius = 8
+        let tap = UITapGestureRecognizer(target: self, action: #selector(touchUpLevelContainerView))
+        $0.addGestureRecognizer(tap)
     }
+    
     private let levelLabel = UILabel().then {
         $0.text = "Lv. 응애"
         $0.font = .subTitle2
         $0.textColor = .font1
     }
+    
     private let levelIconLabel = UILabel().then {
         $0.text = "\u{1F37C}"
         $0.font = .subTitle2
     }
-    private lazy var levelProgressBar = UIProgressView(progressViewStyle: .bar).then {
-        $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.setProgress(0.3, animated: false)
-        $0.progressTintColor = .mainColor
-        $0.trackTintColor = .sub2
-        $0.layer.cornerRadius = 4
-        $0.clipsToBounds = true
-        $0.layer.sublayers![1].cornerRadius = 4
-        $0.subviews[1].clipsToBounds = true
-    }
+    
+    private lazy var levelProgressBar = CustomProgressView(progress: 0.3)
+    
     private let menuButton = UIButton().then {
         $0.setImage(ImageLiterals.homeIcMenu, for: .normal)
     }
+    
     private let snackLabel = UILabel().then {
         $0.text = "티오의 과자"
         $0.font = .snack
         $0.textColor = .snack
     }
+    
     private let snackImageView = UIImageView().then {
         $0.image = ImageLiterals.homeIcMenuSnack
     }
-    private let messageLabel = UILabel().then {
-        $0.numberOfLines = 0
-        let paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.lineSpacing = 0
-        paragraphStyle.alignment = .center
-
-        let attributedText = NSAttributedString(
-            string: "오늘은\n 무슨 일 있었어?",
-            attributes: [
-                NSAttributedString.Key.paragraphStyle: paragraphStyle,
-                NSAttributedString.Key.font: UIFont.body3,
-                NSAttributedString.Key.foregroundColor: UIColor.font2
-            ]
-        )
-        
-        $0.attributedText = attributedText
-    }
-    private let messageBubbleImageView = UIImageView().then {
-        $0.image = ImageLiterals.diaryImgSpeachBubble
-    }
+    
     private let characterImageView = UIImageView()
-    private let emojiBubbleLabel = UILabel().then {
-        $0.text = "\u{1F618}"
-        $0.font = .title1
-    }
-    private let emojiBubbleImageView = UIImageView().then {
-        $0.image = ImageLiterals.diaryImgEmoSpeachBubble
-    }
+    
+    private lazy var messageBubbleView = CustomMessageBubbleView(message: "오늘은\n무슨 일 있었어?", type: .onlyMessage)
+    
+    private lazy var emojiBubbleView = CustomMessageBubbleView(message: "\u{1F618}", type: .emoji)
     
     // MARK: - View Life Cycle
     
@@ -84,6 +62,33 @@ final class HomeMainVC: UIViewController {
         self.tabBarController?.tabBar.isHidden = false
         setUI()
         setLayout()
+        setAddTarget()
+    }
+}
+
+// MARK: - @objc Function
+
+extension HomeMainVC {
+    @objc private func touchUpLevelContainerView() {
+        pushToCharacterLevelPopUpVC()
+    }
+}
+// MARK: - Methods
+
+extension HomeMainVC {
+    private func setAddTarget() {
+
+    }
+    
+    private func pushToCharacterLevelPopUpVC() {
+        let characterLevelPopUpVC = CustomPopUpVC(type: .characterlevel,
+                                                  title: "티오의 레벨",
+                                                  subTitle: "미션을 열심히 수행하여 티오를 키워보세요!",
+                                                  level: nil,
+                                                  levelName: "응애")
+        characterLevelPopUpVC.modalPresentationStyle = .overFullScreen
+        self.present(characterLevelPopUpVC, animated: false)
+        
     }
 }
 
@@ -97,7 +102,7 @@ extension HomeMainVC {
     }
     
     private func setLayout() {
-        view.addSubviews(naviBar, levelContainerView, menuButton, snackLabel, snackImageView, characterImageView)
+        view.addSubviews(naviBar, levelContainerView, menuButton, snackLabel, snackImageView, characterImageView, messageBubbleView, emojiBubbleView)
         
         naviBar.snp.makeConstraints { make in
             make.top.equalToSuperview()
@@ -139,7 +144,18 @@ extension HomeMainVC {
             make.height.equalTo(260)
         }
         
-        setCharacterMessagesLayout()
+        messageBubbleView.snp.makeConstraints { make in
+            make.leading.equalTo(characterImageView.snp.leading).offset(-33)
+            make.top.equalTo(characterImageView.snp.top).offset(-38)
+            make.width.equalTo(95)
+            make.height.equalTo(50)
+        }
+        
+        emojiBubbleView.snp.makeConstraints { make in
+            make.leading.equalTo(characterImageView.snp.trailing).inset(10)
+            make.top.equalTo(characterImageView.snp.top).inset(72)
+            make.width.height.equalTo(47)
+        }
     }
     
     private func setLevelContainerViewLayout() {
@@ -159,31 +175,6 @@ extension HomeMainVC {
             make.bottom.equalToSuperview().inset(8)
             make.leading.trailing.equalToSuperview().inset(12)
             make.height.equalTo(8)
-        }
-    }
-    
-    private func setCharacterMessagesLayout() {
-        characterImageView.addSubviews(messageBubbleImageView, messageLabel, emojiBubbleImageView, emojiBubbleLabel)
-        
-        messageBubbleImageView.snp.makeConstraints { make in
-            make.bottom.equalTo(characterImageView.snp.top).inset(8)
-            make.trailing.equalTo(characterImageView.snp.leading).inset(54)
-            make.width.equalTo(95)
-            make.height.equalTo(50)
-        }
-        
-        messageLabel.snp.makeConstraints { make in
-            make.centerX.centerY.equalTo(messageBubbleImageView)
-        }
-        
-        emojiBubbleImageView.snp.makeConstraints { make in
-            make.leading.equalTo(characterImageView.snp.trailing).inset(10)
-            make.top.equalToSuperview().inset(72)
-            make.width.height.equalTo(47)
-        }
-        
-        emojiBubbleLabel.snp.makeConstraints { make in
-            make.centerX.centerY.equalTo(emojiBubbleImageView)
         }
     }
 }
