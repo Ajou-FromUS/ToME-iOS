@@ -284,7 +284,7 @@
 				A39295142A52D2F000436A4F /* Landing */,
 				A39295132A52D2ED00436A4F /* TabBar */,
 				A392950F2A52D2B200436A4F /* Home */,
-				A392950E2A52D2AC00436A4F /* RecordWill */,
+				A392950E2A52D2AC00436A4F /* Archive */,
 				A392950C2A52D29600436A4F /* Diary */,
 				A392950B2A52D28E00436A4F /* MyPage */,
 			);
@@ -519,13 +519,13 @@
 			path = Diary;
 			sourceTree = "<group>";
 		};
-		A392950E2A52D2AC00436A4F /* RecordWill */ = {
+		A392950E2A52D2AC00436A4F /* Archive */ = {
 			isa = PBXGroup;
 			children = (
 				A39295242A52D37800436A4F /* Views */,
 				A39295222A52D36F00436A4F /* VC */,
 			);
-			path = RecordWill;
+			path = Archive;
 			sourceTree = "<group>";
 		};
 		A392950F2A52D2B200436A4F /* Home */ = {
