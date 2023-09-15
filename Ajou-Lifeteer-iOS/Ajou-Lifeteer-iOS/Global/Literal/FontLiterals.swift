@@ -75,6 +75,11 @@ extension UIFont {
     @nonobjc class var logo: UIFont {
         return UIFont.font(.yDestreetL, ofSize: 12)
     }
+    
+    @nonobjc class var questionNumber: UIFont {
+        return UIFont.font(.pretendardBold, ofSize: 36)
+    }
+    
 }
 
 enum FontName: String {

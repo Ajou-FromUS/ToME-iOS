@@ -10,7 +10,7 @@ import UIKit
 import SnapKit
 import Then
 
-final class ArchiveMainVC: UIViewController {
+final class ArchiveMainVC: UIViewController, UIViewControllerTransitioningDelegate {
 
     // MARK: - UI Components
     
@@ -30,6 +30,28 @@ final class ArchiveMainVC: UIViewController {
         super.viewDidLoad()
         setUI()
         setLayout()
+        setAddTarget()
+    }
+}
+
+// MARK: - @objc Function
+
+extension ArchiveMainVC {
+    @objc private func writeArchiveButtonDidTap() {
+        pushToArchiveDetailVC()
+    }
+}
+
+// MARK: - Methods
+
+extension ArchiveMainVC {
+    private func setAddTarget() {
+        writeArchiveButton.addTarget(self, action: #selector(writeArchiveButtonDidTap), for: .touchUpInside)
+    }
+    
+    private func pushToArchiveDetailVC() {
+        let archiveDetailVC = ArchiveDetailVC()
+        self.navigationController?.fadeTo(archiveDetailVC)
     }
 }
 

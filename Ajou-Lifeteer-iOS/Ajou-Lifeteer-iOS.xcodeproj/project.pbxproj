@@ -32,6 +32,9 @@
 		A36B36982AAF68720008E9F2 /* CustomMessageBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36B36972AAF68720008E9F2 /* CustomMessageBubbleView.swift */; };
 		A36B369A2AAF79750008E9F2 /* MissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36B36992AAF79750008E9F2 /* MissionView.swift */; };
 		A36B369C2AB068CA0008E9F2 /* ToMETimeFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36B369B2AB068CA0008E9F2 /* ToMETimeFormatter.swift */; };
+		A36B36A02AB1DBC70008E9F2 /* ArchiveDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36B369F2AB1DBC70008E9F2 /* ArchiveDetailVC.swift */; };
+		A36B36A22AB1E4820008E9F2 /* CustomTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36B36A12AB1E4820008E9F2 /* CustomTextView.swift */; };
+		A36B36A62AB41CEB0008E9F2 /* UINavigationController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36B36A52AB41CEB0008E9F2 /* UINavigationController+.swift */; };
 		A39294CC2A52C91C00436A4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39294CB2A52C91C00436A4F /* AppDelegate.swift */; };
 		A39294CE2A52C91C00436A4F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39294CD2A52C91C00436A4F /* SceneDelegate.swift */; };
 		A39294D02A52C91C00436A4F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39294CF2A52C91C00436A4F /* ViewController.swift */; };
@@ -114,6 +117,9 @@
 		A36B36972AAF68720008E9F2 /* CustomMessageBubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMessageBubbleView.swift; sourceTree = "<group>"; };
 		A36B36992AAF79750008E9F2 /* MissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionView.swift; sourceTree = "<group>"; };
 		A36B369B2AB068CA0008E9F2 /* ToMETimeFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToMETimeFormatter.swift; sourceTree = "<group>"; };
+		A36B369F2AB1DBC70008E9F2 /* ArchiveDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveDetailVC.swift; sourceTree = "<group>"; };
+		A36B36A12AB1E4820008E9F2 /* CustomTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextView.swift; sourceTree = "<group>"; };
+		A36B36A52AB41CEB0008E9F2 /* UINavigationController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+.swift"; sourceTree = "<group>"; };
 		A39294C82A52C91C00436A4F /* Ajou-Lifeteer-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ajou-Lifeteer-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A39294CB2A52C91C00436A4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A39294CD2A52C91C00436A4F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -376,6 +382,7 @@
 				A36B36932AAF643E0008E9F2 /* CustomPopUpVC.swift */,
 				A36B36952AAF66A40008E9F2 /* CustomProgressView.swift */,
 				A36B36972AAF68720008E9F2 /* CustomMessageBubbleView.swift */,
+				A36B36A12AB1E4820008E9F2 /* CustomTextView.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -420,6 +427,7 @@
 				A3CF55BD2A5BC8C600D19F00 /* UIDevice+.swift */,
 				A3CF55BF2A5BC8DB00D19F00 /* UIColor+.swift */,
 				A3CF55C12A5BC8FD00D19F00 /* UIButton+.swift */,
+				A36B36A52AB41CEB0008E9F2 /* UINavigationController+.swift */,
 			);
 			path = "UIKit+";
 			sourceTree = "<group>";
@@ -653,6 +661,7 @@
 			children = (
 				A392956A2A52D77800436A4F /* .gitkeep */,
 				A3E4D30A2A5BF07F00C7611C /* ArchiveMainVC.swift */,
+				A36B369F2AB1DBC70008E9F2 /* ArchiveDetailVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -863,6 +872,7 @@
 			files = (
 				A3CF55D82A5BCA1F00D19F00 /* applyShadow.swift in Sources */,
 				A3CF55E22A5BCAA700D19F00 /* JsonCoder.swift in Sources */,
+				A36B36A62AB41CEB0008E9F2 /* UINavigationController+.swift in Sources */,
 				A34478E52A698D82002F1981 /* SignInVC.swift in Sources */,
 				A3CF55D02A5BC99E00D19F00 /* Publisher+Driver.swift in Sources */,
 				A3E4D3052A5BEEB200C7611C /* TabBarController.swift in Sources */,
@@ -887,6 +897,7 @@
 				A3CF55CE2A5BC97100D19F00 /* CancelBag.swift in Sources */,
 				A3CF55EE2A5BCB2F00D19F00 /* setStatusBarBackgroundColor.swift in Sources */,
 				A34478F52A717777002F1981 /* FirstDetailLandingPageVC.swift in Sources */,
+				A36B36A22AB1E4820008E9F2 /* CustomTextView.swift in Sources */,
 				A306671D2A5C1689006E7B9F /* CustomAlertVC.swift in Sources */,
 				A3CF55D42A5BC9F400D19F00 /* addToolBar.swift in Sources */,
 				A3CF55D22A5BC9CD00D19F00 /* Publisher+UIControl.swift in Sources */,
@@ -915,6 +926,7 @@
 				A3CF55BA2A5BC88D00D19F00 /* UIImage+.swift in Sources */,
 				A34478F82A7178B7002F1981 /* DetailLandingPageVC.swift in Sources */,
 				A36B36942AAF643E0008E9F2 /* CustomPopUpVC.swift in Sources */,
+				A36B36A02AB1DBC70008E9F2 /* ArchiveDetailVC.swift in Sources */,
 				A3CF55B62A5BC86100D19F00 /* UIStackView+.swift in Sources */,
 				A3CF55F02A5BCB4400D19F00 /* setTextLineHeight.swift in Sources */,
 				A3CF55DA2A5BCA4400D19F00 /* calculatePastTime.swift in Sources */,

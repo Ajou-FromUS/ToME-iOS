@@ -21,6 +21,7 @@ enum NaviType {
     
     case home // 홈에 존재하는 네비바
     case singleTitle // 타이틀이 한줄인 네비바
+    case withoutBackground  // 뒷배경이 존재하지 않는 네비바
 }
 
 final class CustomNavigationBar: UIView {
@@ -39,7 +40,7 @@ final class CustomNavigationBar: UIView {
     private let mindSetBIImageView = UIImageView()
     
     private let logoLabel = UILabel().then {
-        $0.text = "ToME"
+        $0.text = "to Me"
     }
     
     private let missionButton = UIButton()
@@ -132,9 +133,17 @@ extension CustomNavigationBar {
 // MARK: - UI & Layout
 
 extension CustomNavigationBar {
+    private func setBackgroundUI() {
+        self.backgroundColor = .back1
+        self.layer.cornerRadius = 15
+    }
+    
     private func setTitleUI() {
-        centerTitleLabel.font = .body1
-        centerTitleLabel.textColor = .mainColor
+        logoLabel.font = .logo
+        logoLabel.textColor = .font1
+        logoLabel.isHidden = false
+        
+        centerTitleLabel.textColor = .font1
         centerTitleLabel.isHidden = false
     }
     
@@ -154,8 +163,6 @@ extension CustomNavigationBar {
     
     private func setUI(_ type: NaviType) {
         self.naviType = type
-        self.backgroundColor = .back1
-        self.layer.cornerRadius = 15
         
         switch type {
         case .backButton:
@@ -169,12 +176,20 @@ extension CustomNavigationBar {
             backButton.setImage(ImageLiterals.introIcCheck, for: .normal)
         case .onlyBI:
             mindSetBIImageView.image = ImageLiterals.introIcCheck
+            
         case .onlyTitle:
+            setBackgroundUI()
+            centerTitleLabel.font = .body1
             setTitleUI()
         case .home:
+            setBackgroundUI()
             setHomeUI()
         case .singleTitle:
+            setBackgroundUI()
             setHomeUI()
+        case .withoutBackground:
+            centerTitleLabel.font = .body1
+            setTitleUI()
         }
     }
     
@@ -210,6 +225,8 @@ extension CustomNavigationBar {
             missionButton.snp.makeConstraints { make in
                 make.bottom.equalTo(mypageButton.snp.bottom)
             }
+        case .withoutBackground:
+            setHomeLayout()
         }
     }
     
@@ -275,11 +292,16 @@ extension CustomNavigationBar {
     }
     
     private func setOnlyTitleLayout() {
-        self.addSubview(centerTitleLabel)
+        self.addSubviews(logoLabel, centerTitleLabel)
         
         centerTitleLabel.snp.makeConstraints { make in
-            make.centerX.equalToSuperview()
-            make.bottom.equalToSuperview().inset(12)
+            make.bottom.equalToSuperview().inset(18)
+            make.leading.equalToSuperview().inset(27)
+        }
+        
+        logoLabel.snp.makeConstraints { make in
+            make.top.equalToSuperview().offset(76)
+            make.leading.equalTo(centerTitleLabel.snp.leading)
         }
     }
     
@@ -292,7 +314,7 @@ extension CustomNavigationBar {
         }
         
         logoLabel.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(65)
+            make.top.equalToSuperview().offset(76)
             make.leading.equalTo(centerTitleLabel.snp.leading)
         }
         
