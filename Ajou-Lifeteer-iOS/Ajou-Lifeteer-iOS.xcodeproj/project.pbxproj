@@ -33,7 +33,6 @@
 		A36B369A2AAF79750008E9F2 /* MissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36B36992AAF79750008E9F2 /* MissionView.swift */; };
 		A36B369C2AB068CA0008E9F2 /* ToMETimeFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36B369B2AB068CA0008E9F2 /* ToMETimeFormatter.swift */; };
 		A36B36A02AB1DBC70008E9F2 /* ArchiveDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36B369F2AB1DBC70008E9F2 /* ArchiveDetailVC.swift */; };
-		A36B36A22AB1E4820008E9F2 /* CustomTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36B36A12AB1E4820008E9F2 /* CustomTextView.swift */; };
 		A36B36A62AB41CEB0008E9F2 /* UINavigationController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36B36A52AB41CEB0008E9F2 /* UINavigationController+.swift */; };
 		A39294CC2A52C91C00436A4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39294CB2A52C91C00436A4F /* AppDelegate.swift */; };
 		A39294CE2A52C91C00436A4F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39294CD2A52C91C00436A4F /* SceneDelegate.swift */; };
@@ -118,7 +117,6 @@
 		A36B36992AAF79750008E9F2 /* MissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionView.swift; sourceTree = "<group>"; };
 		A36B369B2AB068CA0008E9F2 /* ToMETimeFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToMETimeFormatter.swift; sourceTree = "<group>"; };
 		A36B369F2AB1DBC70008E9F2 /* ArchiveDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveDetailVC.swift; sourceTree = "<group>"; };
-		A36B36A12AB1E4820008E9F2 /* CustomTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextView.swift; sourceTree = "<group>"; };
 		A36B36A52AB41CEB0008E9F2 /* UINavigationController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+.swift"; sourceTree = "<group>"; };
 		A39294C82A52C91C00436A4F /* Ajou-Lifeteer-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ajou-Lifeteer-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A39294CB2A52C91C00436A4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -382,7 +380,6 @@
 				A36B36932AAF643E0008E9F2 /* CustomPopUpVC.swift */,
 				A36B36952AAF66A40008E9F2 /* CustomProgressView.swift */,
 				A36B36972AAF68720008E9F2 /* CustomMessageBubbleView.swift */,
-				A36B36A12AB1E4820008E9F2 /* CustomTextView.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -897,7 +894,6 @@
 				A3CF55CE2A5BC97100D19F00 /* CancelBag.swift in Sources */,
 				A3CF55EE2A5BCB2F00D19F00 /* setStatusBarBackgroundColor.swift in Sources */,
 				A34478F52A717777002F1981 /* FirstDetailLandingPageVC.swift in Sources */,
-				A36B36A22AB1E4820008E9F2 /* CustomTextView.swift in Sources */,
 				A306671D2A5C1689006E7B9F /* CustomAlertVC.swift in Sources */,
 				A3CF55D42A5BC9F400D19F00 /* addToolBar.swift in Sources */,
 				A3CF55D22A5BC9CD00D19F00 /* Publisher+UIControl.swift in Sources */,
