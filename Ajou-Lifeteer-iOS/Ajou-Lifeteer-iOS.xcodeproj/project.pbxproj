@@ -34,6 +34,7 @@
 		A36B369C2AB068CA0008E9F2 /* ToMETimeFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36B369B2AB068CA0008E9F2 /* ToMETimeFormatter.swift */; };
 		A36B36A02AB1DBC70008E9F2 /* ArchiveDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36B369F2AB1DBC70008E9F2 /* ArchiveDetailVC.swift */; };
 		A36B36A62AB41CEB0008E9F2 /* UINavigationController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36B36A52AB41CEB0008E9F2 /* UINavigationController+.swift */; };
+		A36B36AA2AB447DA0008E9F2 /* CustomSureToSavePopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36B36A92AB447DA0008E9F2 /* CustomSureToSavePopUpVC.swift */; };
 		A39294CC2A52C91C00436A4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39294CB2A52C91C00436A4F /* AppDelegate.swift */; };
 		A39294CE2A52C91C00436A4F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39294CD2A52C91C00436A4F /* SceneDelegate.swift */; };
 		A39294D02A52C91C00436A4F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39294CF2A52C91C00436A4F /* ViewController.swift */; };
@@ -118,6 +119,7 @@
 		A36B369B2AB068CA0008E9F2 /* ToMETimeFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToMETimeFormatter.swift; sourceTree = "<group>"; };
 		A36B369F2AB1DBC70008E9F2 /* ArchiveDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveDetailVC.swift; sourceTree = "<group>"; };
 		A36B36A52AB41CEB0008E9F2 /* UINavigationController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+.swift"; sourceTree = "<group>"; };
+		A36B36A92AB447DA0008E9F2 /* CustomSureToSavePopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSureToSavePopUpVC.swift; sourceTree = "<group>"; };
 		A39294C82A52C91C00436A4F /* Ajou-Lifeteer-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ajou-Lifeteer-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A39294CB2A52C91C00436A4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A39294CD2A52C91C00436A4F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -380,6 +382,7 @@
 				A36B36932AAF643E0008E9F2 /* CustomPopUpVC.swift */,
 				A36B36952AAF66A40008E9F2 /* CustomProgressView.swift */,
 				A36B36972AAF68720008E9F2 /* CustomMessageBubbleView.swift */,
+				A36B36A92AB447DA0008E9F2 /* CustomSureToSavePopUpVC.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -892,6 +895,7 @@
 				A30667172A5C070F006E7B9F /* CustomNavigationBar.swift in Sources */,
 				A3CF55AE2A5BBF2400D19F00 /* UITextField+.swift in Sources */,
 				A3CF55CE2A5BC97100D19F00 /* CancelBag.swift in Sources */,
+				A36B36AA2AB447DA0008E9F2 /* CustomSureToSavePopUpVC.swift in Sources */,
 				A3CF55EE2A5BCB2F00D19F00 /* setStatusBarBackgroundColor.swift in Sources */,
 				A34478F52A717777002F1981 /* FirstDetailLandingPageVC.swift in Sources */,
 				A306671D2A5C1689006E7B9F /* CustomAlertVC.swift in Sources */,

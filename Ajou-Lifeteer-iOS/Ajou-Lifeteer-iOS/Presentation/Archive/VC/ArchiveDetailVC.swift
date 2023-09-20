@@ -14,7 +14,8 @@ final class ArchiveDetailVC: UIViewController {
     
     // MARK: - Properties
 
-    let textViewPlaceholder = "답변을 입력해주세요."
+    private let textViewPlaceholder = "답변을 입력해주세요."
+    var keyboardPresent = false
     
     // MARK: - UI Components
     
@@ -67,6 +68,7 @@ final class ArchiveDetailVC: UIViewController {
         setUI()
         setLayout()
         setDelegate()
+        setAddTarget()
         self.view = view
         setKeyboardNotification()
         setTapGesture()
@@ -76,16 +78,26 @@ final class ArchiveDetailVC: UIViewController {
 // MARK: - @objc Function
 
 extension ArchiveDetailVC {
-    @objc private func keyboardWillShow(_ notification: Notification) {
-        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
-            self.scrollView.frame.origin.y -= keyboardSize.height - 270
+    @objc func keyboardWillShow(notification: NSNotification) {
+        if !keyboardPresent, let keyboardFrame = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            self.scrollView.frame.origin.y -= keyboardFrame.height - 270
+            keyboardPresent = true
         }
     }
-    
-    @objc private func keyboardWillHide(_ notification: Notification) {
-        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
-            self.scrollView.frame.origin.y += keyboardSize.height - 270
+
+    @objc func keyboardWillHide(notification: NSNotification) {
+        if keyboardPresent, let keyboardFrame = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            self.scrollView.frame.origin.y += keyboardFrame.height - 270
+            keyboardPresent = false
         }
+    }
+}
+
+// MARK: - @objc Function
+
+extension ArchiveDetailVC {
+    @objc private func saveButtonDidTap() {
+        pushToSureToSavePopUpVC()
     }
 }
 
@@ -94,6 +106,21 @@ extension ArchiveDetailVC {
 extension ArchiveDetailVC {
     private func setDelegate() {
         self.answerTextView.delegate = self
+    }
+    
+    private func setAddTarget() {
+        self.saveButton.addTarget(self, action: #selector(saveButtonDidTap), for: .touchUpInside)
+    }
+    
+    private func pushToSureToSavePopUpVC() {
+        let sureTosavePopUpVC = CustomSureToSavePopUpVC(questionNumber:
+                                                            self.questionNumberLabel.text ?? String(),
+                                                        questionString:
+                                                            self.questionLabel.text ?? String(),
+                                                        answerString:
+                                                            self.answerTextView.text)
+        sureTosavePopUpVC.modalPresentationStyle = .overFullScreen
+        self.present(sureTosavePopUpVC, animated: false)
     }
     
     private func completionButton(isOn: Bool) {
