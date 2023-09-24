@@ -12,6 +12,8 @@ enum BtnType {
     case fillWithBlue  // 파란 버튼
     case borderWithoutBGC   // 배경 없이 테두리만 있는 버튼
     case selectWeather  // 날씨 버튼
+    
+    case edgeRound  // (아카이브) 엣지 라운드처리 버튼
 }
 
 public class CustomButton: UIButton {
@@ -122,6 +124,17 @@ extension CustomButton {
                 for: .disabled
             )
             self.semanticContentAttribute = .forceRightToLeft   // 이미지를 텍스트의 왼쪽으로 설정
+            
+        case .edgeRound:
+            self.layer.cornerRadius = 23
+            self.setBackgroundColor(.font4, for: .normal)
+            self.setAttributedTitle(
+                NSAttributedString(
+                    string: title,
+                    attributes: [.font: UIFont.body1, .foregroundColor: UIColor.font1]
+                ),
+                for: .normal
+            )
         }
     }
 }

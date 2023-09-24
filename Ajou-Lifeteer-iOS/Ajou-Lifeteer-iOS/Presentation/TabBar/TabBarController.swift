@@ -53,10 +53,10 @@ extension TabBarController {
                                                           unselectedImage: ImageLiterals.homeIcHome.withRenderingMode(.alwaysOriginal),
                                                           selectedImage: ImageLiterals.homeIcHomeFill.withRenderingMode(.alwaysOriginal),
                                                           rootViewController: HomeMainVC())
-        let recordedWillMainNVC = templateNavigationController(title: "아카이브",
+        let archiveMainNVC = templateNavigationController(title: "아카이브",
                                                         unselectedImage: ImageLiterals.homeIcArchive.withRenderingMode(.alwaysOriginal),
                                                         selectedImage: ImageLiterals.homeIcArchiveFill.withRenderingMode(.alwaysOriginal),
-                                                        rootViewController: RecordedWillMainVC())
+                                                        rootViewController: ArchiveMainVC())
         let diaryMainNVC = templateNavigationController(title: "일기",
                                                                unselectedImage: ImageLiterals.homeIcDiary.withRenderingMode(.alwaysOriginal),
                                                                selectedImage: ImageLiterals.homeIcDiaryFill.withRenderingMode(.alwaysOriginal),
@@ -67,11 +67,11 @@ extension TabBarController {
                                                              rootViewController: MypageMainVC())
         
         /// 탭바 아이템과 타이틀 간의 간격 조정
-        for tabBarInfo in [homeMainNVC, recordedWillMainNVC, diaryMainNVC, mypageMainNVC] {
+        for tabBarInfo in [homeMainNVC, archiveMainNVC, diaryMainNVC, mypageMainNVC] {
             tabBarInfo.tabBarItem.titlePositionAdjustment = titleSpacing
         }
         
-        viewControllers = [homeMainNVC, recordedWillMainNVC, diaryMainNVC, mypageMainNVC]
+        viewControllers = [homeMainNVC, archiveMainNVC, diaryMainNVC, mypageMainNVC]
     }
     
     private func templateNavigationController(title: String, unselectedImage: UIImage?, selectedImage: UIImage?, rootViewController: UIViewController) -> UINavigationController {

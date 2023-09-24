@@ -32,6 +32,11 @@
 		A36B36982AAF68720008E9F2 /* CustomMessageBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36B36972AAF68720008E9F2 /* CustomMessageBubbleView.swift */; };
 		A36B369A2AAF79750008E9F2 /* MissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36B36992AAF79750008E9F2 /* MissionView.swift */; };
 		A36B369C2AB068CA0008E9F2 /* ToMETimeFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36B369B2AB068CA0008E9F2 /* ToMETimeFormatter.swift */; };
+		A36B36A02AB1DBC70008E9F2 /* ArchiveDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36B369F2AB1DBC70008E9F2 /* ArchiveDetailVC.swift */; };
+		A36B36A62AB41CEB0008E9F2 /* UINavigationController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36B36A52AB41CEB0008E9F2 /* UINavigationController+.swift */; };
+		A36B36AA2AB447DA0008E9F2 /* CustomSureToSavePopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36B36A92AB447DA0008E9F2 /* CustomSureToSavePopUpVC.swift */; };
+		A36B36AC2ABAD2AA0008E9F2 /* ArchiveCompleteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36B36AB2ABAD2AA0008E9F2 /* ArchiveCompleteVC.swift */; };
+		A36B36AE2ABBCB7F0008E9F2 /* ToMECheck.json in Resources */ = {isa = PBXBuildFile; fileRef = A36B36AD2ABBCB7F0008E9F2 /* ToMECheck.json */; };
 		A39294CC2A52C91C00436A4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39294CB2A52C91C00436A4F /* AppDelegate.swift */; };
 		A39294CE2A52C91C00436A4F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39294CD2A52C91C00436A4F /* SceneDelegate.swift */; };
 		A39294D02A52C91C00436A4F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39294CF2A52C91C00436A4F /* ViewController.swift */; };
@@ -85,7 +90,7 @@
 		A3E4D3052A5BEEB200C7611C /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E4D3042A5BEEB200C7611C /* TabBarController.swift */; };
 		A3E4D3072A5BF04300C7611C /* HomeMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E4D3062A5BF04300C7611C /* HomeMainVC.swift */; };
 		A3E4D3092A5BF05E00C7611C /* DiaryMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E4D3082A5BF05E00C7611C /* DiaryMainVC.swift */; };
-		A3E4D30B2A5BF07F00C7611C /* RecordedWillMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E4D30A2A5BF07F00C7611C /* RecordedWillMainVC.swift */; };
+		A3E4D30B2A5BF07F00C7611C /* ArchiveMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E4D30A2A5BF07F00C7611C /* ArchiveMainVC.swift */; };
 		A3E4D30D2A5BF09000C7611C /* MypageMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E4D30C2A5BF09000C7611C /* MypageMainVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -114,6 +119,11 @@
 		A36B36972AAF68720008E9F2 /* CustomMessageBubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMessageBubbleView.swift; sourceTree = "<group>"; };
 		A36B36992AAF79750008E9F2 /* MissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionView.swift; sourceTree = "<group>"; };
 		A36B369B2AB068CA0008E9F2 /* ToMETimeFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToMETimeFormatter.swift; sourceTree = "<group>"; };
+		A36B369F2AB1DBC70008E9F2 /* ArchiveDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveDetailVC.swift; sourceTree = "<group>"; };
+		A36B36A52AB41CEB0008E9F2 /* UINavigationController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+.swift"; sourceTree = "<group>"; };
+		A36B36A92AB447DA0008E9F2 /* CustomSureToSavePopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSureToSavePopUpVC.swift; sourceTree = "<group>"; };
+		A36B36AB2ABAD2AA0008E9F2 /* ArchiveCompleteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveCompleteVC.swift; sourceTree = "<group>"; };
+		A36B36AD2ABBCB7F0008E9F2 /* ToMECheck.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ToMECheck.json; sourceTree = "<group>"; };
 		A39294C82A52C91C00436A4F /* Ajou-Lifeteer-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ajou-Lifeteer-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A39294CB2A52C91C00436A4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A39294CD2A52C91C00436A4F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -200,7 +210,7 @@
 		A3E4D3042A5BEEB200C7611C /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		A3E4D3062A5BF04300C7611C /* HomeMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMainVC.swift; sourceTree = "<group>"; };
 		A3E4D3082A5BF05E00C7611C /* DiaryMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryMainVC.swift; sourceTree = "<group>"; };
-		A3E4D30A2A5BF07F00C7611C /* RecordedWillMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordedWillMainVC.swift; sourceTree = "<group>"; };
+		A3E4D30A2A5BF07F00C7611C /* ArchiveMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveMainVC.swift; sourceTree = "<group>"; };
 		A3E4D30C2A5BF09000C7611C /* MypageMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageMainVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -284,7 +294,7 @@
 				A39295142A52D2F000436A4F /* Landing */,
 				A39295132A52D2ED00436A4F /* TabBar */,
 				A392950F2A52D2B200436A4F /* Home */,
-				A392950E2A52D2AC00436A4F /* RecordWill */,
+				A392950E2A52D2AC00436A4F /* Archive */,
 				A392950C2A52D29600436A4F /* Diary */,
 				A392950B2A52D28E00436A4F /* MyPage */,
 			);
@@ -376,6 +386,7 @@
 				A36B36932AAF643E0008E9F2 /* CustomPopUpVC.swift */,
 				A36B36952AAF66A40008E9F2 /* CustomProgressView.swift */,
 				A36B36972AAF68720008E9F2 /* CustomMessageBubbleView.swift */,
+				A36B36A92AB447DA0008E9F2 /* CustomSureToSavePopUpVC.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -383,6 +394,7 @@
 		A39294FF2A52D14100436A4F /* Lottie */ = {
 			isa = PBXGroup;
 			children = (
+				A36B36AD2ABBCB7F0008E9F2 /* ToMECheck.json */,
 				A39295362A52D68F00436A4F /* .gitkeep */,
 			);
 			path = Lottie;
@@ -420,6 +432,7 @@
 				A3CF55BD2A5BC8C600D19F00 /* UIDevice+.swift */,
 				A3CF55BF2A5BC8DB00D19F00 /* UIColor+.swift */,
 				A3CF55C12A5BC8FD00D19F00 /* UIButton+.swift */,
+				A36B36A52AB41CEB0008E9F2 /* UINavigationController+.swift */,
 			);
 			path = "UIKit+";
 			sourceTree = "<group>";
@@ -519,13 +532,13 @@
 			path = Diary;
 			sourceTree = "<group>";
 		};
-		A392950E2A52D2AC00436A4F /* RecordWill */ = {
+		A392950E2A52D2AC00436A4F /* Archive */ = {
 			isa = PBXGroup;
 			children = (
 				A39295242A52D37800436A4F /* Views */,
 				A39295222A52D36F00436A4F /* VC */,
 			);
-			path = RecordWill;
+			path = Archive;
 			sourceTree = "<group>";
 		};
 		A392950F2A52D2B200436A4F /* Home */ = {
@@ -652,7 +665,9 @@
 			isa = PBXGroup;
 			children = (
 				A392956A2A52D77800436A4F /* .gitkeep */,
-				A3E4D30A2A5BF07F00C7611C /* RecordedWillMainVC.swift */,
+				A3E4D30A2A5BF07F00C7611C /* ArchiveMainVC.swift */,
+				A36B369F2AB1DBC70008E9F2 /* ArchiveDetailVC.swift */,
+				A36B36AB2ABAD2AA0008E9F2 /* ArchiveCompleteVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -823,6 +838,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A344EE012AA8E81100FD2AAA /* Pretendard-SemiBold.otf in Resources */,
+				A36B36AE2ABBCB7F0008E9F2 /* ToMECheck.json in Resources */,
 				A30667152A5C0178006E7B9F /* Assets.xcassets in Resources */,
 				A34478E12A69164A002F1981 /* Pretendard-Bold.otf in Resources */,
 				A344EE052AA8E94300FD2AAA /* YdestreetL.otf in Resources */,
@@ -863,6 +879,7 @@
 			files = (
 				A3CF55D82A5BCA1F00D19F00 /* applyShadow.swift in Sources */,
 				A3CF55E22A5BCAA700D19F00 /* JsonCoder.swift in Sources */,
+				A36B36A62AB41CEB0008E9F2 /* UINavigationController+.swift in Sources */,
 				A34478E52A698D82002F1981 /* SignInVC.swift in Sources */,
 				A3CF55D02A5BC99E00D19F00 /* Publisher+Driver.swift in Sources */,
 				A3E4D3052A5BEEB200C7611C /* TabBarController.swift in Sources */,
@@ -885,6 +902,7 @@
 				A30667172A5C070F006E7B9F /* CustomNavigationBar.swift in Sources */,
 				A3CF55AE2A5BBF2400D19F00 /* UITextField+.swift in Sources */,
 				A3CF55CE2A5BC97100D19F00 /* CancelBag.swift in Sources */,
+				A36B36AA2AB447DA0008E9F2 /* CustomSureToSavePopUpVC.swift in Sources */,
 				A3CF55EE2A5BCB2F00D19F00 /* setStatusBarBackgroundColor.swift in Sources */,
 				A34478F52A717777002F1981 /* FirstDetailLandingPageVC.swift in Sources */,
 				A306671D2A5C1689006E7B9F /* CustomAlertVC.swift in Sources */,
@@ -907,7 +925,7 @@
 				A3CF55EA2A5BCB0000D19F00 /* setImage.swift in Sources */,
 				A34478E32A698554002F1981 /* SplashVC.swift in Sources */,
 				A3CF55E62A5BCAD800D19F00 /* makeAlert.swift in Sources */,
-				A3E4D30B2A5BF07F00C7611C /* RecordedWillMainVC.swift in Sources */,
+				A3E4D30B2A5BF07F00C7611C /* ArchiveMainVC.swift in Sources */,
 				A3CF55A82A5BBED200D19F00 /* UIViewController+.swift in Sources */,
 				A3E4D2FB2A5BDAAA00C7611C /* ColorLiterals.swift in Sources */,
 				A3CF55EC2A5BCB1400D19F00 /* setRootViewController.swift in Sources */,
@@ -915,6 +933,7 @@
 				A3CF55BA2A5BC88D00D19F00 /* UIImage+.swift in Sources */,
 				A34478F82A7178B7002F1981 /* DetailLandingPageVC.swift in Sources */,
 				A36B36942AAF643E0008E9F2 /* CustomPopUpVC.swift in Sources */,
+				A36B36A02AB1DBC70008E9F2 /* ArchiveDetailVC.swift in Sources */,
 				A3CF55B62A5BC86100D19F00 /* UIStackView+.swift in Sources */,
 				A3CF55F02A5BCB4400D19F00 /* setTextLineHeight.swift in Sources */,
 				A3CF55DA2A5BCA4400D19F00 /* calculatePastTime.swift in Sources */,
@@ -924,6 +943,7 @@
 				A36B369A2AAF79750008E9F2 /* MissionView.swift in Sources */,
 				A3CF55AA2A5BBEF700D19F00 /* UIView+.swift in Sources */,
 				A30667192A5C0DFB006E7B9F /* CustomButton.swift in Sources */,
+				A36B36AC2ABAD2AA0008E9F2 /* ArchiveCompleteVC.swift in Sources */,
 				A3CF55C02A5BC8DB00D19F00 /* UIColor+.swift in Sources */,
 				A3CF55E02A5BCA9500D19F00 /* getClassName.swift in Sources */,
 				A3CF55C22A5BC8FD00D19F00 /* UIButton+.swift in Sources */,

@@ -93,7 +93,7 @@ final class CustomPopUpVC: UIViewController {
     private let shareButton = UIButton(type: .custom).then {
         $0.setImage(ImageLiterals.homeBtnShare, for: .normal)
     }
-           
+
     // MARK: - initialization
     
     init(type: popUpType, title: String, subTitle: String, level: Int?, levelName: String?) {
@@ -151,7 +151,6 @@ extension CustomPopUpVC {
         view.addSubviews(visualEffectView, containerView, popUpCloseButton)
         
         containerView.snp.makeConstraints { make in
-            make.centerY.equalToSuperview()
             make.leading.trailing.equalToSuperview().inset(27)
         }
         
@@ -171,7 +170,7 @@ extension CustomPopUpVC {
         if let levelName = levelName {
             self.levelNameLabel.text = "Lv. \(levelName)"
         }
-
+        
         switch type {
         case .todaysMission:
             setTodaysMissionLayout()
@@ -184,6 +183,7 @@ extension CustomPopUpVC {
     
     private func setTodaysMissionLayout() {
         containerView.snp.makeConstraints { make in
+            make.centerY.equalToSuperview()
             make.height.equalTo(554)
         }
         
@@ -232,12 +232,12 @@ extension CustomPopUpVC {
             make.centerX.equalToSuperview()
             make.leading.trailing.equalToSuperview().inset(17)
             make.bottom.equalToSuperview().inset(17)
-            make.height.equalTo(186)
         }
     }
-     
+    
     private func setCharacterLevelLayout() {
         containerView.snp.makeConstraints { make in
+            make.centerY.equalToSuperview()
             make.height.equalTo(554)
         }
         
@@ -292,6 +292,7 @@ extension CustomPopUpVC {
     
     private func setCheckCharacterLevelLayout() {
         containerView.snp.makeConstraints { make in
+            make.centerY.equalToSuperview()
             make.height.equalTo(427)
         }
         
