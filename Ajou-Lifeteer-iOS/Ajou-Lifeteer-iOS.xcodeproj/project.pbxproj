@@ -35,6 +35,8 @@
 		A36B36A02AB1DBC70008E9F2 /* ArchiveDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36B369F2AB1DBC70008E9F2 /* ArchiveDetailVC.swift */; };
 		A36B36A62AB41CEB0008E9F2 /* UINavigationController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36B36A52AB41CEB0008E9F2 /* UINavigationController+.swift */; };
 		A36B36AA2AB447DA0008E9F2 /* CustomSureToSavePopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36B36A92AB447DA0008E9F2 /* CustomSureToSavePopUpVC.swift */; };
+		A36B36AC2ABAD2AA0008E9F2 /* ArchiveCompleteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36B36AB2ABAD2AA0008E9F2 /* ArchiveCompleteVC.swift */; };
+		A36B36AE2ABBCB7F0008E9F2 /* ToMECheck.json in Resources */ = {isa = PBXBuildFile; fileRef = A36B36AD2ABBCB7F0008E9F2 /* ToMECheck.json */; };
 		A39294CC2A52C91C00436A4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39294CB2A52C91C00436A4F /* AppDelegate.swift */; };
 		A39294CE2A52C91C00436A4F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39294CD2A52C91C00436A4F /* SceneDelegate.swift */; };
 		A39294D02A52C91C00436A4F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39294CF2A52C91C00436A4F /* ViewController.swift */; };
@@ -120,6 +122,8 @@
 		A36B369F2AB1DBC70008E9F2 /* ArchiveDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveDetailVC.swift; sourceTree = "<group>"; };
 		A36B36A52AB41CEB0008E9F2 /* UINavigationController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+.swift"; sourceTree = "<group>"; };
 		A36B36A92AB447DA0008E9F2 /* CustomSureToSavePopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSureToSavePopUpVC.swift; sourceTree = "<group>"; };
+		A36B36AB2ABAD2AA0008E9F2 /* ArchiveCompleteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveCompleteVC.swift; sourceTree = "<group>"; };
+		A36B36AD2ABBCB7F0008E9F2 /* ToMECheck.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ToMECheck.json; sourceTree = "<group>"; };
 		A39294C82A52C91C00436A4F /* Ajou-Lifeteer-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ajou-Lifeteer-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A39294CB2A52C91C00436A4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A39294CD2A52C91C00436A4F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -390,6 +394,7 @@
 		A39294FF2A52D14100436A4F /* Lottie */ = {
 			isa = PBXGroup;
 			children = (
+				A36B36AD2ABBCB7F0008E9F2 /* ToMECheck.json */,
 				A39295362A52D68F00436A4F /* .gitkeep */,
 			);
 			path = Lottie;
@@ -662,6 +667,7 @@
 				A392956A2A52D77800436A4F /* .gitkeep */,
 				A3E4D30A2A5BF07F00C7611C /* ArchiveMainVC.swift */,
 				A36B369F2AB1DBC70008E9F2 /* ArchiveDetailVC.swift */,
+				A36B36AB2ABAD2AA0008E9F2 /* ArchiveCompleteVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -832,6 +838,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A344EE012AA8E81100FD2AAA /* Pretendard-SemiBold.otf in Resources */,
+				A36B36AE2ABBCB7F0008E9F2 /* ToMECheck.json in Resources */,
 				A30667152A5C0178006E7B9F /* Assets.xcassets in Resources */,
 				A34478E12A69164A002F1981 /* Pretendard-Bold.otf in Resources */,
 				A344EE052AA8E94300FD2AAA /* YdestreetL.otf in Resources */,
@@ -936,6 +943,7 @@
 				A36B369A2AAF79750008E9F2 /* MissionView.swift in Sources */,
 				A3CF55AA2A5BBEF700D19F00 /* UIView+.swift in Sources */,
 				A30667192A5C0DFB006E7B9F /* CustomButton.swift in Sources */,
+				A36B36AC2ABAD2AA0008E9F2 /* ArchiveCompleteVC.swift in Sources */,
 				A3CF55C02A5BC8DB00D19F00 /* UIColor+.swift in Sources */,
 				A3CF55E02A5BCA9500D19F00 /* getClassName.swift in Sources */,
 				A3CF55C22A5BC8FD00D19F00 /* UIButton+.swift in Sources */,

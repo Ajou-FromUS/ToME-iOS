@@ -86,7 +86,7 @@ final class CustomSureToSavePopUpVC: UIViewController {
 
 extension CustomSureToSavePopUpVC {
     @objc private func saveButtonDidTap() {
-        
+        dismiss(animated: false)
     }
     
     @objc private func cancelButtonDidTap() {
