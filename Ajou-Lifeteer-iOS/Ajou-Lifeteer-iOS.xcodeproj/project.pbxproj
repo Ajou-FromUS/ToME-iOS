@@ -91,7 +91,7 @@
 		A3E4D3072A5BF04300C7611C /* HomeMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E4D3062A5BF04300C7611C /* HomeMainVC.swift */; };
 		A3E4D3092A5BF05E00C7611C /* DiaryMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E4D3082A5BF05E00C7611C /* DiaryMainVC.swift */; };
 		A3E4D30B2A5BF07F00C7611C /* ArchiveMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E4D30A2A5BF07F00C7611C /* ArchiveMainVC.swift */; };
-		A3E4D30D2A5BF09000C7611C /* MypageMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E4D30C2A5BF09000C7611C /* MypageMainVC.swift */; };
+		A3E4D30D2A5BF09000C7611C /* TalkingMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E4D30C2A5BF09000C7611C /* TalkingMainVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -211,7 +211,7 @@
 		A3E4D3062A5BF04300C7611C /* HomeMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMainVC.swift; sourceTree = "<group>"; };
 		A3E4D3082A5BF05E00C7611C /* DiaryMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryMainVC.swift; sourceTree = "<group>"; };
 		A3E4D30A2A5BF07F00C7611C /* ArchiveMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveMainVC.swift; sourceTree = "<group>"; };
-		A3E4D30C2A5BF09000C7611C /* MypageMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageMainVC.swift; sourceTree = "<group>"; };
+		A3E4D30C2A5BF09000C7611C /* TalkingMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkingMainVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -296,7 +296,7 @@
 				A392950F2A52D2B200436A4F /* Home */,
 				A392950E2A52D2AC00436A4F /* Archive */,
 				A392950C2A52D29600436A4F /* Diary */,
-				A392950B2A52D28E00436A4F /* MyPage */,
+				A392950B2A52D28E00436A4F /* Talking */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -514,13 +514,13 @@
 			path = Foundation;
 			sourceTree = "<group>";
 		};
-		A392950B2A52D28E00436A4F /* MyPage */ = {
+		A392950B2A52D28E00436A4F /* Talking */ = {
 			isa = PBXGroup;
 			children = (
 				A39295292A52D38A00436A4F /* Views */,
 				A39295282A52D38700436A4F /* VC */,
 			);
-			path = MyPage;
+			path = Talking;
 			sourceTree = "<group>";
 		};
 		A392950C2A52D29600436A4F /* Diary */ = {
@@ -701,7 +701,7 @@
 			isa = PBXGroup;
 			children = (
 				A39295722A52D7B800436A4F /* .gitkeep */,
-				A3E4D30C2A5BF09000C7611C /* MypageMainVC.swift */,
+				A3E4D30C2A5BF09000C7611C /* TalkingMainVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -938,7 +938,7 @@
 				A3CF55F02A5BCB4400D19F00 /* setTextLineHeight.swift in Sources */,
 				A3CF55DA2A5BCA4400D19F00 /* calculatePastTime.swift in Sources */,
 				A3CF55CA2A5BC94A00D19F00 /* URL+.swift in Sources */,
-				A3E4D30D2A5BF09000C7611C /* MypageMainVC.swift in Sources */,
+				A3E4D30D2A5BF09000C7611C /* TalkingMainVC.swift in Sources */,
 				A39294CE2A52C91C00436A4F /* SceneDelegate.swift in Sources */,
 				A36B369A2AAF79750008E9F2 /* MissionView.swift in Sources */,
 				A3CF55AA2A5BBEF700D19F00 /* UIView+.swift in Sources */,
