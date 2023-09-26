@@ -1,8 +1,8 @@
 //
-//  TalkingMainVC.swift
+//  TalkingDetailVC.swift
 //  Ajou-Lifeteer-iOS
 //
-//  Created by 몽이 누나 on 2023/07/10.
+//  Created by 몽이 누나 on 2023/09/24.
 //
 
 import UIKit
@@ -10,17 +10,15 @@ import UIKit
 import SnapKit
 import Then
 
-final class TalkingMainVC: UIViewController {
+final class TalkingDetailVC: UIViewController {
     
     // MARK: - Properties
 
     var checkQuestionButtonState: Bool = true
-
+    
     // MARK: - UI Components
     
     private lazy var naviBar = CustomNavigationBar(self, type: .singleTitle).setTitle("To. Me")
-    
-    private let characterImageView = UIImageView()
     
     private let questionButton = UIButton(type: .custom).then {
         $0.setImage(ImageLiterals.talkingBtnQuestion, for: .normal)
@@ -45,24 +43,10 @@ final class TalkingMainVC: UIViewController {
         $0.attributedText = attributedText
     }
     
-    private let titleLabel = UILabel().then {
-        $0.numberOfLines = 2
-        $0.textAlignment = .center
-        $0.font = .subTitle2
-        $0.textColor = .font1
-        $0.text = "저랑 대화해요!\n오늘 하루는 어떠셨나요?"
-    }
-    
-    private let subTitleLabel = UILabel().then {
-        $0.font = .body2
-        $0.textColor = .font3
-        $0.text = "티오는 당신의 이야기를 들을 준비가 되어 있어요."
-    }
-    
-    private lazy var startTalkingButton = CustomButton(title: "티오와 대화 시작하기", type: .fillWithBlue)
+    private let talkingMessageVC = TalkingMessageVC()
     
     // MARK: - View Life Cycle
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
@@ -73,22 +57,21 @@ final class TalkingMainVC: UIViewController {
 
 // MARK: - @objc Function
 
-extension TalkingMainVC {
+extension TalkingDetailVC {
     @objc private func questionButtonDidTap() {
         questionButtonState()
-    }
-    
-    @objc private func startTalkingButtonDidTap() {
-        pushToTalkingDetailVC()
     }
 }
 
 // MARK: - Methods
 
-extension TalkingMainVC {
+extension TalkingDetailVC {
     private func setAddTarget() {
         self.questionButton.addTarget(self, action: #selector(questionButtonDidTap), for: .touchUpInside)
-        self.startTalkingButton.addTarget(self, action: #selector(startTalkingButtonDidTap), for: .touchUpInside)
+    }
+    
+    private func setDelegate() {
+        
     }
     
     private func questionButtonState() {
@@ -100,24 +83,21 @@ extension TalkingMainVC {
             checkQuestionButtonState.toggle()
         }
     }
-    
-    private func pushToTalkingDetailVC() {
-        let talkingDetailVC = TalkingDetailVC()
-        self.navigationController?.fadeTo(talkingDetailVC)
-    }
 }
 
 // MARK: - UI & Layout
 
-extension TalkingMainVC {
+extension TalkingDetailVC {
     private func setUI() {
-        view.backgroundColor = .kakaoYellow
-        characterImageView.backgroundColor = .mainColor
+        view.backgroundColor = .systemGray3
         questionExplainView.backgroundColor = .sub2
     }
     
     private func setLayout() {
-        view.addSubviews(naviBar, questionButton, characterImageView, titleLabel, subTitleLabel, startTalkingButton, questionExplainView)
+        view.addSubviews(naviBar)
+        
+        self.addChild(talkingMessageVC)
+        view.addSubview(talkingMessageVC.view)
         
         naviBar.snp.makeConstraints { make in
             make.top.equalToSuperview()
@@ -125,33 +105,18 @@ extension TalkingMainVC {
             make.height.equalTo(142)
         }
         
+        talkingMessageVC.view.addSubviews(questionButton, questionExplainView)
+        
+        talkingMessageVC.view.snp.makeConstraints { make in
+            make.top.equalTo(naviBar.snp.bottom).inset(10)
+            make.leading.trailing.equalTo(view.safeAreaLayoutGuide)
+            make.bottom.equalToSuperview().inset(92)
+        }
+        
         questionButton.snp.makeConstraints { make in
             make.top.equalTo(naviBar.snp.bottom)
             make.leading.equalTo(view.safeAreaLayoutGuide).inset(10)
             make.width.height.equalTo(70)
-        }
-        
-        titleLabel.snp.makeConstraints { make in
-            make.top.equalTo(naviBar.snp.bottom).offset(125)
-            make.centerX.equalToSuperview()
-        }
-        
-        subTitleLabel.snp.makeConstraints { make in
-            make.top.equalTo(titleLabel.snp.bottom).offset(10)
-            make.centerX.equalToSuperview()
-        }
-        
-        characterImageView.snp.makeConstraints { make in
-            make.top.equalTo(subTitleLabel.snp.bottom).offset(36)
-            make.centerX.equalToSuperview()
-            make.width.equalTo(142)
-            make.height.equalTo(218)
-        }
-        
-        startTalkingButton.snp.makeConstraints { make in
-            make.bottom.equalToSuperview().inset(108)
-            make.leading.trailing.equalTo(view.safeAreaLayoutGuide).inset(27)
-            make.height.equalTo(52)
         }
         
         questionExplainView.snp.makeConstraints { make in

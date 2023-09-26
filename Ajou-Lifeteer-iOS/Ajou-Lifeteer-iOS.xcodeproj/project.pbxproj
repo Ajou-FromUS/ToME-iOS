@@ -11,6 +11,10 @@
 		A30667172A5C070F006E7B9F /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30667162A5C070F006E7B9F /* CustomNavigationBar.swift */; };
 		A30667192A5C0DFB006E7B9F /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30667182A5C0DFB006E7B9F /* CustomButton.swift */; };
 		A306671D2A5C1689006E7B9F /* CustomAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A306671C2A5C1689006E7B9F /* CustomAlertVC.swift */; };
+		A330D3F02AC0342800C1CC22 /* TalkingDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A330D3EF2AC0342800C1CC22 /* TalkingDetailVC.swift */; };
+		A330D3F32AC0362800C1CC22 /* MessageKit in Frameworks */ = {isa = PBXBuildFile; productRef = A330D3F22AC0362800C1CC22 /* MessageKit */; };
+		A330D3F52AC29D4E00C1CC22 /* TalkingMessageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A330D3F42AC29D4E00C1CC22 /* TalkingMessageVC.swift */; };
+		A330D3F72AC2A26900C1CC22 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = A330D3F62AC2A26900C1CC22 /* Message.swift */; };
 		A34478DE2A69164A002F1981 /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = A34478DA2A69164A002F1981 /* Pretendard-Regular.otf */; };
 		A34478DF2A69164A002F1981 /* GmarketSansLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = A34478DB2A69164A002F1981 /* GmarketSansLight.otf */; };
 		A34478E02A69164A002F1981 /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = A34478DC2A69164A002F1981 /* Pretendard-Medium.otf */; };
@@ -98,6 +102,9 @@
 		A30667162A5C070F006E7B9F /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
 		A30667182A5C0DFB006E7B9F /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		A306671C2A5C1689006E7B9F /* CustomAlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertVC.swift; sourceTree = "<group>"; };
+		A330D3EF2AC0342800C1CC22 /* TalkingDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkingDetailVC.swift; sourceTree = "<group>"; };
+		A330D3F42AC29D4E00C1CC22 /* TalkingMessageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkingMessageVC.swift; sourceTree = "<group>"; };
+		A330D3F62AC2A26900C1CC22 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		A34478DA2A69164A002F1981 /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Pretendard-Regular.otf"; path = "../../../../../../2022-Lifeteer-iOS/Lifeteer-iOS/Lifeteer-iOS/Global/Resource/Fonts/Pretendard-Regular.otf"; sourceTree = "<group>"; };
 		A34478DB2A69164A002F1981 /* GmarketSansLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = GmarketSansLight.otf; path = "../../../../../../2022-Lifeteer-iOS/Lifeteer-iOS/Lifeteer-iOS/Global/Resource/Fonts/GmarketSansLight.otf"; sourceTree = "<group>"; };
 		A34478DC2A69164A002F1981 /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Pretendard-Medium.otf"; path = "../../../../../../2022-Lifeteer-iOS/Lifeteer-iOS/Lifeteer-iOS/Global/Resource/Fonts/Pretendard-Medium.otf"; sourceTree = "<group>"; };
@@ -222,6 +229,7 @@
 				A39294ED2A52CBF200436A4F /* Lottie in Frameworks */,
 				A39294F02A52CBFF00436A4F /* FSCalendar in Frameworks */,
 				A39294E72A52CBD900436A4F /* SnapKit in Frameworks */,
+				A330D3F32AC0362800C1CC22 /* MessageKit in Frameworks */,
 				A39294E42A52CBCC00436A4F /* Kingfisher in Frameworks */,
 				A39294E12A52CBBF00436A4F /* Moya in Frameworks */,
 				A39294EA2A52CBE400436A4F /* Then in Frameworks */,
@@ -473,6 +481,7 @@
 			isa = PBXGroup;
 			children = (
 				A39295542A52D71900436A4F /* .gitkeep */,
+				A330D3F62AC2A26900C1CC22 /* Message.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -702,6 +711,7 @@
 			children = (
 				A39295722A52D7B800436A4F /* .gitkeep */,
 				A3E4D30C2A5BF09000C7611C /* TalkingMainVC.swift */,
+				A330D3EF2AC0342800C1CC22 /* TalkingDetailVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -710,6 +720,7 @@
 			isa = PBXGroup;
 			children = (
 				A39295702A52D7AD00436A4F /* .gitkeep */,
+				A330D3F42AC29D4E00C1CC22 /* TalkingMessageVC.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -786,6 +797,7 @@
 				A39294E92A52CBE400436A4F /* Then */,
 				A39294EC2A52CBF200436A4F /* Lottie */,
 				A39294EF2A52CBFF00436A4F /* FSCalendar */,
+				A330D3F22AC0362800C1CC22 /* MessageKit */,
 			);
 			productName = "Ajou-Lifeteer-iOS";
 			productReference = A39294C82A52C91C00436A4F /* Ajou-Lifeteer-iOS.app */;
@@ -822,6 +834,7 @@
 				A39294E82A52CBE400436A4F /* XCRemoteSwiftPackageReference "Then" */,
 				A39294EB2A52CBF200436A4F /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				A39294EE2A52CBFF00436A4F /* XCRemoteSwiftPackageReference "FSCalendar" */,
+				A330D3F12AC0362800C1CC22 /* XCRemoteSwiftPackageReference "MessageKit" */,
 			);
 			productRefGroup = A39294C92A52C91C00436A4F /* Products */;
 			projectDirPath = "";
@@ -895,9 +908,11 @@
 				A3CF55B02A5BC01200D19F00 /* UITableView+.swift in Sources */,
 				A3CF55F62A5BCB8A00D19F00 /* UserDefaultWrapper.swift in Sources */,
 				A3E4D3072A5BF04300C7611C /* HomeMainVC.swift in Sources */,
+				A330D3F02AC0342800C1CC22 /* TalkingDetailVC.swift in Sources */,
 				A3CF55DC2A5BCA5C00D19F00 /* calculateStatusBarHeight.swift in Sources */,
 				A3CF55AC2A5BBF1000D19F00 /* UITextView+.swift in Sources */,
 				A34478E72A698DBF002F1981 /* SignInKakaoDetailVC.swift in Sources */,
+				A330D3F72AC2A26900C1CC22 /* Message.swift in Sources */,
 				A36B36962AAF66A40008E9F2 /* CustomProgressView.swift in Sources */,
 				A30667172A5C070F006E7B9F /* CustomNavigationBar.swift in Sources */,
 				A3CF55AE2A5BBF2400D19F00 /* UITextField+.swift in Sources */,
@@ -913,6 +928,7 @@
 				A3CF55E82A5BCAED00D19F00 /* makeVibrate.swift in Sources */,
 				A36B36982AAF68720008E9F2 /* CustomMessageBubbleView.swift in Sources */,
 				A3CF55C82A5BC93900D19F00 /* String+.swift in Sources */,
+				A330D3F52AC29D4E00C1CC22 /* TalkingMessageVC.swift in Sources */,
 				A34478FC2A71790D002F1981 /* ThirdDetailLandingPageVC.swift in Sources */,
 				A3CF55BE2A5BC8C600D19F00 /* UIDevice+.swift in Sources */,
 				A3E4D3012A5BDB9200C7611C /* FontLiterals.swift in Sources */,
@@ -1160,6 +1176,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		A330D3F12AC0362800C1CC22 /* XCRemoteSwiftPackageReference "MessageKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MessageKit/MessageKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
 		A39294DF2A52CBBF00436A4F /* XCRemoteSwiftPackageReference "Moya" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Moya/Moya.git";
@@ -1211,6 +1235,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		A330D3F22AC0362800C1CC22 /* MessageKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A330D3F12AC0362800C1CC22 /* XCRemoteSwiftPackageReference "MessageKit" */;
+			productName = MessageKit;
+		};
 		A39294E02A52CBBF00436A4F /* Moya */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A39294DF2A52CBBF00436A4F /* XCRemoteSwiftPackageReference "Moya" */;
