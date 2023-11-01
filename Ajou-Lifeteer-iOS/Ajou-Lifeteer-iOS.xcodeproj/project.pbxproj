@@ -15,8 +15,7 @@
 		A330D3F32AC0362800C1CC22 /* MessageKit in Frameworks */ = {isa = PBXBuildFile; productRef = A330D3F22AC0362800C1CC22 /* MessageKit */; };
 		A330D3F52AC29D4E00C1CC22 /* TalkingMessageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A330D3F42AC29D4E00C1CC22 /* TalkingMessageVC.swift */; };
 		A330D3F72AC2A26900C1CC22 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = A330D3F62AC2A26900C1CC22 /* Message.swift */; };
-		A330D3FC2AC2D44E00C1CC22 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = A330D3FB2AC2D44E00C1CC22 /* .gitkeep */; };
-		A330D3FE2AC2D45900C1CC22 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = A330D3FD2AC2D45900C1CC22 /* .gitkeep */; };
+		A330D4002AC2D4CE00C1CC22 /* MyPageMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A330D3FF2AC2D4CE00C1CC22 /* MyPageMainVC.swift */; };
 		A34478DE2A69164A002F1981 /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = A34478DA2A69164A002F1981 /* Pretendard-Regular.otf */; };
 		A34478DF2A69164A002F1981 /* GmarketSansLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = A34478DB2A69164A002F1981 /* GmarketSansLight.otf */; };
 		A34478E02A69164A002F1981 /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = A34478DC2A69164A002F1981 /* Pretendard-Medium.otf */; };
@@ -109,6 +108,7 @@
 		A330D3F62AC2A26900C1CC22 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		A330D3FB2AC2D44E00C1CC22 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		A330D3FD2AC2D45900C1CC22 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		A330D3FF2AC2D4CE00C1CC22 /* MyPageMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageMainVC.swift; sourceTree = "<group>"; };
 		A34478DA2A69164A002F1981 /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Pretendard-Regular.otf"; path = "../../../../../../2022-Lifeteer-iOS/Lifeteer-iOS/Lifeteer-iOS/Global/Resource/Fonts/Pretendard-Regular.otf"; sourceTree = "<group>"; };
 		A34478DB2A69164A002F1981 /* GmarketSansLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = GmarketSansLight.otf; path = "../../../../../../2022-Lifeteer-iOS/Lifeteer-iOS/Lifeteer-iOS/Global/Resource/Fonts/GmarketSansLight.otf"; sourceTree = "<group>"; };
 		A34478DC2A69164A002F1981 /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Pretendard-Medium.otf"; path = "../../../../../../2022-Lifeteer-iOS/Lifeteer-iOS/Lifeteer-iOS/Global/Resource/Fonts/Pretendard-Medium.otf"; sourceTree = "<group>"; };
@@ -256,6 +256,7 @@
 			isa = PBXGroup;
 			children = (
 				A330D3FD2AC2D45900C1CC22 /* .gitkeep */,
+				A330D3FF2AC2D4CE00C1CC22 /* MyPageMainVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -882,13 +883,11 @@
 			files = (
 				A344EE012AA8E81100FD2AAA /* Pretendard-SemiBold.otf in Resources */,
 				A36B36AE2ABBCB7F0008E9F2 /* ToMECheck.json in Resources */,
-				A330D3FE2AC2D45900C1CC22 /* .gitkeep in Resources */,
 				A30667152A5C0178006E7B9F /* Assets.xcassets in Resources */,
 				A34478E12A69164A002F1981 /* Pretendard-Bold.otf in Resources */,
 				A344EE052AA8E94300FD2AAA /* YdestreetL.otf in Resources */,
 				A34478DF2A69164A002F1981 /* GmarketSansLight.otf in Resources */,
 				A344EE032AA8E87700FD2AAA /* Coiny-Cyrillic.ttf in Resources */,
-				A330D3FC2AC2D44E00C1CC22 /* .gitkeep in Resources */,
 				A34478DE2A69164A002F1981 /* Pretendard-Regular.otf in Resources */,
 				A34478E02A69164A002F1981 /* Pretendard-Medium.otf in Resources */,
 			);
@@ -978,6 +977,7 @@
 				A3E4D2FB2A5BDAAA00C7611C /* ColorLiterals.swift in Sources */,
 				A3CF55EC2A5BCB1400D19F00 /* setRootViewController.swift in Sources */,
 				A3CF55D62A5BCA0A00D19F00 /* adjusted+.swift in Sources */,
+				A330D4002AC2D4CE00C1CC22 /* MyPageMainVC.swift in Sources */,
 				A3CF55BA2A5BC88D00D19F00 /* UIImage+.swift in Sources */,
 				A34478F82A7178B7002F1981 /* DetailLandingPageVC.swift in Sources */,
 				A36B36942AAF643E0008E9F2 /* CustomPopUpVC.swift in Sources */,

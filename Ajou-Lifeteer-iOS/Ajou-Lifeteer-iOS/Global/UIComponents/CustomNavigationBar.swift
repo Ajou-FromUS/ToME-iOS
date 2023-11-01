@@ -67,6 +67,7 @@ extension CustomNavigationBar {
     private func setAddTarget() {
         self.backButton.addTarget(self, action: #selector(popToPreviousVC), for: .touchUpInside)
         self.missionButton.addTarget(self, action: #selector(missionButtonDidTap), for: .touchUpInside)
+        self.mypageButton.addTarget(self, action: #selector(mypageButtonDidTap), for: .touchUpInside)
     }
     
     @discardableResult
@@ -127,6 +128,11 @@ extension CustomNavigationBar {
                                       levelName: nil)
         missionVC.modalPresentationStyle = .overFullScreen
         vc?.present(missionVC, animated: false)
+    }
+    
+    @objc private func mypageButtonDidTap() {
+        let mypageMainVC = MyPageMainVC()
+        self.vc?.navigationController?.pushViewController(mypageMainVC, animated: false)
     }
 }
 
