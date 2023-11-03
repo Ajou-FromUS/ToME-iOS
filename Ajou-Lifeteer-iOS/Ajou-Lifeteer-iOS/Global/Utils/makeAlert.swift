@@ -23,7 +23,6 @@ import UIKit
   
  */
 
-
 public extension UIViewController {
     func makeAlert(title: String,
                    message: String,
