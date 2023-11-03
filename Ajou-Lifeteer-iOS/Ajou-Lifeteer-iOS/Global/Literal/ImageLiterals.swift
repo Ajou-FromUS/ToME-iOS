@@ -67,6 +67,7 @@ enum ImageLiterals {
     static var questionBtn: UIImage { .load(named: "question_btn") }
     static var talkingBtnQuestion: UIImage { .load(named: "talking_btn_question") }
     static var toBtnImage: UIImage { .load(named: "to_btn_image") }
+    static var tomeLogo: UIImage { .load(named: "tome_logo") }
     static var topbar: UIImage { .load(named: "topbar") }
     static var visitiorIcLock: UIImage { .load(named: "visitior_ic_lock") }
     static var warningIc: UIImage { .load(named: "warning_ic") }

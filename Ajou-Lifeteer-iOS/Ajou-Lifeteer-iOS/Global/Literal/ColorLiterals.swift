@@ -20,6 +20,10 @@ extension UIColor {
         return UIColor(hex: "#E8EDFF")
     }
     
+    static var sub3: UIColor {
+        return UIColor(hex: "#45548C")
+    }
+    
     static var snackBackground: UIColor {
         return UIColor(hex: "#FFF1DA")
     }

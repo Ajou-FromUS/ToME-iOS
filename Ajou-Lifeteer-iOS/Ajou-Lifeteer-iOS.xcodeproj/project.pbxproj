@@ -51,6 +51,7 @@
 		A39294EA2A52CBE400436A4F /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = A39294E92A52CBE400436A4F /* Then */; };
 		A39294ED2A52CBF200436A4F /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = A39294EC2A52CBF200436A4F /* Lottie */; };
 		A39294F02A52CBFF00436A4F /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = A39294EF2A52CBFF00436A4F /* FSCalendar */; };
+		A3C6F6F42AF4BF2F008D0FF0 /* LeeSeoyun.otf in Resources */ = {isa = PBXBuildFile; fileRef = A3C6F6F32AF4BF2F008D0FF0 /* LeeSeoyun.otf */; };
 		A3CF55A82A5BBED200D19F00 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CF55A72A5BBED200D19F00 /* UIViewController+.swift */; };
 		A3CF55AA2A5BBEF700D19F00 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CF55A92A5BBEF700D19F00 /* UIView+.swift */; };
 		A3CF55AC2A5BBF1000D19F00 /* UITextView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CF55AB2A5BBF1000D19F00 /* UITextView+.swift */; };
@@ -176,6 +177,7 @@
 		A392956E2A52D78E00436A4F /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		A39295702A52D7AD00436A4F /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		A39295722A52D7B800436A4F /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		A3C6F6F32AF4BF2F008D0FF0 /* LeeSeoyun.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = LeeSeoyun.otf; sourceTree = "<group>"; };
 		A3CF55A72A5BBED200D19F00 /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 		A3CF55A92A5BBEF700D19F00 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		A3CF55AB2A5BBF1000D19F00 /* UITextView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+.swift"; sourceTree = "<group>"; };
@@ -449,6 +451,7 @@
 				A34478DA2A69164A002F1981 /* Pretendard-Regular.otf */,
 				A344EE022AA8E87700FD2AAA /* Coiny-Cyrillic.ttf */,
 				A344EE042AA8E94300FD2AAA /* YdestreetL.otf */,
+				A3C6F6F32AF4BF2F008D0FF0 /* LeeSeoyun.otf */,
 				A39295342A52D68300436A4F /* .gitkeep */,
 			);
 			path = Fonts;
@@ -888,6 +891,7 @@
 				A344EE052AA8E94300FD2AAA /* YdestreetL.otf in Resources */,
 				A34478DF2A69164A002F1981 /* GmarketSansLight.otf in Resources */,
 				A344EE032AA8E87700FD2AAA /* Coiny-Cyrillic.ttf in Resources */,
+				A3C6F6F42AF4BF2F008D0FF0 /* LeeSeoyun.otf in Resources */,
 				A34478DE2A69164A002F1981 /* Pretendard-Regular.otf in Resources */,
 				A34478E02A69164A002F1981 /* Pretendard-Medium.otf in Resources */,
 			);
