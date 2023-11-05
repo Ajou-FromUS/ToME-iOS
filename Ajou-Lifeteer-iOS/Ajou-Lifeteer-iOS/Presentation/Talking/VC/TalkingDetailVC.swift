@@ -49,6 +49,7 @@ final class TalkingDetailVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideTabBar(wantsToHide: true)
         setUI()
         setLayout()
         setAddTarget()

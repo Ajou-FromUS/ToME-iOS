@@ -79,6 +79,10 @@ extension UIColor {
     static var snack: UIColor {
         return UIColor(hex: "#787878")
     }
+    
+    static var popUpBackground: UIColor {
+        return UIColor(hex: "#545B73")
+    }
 }
 
 extension UIColor {

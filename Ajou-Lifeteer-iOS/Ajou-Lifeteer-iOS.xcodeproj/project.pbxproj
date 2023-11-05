@@ -11,6 +11,9 @@
 		A30667172A5C070F006E7B9F /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30667162A5C070F006E7B9F /* CustomNavigationBar.swift */; };
 		A30667192A5C0DFB006E7B9F /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30667182A5C0DFB006E7B9F /* CustomButton.swift */; };
 		A306671D2A5C1689006E7B9F /* CustomAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A306671C2A5C1689006E7B9F /* CustomAlertVC.swift */; };
+		A30FDEC92AF7F6780088D98E /* ToAnimationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30FDEC82AF7F6780088D98E /* ToAnimationManager.swift */; };
+		A30FDECB2AF7F80A0088D98E /* MissionMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30FDECA2AF7F80A0088D98E /* MissionMainVC.swift */; };
+		A30FDECD2AF7FB420088D98E /* TopAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30FDECC2AF7FB420088D98E /* TopAlertView.swift */; };
 		A330D3F02AC0342800C1CC22 /* TalkingDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A330D3EF2AC0342800C1CC22 /* TalkingDetailVC.swift */; };
 		A330D3F32AC0362800C1CC22 /* MessageKit in Frameworks */ = {isa = PBXBuildFile; productRef = A330D3F22AC0362800C1CC22 /* MessageKit */; };
 		A330D3F52AC29D4E00C1CC22 /* TalkingMessageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A330D3F42AC29D4E00C1CC22 /* TalkingMessageVC.swift */; };
@@ -51,7 +54,8 @@
 		A39294EA2A52CBE400436A4F /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = A39294E92A52CBE400436A4F /* Then */; };
 		A39294ED2A52CBF200436A4F /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = A39294EC2A52CBF200436A4F /* Lottie */; };
 		A39294F02A52CBFF00436A4F /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = A39294EF2A52CBFF00436A4F /* FSCalendar */; };
-		A3C6F6F42AF4BF2F008D0FF0 /* LeeSeoyun.otf in Resources */ = {isa = PBXBuildFile; fileRef = A3C6F6F32AF4BF2F008D0FF0 /* LeeSeoyun.otf */; };
+		A3C6F6F62AF4CBB1008D0FF0 /* LeeSeoyun.otf in Resources */ = {isa = PBXBuildFile; fileRef = A3C6F6F52AF4CBB1008D0FF0 /* LeeSeoyun.otf */; };
+		A3C6F6F82AF5383A008D0FF0 /* BubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C6F6F72AF5383A008D0FF0 /* BubbleView.swift */; };
 		A3CF55A82A5BBED200D19F00 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CF55A72A5BBED200D19F00 /* UIViewController+.swift */; };
 		A3CF55AA2A5BBEF700D19F00 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CF55A92A5BBEF700D19F00 /* UIView+.swift */; };
 		A3CF55AC2A5BBF1000D19F00 /* UITextView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CF55AB2A5BBF1000D19F00 /* UITextView+.swift */; };
@@ -104,6 +108,9 @@
 		A30667162A5C070F006E7B9F /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
 		A30667182A5C0DFB006E7B9F /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		A306671C2A5C1689006E7B9F /* CustomAlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertVC.swift; sourceTree = "<group>"; };
+		A30FDEC82AF7F6780088D98E /* ToAnimationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToAnimationManager.swift; sourceTree = "<group>"; };
+		A30FDECA2AF7F80A0088D98E /* MissionMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionMainVC.swift; sourceTree = "<group>"; };
+		A30FDECC2AF7FB420088D98E /* TopAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopAlertView.swift; sourceTree = "<group>"; };
 		A330D3EF2AC0342800C1CC22 /* TalkingDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkingDetailVC.swift; sourceTree = "<group>"; };
 		A330D3F42AC29D4E00C1CC22 /* TalkingMessageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkingMessageVC.swift; sourceTree = "<group>"; };
 		A330D3F62AC2A26900C1CC22 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
@@ -177,7 +184,8 @@
 		A392956E2A52D78E00436A4F /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		A39295702A52D7AD00436A4F /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		A39295722A52D7B800436A4F /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
-		A3C6F6F32AF4BF2F008D0FF0 /* LeeSeoyun.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = LeeSeoyun.otf; sourceTree = "<group>"; };
+		A3C6F6F52AF4CBB1008D0FF0 /* LeeSeoyun.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = LeeSeoyun.otf; sourceTree = "<group>"; };
+		A3C6F6F72AF5383A008D0FF0 /* BubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleView.swift; sourceTree = "<group>"; };
 		A3CF55A72A5BBED200D19F00 /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 		A3CF55A92A5BBEF700D19F00 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		A3CF55AB2A5BBF1000D19F00 /* UITextView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+.swift"; sourceTree = "<group>"; };
@@ -245,6 +253,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A30FDEC62AF7F5110088D98E /* Mission */ = {
+			isa = PBXGroup;
+			children = (
+				A30FDECA2AF7F80A0088D98E /* MissionMainVC.swift */,
+			);
+			path = Mission;
+			sourceTree = "<group>";
+		};
+		A30FDEC72AF7F6560088D98E /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				A30FDEC82AF7F6780088D98E /* ToAnimationManager.swift */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
 		A330D3F82AC2D40100C1CC22 /* MyPage */ = {
 			isa = PBXGroup;
 			children = (
@@ -303,6 +327,7 @@
 		A39294F12A52D08300436A4F /* Global */ = {
 			isa = PBXGroup;
 			children = (
+				A30FDEC72AF7F6560088D98E /* Animation */,
 				A39294FE2A52D12A00436A4F /* UIComponents */,
 				A39294FD2A52D12200436A4F /* Literal */,
 				A39294FC2A52D11B00436A4F /* Resource */,
@@ -336,6 +361,7 @@
 				A392950F2A52D2B200436A4F /* Home */,
 				A392950E2A52D2AC00436A4F /* Archive */,
 				A392950C2A52D29600436A4F /* Diary */,
+				A30FDEC62AF7F5110088D98E /* Mission */,
 				A392950B2A52D28E00436A4F /* Talking */,
 				A330D3F82AC2D40100C1CC22 /* MyPage */,
 			);
@@ -451,7 +477,7 @@
 				A34478DA2A69164A002F1981 /* Pretendard-Regular.otf */,
 				A344EE022AA8E87700FD2AAA /* Coiny-Cyrillic.ttf */,
 				A344EE042AA8E94300FD2AAA /* YdestreetL.otf */,
-				A3C6F6F32AF4BF2F008D0FF0 /* LeeSeoyun.otf */,
+				A3C6F6F52AF4CBB1008D0FF0 /* LeeSeoyun.otf */,
 				A39295342A52D68300436A4F /* .gitkeep */,
 			);
 			path = Fonts;
@@ -700,6 +726,8 @@
 			children = (
 				A39295662A52D76200436A4F /* .gitkeep */,
 				A36B36992AAF79750008E9F2 /* MissionView.swift */,
+				A3C6F6F72AF5383A008D0FF0 /* BubbleView.swift */,
+				A30FDECC2AF7FB420088D98E /* TopAlertView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -891,7 +919,7 @@
 				A344EE052AA8E94300FD2AAA /* YdestreetL.otf in Resources */,
 				A34478DF2A69164A002F1981 /* GmarketSansLight.otf in Resources */,
 				A344EE032AA8E87700FD2AAA /* Coiny-Cyrillic.ttf in Resources */,
-				A3C6F6F42AF4BF2F008D0FF0 /* LeeSeoyun.otf in Resources */,
+				A3C6F6F62AF4CBB1008D0FF0 /* LeeSeoyun.otf in Resources */,
 				A34478DE2A69164A002F1981 /* Pretendard-Regular.otf in Resources */,
 				A34478E02A69164A002F1981 /* Pretendard-Medium.otf in Resources */,
 			);
@@ -945,6 +973,7 @@
 				A3CF55B02A5BC01200D19F00 /* UITableView+.swift in Sources */,
 				A3CF55F62A5BCB8A00D19F00 /* UserDefaultWrapper.swift in Sources */,
 				A3E4D3072A5BF04300C7611C /* HomeMainVC.swift in Sources */,
+				A30FDECB2AF7F80A0088D98E /* MissionMainVC.swift in Sources */,
 				A330D3F02AC0342800C1CC22 /* TalkingDetailVC.swift in Sources */,
 				A3CF55DC2A5BCA5C00D19F00 /* calculateStatusBarHeight.swift in Sources */,
 				A3CF55AC2A5BBF1000D19F00 /* UITextView+.swift in Sources */,
@@ -961,6 +990,7 @@
 				A3CF55D42A5BC9F400D19F00 /* addToolBar.swift in Sources */,
 				A3CF55D22A5BC9CD00D19F00 /* Publisher+UIControl.swift in Sources */,
 				A3CF55F22A5BCB5800D19F00 /* Toast.swift in Sources */,
+				A30FDECD2AF7FB420088D98E /* TopAlertView.swift in Sources */,
 				A3CF55E42A5BCABD00D19F00 /* LoadingIndicator.swift in Sources */,
 				A3CF55E82A5BCAED00D19F00 /* makeVibrate.swift in Sources */,
 				A36B36982AAF68720008E9F2 /* CustomMessageBubbleView.swift in Sources */,
@@ -972,9 +1002,11 @@
 				A3CF55C62A5BC92900D19F00 /* Result+.swift in Sources */,
 				A3CF55C42A5BC91500D19F00 /* Encodable+.swift in Sources */,
 				A3CF55B22A5BC18E00D19F00 /* UITabBar+.swift in Sources */,
+				A3C6F6F82AF5383A008D0FF0 /* BubbleView.swift in Sources */,
 				A3CF55DE2A5BCA8500D19F00 /* calculateTopInset.swift in Sources */,
 				A3CF55B82A5BC87500D19F00 /* UILabel+.swift in Sources */,
 				A39294CC2A52C91C00436A4F /* AppDelegate.swift in Sources */,
+				A30FDEC92AF7F6780088D98E /* ToAnimationManager.swift in Sources */,
 				A3CF55EA2A5BCB0000D19F00 /* setImage.swift in Sources */,
 				A34478E32A698554002F1981 /* SplashVC.swift in Sources */,
 				A3CF55E62A5BCAD800D19F00 /* makeAlert.swift in Sources */,

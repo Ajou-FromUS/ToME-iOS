@@ -28,6 +28,7 @@ enum ImageLiterals {
     static var diaryReduceDefault: UIImage { .load(named: "diary_reduce_default") }
     static var gallaryBtnImageFill: UIImage { .load(named: "gallary_btn_image_fill") }
     static var gallaryBtnImage: UIImage { .load(named: "gallary_btn_image") }
+    static var homeBtnBubble: UIImage { .load(named: "home_btn_bubble") }
     static var homeIcArchiveFill: UIImage { .load(named: "home_ic_archive_fill") }
     static var homeIcArchive: UIImage { .load(named: "home_ic_archive") }
     static var homeIcConversationFill: UIImage { .load(named: "home_ic_conversation_fill") }
@@ -54,6 +55,7 @@ enum ImageLiterals {
     static var homeIcStatistics: UIImage { .load(named: "home_ic_statistics") }
     static var homeIcTalking: UIImage { .load(named: "home_ic_talking") }
     static var homeImgSnackscore: UIImage { .load(named: "home_img_snackscore") }
+    static var homeImgTo: UIImage { .load(named: "home_img_to") }
     static var homeImgTodaysCompleteFill: UIImage { .load(named: "home_img_todayscomplete_fill") }
     static var homeImgTodaysComplete: UIImage { .load(named: "home_img_todayscomplete") }
     static var introIcCheckFill: UIImage { .load(named: "intro_ic_check_fill") }

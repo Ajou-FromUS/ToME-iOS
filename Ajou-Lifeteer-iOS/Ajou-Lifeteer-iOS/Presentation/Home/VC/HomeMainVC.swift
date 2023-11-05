@@ -12,83 +12,90 @@ import Then
 
 final class HomeMainVC: UIViewController {
     
+    // MARK: - Properties
+
+    var isTalkedWithTo: Bool = true
+    
     // MARK: - UI Components
     
-    private lazy var naviBar = CustomNavigationBar(self, type: .home).setUserName("몽이누나")
+    private lazy var naviBar = CustomNavigationBar(self, type: .home).setUserName("세상에서제일귀여운몽이누나")
     
-    private lazy var levelContainerView = UIView().then {
-        $0.layer.cornerRadius = 8
-        let tap = UITapGestureRecognizer(target: self, action: #selector(touchUpLevelContainerView))
-        $0.addGestureRecognizer(tap)
+    private lazy var talkingWithToBubbleView = BubbleView(type: .talkingWithTO).then {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(talkingWithToBubbleViewDidTap))
+        $0.addGestureRecognizer(tapGesture)
     }
     
-    private let levelLabel = UILabel().then {
-        $0.text = "Lv. 응애"
-        $0.font = .subTitle2
-        $0.textColor = .font1
+    private lazy var todaysMissionBubbleView = BubbleView(type: .todaysMission).then {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(todaysMissionBubbleViewDidTap))
+        $0.addGestureRecognizer(tapGesture)
     }
     
-    private let levelIconLabel = UILabel().then {
-        $0.text = "\u{1F37C}"
-        $0.font = .subTitle2
+    private let toImageView = UIImageView().then {
+        $0.image = ImageLiterals.homeImgTo
     }
     
-    private lazy var levelProgressBar = CustomProgressView(progress: 0.3)
+    private let floatingAnimation = ToAnimationManager.createFloatingAnimation()
     
-    private let menuButton = UIButton().then {
-        $0.setImage(ImageLiterals.homeIcMenu, for: .normal)
+    private lazy var topAlertView = TopAlertView().then {
+        $0.alpha = 0
     }
-    
-    private let snackLabel = UILabel().then {
-        $0.text = "티오의 과자"
-        $0.font = .snack
-        $0.textColor = .snack
-    }
-    
-    private let snackImageView = UIImageView().then {
-        $0.image = ImageLiterals.homeIcMenuSnack
-    }
-    
-    private let characterImageView = UIImageView()
-    
-    private lazy var messageBubbleView = CustomMessageBubbleView(message: "오늘은\n무슨 일 있었어?", type: .onlyMessage)
-    
-    private lazy var emojiBubbleView = CustomMessageBubbleView(message: "\u{1F618}", type: .emoji)
-    
+        
     // MARK: - View Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tabBarController?.tabBar.isHidden = false
         setUI()
         setLayout()
         setAddTarget()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        setBubbleViewAnimation()
     }
 }
 
 // MARK: - @objc Function
 
 extension HomeMainVC {
-    @objc private func touchUpLevelContainerView() {
-        pushToCharacterLevelPopUpVC()
+    @objc private func talkingWithToBubbleViewDidTap() {
+        let talkingDetailVC = TalkingDetailVC()
+        self.navigationController?.fadeTo(talkingDetailVC)
+    }
+    
+    @objc private func todaysMissionBubbleViewDidTap() {
+        if isTalkedWithTo {
+            let missionMainVC = MissionMainVC()
+            self.navigationController?.fadeTo(missionMainVC)
+        } else {
+            wantsToShowTopAlertVC()
+        }
     }
 }
 // MARK: - Methods
 
 extension HomeMainVC {
     private func setAddTarget() {
-
+        
     }
     
-    private func pushToCharacterLevelPopUpVC() {
-        let characterLevelPopUpVC = CustomPopUpVC(type: .characterlevel,
-                                                  title: "티오의 레벨",
-                                                  subTitle: "미션을 열심히 수행하여 티오를 키워보세요!",
-                                                  level: nil,
-                                                  levelName: "응애")
-        characterLevelPopUpVC.modalPresentationStyle = .overFullScreen
-        self.present(characterLevelPopUpVC, animated: false)
-        
+    private func setBubbleViewAnimation() {
+        talkingWithToBubbleView.layer.add(floatingAnimation, forKey: "floatingAnimation")
+        todaysMissionBubbleView.layer.add(floatingAnimation, forKey: "floatingAnimation")
+    }
+    
+    private func wantsToShowTopAlertVC() {
+        // Alert View를 서서히 나타나도록 애니메이션
+        UIView.animate(withDuration: 0.5, animations: {
+            self.topAlertView.alpha = 1
+        }) { _ in
+            // 일정 시간 후에 Alert View를 서서히 사라지도록 애니메이션
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                UIView.animate(withDuration: 0.5, animations: {
+                    self.topAlertView.alpha = 0
+                })
+            }
+        }
     }
 }
 
@@ -96,85 +103,47 @@ extension HomeMainVC {
 
 extension HomeMainVC {
     private func setUI() {
-        view.backgroundColor = .black
-        levelContainerView.backgroundColor = .white.withAlphaComponent(0.6)
-        characterImageView.backgroundColor = .mainColor
+        view.backgroundColor = .lightGray
     }
     
     private func setLayout() {
-        view.addSubviews(naviBar, levelContainerView, menuButton, snackLabel, snackImageView, characterImageView, messageBubbleView, emojiBubbleView)
+        view.addSubviews(naviBar, talkingWithToBubbleView, todaysMissionBubbleView, toImageView)
         
         naviBar.snp.makeConstraints { make in
             make.top.equalToSuperview()
             make.leading.trailing.equalTo(view.safeAreaLayoutGuide)
-            make.height.equalTo(179)
+            make.height.equalTo(298)
         }
         
-        levelContainerView.snp.makeConstraints { make in
-            make.top.equalTo(naviBar.snp.bottom).offset(12)
-            make.leading.equalTo(view.safeAreaLayoutGuide).inset(27)
-            make.width.equalTo(136)
-            make.height.equalTo(51)
+        talkingWithToBubbleView.snp.makeConstraints { make in
+            make.top.equalTo(naviBar.snp.bottom).offset(67)
+            make.leading.equalToSuperview().inset(32)
+            make.width.height.equalTo(125)
         }
         
-        setLevelContainerViewLayout()
-        
-        menuButton.snp.makeConstraints { make in
-            make.top.equalTo(naviBar.snp.bottom).offset(20)
-            make.trailing.equalTo(view.safeAreaLayoutGuide).inset(37)
-            make.width.height.equalTo(35)
+        todaysMissionBubbleView.snp.makeConstraints { make in
+            make.top.equalTo(naviBar.snp.bottom).inset(5)
+            make.trailing.equalToSuperview().inset(32)
+            make.width.height.equalTo(125)
         }
         
-        snackLabel.snp.makeConstraints { make in
-            make.top.equalTo(levelContainerView.snp.bottom).offset(12)
-            make.leading.equalTo(view.safeAreaLayoutGuide).inset(27)
-        }
-        
-        snackImageView.snp.makeConstraints { make in
-            make.top.equalTo(snackLabel.snp.bottom).offset(5)
-            make.leading.equalTo(snackLabel.snp.leading)
-            make.width.equalTo(43)
-            make.height.equalTo(55)
-        }
-        
-        characterImageView.snp.makeConstraints { make in
+        toImageView.snp.makeConstraints { make in
+            make.bottom.equalToSuperview().inset(166)
             make.centerX.equalToSuperview()
-            make.top.equalTo(naviBar.snp.bottom).offset(169)
-            make.width.equalTo(170)
-            make.height.equalTo(260)
+            make.width.equalTo(148)
+            make.height.equalTo(124)
         }
         
-        messageBubbleView.snp.makeConstraints { make in
-            make.leading.equalTo(characterImageView.snp.leading).offset(-33)
-            make.top.equalTo(characterImageView.snp.top).offset(-38)
-            make.width.equalTo(95)
-            make.height.equalTo(50)
-        }
-        
-        emojiBubbleView.snp.makeConstraints { make in
-            make.leading.equalTo(characterImageView.snp.trailing).inset(10)
-            make.top.equalTo(characterImageView.snp.top).inset(72)
-            make.width.height.equalTo(47)
-        }
+        setTopAlertViewLayout()
     }
     
-    private func setLevelContainerViewLayout() {
-        levelContainerView.addSubviews(levelLabel, levelIconLabel, levelProgressBar)
+    private func setTopAlertViewLayout() {
+        view.addSubview(topAlertView)
         
-        levelLabel.snp.makeConstraints { make in
-            make.top.equalToSuperview().inset(7)
-            make.leading.equalToSuperview().inset(16)
-        }
-        
-        levelIconLabel.snp.makeConstraints { make in
-            make.top.equalTo(levelLabel.snp.top)
-            make.trailing.equalToSuperview().inset(17)
-        }
-        
-        levelProgressBar.snp.makeConstraints { make in
-            make.bottom.equalToSuperview().inset(8)
-            make.leading.trailing.equalToSuperview().inset(12)
-            make.height.equalTo(8)
+        topAlertView.snp.makeConstraints { make in
+            make.top.equalToSuperview().inset(94)
+            make.leading.trailing.equalTo(view.safeAreaLayoutGuide).inset(27)
+            make.height.equalTo(65)
         }
     }
 }
