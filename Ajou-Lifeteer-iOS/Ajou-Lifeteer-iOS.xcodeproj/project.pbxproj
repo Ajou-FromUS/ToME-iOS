@@ -11,13 +11,15 @@
 		A30667172A5C070F006E7B9F /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30667162A5C070F006E7B9F /* CustomNavigationBar.swift */; };
 		A30667192A5C0DFB006E7B9F /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30667182A5C0DFB006E7B9F /* CustomButton.swift */; };
 		A306671D2A5C1689006E7B9F /* CustomAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A306671C2A5C1689006E7B9F /* CustomAlertVC.swift */; };
-		A30FDEC92AF7F6780088D98E /* ToAnimationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30FDEC82AF7F6780088D98E /* ToAnimationManager.swift */; };
+		A30FDEC92AF7F6780088D98E /* ToMEAnimationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30FDEC82AF7F6780088D98E /* ToMEAnimationManager.swift */; };
 		A30FDECB2AF7F80A0088D98E /* MissionMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30FDECA2AF7F80A0088D98E /* MissionMainVC.swift */; };
 		A30FDECD2AF7FB420088D98E /* TopAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30FDECC2AF7FB420088D98E /* TopAlertView.swift */; };
 		A30FDED12AF806560088D98E /* CurrentMissionCompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30FDED02AF806560088D98E /* CurrentMissionCompleteView.swift */; };
 		A30FDED32AF8C4300088D98E /* MissionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30FDED22AF8C4300088D98E /* MissionModel.swift */; };
 		A30FDED52AF8C6A00088D98E /* MissionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30FDED42AF8C6A00088D98E /* MissionTableViewCell.swift */; };
 		A30FDED72AF8D4D40088D98E /* MissionDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30FDED62AF8D4D40088D98E /* MissionDetailVC.swift */; };
+		A30FDED92AF920040088D98E /* ToMEPhotoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30FDED82AF920040088D98E /* ToMEPhotoManager.swift */; };
+		A30FDEDC2AF92ABA0088D98E /* Mantis in Frameworks */ = {isa = PBXBuildFile; productRef = A30FDEDB2AF92ABA0088D98E /* Mantis */; };
 		A330D3F02AC0342800C1CC22 /* TalkingDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A330D3EF2AC0342800C1CC22 /* TalkingDetailVC.swift */; };
 		A330D3F32AC0362800C1CC22 /* MessageKit in Frameworks */ = {isa = PBXBuildFile; productRef = A330D3F22AC0362800C1CC22 /* MessageKit */; };
 		A330D3F52AC29D4E00C1CC22 /* TalkingMessageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A330D3F42AC29D4E00C1CC22 /* TalkingMessageVC.swift */; };
@@ -112,13 +114,14 @@
 		A30667162A5C070F006E7B9F /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
 		A30667182A5C0DFB006E7B9F /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		A306671C2A5C1689006E7B9F /* CustomAlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertVC.swift; sourceTree = "<group>"; };
-		A30FDEC82AF7F6780088D98E /* ToAnimationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToAnimationManager.swift; sourceTree = "<group>"; };
+		A30FDEC82AF7F6780088D98E /* ToMEAnimationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToMEAnimationManager.swift; sourceTree = "<group>"; };
 		A30FDECA2AF7F80A0088D98E /* MissionMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionMainVC.swift; sourceTree = "<group>"; };
 		A30FDECC2AF7FB420088D98E /* TopAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopAlertView.swift; sourceTree = "<group>"; };
 		A30FDED02AF806560088D98E /* CurrentMissionCompleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentMissionCompleteView.swift; sourceTree = "<group>"; };
 		A30FDED22AF8C4300088D98E /* MissionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionModel.swift; sourceTree = "<group>"; };
 		A30FDED42AF8C6A00088D98E /* MissionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionTableViewCell.swift; sourceTree = "<group>"; };
 		A30FDED62AF8D4D40088D98E /* MissionDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionDetailVC.swift; sourceTree = "<group>"; };
+		A30FDED82AF920040088D98E /* ToMEPhotoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToMEPhotoManager.swift; sourceTree = "<group>"; };
 		A330D3EF2AC0342800C1CC22 /* TalkingDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkingDetailVC.swift; sourceTree = "<group>"; };
 		A330D3F42AC29D4E00C1CC22 /* TalkingMessageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkingMessageVC.swift; sourceTree = "<group>"; };
 		A330D3F62AC2A26900C1CC22 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
@@ -250,6 +253,7 @@
 			files = (
 				A39294ED2A52CBF200436A4F /* Lottie in Frameworks */,
 				A39294F02A52CBFF00436A4F /* FSCalendar in Frameworks */,
+				A30FDEDC2AF92ABA0088D98E /* Mantis in Frameworks */,
 				A39294E72A52CBD900436A4F /* SnapKit in Frameworks */,
 				A330D3F32AC0362800C1CC22 /* MessageKit in Frameworks */,
 				A39294E42A52CBCC00436A4F /* Kingfisher in Frameworks */,
@@ -273,7 +277,7 @@
 		A30FDEC72AF7F6560088D98E /* Animation */ = {
 			isa = PBXGroup;
 			children = (
-				A30FDEC82AF7F6780088D98E /* ToAnimationManager.swift */,
+				A30FDEC82AF7F6780088D98E /* ToMEAnimationManager.swift */,
 			);
 			path = Animation;
 			sourceTree = "<group>";
@@ -560,6 +564,7 @@
 			children = (
 				A392953E2A52D6BE00436A4F /* .gitkeep */,
 				A36B369B2AB068CA0008E9F2 /* ToMETimeFormatter.swift */,
+				A30FDED82AF920040088D98E /* ToMEPhotoManager.swift */,
 			);
 			path = LTUtils;
 			sourceTree = "<group>";
@@ -888,6 +893,7 @@
 				A39294EC2A52CBF200436A4F /* Lottie */,
 				A39294EF2A52CBFF00436A4F /* FSCalendar */,
 				A330D3F22AC0362800C1CC22 /* MessageKit */,
+				A30FDEDB2AF92ABA0088D98E /* Mantis */,
 			);
 			productName = "Ajou-Lifeteer-iOS";
 			productReference = A39294C82A52C91C00436A4F /* Ajou-Lifeteer-iOS.app */;
@@ -925,6 +931,7 @@
 				A39294EB2A52CBF200436A4F /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				A39294EE2A52CBFF00436A4F /* XCRemoteSwiftPackageReference "FSCalendar" */,
 				A330D3F12AC0362800C1CC22 /* XCRemoteSwiftPackageReference "MessageKit" */,
+				A30FDEDA2AF92ABA0088D98E /* XCRemoteSwiftPackageReference "Mantis" */,
 			);
 			productRefGroup = A39294C92A52C91C00436A4F /* Products */;
 			projectDirPath = "";
@@ -1013,6 +1020,7 @@
 				A36B36962AAF66A40008E9F2 /* CustomProgressView.swift in Sources */,
 				A30667172A5C070F006E7B9F /* CustomNavigationBar.swift in Sources */,
 				A3CF55AE2A5BBF2400D19F00 /* UITextField+.swift in Sources */,
+				A30FDED92AF920040088D98E /* ToMEPhotoManager.swift in Sources */,
 				A3CF55CE2A5BC97100D19F00 /* CancelBag.swift in Sources */,
 				A36B36AA2AB447DA0008E9F2 /* CustomSureToSavePopUpVC.swift in Sources */,
 				A3CF55EE2A5BCB2F00D19F00 /* setStatusBarBackgroundColor.swift in Sources */,
@@ -1037,7 +1045,7 @@
 				A3CF55DE2A5BCA8500D19F00 /* calculateTopInset.swift in Sources */,
 				A3CF55B82A5BC87500D19F00 /* UILabel+.swift in Sources */,
 				A39294CC2A52C91C00436A4F /* AppDelegate.swift in Sources */,
-				A30FDEC92AF7F6780088D98E /* ToAnimationManager.swift in Sources */,
+				A30FDEC92AF7F6780088D98E /* ToMEAnimationManager.swift in Sources */,
 				A3CF55EA2A5BCB0000D19F00 /* setImage.swift in Sources */,
 				A34478E32A698554002F1981 /* SplashVC.swift in Sources */,
 				A3CF55E62A5BCAD800D19F00 /* makeAlert.swift in Sources */,
@@ -1278,6 +1286,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		A30FDEDA2AF92ABA0088D98E /* XCRemoteSwiftPackageReference "Mantis" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/guoyingtao/Mantis.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.7.5;
+			};
+		};
 		A330D3F12AC0362800C1CC22 /* XCRemoteSwiftPackageReference "MessageKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/MessageKit/MessageKit";
@@ -1337,6 +1353,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		A30FDEDB2AF92ABA0088D98E /* Mantis */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A30FDEDA2AF92ABA0088D98E /* XCRemoteSwiftPackageReference "Mantis" */;
+			productName = Mantis;
+		};
 		A330D3F22AC0362800C1CC22 /* MessageKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A330D3F12AC0362800C1CC22 /* XCRemoteSwiftPackageReference "MessageKit" */;

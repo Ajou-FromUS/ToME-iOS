@@ -16,6 +16,9 @@ final class HomeMainVC: UIViewController {
 
     var isTalkedWithTo: Bool = true
     
+    // 햅틱 피드백 제너레이터
+    let feedbackGenerator = UIImpactFeedbackGenerator(style: .light)
+    
     // MARK: - UI Components
     
     private lazy var naviBar = CustomNavigationBar(self, type: .home).setUserName("세상에서제일귀여운몽이누나")
@@ -34,19 +37,21 @@ final class HomeMainVC: UIViewController {
         $0.image = ImageLiterals.homeImgTo
     }
     
-    private let floatingAnimation = ToAnimationManager.createFloatingAnimation()
+    private let floatingAnimation = ToMEAnimationManager.createFloatingAnimation()
     
     private lazy var topAlertView = TopAlertView().then {
         $0.alpha = 0
     }
-        
+    
     // MARK: - View Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setNavibarAnimation()
         setUI()
         setLayout()
         setAddTarget()
+        setHaptic()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -59,11 +64,15 @@ final class HomeMainVC: UIViewController {
 
 extension HomeMainVC {
     @objc private func talkingWithToBubbleViewDidTap() {
+        // 버튼이 눌릴 때 햅틱 피드백 제공
+        feedbackGenerator.impactOccurred()
         let talkingDetailVC = TalkingDetailVC()
         self.navigationController?.fadeTo(talkingDetailVC)
     }
     
     @objc private func todaysMissionBubbleViewDidTap() {
+        // 버튼이 눌릴 때 햅틱 피드백 제공
+        feedbackGenerator.impactOccurred()
         if isTalkedWithTo {
             let missionMainVC = MissionMainVC()
             self.navigationController?.fadeTo(missionMainVC)
@@ -82,6 +91,15 @@ extension HomeMainVC {
     private func setBubbleViewAnimation() {
         talkingWithToBubbleView.layer.add(floatingAnimation, forKey: "floatingAnimation")
         todaysMissionBubbleView.layer.add(floatingAnimation, forKey: "floatingAnimation")
+    }
+    
+    private func setNavibarAnimation() {
+        ToMEAnimationManager.createSequentialTextAnimation(label: naviBar.centerTitleLabel, text: naviBar.centerTitleLabel.text ?? String())
+    }
+    
+    private func setHaptic() {
+        // 햅틱 피드백 준비
+        feedbackGenerator.prepare()
     }
     
     private func wantsToShowTopAlertVC() {

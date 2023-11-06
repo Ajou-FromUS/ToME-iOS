@@ -18,6 +18,11 @@ enum HomeBubbleType {
 
 final class BubbleView: UIView {
     
+    // MARK: - Properties
+
+    var characterImageViewHeight = Int()
+    var characterImageViewWidth = Int()
+    
     // MARK: - UI Components
     
     private let titleLabel = UILabel().then {
@@ -53,10 +58,14 @@ extension BubbleView {
             self.titleLabel.text = "티오랑\n대화하기"
             setTitleLabel()
             self.characterImageView.image = ImageLiterals.homeIcTalking
+            self.characterImageViewWidth = 43
+            self.characterImageViewHeight = 25
         case .todaysMission:
             self.titleLabel.text = "오늘의 미션\n확인하기"
             setTitleLabel()
             self.characterImageView.image = ImageLiterals.homeIcMissionFill
+            self.characterImageViewWidth = 33
+            self.characterImageViewHeight = 28
         }
         
         self.addSubviews(bubbleImageView, characterImageView, titleLabel)
@@ -68,8 +77,8 @@ extension BubbleView {
         characterImageView.snp.makeConstraints { make in
             make.top.equalToSuperview().inset(27)
             make.centerX.equalToSuperview()
-            make.width.equalTo(43)
-            make.height.equalTo(25)
+            make.width.equalTo(self.characterImageViewWidth)
+            make.height.equalTo(self.characterImageViewHeight)
         }
         
         titleLabel.snp.makeConstraints { make in

@@ -15,4 +15,12 @@ extension UINavigationController {
         view.layer.add(transition, forKey: nil)
         pushViewController(viewController, animated: false)
     }
+    
+    func fadePop(_ viewController: UIViewController) {
+        let transition: CATransition = CATransition()
+        transition.duration = 1
+        transition.type = CATransitionType.fade
+        view.layer.add(transition, forKey: nil)
+        popViewController(animated: false)
+    }
 }

@@ -16,6 +16,8 @@ class MissionTableViewCell: UITableViewCell {
     
     private let containerView = UIView().then {
         $0.layer.cornerRadius = 10
+        $0.layer.borderWidth = 1
+        $0.layer.borderColor = UIColor.disabled2.cgColor
     }
     
     private let missionImageView = UIImageView().then {

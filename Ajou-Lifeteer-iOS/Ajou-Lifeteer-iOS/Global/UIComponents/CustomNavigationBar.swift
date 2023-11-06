@@ -34,7 +34,7 @@ final class CustomNavigationBar: UIView {
 
     // MARK: - UI Components
     
-    private let centerTitleLabel = UILabel()
+    var centerTitleLabel = UILabel()
     private let backButton = UIButton()
     private let mindSetBIImageView = UIImageView()
     

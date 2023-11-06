@@ -45,6 +45,11 @@ final class MissionMainVC: UIViewController {
         setUI()
         setLayout()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        self.hideTabBar(wantsToHide: false)
+    }
 }
 
 // MARK: - Methods
@@ -88,7 +93,7 @@ extension MissionMainVC {
         }
         
         missionTableView.snp.makeConstraints { make in
-            make.centerY.equalToSuperview()
+            make.top.equalTo(view.safeAreaLayoutGuide).offset(170)
             make.leading.trailing.equalTo(view.safeAreaLayoutGuide).inset(27)
             make.height.equalTo(missionList.count * 94 + 20)
         }
@@ -100,6 +105,16 @@ extension MissionMainVC {
 extension MissionMainVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return CGFloat(cellHeight + spacing)
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let cell = tableView.cellForRow(at: indexPath) as? MissionTableViewCell else { return }
+        guard let selectedRecords = tableView.indexPathsForSelectedRows else { return }
+            
+        // 미션 상세 페이지로 이동
+        let missionDetailVC = MissionDetailVC()
+        missionDetailVC.setData(missionType: self.missionList[0].missionType, missionTitle: self.missionList[0].missionTitle)
+        self.navigationController?.fadeTo(missionDetailVC)
     }
 }
 

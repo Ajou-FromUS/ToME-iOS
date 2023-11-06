@@ -22,7 +22,7 @@ final class ArchiveMainVC: UIViewController, UIViewControllerTransitioningDelega
     
     private lazy var rectangularMessageBubbleView = CustomMessageBubbleView(message: "오늘의 아카이브를 작성해볼까요?", type: .rectangular)
     
-    private lazy var writeArchiveButton = CustomButton(title: "작성하러 가기", type: .edgeRound)
+    private lazy var writeArchiveButton = CustomButton(title: "작성하러 가기", type: .fillWithBlue)
     
     // MARK: - View Life Cycle
     

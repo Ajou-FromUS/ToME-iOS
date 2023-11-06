@@ -10,10 +10,12 @@ import UIKit
 @frozen
 enum BtnType {
     case fillWithBlue  // 파란 버튼
-    case borderWithoutBGC   // 배경 없이 테두리만 있는 버튼
-    case selectWeather  // 날씨 버튼
+    case fillWithGrey   // 회색 버튼
     
-    case edgeRound  // (아카이브) 엣지 라운드처리 버튼
+    case fillWithBlueAndImage  // 파란 버튼 + 이미지
+    case fillWithGreyAndImage  // 회색 버튼 + 이미지
+
+    case borderWithoutBGC   // 배경 없이 테두리만 있는 버튼
 }
 
 public class CustomButton: UIButton {
@@ -22,6 +24,7 @@ public class CustomButton: UIButton {
     
     init(title: String, type: BtnType) {
         super.init(frame: .zero)
+        self.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 25)
         self.setUI(title, type)
     }
     
@@ -49,7 +52,7 @@ extension CustomButton {
     
     /// 버튼에 image 추가 (weather 버튼일 경우)
     @discardableResult
-    public func setWeatherImage(image: UIImage) -> Self {
+    public func setImage(image: UIImage) -> Self {
         self.setImage(image, for: .normal)
         return self
     }
@@ -73,7 +76,7 @@ extension CustomButton {
 
 extension CustomButton {
     private func setUI(_ title: String, _ type: BtnType) {
-        self.layer.cornerRadius = 5
+        self.layer.cornerRadius = 8
         
         switch type {
         case .fillWithBlue:
@@ -93,7 +96,15 @@ extension CustomButton {
                 ),
                 for: .disabled
             )
-            
+        case .fillWithGrey:
+            self.setBackgroundColor(.disabled1, for: .normal)
+            self.setAttributedTitle(
+                NSAttributedString(
+                    string: title,
+                    attributes: [.font: UIFont.body1, .foregroundColor: UIColor.font2]
+                ),
+                for: .normal
+            )
         case .borderWithoutBGC:
             self.layer.borderWidth = 1
             self.layer.borderColor = UIColor.mainColor.cgColor
@@ -106,13 +117,13 @@ extension CustomButton {
                 ),
                 for: .normal
             )
-        case .selectWeather:
+        case .fillWithBlueAndImage:
             self.setBackgroundColor(.mainColor, for: .normal)
             self.setBackgroundColor(.disabled1, for: .disabled)
             self.setAttributedTitle(
                 NSAttributedString(
                     string: title,
-                    attributes: [.font: UIFont.body1, .foregroundColor: UIColor.mainColor]
+                    attributes: [.font: UIFont.body1, .foregroundColor: UIColor.font4]
                 ),
                 for: .normal
             )
@@ -123,18 +134,18 @@ extension CustomButton {
                 ),
                 for: .disabled
             )
-            self.semanticContentAttribute = .forceRightToLeft   // 이미지를 텍스트의 왼쪽으로 설정
+            self.semanticContentAttribute = .forceLeftToRight   // 이미지를 텍스트의 왼쪽으로 설정
             
-        case .edgeRound:
-            self.layer.cornerRadius = 23
-            self.setBackgroundColor(.font4, for: .normal)
+        case .fillWithGreyAndImage:
+            self.setBackgroundColor(.disabled2, for: .normal)
             self.setAttributedTitle(
                 NSAttributedString(
                     string: title,
-                    attributes: [.font: UIFont.body1, .foregroundColor: UIColor.font1]
+                    attributes: [.font: UIFont.body1, .foregroundColor: UIColor.font2]
                 ),
                 for: .normal
             )
+            self.semanticContentAttribute = .forceLeftToRight   // 이미지를 텍스트의 왼쪽으로 설정
         }
     }
 }
