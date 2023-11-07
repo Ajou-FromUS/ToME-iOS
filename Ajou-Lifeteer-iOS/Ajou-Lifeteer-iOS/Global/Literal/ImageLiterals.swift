@@ -62,9 +62,11 @@ enum ImageLiterals {
     static var introIcCheck: UIImage { .load(named: "intro_ic_check") }
     static var introImgCalender: UIImage { .load(named: "intro_img_calender") }
     static var introImgExplainMission: UIImage { .load(named: "intro_img_explain_mission") }
+    static var missionImgDecibelRectangle: UIImage { .load(named: "mission_img_decibel_rectangle") }
     static var missionImgDecibel: UIImage { .load(named: "mission_img_decibel") }
     static var missionImgPhotoRectangle: UIImage { .load(named: "mission_img_photo_rectangle") }
     static var missionImgPhoto: UIImage { .load(named: "mission_img_photo") }
+    static var missionImgTextRectangle: UIImage { .load(named: "mission_img_text_rectangle") }
     static var missionImgText: UIImage { .load(named: "mission_img_text") }
     static var missionProgressFill: UIImage { .load(named: "mission_progress_fill") }
     static var missionProgress: UIImage { .load(named: "mission_progress") }

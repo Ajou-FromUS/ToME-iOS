@@ -10,7 +10,7 @@ import UIKit
 extension UINavigationController {
     func fadeTo(_ viewController: UIViewController) {
         let transition: CATransition = CATransition()
-        transition.duration = 1
+        transition.duration = 0.5
         transition.type = CATransitionType.fade
         view.layer.add(transition, forKey: nil)
         pushViewController(viewController, animated: false)

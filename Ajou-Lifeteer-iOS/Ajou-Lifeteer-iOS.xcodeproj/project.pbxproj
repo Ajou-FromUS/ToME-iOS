@@ -20,6 +20,9 @@
 		A30FDED72AF8D4D40088D98E /* MissionDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30FDED62AF8D4D40088D98E /* MissionDetailVC.swift */; };
 		A30FDED92AF920040088D98E /* ToMEPhotoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30FDED82AF920040088D98E /* ToMEPhotoManager.swift */; };
 		A30FDEDC2AF92ABA0088D98E /* Mantis in Frameworks */ = {isa = PBXBuildFile; productRef = A30FDEDB2AF92ABA0088D98E /* Mantis */; };
+		A30FDEDF2AF93F460088D98E /* MissionAskedToCompleteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30FDEDE2AF93F460088D98E /* MissionAskedToCompleteVC.swift */; };
+		A30FDEE22AF9DA4D0088D98E /* MissionProceedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30FDEE12AF9DA4D0088D98E /* MissionProceedVC.swift */; };
+		A30FDEE82AF9F84A0088D98E /* ToMEDecibelMananger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30FDEE72AF9F84A0088D98E /* ToMEDecibelMananger.swift */; };
 		A330D3F02AC0342800C1CC22 /* TalkingDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A330D3EF2AC0342800C1CC22 /* TalkingDetailVC.swift */; };
 		A330D3F32AC0362800C1CC22 /* MessageKit in Frameworks */ = {isa = PBXBuildFile; productRef = A330D3F22AC0362800C1CC22 /* MessageKit */; };
 		A330D3F52AC29D4E00C1CC22 /* TalkingMessageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A330D3F42AC29D4E00C1CC22 /* TalkingMessageVC.swift */; };
@@ -122,6 +125,9 @@
 		A30FDED42AF8C6A00088D98E /* MissionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionTableViewCell.swift; sourceTree = "<group>"; };
 		A30FDED62AF8D4D40088D98E /* MissionDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionDetailVC.swift; sourceTree = "<group>"; };
 		A30FDED82AF920040088D98E /* ToMEPhotoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToMEPhotoManager.swift; sourceTree = "<group>"; };
+		A30FDEDE2AF93F460088D98E /* MissionAskedToCompleteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionAskedToCompleteVC.swift; sourceTree = "<group>"; };
+		A30FDEE12AF9DA4D0088D98E /* MissionProceedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionProceedVC.swift; sourceTree = "<group>"; };
+		A30FDEE72AF9F84A0088D98E /* ToMEDecibelMananger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToMEDecibelMananger.swift; sourceTree = "<group>"; };
 		A330D3EF2AC0342800C1CC22 /* TalkingDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkingDetailVC.swift; sourceTree = "<group>"; };
 		A330D3F42AC29D4E00C1CC22 /* TalkingMessageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkingMessageVC.swift; sourceTree = "<group>"; };
 		A330D3F62AC2A26900C1CC22 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
@@ -296,6 +302,8 @@
 			children = (
 				A30FDECA2AF7F80A0088D98E /* MissionMainVC.swift */,
 				A30FDED62AF8D4D40088D98E /* MissionDetailVC.swift */,
+				A30FDEDE2AF93F460088D98E /* MissionAskedToCompleteVC.swift */,
+				A30FDEE12AF9DA4D0088D98E /* MissionProceedVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -410,7 +418,7 @@
 		A39294F72A52D0E500436A4F /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				A39295052A52D1D300436A4F /* LTUtils */,
+				A39295052A52D1D300436A4F /* ToMEUtils */,
 				A3CF55D32A5BC9F400D19F00 /* addToolBar.swift */,
 				A3CF55D52A5BCA0A00D19F00 /* adjusted+.swift */,
 				A3CF55D72A5BCA1F00D19F00 /* applyShadow.swift */,
@@ -559,14 +567,15 @@
 			path = "Combine+";
 			sourceTree = "<group>";
 		};
-		A39295052A52D1D300436A4F /* LTUtils */ = {
+		A39295052A52D1D300436A4F /* ToMEUtils */ = {
 			isa = PBXGroup;
 			children = (
 				A392953E2A52D6BE00436A4F /* .gitkeep */,
 				A36B369B2AB068CA0008E9F2 /* ToMETimeFormatter.swift */,
 				A30FDED82AF920040088D98E /* ToMEPhotoManager.swift */,
+				A30FDEE72AF9F84A0088D98E /* ToMEDecibelMananger.swift */,
 			);
-			path = LTUtils;
+			path = ToMEUtils;
 			sourceTree = "<group>";
 		};
 		A39295062A52D25200436A4F /* Model */ = {
@@ -1006,6 +1015,7 @@
 				A3E4D3032A5BE90500C7611C /* ImageLiterals.swift in Sources */,
 				A34478FE2A71794D002F1981 /* LastDetailLandingPageVC.swift in Sources */,
 				A3CF55B42A5BC1A700D19F00 /* UISwitch+.swift in Sources */,
+				A30FDEDF2AF93F460088D98E /* MissionAskedToCompleteVC.swift in Sources */,
 				A34478F32A717679002F1981 /* LandingPageMainVC.swift in Sources */,
 				A30FDED32AF8C4300088D98E /* MissionModel.swift in Sources */,
 				A3CF55B02A5BC01200D19F00 /* UITableView+.swift in Sources */,
@@ -1051,10 +1061,12 @@
 				A3CF55E62A5BCAD800D19F00 /* makeAlert.swift in Sources */,
 				A3E4D30B2A5BF07F00C7611C /* ArchiveMainVC.swift in Sources */,
 				A3CF55A82A5BBED200D19F00 /* UIViewController+.swift in Sources */,
+				A30FDEE82AF9F84A0088D98E /* ToMEDecibelMananger.swift in Sources */,
 				A3E4D2FB2A5BDAAA00C7611C /* ColorLiterals.swift in Sources */,
 				A3CF55EC2A5BCB1400D19F00 /* setRootViewController.swift in Sources */,
 				A3CF55D62A5BCA0A00D19F00 /* adjusted+.swift in Sources */,
 				A330D4002AC2D4CE00C1CC22 /* MyPageMainVC.swift in Sources */,
+				A30FDEE22AF9DA4D0088D98E /* MissionProceedVC.swift in Sources */,
 				A3CF55BA2A5BC88D00D19F00 /* UIImage+.swift in Sources */,
 				A34478F82A7178B7002F1981 /* DetailLandingPageVC.swift in Sources */,
 				A36B36942AAF643E0008E9F2 /* CustomPopUpVC.swift in Sources */,

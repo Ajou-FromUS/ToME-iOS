@@ -19,8 +19,8 @@ final class MissionMainVC: UIViewController {
 
     var missionList: [MissionModel] = [
         MissionModel(missionType: 0, missionTitle: "나무 사진찍기"),
-        MissionModel(missionType: 1, missionTitle: "데시벨 70으로 소리지르기"),
-        MissionModel(missionType: 2, missionTitle: "행복한 일 찾아 적기")
+        MissionModel(missionType: 1, missionTitle: "50db까지 소리 지르기"),
+        MissionModel(missionType: 2, missionTitle: "오늘의 감사일기 적어보기")
     ]
     
     // MARK: - UI Components
@@ -113,7 +113,7 @@ extension MissionMainVC: UITableViewDelegate {
             
         // 미션 상세 페이지로 이동
         let missionDetailVC = MissionDetailVC()
-        missionDetailVC.setData(missionType: self.missionList[0].missionType, missionTitle: self.missionList[0].missionTitle)
+        missionDetailVC.setData(missionType: self.missionList[indexPath.row].missionType, missionTitle: self.missionList[indexPath.row].missionTitle)
         self.navigationController?.fadeTo(missionDetailVC)
     }
 }

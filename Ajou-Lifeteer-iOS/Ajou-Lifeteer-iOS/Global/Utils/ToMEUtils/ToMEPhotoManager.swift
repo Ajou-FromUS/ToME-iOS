@@ -70,7 +70,7 @@ class ToMEPhotoManager: NSObject, UIImagePickerControllerDelegate, UINavigationC
     }
 
     // 권한을 거부했을 때 띄어주는 Alert 함수
-    private func showAlertForPermission(_ type: String) {
+    func showAlertForPermission(_ type: String) {
         if let appName = Bundle.main.infoDictionary?["CFBundleDisplayName"] as? String {
             let alertVC = UIAlertController(
                 title: "설정",

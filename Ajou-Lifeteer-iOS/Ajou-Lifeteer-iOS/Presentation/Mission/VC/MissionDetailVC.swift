@@ -16,6 +16,12 @@ final class MissionDetailVC: UIViewController {
 
     private var photoManager: ToMEPhotoManager?
     
+    var missionType = Int()
+    
+    var startMissionButtonTitle: String = "미션 수행하러 가기"
+    
+    var backButtonTitle: String = "다른 미션 보러가기"
+        
     // MARK: - UI Components
     
     private lazy var naviBar = CustomNavigationBar(self, type: .singleTitle).setTitle("미션")
@@ -45,10 +51,16 @@ final class MissionDetailVC: UIViewController {
         $0.textColor = .font1
     }
     
-    private lazy var startMissionButton = CustomButton(title: "미션 수행하러 가기", type: .fillWithBlueAndImage)
+    private let middleLabel = UILabel().then {
+        $0.text = "오늘의 미션을 수행해 보세요."
+        $0.font = .newBody3
+        $0.textColor = .font1
+    }
+    
+    var startMissionButton = CustomButton(title: "미션 수행하러 가기", type: .fillWithBlueAndImage)
                                                         .setImage(image: ImageLiterals.gallaryBtnImageFill)
     
-    private lazy var backButton = CustomButton(title: "다른 미션 보러가기", type: .fillWithGreyAndImage)
+    var backButton = CustomButton(title: "다른 미션 보러가기", type: .fillWithGreyAndImage)
                                                         .setImage(image: ImageLiterals.backBtnImage)
 
     // MARK: - View Life Cycle
@@ -71,13 +83,34 @@ extension MissionDetailVC {
         self.navigationController?.popViewController(animated: false)
     }
     
-    @objc private func startMissionButtonDidTap() {
+    @objc private func startPhotoMissionButtonDidTap() {
         pushToPhotoAlertController()
         // crop이 끝난 사진을 missionImageView의 image로 설정
         photoManager?.didFinishCropping = { croppedImage in
             self.missionImageView.image = croppedImage
+            self.missionImageView.layer.cornerRadius = 10
+            self.currentMissionCompleteView.isHidden = true
             
+            self.backButton.setTitle("dfadfqerqerwer", for: .application)
+            
+            self.view.addSubview(self.middleLabel)
+            self.middleLabel.snp.makeConstraints { make in
+                make.centerX.equalToSuperview()
+                make.bottom.equalTo(self.containerView.snp.top).offset(-20)
+            }
+
+            print(croppedImage)
         }
+        
+        self.backButtonTitle = "zzzz"
+        self.backButton.changeTitle(string: self.backButtonTitle)
+    }
+    
+    @objc private func startOtherButtonDidTap() {
+        let missionProceedVC = MissionProceedVC()
+        missionProceedVC.missionType = self.missionType
+        missionProceedVC.missionTitleLabel.text = self.missionTitleLabel.text
+        self.navigationController?.fadeTo(missionProceedVC)
     }
 }
 
@@ -86,21 +119,26 @@ extension MissionDetailVC {
 extension MissionDetailVC {
     func setData(missionType: Int, missionTitle: String) {
         if missionType == 0 {
-            missionTypeLabel.text = "찰칵 미션"
-            missionImageView.image = ImageLiterals.missionImgPhotoRectangle
+            self.missionTypeLabel.text = "찰칵 미션"
+            self.missionImageView.image = ImageLiterals.missionImgPhotoRectangle
         } else if missionType == 1 {
-            missionTypeLabel.text = "데시벨 미션"
-            missionImageView.image = ImageLiterals.missionImgDecibel
+            self.missionTypeLabel.text = "데시벨 미션"
+            self.missionImageView.image = ImageLiterals.missionImgDecibelRectangle
         } else {
-            missionTypeLabel.text = "텍스트 미션"
-            missionImageView.image = ImageLiterals.missionImgText
+            self.missionTypeLabel.text = "텍스트 미션"
+            self.missionImageView.image = ImageLiterals.missionImgTextRectangle
         }
-        
-        missionTitleLabel.text = missionTitle
+        self.missionType = missionType
+        self.missionTitleLabel.text = missionTitle
     }
     
     func setAddTarget() {
-        self.startMissionButton.addTarget(self, action: #selector(startMissionButtonDidTap), for: .touchUpInside)
+        if self.missionType == 0 {
+            self.startMissionButton.addTarget(self, action: #selector(startPhotoMissionButtonDidTap), for: .touchUpInside)
+        } else {
+            self.startMissionButton.addTarget(self, action: #selector(startOtherButtonDidTap), for: .touchUpInside)
+        }
+        
         self.backButton.addTarget(self, action: #selector(popToPreviousVC), for: .touchUpInside)
     }
     
