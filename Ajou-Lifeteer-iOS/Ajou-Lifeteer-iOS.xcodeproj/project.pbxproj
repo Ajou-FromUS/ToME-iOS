@@ -11,6 +11,7 @@
 		A30667172A5C070F006E7B9F /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30667162A5C070F006E7B9F /* CustomNavigationBar.swift */; };
 		A30667192A5C0DFB006E7B9F /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30667182A5C0DFB006E7B9F /* CustomButton.swift */; };
 		A306671D2A5C1689006E7B9F /* CustomAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A306671C2A5C1689006E7B9F /* CustomAlertVC.swift */; };
+		A30D5F952AFA95F400C276F0 /* CircularMissionProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30D5F942AFA95F400C276F0 /* CircularMissionProgressView.swift */; };
 		A30FDEC92AF7F6780088D98E /* ToMEAnimationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30FDEC82AF7F6780088D98E /* ToMEAnimationManager.swift */; };
 		A30FDECB2AF7F80A0088D98E /* MissionMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30FDECA2AF7F80A0088D98E /* MissionMainVC.swift */; };
 		A30FDECD2AF7FB420088D98E /* TopAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30FDECC2AF7FB420088D98E /* TopAlertView.swift */; };
@@ -117,6 +118,7 @@
 		A30667162A5C070F006E7B9F /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
 		A30667182A5C0DFB006E7B9F /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		A306671C2A5C1689006E7B9F /* CustomAlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertVC.swift; sourceTree = "<group>"; };
+		A30D5F942AFA95F400C276F0 /* CircularMissionProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularMissionProgressView.swift; sourceTree = "<group>"; };
 		A30FDEC82AF7F6780088D98E /* ToMEAnimationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToMEAnimationManager.swift; sourceTree = "<group>"; };
 		A30FDECA2AF7F80A0088D98E /* MissionMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionMainVC.swift; sourceTree = "<group>"; };
 		A30FDECC2AF7FB420088D98E /* TopAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopAlertView.swift; sourceTree = "<group>"; };
@@ -293,6 +295,7 @@
 			children = (
 				A30FDED02AF806560088D98E /* CurrentMissionCompleteView.swift */,
 				A30FDED42AF8C6A00088D98E /* MissionTableViewCell.swift */,
+				A30D5F942AFA95F400C276F0 /* CircularMissionProgressView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1018,6 +1021,7 @@
 				A30FDEDF2AF93F460088D98E /* MissionAskedToCompleteVC.swift in Sources */,
 				A34478F32A717679002F1981 /* LandingPageMainVC.swift in Sources */,
 				A30FDED32AF8C4300088D98E /* MissionModel.swift in Sources */,
+				A30D5F952AFA95F400C276F0 /* CircularMissionProgressView.swift in Sources */,
 				A3CF55B02A5BC01200D19F00 /* UITableView+.swift in Sources */,
 				A3CF55F62A5BCB8A00D19F00 /* UserDefaultWrapper.swift in Sources */,
 				A3E4D3072A5BF04300C7611C /* HomeMainVC.swift in Sources */,

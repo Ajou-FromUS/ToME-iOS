@@ -11,6 +11,8 @@ import UIKit
 
 class ToMEDecibelMananger: NSObject, AVAudioRecorderDelegate {
     
+    static let shared = ToMEDecibelMananger()
+    
     // MARK: - Properties
 
     var audioRecorder: AVAudioRecorder!
@@ -74,17 +76,16 @@ class ToMEDecibelMananger: NSObject, AVAudioRecorderDelegate {
             print("Audio recorder setup error: \(error.localizedDescription)")
         }
         
-        levelTimer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(updateAudioLevel), userInfo: nil, repeats: true)
+        levelTimer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(returnAudioLevel), userInfo: nil, repeats: true)
     }
     
     // 오디오 레벨 업데이트
-    @objc func updateAudioLevel() {
+    @objc func returnAudioLevel() -> Float {
         audioRecorder.updateMeters()
-        var decibels = audioRecorder.peakPower(forChannel: 0)
-        
-        print("데시벨 레벨: \(decibels + 20)")
+        let decibels = audioRecorder.peakPower(forChannel: 0)
+        return decibels + 20.0
     }
-    
+
     // (화면을 빠져나갈 경우) 데시벨 모니터링 중단
     func stopMonitoringDecibels() {
         levelTimer?.invalidate()

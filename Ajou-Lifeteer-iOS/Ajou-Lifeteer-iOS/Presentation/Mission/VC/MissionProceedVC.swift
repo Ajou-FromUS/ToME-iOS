@@ -16,7 +16,7 @@ final class MissionProceedVC: UIViewController {
     
     var missionType = Int()
     
-    let decibelManager = ToMEDecibelMananger()
+    let decibelManager = ToMEDecibelMananger.shared
         
     // MARK: - UI Components
     
@@ -50,6 +50,35 @@ final class MissionProceedVC: UIViewController {
         $0.textColor = .font1
     }
     
+    private lazy var circularDecibelProgressView = CircularMissionProgressView()
+    
+    private let missionSubLabel = UILabel().then {
+        $0.numberOfLines = 2
+        $0.font = .newBody2
+        $0.textColor = .font1
+        $0.text = "데시벨을 측정하고 있어요.\n마음껏 소리 지르세요!"
+        $0.setLineSpacing(lineSpacing: 8)
+        $0.textAlignment = .center
+    }
+    
+    var decibelLabel = UILabel().then {
+        $0.font = .title1
+        $0.textColor = .font1
+    }
+    
+    private let dBLabel = UILabel().then {
+        $0.font = .title4
+        $0.textColor = .font1
+        $0.text = "db"
+    }
+    
+    private lazy var decibelValueStackView = UIStackView(
+        arrangedSubviews: [decibelLabel, dBLabel]
+    ).then {
+        $0.spacing = 3
+        $0.alignment = .bottom
+    }
+    
     // MARK: - View Life Cycle
     
     override func viewDidLoad() {
@@ -59,12 +88,43 @@ final class MissionProceedVC: UIViewController {
         setLayout()
         // 데시벨 측정 시작
         decibelManager.startMonitoringDecibels()
+        // 0.5초마다 데시벨 값을 업데이트하고 PieChartView에 반영
+        Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { _ in
+            let decibelValue = self.decibelManager.returnAudioLevel()
+            self.updateCircularProgressView(withDecibels: decibelValue)
+            self.updateDecibelStackView(withDecibels: decibelValue)
+        }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
+        // 화면을 빠져나가면 데시벨 모니터링 중단
+        decibelManager.stopMonitoringDecibels()
+    }
+    
+    func updateCircularProgressView(withDecibels decibels: Float) {
+            
+           // Ensure the decibel level is within the valid range (0 to 50)
+           let normalizedDecibels = min(max(decibels, 0), 50)
+
+           // Calculate the progress as a percentage
+           let progressPercentage = normalizedDecibels / 50.0
+           // Update the progress property of the CircularProgressView
+        circularDecibelProgressView.progress = CGFloat(progressPercentage)
+       }
+    
+    func updateDecibelStackView(withDecibels decibels: Float) {
+        let normalizedDecibels = min(max(decibels, 0), 50)
+        self.decibelLabel.text = String(Int(normalizedDecibels))
+        
     }
 }
 
 // MARK: - Methods
 
 extension MissionProceedVC {
+    
     private func setData() {
         if missionType == 1 {
             self.missionTypeLabel.text = "데시벨 미션"
@@ -83,6 +143,7 @@ extension MissionProceedVC {
         view.backgroundColor = .systemGray
         self.containerView.backgroundColor = .disabled2.withAlphaComponent(0.6)
         self.horizontalDevidedView.backgroundColor = .font3
+        self.circularDecibelProgressView.backgroundColor = .clear
     }
     
     private func setLayout() {
@@ -104,7 +165,8 @@ extension MissionProceedVC {
             make.top.equalTo(middleLabel.snp.bottom).offset(31)
         }
         
-        containerView.addSubviews(missionImageView, missionTypeLabel, horizontalDevidedView, missionTitleLabel)
+        containerView.addSubviews(missionImageView, missionTypeLabel, horizontalDevidedView,
+                                  missionTitleLabel, circularDecibelProgressView, missionSubLabel, decibelValueStackView)
         
         missionImageView.snp.makeConstraints { make in
             make.top.leading.equalToSuperview().inset(21)
@@ -129,8 +191,23 @@ extension MissionProceedVC {
             make.leading.equalTo(missionTypeLabel.snp.leading)
         }
         
+        circularDecibelProgressView.snp.makeConstraints { make in
+            make.top.equalTo(missionTitleLabel.snp.bottom).offset(52)
+            make.leading.trailing.equalToSuperview().inset(97)
+            make.height.equalTo(circularDecibelProgressView.snp.width)
+        }
+        
+        missionSubLabel.snp.makeConstraints { make in
+            make.top.equalTo(circularDecibelProgressView.snp.bottom).offset(30)
+            make.centerX.equalToSuperview()
+        }
+        
         containerView.snp.makeConstraints { make in
-            make.bottom.equalTo(missionTitleLabel.snp.bottom).offset(20)
+            make.bottom.equalTo(missionSubLabel.snp.bottom).offset(40)
+        }
+        
+        decibelValueStackView.snp.makeConstraints { make in
+            make.center.equalTo(circularDecibelProgressView.snp.center)
         }
     }
 }
