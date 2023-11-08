@@ -83,7 +83,7 @@ extension CustomButton {
         switch type {
         case .fillWithBlue:
             self.setBackgroundColor(.mainColor, for: .normal)
-            self.setBackgroundColor(.red, for: .disabled)
+            self.setBackgroundColor(.disabled2, for: .disabled)
             self.setAttributedTitle(
                 NSAttributedString(
                     string: title,
@@ -99,7 +99,7 @@ extension CustomButton {
                 for: .disabled
             )
         case .fillWithGrey:
-            self.setBackgroundColor(.disabled1, for: .normal)
+            self.setBackgroundColor(.disabled2, for: .normal)
             self.setAttributedTitle(
                 NSAttributedString(
                     string: title,
@@ -121,7 +121,7 @@ extension CustomButton {
             )
         case .fillWithBlueAndImage:
             self.setBackgroundColor(.mainColor, for: .normal)
-            self.setBackgroundColor(.disabled1, for: .disabled)
+            self.setBackgroundColor(.disabled2, for: .disabled)
             self.setAttributedTitle(
                 NSAttributedString(
                     string: title,

@@ -130,6 +130,11 @@ extension MissionProceedVC {
             }
         }
     }
+    
+    @objc private func completeMissionButtonDidTap() {
+        let missionCompleteVC = MissionCompleteVC()
+        self.navigationController?.fadeTo(missionCompleteVC)
+    }
 }
 
 // MARK: - Methods
@@ -146,6 +151,7 @@ extension MissionProceedVC {
     }
     
     func setAddTarget() {
+        self.completeMissionButton.addTarget(self, action: #selector(completeMissionButtonDidTap), for: .touchUpInside)
         self.backButton.addTarget(self, action: #selector(popToPreviousVC), for: .touchUpInside)
     }
     
@@ -170,6 +176,7 @@ extension MissionProceedVC {
             let decibelValue = self.decibelManager.returnAudioLevel()
             self.updateCircularDecibelProgressView(withDecibels: decibelValue)
             self.updateDecibelStackView(withDecibels: decibelValue)
+            if decibelValue >= 50 { self.setCompleteDecibelMission() }
         }
     }
     
@@ -187,6 +194,13 @@ extension MissionProceedVC {
     private func updateDecibelStackView(withDecibels decibels: Float) {
         let normalizedDecibels = min(max(decibels, 0), 50)
         self.decibelLabel.text = String(Int(normalizedDecibels))
+    }
+
+    // 데시벨을 달성했을 경우
+    private func setCompleteDecibelMission() {
+        self.completeMissionButton.setEnabled(true)
+        self.completeMissionButton.isHidden = false
+        self.backButton.isHidden = false
     }
 }
 
@@ -249,9 +263,26 @@ extension MissionProceedVC {
         } else {
             setTextMisisonLayout()
         }
+        
+        view.addSubviews(completeMissionButton, backButton)
+        
+        backButton.snp.makeConstraints { make in
+            make.bottom.equalTo(view.safeAreaLayoutGuide).inset(40)
+            make.leading.trailing.equalTo(view.safeAreaLayoutGuide).inset(27)
+            make.height.equalTo(53)
+        }
+        
+        completeMissionButton.snp.makeConstraints { make in
+            make.bottom.equalTo(backButton.snp.top).offset(-10)
+            make.leading.trailing.equalTo(view.safeAreaLayoutGuide).inset(27)
+            make.height.equalTo(53)
+        }
     }
     
     private func setDecibelMissionLayout() {
+        self.completeMissionButton.isHidden = true
+        self.backButton.isHidden = true
+        
         containerView.addSubviews(circularDecibelProgressView, missionSubLabel, decibelValueStackView)
         
         circularDecibelProgressView.snp.makeConstraints { make in
@@ -290,20 +321,6 @@ extension MissionProceedVC {
         
         containerView.snp.makeConstraints { make in
             make.bottom.equalTo(missionTextView.snp.bottom).offset(40)
-        }
-        
-        view.addSubviews(completeMissionButton, backButton)
-        
-        backButton.snp.makeConstraints { make in
-            make.bottom.equalTo(view.safeAreaLayoutGuide).inset(40)
-            make.leading.trailing.equalTo(view.safeAreaLayoutGuide).inset(27)
-            make.height.equalTo(53)
-        }
-        
-        completeMissionButton.snp.makeConstraints { make in
-            make.bottom.equalTo(backButton.snp.top).offset(-10)
-            make.leading.trailing.equalTo(view.safeAreaLayoutGuide).inset(27)
-            make.height.equalTo(53)
         }
     }
 }

@@ -56,6 +56,7 @@ final class HomeMainVC: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
+        self.hideTabBar(wantsToHide: false)
         setBubbleViewAnimation()
     }
 }
