@@ -43,10 +43,10 @@ final class MissionAskedToCompleteVC: UIViewController {
     }
     
     private lazy var startMissionButton = CustomButton(title: "티오에게 보여주기", type: .fillWithBlueAndImage)
-                                                        .setImage(image: ImageLiterals.toBtnImage)
+                                                        .setImage(image: ImageLiterals.toBtnImage, disabledImage: nil)
     
     private lazy var backButton = CustomButton(title: "사진 다시 선택하기", type: .fillWithGreyAndImage)
-                                                        .setImage(image: ImageLiterals.gallaryBtnImage)
+                                                        .setImage(image: ImageLiterals.gallaryBtnImage, disabledImage: nil)
     
     // MARK: - View Life Cycle
 

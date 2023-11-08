@@ -58,10 +58,10 @@ final class MissionDetailVC: UIViewController {
     }
     
     var startMissionButton = CustomButton(title: "미션 수행하러 가기", type: .fillWithBlueAndImage)
-                                                        .setImage(image: ImageLiterals.gallaryBtnImageFill)
+        .setImage(image: ImageLiterals.gallaryBtnImageFill, disabledImage: nil)
     
     var backButton = CustomButton(title: "다른 미션 보러가기", type: .fillWithGreyAndImage)
-                                                        .setImage(image: ImageLiterals.backBtnImage)
+        .setImage(image: ImageLiterals.backBtnImage, disabledImage: nil)
 
     // MARK: - View Life Cycle
     

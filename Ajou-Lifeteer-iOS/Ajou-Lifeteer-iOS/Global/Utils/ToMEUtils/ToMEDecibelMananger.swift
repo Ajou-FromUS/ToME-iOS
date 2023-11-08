@@ -83,7 +83,7 @@ class ToMEDecibelMananger: NSObject, AVAudioRecorderDelegate {
     @objc func returnAudioLevel() -> Float {
         audioRecorder.updateMeters()
         let decibels = audioRecorder.peakPower(forChannel: 0)
-        return decibels + 20.0
+        return decibels + 53.0
     }
 
     // (화면을 빠져나갈 경우) 데시벨 모니터링 중단

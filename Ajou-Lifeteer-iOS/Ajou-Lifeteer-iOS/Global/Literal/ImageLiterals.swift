@@ -62,6 +62,7 @@ enum ImageLiterals {
     static var introIcCheck: UIImage { .load(named: "intro_ic_check") }
     static var introImgCalender: UIImage { .load(named: "intro_img_calender") }
     static var introImgExplainMission: UIImage { .load(named: "intro_img_explain_mission") }
+    static var missionImgTextBorder: UIImage { .load(named: "mission_img_text_border") }
     static var missionImgDecibelRectangle: UIImage { .load(named: "mission_img_decibel_rectangle") }
     static var missionImgDecibel: UIImage { .load(named: "mission_img_decibel") }
     static var missionImgPhotoRectangle: UIImage { .load(named: "mission_img_photo_rectangle") }
@@ -74,6 +75,7 @@ enum ImageLiterals {
     static var mypageIcToggle: UIImage { .load(named: "mypage_ic_toggle") }
     static var questionBtn: UIImage { .load(named: "question_btn") }
     static var talkingBtnQuestion: UIImage { .load(named: "talking_btn_question") }
+    static var toBtnImageDisabled: UIImage { .load(named: "to_btn_image_disabled") }
     static var toBtnImage: UIImage { .load(named: "to_btn_image") }
     static var tomeLogo: UIImage { .load(named: "tome_logo") }
     static var topbar: UIImage { .load(named: "topbar") }

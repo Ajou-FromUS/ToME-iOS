@@ -112,6 +112,7 @@
 		A3E4D3092A5BF05E00C7611C /* DiaryMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E4D3082A5BF05E00C7611C /* DiaryMainVC.swift */; };
 		A3E4D30B2A5BF07F00C7611C /* ArchiveMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E4D30A2A5BF07F00C7611C /* ArchiveMainVC.swift */; };
 		A3E4D30D2A5BF09000C7611C /* TalkingMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E4D30C2A5BF09000C7611C /* TalkingMainVC.swift */; };
+		A3EED07F2AFB3DD50093A431 /* ToMETextViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EED07E2AFB3DD50093A431 /* ToMETextViewManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -252,6 +253,7 @@
 		A3E4D3082A5BF05E00C7611C /* DiaryMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryMainVC.swift; sourceTree = "<group>"; };
 		A3E4D30A2A5BF07F00C7611C /* ArchiveMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveMainVC.swift; sourceTree = "<group>"; };
 		A3E4D30C2A5BF09000C7611C /* TalkingMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkingMainVC.swift; sourceTree = "<group>"; };
+		A3EED07E2AFB3DD50093A431 /* ToMETextViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToMETextViewManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -577,6 +579,7 @@
 				A36B369B2AB068CA0008E9F2 /* ToMETimeFormatter.swift */,
 				A30FDED82AF920040088D98E /* ToMEPhotoManager.swift */,
 				A30FDEE72AF9F84A0088D98E /* ToMEDecibelMananger.swift */,
+				A3EED07E2AFB3DD50093A431 /* ToMETextViewManager.swift */,
 			);
 			path = ToMEUtils;
 			sourceTree = "<group>";
@@ -1006,6 +1009,7 @@
 				A30FDED52AF8C6A00088D98E /* MissionTableViewCell.swift in Sources */,
 				A3CF55E22A5BCAA700D19F00 /* JsonCoder.swift in Sources */,
 				A36B36A62AB41CEB0008E9F2 /* UINavigationController+.swift in Sources */,
+				A3EED07F2AFB3DD50093A431 /* ToMETextViewManager.swift in Sources */,
 				A34478E52A698D82002F1981 /* SignInVC.swift in Sources */,
 				A3CF55D02A5BC99E00D19F00 /* Publisher+Driver.swift in Sources */,
 				A3E4D3052A5BEEB200C7611C /* TabBarController.swift in Sources */,

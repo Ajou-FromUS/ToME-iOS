@@ -16,8 +16,8 @@ final class MissionProceedVC: UIViewController {
     
     var missionType = Int()
     
-    let decibelManager = ToMEDecibelMananger.shared
-        
+    private let decibelManager = ToMEDecibelMananger.shared
+            
     // MARK: - UI Components
     
     private lazy var naviBar = CustomNavigationBar(self, type: .singleTitle).setTitle("미션")
@@ -79,6 +79,25 @@ final class MissionProceedVC: UIViewController {
         $0.alignment = .bottom
     }
     
+    private lazy var missionTextView = ToMeTextViewManager(placeholder: "이곳을 클릭하여 작성하세요.\n최대 85자까지 작성할 수 있어요.", maxCount: 85).then {
+        $0.isEditable = true
+    }
+    
+    private let textSubLabel = UILabel().then {
+        $0.text = "오늘 하루를 되돌아 보고, 감사일기를 적어보세요."
+        $0.font = .body2
+        $0.textColor = .font2
+    }
+    
+    var completeMissionButton = CustomButton(title: "티오에게 보여주기",
+                                             type: .fillWithBlueAndImage)
+        .setImage(image: ImageLiterals.toBtnImage, disabledImage: ImageLiterals.toBtnImageDisabled).then {
+            $0.setEnabled(false)
+        }
+    
+    var backButton = CustomButton(title: "다른 미션 보러가기", type: .fillWithGreyAndImage)
+                                                        .setImage(image: ImageLiterals.backBtnImage, disabledImage: nil)
+    
     // MARK: - View Life Cycle
     
     override func viewDidLoad() {
@@ -86,45 +105,36 @@ final class MissionProceedVC: UIViewController {
         setData()
         setUI()
         setLayout()
-        // 데시벨 측정 시작
-        decibelManager.startMonitoringDecibels()
-        // 0.5초마다 데시벨 값을 업데이트하고 PieChartView에 반영
-        Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { _ in
-            let decibelValue = self.decibelManager.returnAudioLevel()
-            self.updateCircularProgressView(withDecibels: decibelValue)
-            self.updateDecibelStackView(withDecibels: decibelValue)
-        }
+        setMission()
+        setAddTarget()
+        setCompleteButtonEnabled()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-
         // 화면을 빠져나가면 데시벨 모니터링 중단
         decibelManager.stopMonitoringDecibels()
     }
-    
-    func updateCircularProgressView(withDecibels decibels: Float) {
-            
-           // Ensure the decibel level is within the valid range (0 to 50)
-           let normalizedDecibels = min(max(decibels, 0), 50)
+  
+}
 
-           // Calculate the progress as a percentage
-           let progressPercentage = normalizedDecibels / 50.0
-           // Update the progress property of the CircularProgressView
-        circularDecibelProgressView.progress = CGFloat(progressPercentage)
-       }
-    
-    func updateDecibelStackView(withDecibels decibels: Float) {
-        let normalizedDecibels = min(max(decibels, 0), 50)
-        self.decibelLabel.text = String(Int(normalizedDecibels))
-        
+// MARK: - @objc Function
+
+extension MissionProceedVC {
+    @objc private func popToPreviousVC() {
+        // 이동하고자 하는 이전 페이지의 인덱스를 찾거나 해당 뷰 컨트롤러를 가져옵니다.
+        if let viewControllers = self.navigationController?.viewControllers {
+            if viewControllers.count >= 3 { // 이전 페이지가 2개 이상 있는 경우
+                let previousViewController = viewControllers[viewControllers.count - 3]
+                self.navigationController?.popToViewController(previousViewController, animated: false)
+            }
+        }
     }
 }
 
 // MARK: - Methods
 
 extension MissionProceedVC {
-    
     private func setData() {
         if missionType == 1 {
             self.missionTypeLabel.text = "데시벨 미션"
@@ -133,6 +143,50 @@ extension MissionProceedVC {
             self.missionTypeLabel.text = "텍스트 미션"
             self.missionImageView.image = ImageLiterals.missionImgText
         }
+    }
+    
+    func setAddTarget() {
+        self.backButton.addTarget(self, action: #selector(popToPreviousVC), for: .touchUpInside)
+    }
+    
+    private func setMission() {
+        if missionType == 1 { // 데시벨 미션일 경우
+            setDecibelVisualization()
+        }
+    }
+    
+    private func setCompleteButtonEnabled() {
+        missionTextView.onTextChange = { isTextFilled in
+            self.completeMissionButton.isEnabled = isTextFilled
+        }
+
+    }
+    
+    private func setDecibelVisualization() {
+        // 데시벨 측정 시작
+        decibelManager.startMonitoringDecibels()
+        // 0.5초마다 데시벨 값을 업데이트하고 ProgressView에 반영
+        Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { _ in
+            let decibelValue = self.decibelManager.returnAudioLevel()
+            self.updateCircularDecibelProgressView(withDecibels: decibelValue)
+            self.updateDecibelStackView(withDecibels: decibelValue)
+        }
+    }
+    
+    // 데시벨에 따른 원형 그래프 업데이트
+    private func updateCircularDecibelProgressView(withDecibels decibels: Float) {
+        // Ensure the decibel level is within the valid range (0 to 50)
+        let normalizedDecibels = min(max(decibels, 0), 50)
+        // Calculate the progress as a percentage
+        let progressPercentage = normalizedDecibels / 50.0
+        // Update the progress property of the CircularProgressView
+        circularDecibelProgressView.progress = CGFloat(progressPercentage)
+    }
+    
+    // 데시벨에 따른 StackView 업데이트
+    private func updateDecibelStackView(withDecibels decibels: Float) {
+        let normalizedDecibels = min(max(decibels, 0), 50)
+        self.decibelLabel.text = String(Int(normalizedDecibels))
     }
 }
 
@@ -165,8 +219,7 @@ extension MissionProceedVC {
             make.top.equalTo(middleLabel.snp.bottom).offset(31)
         }
         
-        containerView.addSubviews(missionImageView, missionTypeLabel, horizontalDevidedView,
-                                  missionTitleLabel, circularDecibelProgressView, missionSubLabel, decibelValueStackView)
+        containerView.addSubviews(missionImageView, missionTypeLabel, horizontalDevidedView, missionTitleLabel)
         
         missionImageView.snp.makeConstraints { make in
             make.top.leading.equalToSuperview().inset(21)
@@ -190,6 +243,16 @@ extension MissionProceedVC {
             make.top.equalTo(horizontalDevidedView.snp.bottom).offset(10)
             make.leading.equalTo(missionTypeLabel.snp.leading)
         }
+       
+        if missionType == 1 {
+            setDecibelMissionLayout()
+        } else {
+            setTextMisisonLayout()
+        }
+    }
+    
+    private func setDecibelMissionLayout() {
+        containerView.addSubviews(circularDecibelProgressView, missionSubLabel, decibelValueStackView)
         
         circularDecibelProgressView.snp.makeConstraints { make in
             make.top.equalTo(missionTitleLabel.snp.bottom).offset(52)
@@ -208,6 +271,39 @@ extension MissionProceedVC {
         
         decibelValueStackView.snp.makeConstraints { make in
             make.center.equalTo(circularDecibelProgressView.snp.center)
+        }
+    }
+    
+    private func setTextMisisonLayout() {
+        containerView.addSubviews(textSubLabel, missionTextView)
+        
+        textSubLabel.snp.makeConstraints { make in
+            make.top.equalTo(missionImageView.snp.bottom).offset(34)
+            make.centerX.equalToSuperview()
+        }
+        
+        missionTextView.snp.makeConstraints { make in
+            make.top.equalTo(textSubLabel.snp.bottom).offset(15)
+            make.leading.trailing.equalToSuperview().inset(20)
+            make.height.equalTo(166)
+        }
+        
+        containerView.snp.makeConstraints { make in
+            make.bottom.equalTo(missionTextView.snp.bottom).offset(40)
+        }
+        
+        view.addSubviews(completeMissionButton, backButton)
+        
+        backButton.snp.makeConstraints { make in
+            make.bottom.equalTo(view.safeAreaLayoutGuide).inset(40)
+            make.leading.trailing.equalTo(view.safeAreaLayoutGuide).inset(27)
+            make.height.equalTo(53)
+        }
+        
+        completeMissionButton.snp.makeConstraints { make in
+            make.bottom.equalTo(backButton.snp.top).offset(-10)
+            make.leading.trailing.equalTo(view.safeAreaLayoutGuide).inset(27)
+            make.height.equalTo(53)
         }
     }
 }

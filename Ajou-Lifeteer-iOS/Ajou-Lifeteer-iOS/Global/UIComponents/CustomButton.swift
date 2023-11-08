@@ -24,6 +24,7 @@ public class CustomButton: UIButton {
     
     init(title: String, type: BtnType) {
         super.init(frame: .zero)
+        self.adjustsImageWhenDisabled = false
         self.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 25)
         self.setUI(title, type)
     }
@@ -52,8 +53,9 @@ extension CustomButton {
     
     /// 버튼에 image 추가 (weather 버튼일 경우)
     @discardableResult
-    public func setImage(image: UIImage) -> Self {
+    public func setImage(image: UIImage, disabledImage: UIImage?) -> Self {
         self.setImage(image, for: .normal)
+        self.setImage(disabledImage, for: .disabled)
         return self
     }
     
@@ -81,7 +83,7 @@ extension CustomButton {
         switch type {
         case .fillWithBlue:
             self.setBackgroundColor(.mainColor, for: .normal)
-            self.setBackgroundColor(.disabled1, for: .disabled)
+            self.setBackgroundColor(.red, for: .disabled)
             self.setAttributedTitle(
                 NSAttributedString(
                     string: title,
@@ -92,7 +94,7 @@ extension CustomButton {
             self.setAttributedTitle(
                 NSAttributedString(
                     string: title,
-                    attributes: [.font: UIFont.body1, .foregroundColor: UIColor.font3]
+                    attributes: [.font: UIFont.body1, .foregroundColor: UIColor.font2]
                 ),
                 for: .disabled
             )
@@ -130,7 +132,7 @@ extension CustomButton {
             self.setAttributedTitle(
                 NSAttributedString(
                     string: title,
-                    attributes: [.font: UIFont.body1, .foregroundColor: UIColor.disabled1]
+                    attributes: [.font: UIFont.body1, .foregroundColor: UIColor.font2]
                 ),
                 for: .disabled
             )
@@ -144,6 +146,13 @@ extension CustomButton {
                     attributes: [.font: UIFont.body1, .foregroundColor: UIColor.font2]
                 ),
                 for: .normal
+            )
+            self.setAttributedTitle(
+                NSAttributedString(
+                    string: title,
+                    attributes: [.font: UIFont.body1, .foregroundColor: UIColor.font2]
+                ),
+                for: .disabled
             )
             self.semanticContentAttribute = .forceLeftToRight   // 이미지를 텍스트의 왼쪽으로 설정
         }
