@@ -21,7 +21,7 @@ enum NaviType {
     
     case home // 홈에 존재하는 네비바
     case singleTitle // 타이틀이 한줄인 네비바
-    case withoutBackground  // 뒷배경이 존재하지 않는 네비바
+    case singleTitleWithPopButton // 타이틀 한 줄 + 뒤로가기 버튼 (티오랑 대화하기)
 }
 
 final class CustomNavigationBar: UIView {
@@ -35,16 +35,27 @@ final class CustomNavigationBar: UIView {
 
     // MARK: - UI Components
     
-    private let centerTitleLabel = UILabel()
+    var centerTitleLabel = UILabel()
     private let backButton = UIButton()
     private let mindSetBIImageView = UIImageView()
+    
+    private let finishTalkingButton = UIButton(type: .custom).then {
+        $0.setTitle("대화 마치기", for: .normal)
+        $0.setTitleColor(.sub2, for: .normal)
+        $0.setBackgroundColor(.sub1, for: .normal)
+        $0.layer.cornerRadius = 5
+        $0.layer.borderWidth = 1
+        $0.layer.borderColor = UIColor.sub2.cgColor
+        $0.titleLabel?.font = UIFont(name: "LeeSeoYun", size: 14)
+    }
     
     private let logoLabel = UILabel().then {
         $0.text = "to Me"
     }
     
-    private let missionButton = UIButton()
-    private let mypageButton = UIButton()
+    private let logoImageView = UIImageView().then {
+        $0.image = ImageLiterals.tomeLogo
+    }
     
     // MARK: - initialization
     
@@ -66,21 +77,20 @@ final class CustomNavigationBar: UIView {
 extension CustomNavigationBar {
     private func setAddTarget() {
         self.backButton.addTarget(self, action: #selector(popToPreviousVC), for: .touchUpInside)
-        self.missionButton.addTarget(self, action: #selector(missionButtonDidTap), for: .touchUpInside)
-        self.mypageButton.addTarget(self, action: #selector(mypageButtonDidTap), for: .touchUpInside)
+        self.finishTalkingButton.addTarget(self, action: #selector(finishTalkingButtonDidTap), for: .touchUpInside)
     }
     
     @discardableResult
     func setUserName(_ name: String) -> Self {
         self.centerTitleLabel.numberOfLines = 0
         let paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.lineSpacing = 5
+        paragraphStyle.lineSpacing = 9
 
         let attributedText = NSAttributedString(
-            string: "\(name)님,\n어서오세요!",
+            string: "\(name)야,\n오늘도 나랑 대화하자",
             attributes: [
                 NSAttributedString.Key.paragraphStyle: paragraphStyle,
-                NSAttributedString.Key.font: UIFont.title1,
+                NSAttributedString.Key.font: UIFont.newBody1,
                 NSAttributedString.Key.foregroundColor: UIColor.font1
             ]
         )
@@ -91,7 +101,7 @@ extension CustomNavigationBar {
     
     @discardableResult
     func setTitle(_ title: String) -> Self {
-        self.centerTitleLabel.font = .title2
+        self.centerTitleLabel.font = .newBody1
         self.centerTitleLabel.text = title
         return self
     }
@@ -120,6 +130,10 @@ extension CustomNavigationBar {
         self.backButtonClosure?()
     }
     
+    @objc private func finishTalkingButtonDidTap() {
+        self.vc?.navigationController?.popViewController(animated: false)
+    }
+    
     @objc private func missionButtonDidTap() {
         let missionVC = CustomPopUpVC(type: .todaysMission,
                                       title: "오늘의 미션",
@@ -140,33 +154,14 @@ extension CustomNavigationBar {
 
 extension CustomNavigationBar {
     private func setBackgroundUI() {
-        self.backgroundColor = .back1
-        self.layer.cornerRadius = 15
+        self.backgroundColor = .clear
     }
     
     private func setTitleUI() {
-        logoLabel.font = .logo
-        logoLabel.textColor = .font1
-        logoLabel.isHidden = false
-        
         centerTitleLabel.textColor = .font1
         centerTitleLabel.isHidden = false
     }
-    
-    private func setHomeUI() {
-        logoLabel.font = .logo
-        logoLabel.textColor = .font1
-        logoLabel.isHidden = false
-        
-        centerTitleLabel.font = .title1
-        centerTitleLabel.textColor = .font1
-        centerTitleLabel.textAlignment = .left
-        centerTitleLabel.isHidden = false
-        
-        missionButton.setImage(ImageLiterals.homeBtnMission, for: .normal)
-        mypageButton.setImage(ImageLiterals.homeBtnMypage, for: .normal)
-    }
-    
+
     private func setUI(_ type: NaviType) {
         self.naviType = type
         
@@ -185,16 +180,16 @@ extension CustomNavigationBar {
             
         case .onlyTitle:
             setBackgroundUI()
-            centerTitleLabel.font = .body1
+            centerTitleLabel.font = .newBody1
             setTitleUI()
         case .home:
             setBackgroundUI()
-            setHomeUI()
+            setTitleUI()
         case .singleTitle:
             setBackgroundUI()
-            setHomeUI()
-        case .withoutBackground:
-            centerTitleLabel.font = .body1
+            setTitleUI()
+        case .singleTitleWithPopButton:
+            setBackgroundUI()
             setTitleUI()
         }
     }
@@ -213,26 +208,19 @@ extension CustomNavigationBar {
             setOnlyTitleLayout()
         case .home:
             setHomeLayout()
-            
-            mypageButton.snp.makeConstraints { make in
-                make.bottom.equalToSuperview().inset(54)
-            }
-            
-            missionButton.snp.makeConstraints { make in
-                make.bottom.equalTo(mypageButton.snp.bottom)
-            }
         case .singleTitle:
             setHomeLayout()
-            
-            mypageButton.snp.makeConstraints { make in
-                make.bottom.equalToSuperview().inset(17)
-            }
-            
-            missionButton.snp.makeConstraints { make in
-                make.bottom.equalTo(mypageButton.snp.bottom)
-            }
-        case .withoutBackground:
+        case .singleTitleWithPopButton:
             setHomeLayout()
+            
+            self.addSubview(finishTalkingButton)
+            
+            finishTalkingButton.snp.makeConstraints { make in
+                make.top.equalTo(centerTitleLabel.snp.top)
+                make.trailing.equalToSuperview().inset(26)
+                make.height.equalTo(26)
+                make.width.equalTo(85)
+            }
         }
     }
     
@@ -312,26 +300,18 @@ extension CustomNavigationBar {
     }
     
     private func setHomeLayout() {
-        self.addSubviews(logoLabel, centerTitleLabel, missionButton, mypageButton)
+        self.addSubviews(logoImageView, centerTitleLabel)
+        
+        logoImageView.snp.makeConstraints { make in
+            make.top.equalToSuperview().offset(69)
+            make.leading.equalToSuperview().inset(27)
+            make.width.equalTo(45)
+            make.height.equalTo(11)
+        }
         
         centerTitleLabel.snp.makeConstraints { make in
-            make.bottom.equalToSuperview().inset(18)
+            make.top.equalTo(logoImageView.snp.bottom).offset(20)
             make.leading.equalToSuperview().inset(27)
-        }
-        
-        logoLabel.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(76)
-            make.leading.equalTo(centerTitleLabel.snp.leading)
-        }
-        
-        mypageButton.snp.makeConstraints { make in
-            make.trailing.equalToSuperview().inset(27)
-            make.width.height.equalTo(32)
-        }
-        
-        missionButton.snp.makeConstraints { make in
-            make.trailing.equalTo(mypageButton.snp.leading).offset(-16)
-            make.width.height.equalTo(32)
         }
     }
 }

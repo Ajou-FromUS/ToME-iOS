@@ -39,4 +39,3 @@ extension Double {
         return self * ratio
     }
 }
-

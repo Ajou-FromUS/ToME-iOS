@@ -18,7 +18,7 @@ final class TalkingMainVC: UIViewController {
 
     // MARK: - UI Components
     
-    private lazy var naviBar = CustomNavigationBar(self, type: .singleTitle).setTitle("To. Me")
+    private lazy var naviBar = CustomNavigationBar(self, type: .singleTitle).setTitle("티오랑 대화하기")
     
     private let characterImageView = UIImageView()
     

@@ -19,7 +19,7 @@ final class TabBarController: UITabBarController {
         super.viewDidLoad()
         setUI()
         setTabBarControllers()
-
+        self.selectedIndex = 1
     }
     
     override func viewDidLayoutSubviews() {
@@ -42,41 +42,33 @@ extension TabBarController {
         ]
         appearance.setTitleTextAttributes(attributes, for: .normal)
         
-        tabBar.backgroundColor = .font4
+        tabBar.backgroundColor = .clear
         tabBar.layer.cornerRadius = 15
         tabBar.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         tabBar.unselectedItemTintColor = .disabled1
     }
     
     private func setTabBarControllers() {
-        let homeMainNVC = templateNavigationController(title: "홈",
-                                                          unselectedImage: ImageLiterals.homeIcHome.withRenderingMode(.alwaysOriginal),
+        let homeMainNVC = templateNavigationController(unselectedImage: ImageLiterals.homeIcHome.withRenderingMode(.alwaysOriginal),
                                                           selectedImage: ImageLiterals.homeIcHomeFill.withRenderingMode(.alwaysOriginal),
                                                           rootViewController: HomeMainVC())
-        let archiveMainNVC = templateNavigationController(title: "아카이브",
-                                                        unselectedImage: ImageLiterals.homeIcArchive.withRenderingMode(.alwaysOriginal),
-                                                        selectedImage: ImageLiterals.homeIcArchiveFill.withRenderingMode(.alwaysOriginal),
-                                                        rootViewController: ArchiveMainVC())
-        let diaryMainNVC = templateNavigationController(title: "일기",
-                                                               unselectedImage: ImageLiterals.homeIcDiary.withRenderingMode(.alwaysOriginal),
-                                                               selectedImage: ImageLiterals.homeIcDiaryFill.withRenderingMode(.alwaysOriginal),
+        let statisticsMainNVC = templateNavigationController(unselectedImage: ImageLiterals.homeIcStatistics.withRenderingMode(.alwaysOriginal),
+                                                               selectedImage: ImageLiterals.homeIcStatisticsFill.withRenderingMode(.alwaysOriginal),
                                                                rootViewController: DiaryMainVC())
-        let talkingMainNVC = templateNavigationController(title: "ToME",
-                                                         unselectedImage: ImageLiterals.homeIcConversation.withRenderingMode(.alwaysOriginal),
-                                                         selectedImage: ImageLiterals.homeIcConversationFill.withRenderingMode(.alwaysOriginal),
+        let mypageMainNVC = templateNavigationController(unselectedImage: ImageLiterals.homeIcMypage.withRenderingMode(.alwaysOriginal),
+                                                         selectedImage: ImageLiterals.homeIcMypageFill.withRenderingMode(.alwaysOriginal),
                                                              rootViewController: TalkingMainVC())
         
         /// 탭바 아이템과 타이틀 간의 간격 조정
-        for tabBarInfo in [homeMainNVC, archiveMainNVC, diaryMainNVC, talkingMainNVC] {
+        for tabBarInfo in [statisticsMainNVC, homeMainNVC, mypageMainNVC] {
             tabBarInfo.tabBarItem.titlePositionAdjustment = titleSpacing
         }
         
-        viewControllers = [homeMainNVC, archiveMainNVC, diaryMainNVC, talkingMainNVC]
+        viewControllers = [statisticsMainNVC, homeMainNVC, mypageMainNVC]
     }
     
-    private func templateNavigationController(title: String, unselectedImage: UIImage?, selectedImage: UIImage?, rootViewController: UIViewController) -> UINavigationController {
+    private func templateNavigationController(unselectedImage: UIImage?, selectedImage: UIImage?, rootViewController: UIViewController) -> UINavigationController {
         let nav = UINavigationController(rootViewController: rootViewController)
-        nav.title = title
         nav.tabBarItem.image = unselectedImage
         nav.tabBarItem.selectedImage = selectedImage
         nav.navigationBar.isHidden = true

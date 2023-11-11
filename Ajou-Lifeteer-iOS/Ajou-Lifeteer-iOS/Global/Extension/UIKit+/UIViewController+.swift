@@ -30,4 +30,3 @@ extension UIViewController {
         self.tabBarController?.tabBar.isHidden = wantsToHide
     }
 }
-

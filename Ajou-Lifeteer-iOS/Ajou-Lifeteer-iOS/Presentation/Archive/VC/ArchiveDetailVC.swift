@@ -21,7 +21,7 @@ final class ArchiveDetailVC: UIViewController {
     
     private lazy var scrollView = UIScrollView()
     
-    private lazy var naviBar = CustomNavigationBar(self, type: .withoutBackground).setTitle("아카이브")
+    private lazy var naviBar = CustomNavigationBar(self, type: .onlyTitle).setTitle("아카이브")
     
     private lazy var saveButton = CustomButton(title: "저장 완료하기", type: .fillWithBlue).then {
         $0.isEnabled = false

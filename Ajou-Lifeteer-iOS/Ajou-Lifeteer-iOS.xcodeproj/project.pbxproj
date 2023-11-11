@@ -11,6 +11,19 @@
 		A30667172A5C070F006E7B9F /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30667162A5C070F006E7B9F /* CustomNavigationBar.swift */; };
 		A30667192A5C0DFB006E7B9F /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30667182A5C0DFB006E7B9F /* CustomButton.swift */; };
 		A306671D2A5C1689006E7B9F /* CustomAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A306671C2A5C1689006E7B9F /* CustomAlertVC.swift */; };
+		A30D5F952AFA95F400C276F0 /* CircularMissionProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30D5F942AFA95F400C276F0 /* CircularMissionProgressView.swift */; };
+		A30FDEC92AF7F6780088D98E /* ToMEAnimationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30FDEC82AF7F6780088D98E /* ToMEAnimationManager.swift */; };
+		A30FDECB2AF7F80A0088D98E /* MissionMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30FDECA2AF7F80A0088D98E /* MissionMainVC.swift */; };
+		A30FDECD2AF7FB420088D98E /* TopAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30FDECC2AF7FB420088D98E /* TopAlertView.swift */; };
+		A30FDED12AF806560088D98E /* CurrentMissionCompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30FDED02AF806560088D98E /* CurrentMissionCompleteView.swift */; };
+		A30FDED32AF8C4300088D98E /* MissionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30FDED22AF8C4300088D98E /* MissionModel.swift */; };
+		A30FDED52AF8C6A00088D98E /* MissionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30FDED42AF8C6A00088D98E /* MissionTableViewCell.swift */; };
+		A30FDED72AF8D4D40088D98E /* MissionDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30FDED62AF8D4D40088D98E /* MissionDetailVC.swift */; };
+		A30FDED92AF920040088D98E /* ToMEPhotoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30FDED82AF920040088D98E /* ToMEPhotoManager.swift */; };
+		A30FDEDC2AF92ABA0088D98E /* Mantis in Frameworks */ = {isa = PBXBuildFile; productRef = A30FDEDB2AF92ABA0088D98E /* Mantis */; };
+		A30FDEDF2AF93F460088D98E /* MissionCompleteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30FDEDE2AF93F460088D98E /* MissionCompleteVC.swift */; };
+		A30FDEE22AF9DA4D0088D98E /* MissionProceedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30FDEE12AF9DA4D0088D98E /* MissionProceedVC.swift */; };
+		A30FDEE82AF9F84A0088D98E /* ToMEDecibelMananger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30FDEE72AF9F84A0088D98E /* ToMEDecibelMananger.swift */; };
 		A330D3F02AC0342800C1CC22 /* TalkingDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A330D3EF2AC0342800C1CC22 /* TalkingDetailVC.swift */; };
 		A330D3F32AC0362800C1CC22 /* MessageKit in Frameworks */ = {isa = PBXBuildFile; productRef = A330D3F22AC0362800C1CC22 /* MessageKit */; };
 		A330D3F52AC29D4E00C1CC22 /* TalkingMessageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A330D3F42AC29D4E00C1CC22 /* TalkingMessageVC.swift */; };
@@ -51,6 +64,8 @@
 		A39294EA2A52CBE400436A4F /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = A39294E92A52CBE400436A4F /* Then */; };
 		A39294ED2A52CBF200436A4F /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = A39294EC2A52CBF200436A4F /* Lottie */; };
 		A39294F02A52CBFF00436A4F /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = A39294EF2A52CBFF00436A4F /* FSCalendar */; };
+		A3C6F6F62AF4CBB1008D0FF0 /* LeeSeoyun.otf in Resources */ = {isa = PBXBuildFile; fileRef = A3C6F6F52AF4CBB1008D0FF0 /* LeeSeoyun.otf */; };
+		A3C6F6F82AF5383A008D0FF0 /* BubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C6F6F72AF5383A008D0FF0 /* BubbleView.swift */; };
 		A3CF55A82A5BBED200D19F00 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CF55A72A5BBED200D19F00 /* UIViewController+.swift */; };
 		A3CF55AA2A5BBEF700D19F00 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CF55A92A5BBEF700D19F00 /* UIView+.swift */; };
 		A3CF55AC2A5BBF1000D19F00 /* UITextView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CF55AB2A5BBF1000D19F00 /* UITextView+.swift */; };
@@ -97,12 +112,35 @@
 		A3E4D3092A5BF05E00C7611C /* DiaryMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E4D3082A5BF05E00C7611C /* DiaryMainVC.swift */; };
 		A3E4D30B2A5BF07F00C7611C /* ArchiveMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E4D30A2A5BF07F00C7611C /* ArchiveMainVC.swift */; };
 		A3E4D30D2A5BF09000C7611C /* TalkingMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E4D30C2A5BF09000C7611C /* TalkingMainVC.swift */; };
+		A3EED07F2AFB3DD50093A431 /* ToMETextViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EED07E2AFB3DD50093A431 /* ToMETextViewManager.swift */; };
+		A3EED0832AFBBA650093A431 /* TalkingWithToVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EED0822AFBBA650093A431 /* TalkingWithToVC.swift */; };
+		A3F7F0CE2AFFF65F00DFCC3E /* bubble.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3F7F0CA2AFFF65E00DFCC3E /* bubble.mp3 */; };
+		A3F7F0CF2AFFF65F00DFCC3E /* homeBackgroundMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3F7F0CB2AFFF65F00DFCC3E /* homeBackgroundMusic.mp3 */; };
+		A3F7F0D02AFFF65F00DFCC3E /* oneOfMissionComplete.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3F7F0CC2AFFF65F00DFCC3E /* oneOfMissionComplete.mp3 */; };
+		A3F7F0D12AFFF65F00DFCC3E /* missionComplete.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3F7F0CD2AFFF65F00DFCC3E /* missionComplete.mp3 */; };
+		A3F7F0D32AFFF82000DFCC3E /* ToMEMusicManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F7F0D22AFFF82000DFCC3E /* ToMEMusicManager.swift */; };
+		A3F9C24A2AFC6094001409D8 /* TypingBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F9C2492AFC6094001409D8 /* TypingBubble.swift */; };
+		A3F9C24C2AFC60C1001409D8 /* BubbleCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F9C24B2AFC60C1001409D8 /* BubbleCircle.swift */; };
+		A3F9C24E2AFC60E7001409D8 /* TypingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F9C24D2AFC60E7001409D8 /* TypingIndicator.swift */; };
+		A3F9C2502AFC619F001409D8 /* MessagesViewController+TypingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F9C24F2AFC619F001409D8 /* MessagesViewController+TypingIndicator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A30667162A5C070F006E7B9F /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
 		A30667182A5C0DFB006E7B9F /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		A306671C2A5C1689006E7B9F /* CustomAlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertVC.swift; sourceTree = "<group>"; };
+		A30D5F942AFA95F400C276F0 /* CircularMissionProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularMissionProgressView.swift; sourceTree = "<group>"; };
+		A30FDEC82AF7F6780088D98E /* ToMEAnimationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToMEAnimationManager.swift; sourceTree = "<group>"; };
+		A30FDECA2AF7F80A0088D98E /* MissionMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionMainVC.swift; sourceTree = "<group>"; };
+		A30FDECC2AF7FB420088D98E /* TopAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopAlertView.swift; sourceTree = "<group>"; };
+		A30FDED02AF806560088D98E /* CurrentMissionCompleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentMissionCompleteView.swift; sourceTree = "<group>"; };
+		A30FDED22AF8C4300088D98E /* MissionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionModel.swift; sourceTree = "<group>"; };
+		A30FDED42AF8C6A00088D98E /* MissionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionTableViewCell.swift; sourceTree = "<group>"; };
+		A30FDED62AF8D4D40088D98E /* MissionDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionDetailVC.swift; sourceTree = "<group>"; };
+		A30FDED82AF920040088D98E /* ToMEPhotoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToMEPhotoManager.swift; sourceTree = "<group>"; };
+		A30FDEDE2AF93F460088D98E /* MissionCompleteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionCompleteVC.swift; sourceTree = "<group>"; };
+		A30FDEE12AF9DA4D0088D98E /* MissionProceedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionProceedVC.swift; sourceTree = "<group>"; };
+		A30FDEE72AF9F84A0088D98E /* ToMEDecibelMananger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToMEDecibelMananger.swift; sourceTree = "<group>"; };
 		A330D3EF2AC0342800C1CC22 /* TalkingDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkingDetailVC.swift; sourceTree = "<group>"; };
 		A330D3F42AC29D4E00C1CC22 /* TalkingMessageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkingMessageVC.swift; sourceTree = "<group>"; };
 		A330D3F62AC2A26900C1CC22 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
@@ -176,6 +214,8 @@
 		A392956E2A52D78E00436A4F /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		A39295702A52D7AD00436A4F /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		A39295722A52D7B800436A4F /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		A3C6F6F52AF4CBB1008D0FF0 /* LeeSeoyun.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = LeeSeoyun.otf; sourceTree = "<group>"; };
+		A3C6F6F72AF5383A008D0FF0 /* BubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleView.swift; sourceTree = "<group>"; };
 		A3CF55A72A5BBED200D19F00 /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 		A3CF55A92A5BBEF700D19F00 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		A3CF55AB2A5BBF1000D19F00 /* UITextView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+.swift"; sourceTree = "<group>"; };
@@ -223,6 +263,17 @@
 		A3E4D3082A5BF05E00C7611C /* DiaryMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryMainVC.swift; sourceTree = "<group>"; };
 		A3E4D30A2A5BF07F00C7611C /* ArchiveMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveMainVC.swift; sourceTree = "<group>"; };
 		A3E4D30C2A5BF09000C7611C /* TalkingMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkingMainVC.swift; sourceTree = "<group>"; };
+		A3EED07E2AFB3DD50093A431 /* ToMETextViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToMETextViewManager.swift; sourceTree = "<group>"; };
+		A3EED0822AFBBA650093A431 /* TalkingWithToVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkingWithToVC.swift; sourceTree = "<group>"; };
+		A3F7F0CA2AFFF65E00DFCC3E /* bubble.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bubble.mp3; sourceTree = "<group>"; };
+		A3F7F0CB2AFFF65F00DFCC3E /* homeBackgroundMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = homeBackgroundMusic.mp3; sourceTree = "<group>"; };
+		A3F7F0CC2AFFF65F00DFCC3E /* oneOfMissionComplete.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = oneOfMissionComplete.mp3; sourceTree = "<group>"; };
+		A3F7F0CD2AFFF65F00DFCC3E /* missionComplete.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = missionComplete.mp3; sourceTree = "<group>"; };
+		A3F7F0D22AFFF82000DFCC3E /* ToMEMusicManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToMEMusicManager.swift; sourceTree = "<group>"; };
+		A3F9C2492AFC6094001409D8 /* TypingBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypingBubble.swift; sourceTree = "<group>"; };
+		A3F9C24B2AFC60C1001409D8 /* BubbleCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleCircle.swift; sourceTree = "<group>"; };
+		A3F9C24D2AFC60E7001409D8 /* TypingIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypingIndicator.swift; sourceTree = "<group>"; };
+		A3F9C24F2AFC619F001409D8 /* MessagesViewController+TypingIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MessagesViewController+TypingIndicator.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,6 +283,7 @@
 			files = (
 				A39294ED2A52CBF200436A4F /* Lottie in Frameworks */,
 				A39294F02A52CBFF00436A4F /* FSCalendar in Frameworks */,
+				A30FDEDC2AF92ABA0088D98E /* Mantis in Frameworks */,
 				A39294E72A52CBD900436A4F /* SnapKit in Frameworks */,
 				A330D3F32AC0362800C1CC22 /* MessageKit in Frameworks */,
 				A39294E42A52CBCC00436A4F /* Kingfisher in Frameworks */,
@@ -243,6 +295,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A30FDEC62AF7F5110088D98E /* Mission */ = {
+			isa = PBXGroup;
+			children = (
+				A30FDECF2AF805F90088D98E /* VC */,
+				A30FDECE2AF805F20088D98E /* Views */,
+			);
+			path = Mission;
+			sourceTree = "<group>";
+		};
+		A30FDEC72AF7F6560088D98E /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				A30FDEC82AF7F6780088D98E /* ToMEAnimationManager.swift */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
+		A30FDECE2AF805F20088D98E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A30FDED02AF806560088D98E /* CurrentMissionCompleteView.swift */,
+				A30FDED42AF8C6A00088D98E /* MissionTableViewCell.swift */,
+				A30D5F942AFA95F400C276F0 /* CircularMissionProgressView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A30FDECF2AF805F90088D98E /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				A30FDECA2AF7F80A0088D98E /* MissionMainVC.swift */,
+				A30FDED62AF8D4D40088D98E /* MissionDetailVC.swift */,
+				A30FDEE12AF9DA4D0088D98E /* MissionProceedVC.swift */,
+				A30FDEDE2AF93F460088D98E /* MissionCompleteVC.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
 		A330D3F82AC2D40100C1CC22 /* MyPage */ = {
 			isa = PBXGroup;
 			children = (
@@ -301,6 +391,7 @@
 		A39294F12A52D08300436A4F /* Global */ = {
 			isa = PBXGroup;
 			children = (
+				A30FDEC72AF7F6560088D98E /* Animation */,
 				A39294FE2A52D12A00436A4F /* UIComponents */,
 				A39294FD2A52D12200436A4F /* Literal */,
 				A39294FC2A52D11B00436A4F /* Resource */,
@@ -334,6 +425,7 @@
 				A392950F2A52D2B200436A4F /* Home */,
 				A392950E2A52D2AC00436A4F /* Archive */,
 				A392950C2A52D29600436A4F /* Diary */,
+				A30FDEC62AF7F5110088D98E /* Mission */,
 				A392950B2A52D28E00436A4F /* Talking */,
 				A330D3F82AC2D40100C1CC22 /* MyPage */,
 			);
@@ -351,7 +443,7 @@
 		A39294F72A52D0E500436A4F /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				A39295052A52D1D300436A4F /* LTUtils */,
+				A39295052A52D1D300436A4F /* ToMEUtils */,
 				A3CF55D32A5BC9F400D19F00 /* addToolBar.swift */,
 				A3CF55D52A5BCA0A00D19F00 /* adjusted+.swift */,
 				A3CF55D72A5BCA1F00D19F00 /* applyShadow.swift */,
@@ -380,6 +472,10 @@
 				A39295012A52D17700436A4F /* UIKit+ */,
 				A39295032A52D19100436A4F /* Foundation+ */,
 				A39295042A52D19F00436A4F /* Combine+ */,
+				A3F9C2492AFC6094001409D8 /* TypingBubble.swift */,
+				A3F9C24B2AFC60C1001409D8 /* BubbleCircle.swift */,
+				A3F9C24D2AFC60E7001409D8 /* TypingIndicator.swift */,
+				A3F9C24F2AFC619F001409D8 /* MessagesViewController+TypingIndicator.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -398,6 +494,7 @@
 			isa = PBXGroup;
 			children = (
 				A39294D42A52C91D00436A4F /* Assets.xcassets */,
+				A3F7F0C92AFFF64400DFCC3E /* Music */,
 				A39295002A52D14A00436A4F /* Fonts */,
 				A39294FF2A52D14100436A4F /* Lottie */,
 			);
@@ -449,6 +546,7 @@
 				A34478DA2A69164A002F1981 /* Pretendard-Regular.otf */,
 				A344EE022AA8E87700FD2AAA /* Coiny-Cyrillic.ttf */,
 				A344EE042AA8E94300FD2AAA /* YdestreetL.otf */,
+				A3C6F6F52AF4CBB1008D0FF0 /* LeeSeoyun.otf */,
 				A39295342A52D68300436A4F /* .gitkeep */,
 			);
 			path = Fonts;
@@ -499,13 +597,17 @@
 			path = "Combine+";
 			sourceTree = "<group>";
 		};
-		A39295052A52D1D300436A4F /* LTUtils */ = {
+		A39295052A52D1D300436A4F /* ToMEUtils */ = {
 			isa = PBXGroup;
 			children = (
 				A392953E2A52D6BE00436A4F /* .gitkeep */,
 				A36B369B2AB068CA0008E9F2 /* ToMETimeFormatter.swift */,
+				A30FDED82AF920040088D98E /* ToMEPhotoManager.swift */,
+				A30FDEE72AF9F84A0088D98E /* ToMEDecibelMananger.swift */,
+				A3EED07E2AFB3DD50093A431 /* ToMETextViewManager.swift */,
+				A3F7F0D22AFFF82000DFCC3E /* ToMEMusicManager.swift */,
 			);
-			path = LTUtils;
+			path = ToMEUtils;
 			sourceTree = "<group>";
 		};
 		A39295062A52D25200436A4F /* Model */ = {
@@ -513,6 +615,7 @@
 			children = (
 				A39295542A52D71900436A4F /* .gitkeep */,
 				A330D3F62AC2A26900C1CC22 /* Message.swift */,
+				A30FDED22AF8C4300088D98E /* MissionModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -697,6 +800,8 @@
 			children = (
 				A39295662A52D76200436A4F /* .gitkeep */,
 				A36B36992AAF79750008E9F2 /* MissionView.swift */,
+				A3C6F6F72AF5383A008D0FF0 /* BubbleView.swift */,
+				A30FDECC2AF7FB420088D98E /* TopAlertView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -752,6 +857,7 @@
 			children = (
 				A39295702A52D7AD00436A4F /* .gitkeep */,
 				A330D3F42AC29D4E00C1CC22 /* TalkingMessageVC.swift */,
+				A3EED0822AFBBA650093A431 /* TalkingWithToVC.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -804,6 +910,17 @@
 			path = DefaultDto;
 			sourceTree = "<group>";
 		};
+		A3F7F0C92AFFF64400DFCC3E /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				A3F7F0CA2AFFF65E00DFCC3E /* bubble.mp3 */,
+				A3F7F0CB2AFFF65F00DFCC3E /* homeBackgroundMusic.mp3 */,
+				A3F7F0CD2AFFF65F00DFCC3E /* missionComplete.mp3 */,
+				A3F7F0CC2AFFF65F00DFCC3E /* oneOfMissionComplete.mp3 */,
+			);
+			path = Music;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -829,6 +946,7 @@
 				A39294EC2A52CBF200436A4F /* Lottie */,
 				A39294EF2A52CBFF00436A4F /* FSCalendar */,
 				A330D3F22AC0362800C1CC22 /* MessageKit */,
+				A30FDEDB2AF92ABA0088D98E /* Mantis */,
 			);
 			productName = "Ajou-Lifeteer-iOS";
 			productReference = A39294C82A52C91C00436A4F /* Ajou-Lifeteer-iOS.app */;
@@ -866,6 +984,7 @@
 				A39294EB2A52CBF200436A4F /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				A39294EE2A52CBFF00436A4F /* XCRemoteSwiftPackageReference "FSCalendar" */,
 				A330D3F12AC0362800C1CC22 /* XCRemoteSwiftPackageReference "MessageKit" */,
+				A30FDEDA2AF92ABA0088D98E /* XCRemoteSwiftPackageReference "Mantis" */,
 			);
 			productRefGroup = A39294C92A52C91C00436A4F /* Products */;
 			projectDirPath = "";
@@ -882,13 +1001,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				A344EE012AA8E81100FD2AAA /* Pretendard-SemiBold.otf in Resources */,
+				A3F7F0CE2AFFF65F00DFCC3E /* bubble.mp3 in Resources */,
 				A36B36AE2ABBCB7F0008E9F2 /* ToMECheck.json in Resources */,
+				A3F7F0CF2AFFF65F00DFCC3E /* homeBackgroundMusic.mp3 in Resources */,
 				A30667152A5C0178006E7B9F /* Assets.xcassets in Resources */,
 				A34478E12A69164A002F1981 /* Pretendard-Bold.otf in Resources */,
 				A344EE052AA8E94300FD2AAA /* YdestreetL.otf in Resources */,
 				A34478DF2A69164A002F1981 /* GmarketSansLight.otf in Resources */,
 				A344EE032AA8E87700FD2AAA /* Coiny-Cyrillic.ttf in Resources */,
+				A3C6F6F62AF4CBB1008D0FF0 /* LeeSeoyun.otf in Resources */,
+				A3F7F0D12AFFF65F00DFCC3E /* missionComplete.mp3 in Resources */,
 				A34478DE2A69164A002F1981 /* Pretendard-Regular.otf in Resources */,
+				A3F7F0D02AFFF65F00DFCC3E /* oneOfMissionComplete.mp3 in Resources */,
 				A34478E02A69164A002F1981 /* Pretendard-Medium.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -898,6 +1022,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		A3CF55F72A5BD26200D19F00 /* SwiftLint Script */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -913,6 +1038,7 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -922,24 +1048,34 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3CF55D82A5BCA1F00D19F00 /* applyShadow.swift in Sources */,
+				A30FDED52AF8C6A00088D98E /* MissionTableViewCell.swift in Sources */,
 				A3CF55E22A5BCAA700D19F00 /* JsonCoder.swift in Sources */,
 				A36B36A62AB41CEB0008E9F2 /* UINavigationController+.swift in Sources */,
+				A3EED07F2AFB3DD50093A431 /* ToMETextViewManager.swift in Sources */,
+				A3F9C24C2AFC60C1001409D8 /* BubbleCircle.swift in Sources */,
 				A34478E52A698D82002F1981 /* SignInVC.swift in Sources */,
 				A3CF55D02A5BC99E00D19F00 /* Publisher+Driver.swift in Sources */,
 				A3E4D3052A5BEEB200C7611C /* TabBarController.swift in Sources */,
+				A30FDED12AF806560088D98E /* CurrentMissionCompleteView.swift in Sources */,
 				A3E4D3092A5BF05E00C7611C /* DiaryMainVC.swift in Sources */,
 				A39294D02A52C91C00436A4F /* ViewController.swift in Sources */,
 				A34478FA2A7178FB002F1981 /* SecondDetailLandingPageVC.swift in Sources */,
 				A36B369C2AB068CA0008E9F2 /* ToMETimeFormatter.swift in Sources */,
 				A3CF55F42A5BCB7300D19F00 /* UserDefaultKeyList.swift in Sources */,
 				A3E4D3032A5BE90500C7611C /* ImageLiterals.swift in Sources */,
+				A3EED0832AFBBA650093A431 /* TalkingWithToVC.swift in Sources */,
 				A34478FE2A71794D002F1981 /* LastDetailLandingPageVC.swift in Sources */,
 				A3CF55B42A5BC1A700D19F00 /* UISwitch+.swift in Sources */,
+				A30FDEDF2AF93F460088D98E /* MissionCompleteVC.swift in Sources */,
 				A34478F32A717679002F1981 /* LandingPageMainVC.swift in Sources */,
+				A30FDED32AF8C4300088D98E /* MissionModel.swift in Sources */,
+				A30D5F952AFA95F400C276F0 /* CircularMissionProgressView.swift in Sources */,
 				A3CF55B02A5BC01200D19F00 /* UITableView+.swift in Sources */,
 				A3CF55F62A5BCB8A00D19F00 /* UserDefaultWrapper.swift in Sources */,
 				A3E4D3072A5BF04300C7611C /* HomeMainVC.swift in Sources */,
+				A30FDECB2AF7F80A0088D98E /* MissionMainVC.swift in Sources */,
 				A330D3F02AC0342800C1CC22 /* TalkingDetailVC.swift in Sources */,
+				A3F7F0D32AFFF82000DFCC3E /* ToMEMusicManager.swift in Sources */,
 				A3CF55DC2A5BCA5C00D19F00 /* calculateStatusBarHeight.swift in Sources */,
 				A3CF55AC2A5BBF1000D19F00 /* UITextView+.swift in Sources */,
 				A34478E72A698DBF002F1981 /* SignInKakaoDetailVC.swift in Sources */,
@@ -947,37 +1083,46 @@
 				A36B36962AAF66A40008E9F2 /* CustomProgressView.swift in Sources */,
 				A30667172A5C070F006E7B9F /* CustomNavigationBar.swift in Sources */,
 				A3CF55AE2A5BBF2400D19F00 /* UITextField+.swift in Sources */,
+				A30FDED92AF920040088D98E /* ToMEPhotoManager.swift in Sources */,
 				A3CF55CE2A5BC97100D19F00 /* CancelBag.swift in Sources */,
 				A36B36AA2AB447DA0008E9F2 /* CustomSureToSavePopUpVC.swift in Sources */,
 				A3CF55EE2A5BCB2F00D19F00 /* setStatusBarBackgroundColor.swift in Sources */,
+				A3F9C24A2AFC6094001409D8 /* TypingBubble.swift in Sources */,
+				A3F9C24E2AFC60E7001409D8 /* TypingIndicator.swift in Sources */,
 				A34478F52A717777002F1981 /* FirstDetailLandingPageVC.swift in Sources */,
 				A306671D2A5C1689006E7B9F /* CustomAlertVC.swift in Sources */,
 				A3CF55D42A5BC9F400D19F00 /* addToolBar.swift in Sources */,
 				A3CF55D22A5BC9CD00D19F00 /* Publisher+UIControl.swift in Sources */,
 				A3CF55F22A5BCB5800D19F00 /* Toast.swift in Sources */,
+				A30FDECD2AF7FB420088D98E /* TopAlertView.swift in Sources */,
 				A3CF55E42A5BCABD00D19F00 /* LoadingIndicator.swift in Sources */,
 				A3CF55E82A5BCAED00D19F00 /* makeVibrate.swift in Sources */,
 				A36B36982AAF68720008E9F2 /* CustomMessageBubbleView.swift in Sources */,
 				A3CF55C82A5BC93900D19F00 /* String+.swift in Sources */,
 				A330D3F52AC29D4E00C1CC22 /* TalkingMessageVC.swift in Sources */,
 				A34478FC2A71790D002F1981 /* ThirdDetailLandingPageVC.swift in Sources */,
+				A3F9C2502AFC619F001409D8 /* MessagesViewController+TypingIndicator.swift in Sources */,
 				A3CF55BE2A5BC8C600D19F00 /* UIDevice+.swift in Sources */,
 				A3E4D3012A5BDB9200C7611C /* FontLiterals.swift in Sources */,
 				A3CF55C62A5BC92900D19F00 /* Result+.swift in Sources */,
 				A3CF55C42A5BC91500D19F00 /* Encodable+.swift in Sources */,
 				A3CF55B22A5BC18E00D19F00 /* UITabBar+.swift in Sources */,
+				A3C6F6F82AF5383A008D0FF0 /* BubbleView.swift in Sources */,
 				A3CF55DE2A5BCA8500D19F00 /* calculateTopInset.swift in Sources */,
 				A3CF55B82A5BC87500D19F00 /* UILabel+.swift in Sources */,
 				A39294CC2A52C91C00436A4F /* AppDelegate.swift in Sources */,
+				A30FDEC92AF7F6780088D98E /* ToMEAnimationManager.swift in Sources */,
 				A3CF55EA2A5BCB0000D19F00 /* setImage.swift in Sources */,
 				A34478E32A698554002F1981 /* SplashVC.swift in Sources */,
 				A3CF55E62A5BCAD800D19F00 /* makeAlert.swift in Sources */,
 				A3E4D30B2A5BF07F00C7611C /* ArchiveMainVC.swift in Sources */,
 				A3CF55A82A5BBED200D19F00 /* UIViewController+.swift in Sources */,
+				A30FDEE82AF9F84A0088D98E /* ToMEDecibelMananger.swift in Sources */,
 				A3E4D2FB2A5BDAAA00C7611C /* ColorLiterals.swift in Sources */,
 				A3CF55EC2A5BCB1400D19F00 /* setRootViewController.swift in Sources */,
 				A3CF55D62A5BCA0A00D19F00 /* adjusted+.swift in Sources */,
 				A330D4002AC2D4CE00C1CC22 /* MyPageMainVC.swift in Sources */,
+				A30FDEE22AF9DA4D0088D98E /* MissionProceedVC.swift in Sources */,
 				A3CF55BA2A5BC88D00D19F00 /* UIImage+.swift in Sources */,
 				A34478F82A7178B7002F1981 /* DetailLandingPageVC.swift in Sources */,
 				A36B36942AAF643E0008E9F2 /* CustomPopUpVC.swift in Sources */,
@@ -986,6 +1131,7 @@
 				A3CF55F02A5BCB4400D19F00 /* setTextLineHeight.swift in Sources */,
 				A3CF55DA2A5BCA4400D19F00 /* calculatePastTime.swift in Sources */,
 				A3CF55CA2A5BC94A00D19F00 /* URL+.swift in Sources */,
+				A30FDED72AF8D4D40088D98E /* MissionDetailVC.swift in Sources */,
 				A3E4D30D2A5BF09000C7611C /* TalkingMainVC.swift in Sources */,
 				A39294CE2A52C91C00436A4F /* SceneDelegate.swift in Sources */,
 				A36B369A2AAF79750008E9F2 /* MissionView.swift in Sources */,
@@ -1208,6 +1354,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		A30FDEDA2AF92ABA0088D98E /* XCRemoteSwiftPackageReference "Mantis" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/guoyingtao/Mantis.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.7.5;
+			};
+		};
 		A330D3F12AC0362800C1CC22 /* XCRemoteSwiftPackageReference "MessageKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/MessageKit/MessageKit";
@@ -1267,6 +1421,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		A30FDEDB2AF92ABA0088D98E /* Mantis */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A30FDEDA2AF92ABA0088D98E /* XCRemoteSwiftPackageReference "Mantis" */;
+			productName = Mantis;
+		};
 		A330D3F22AC0362800C1CC22 /* MessageKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A330D3F12AC0362800C1CC22 /* XCRemoteSwiftPackageReference "MessageKit" */;

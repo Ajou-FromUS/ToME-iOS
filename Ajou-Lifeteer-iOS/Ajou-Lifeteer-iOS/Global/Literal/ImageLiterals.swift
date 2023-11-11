@@ -12,6 +12,7 @@ enum ImageLiterals {
     static var archiveIcStartFill: UIImage { .load(named: "archive_ic_start_fill") }
     static var archiveIcStart: UIImage { .load(named: "archive_ic_start") }
     static var archiveImgMessage: UIImage { .load(named: "archive_img_message") }
+    static var backBtnImage: UIImage { .load(named: "back_btn_image") }
     static var bannerIcCheck: UIImage { .load(named: "banner_ic_check") }
     static var diaryArrowBack: UIImage { .load(named: "diary_arrow_back") }
     static var diaryArrowNextDisabled: UIImage { .load(named: "diary_arrow_next_disabled") }
@@ -25,6 +26,9 @@ enum ImageLiterals {
     static var diaryImgMessage: UIImage { .load(named: "diary_img_message") }
     static var diaryImgSpeachBubble: UIImage { .load(named: "diary_img_speach_bubble") }
     static var diaryReduceDefault: UIImage { .load(named: "diary_reduce_default") }
+    static var gallaryBtnImageFill: UIImage { .load(named: "gallary_btn_image_fill") }
+    static var gallaryBtnImage: UIImage { .load(named: "gallary_btn_image") }
+    static var homeBtnBubble: UIImage { .load(named: "home_btn_bubble") }
     static var homeIcArchiveFill: UIImage { .load(named: "home_ic_archive_fill") }
     static var homeIcArchive: UIImage { .load(named: "home_ic_archive") }
     static var homeIcConversationFill: UIImage { .load(named: "home_ic_conversation_fill") }
@@ -43,18 +47,41 @@ enum ImageLiterals {
     static var homeIcMenuSnack: UIImage { .load(named: "home_ic_menu_snack") }
     static var homeIcMenuStore: UIImage { .load(named: "home_ic_menu_store") }
     static var homeIcMenu: UIImage { .load(named: "home_ic_menu") }
+    static var homeIcMissionFill: UIImage { .load(named: "home_ic_mission_fill") }
+    static var homeIcMypageFill: UIImage { .load(named: "home_ic_mypage_fill") }
+    static var homeIcMypage: UIImage { .load(named: "home_ic_mypage") }
     static var homeIcPopupClose: UIImage { .load(named: "home_ic_popup_close") }
+    static var homeIcStatisticsFill: UIImage { .load(named: "home_ic_statistics_fill") }
+    static var homeIcStatistics: UIImage { .load(named: "home_ic_statistics") }
+    static var homeIcTalking: UIImage { .load(named: "home_ic_talking") }
     static var homeImgSnackscore: UIImage { .load(named: "home_img_snackscore") }
+    static var homeImgTo: UIImage { .load(named: "home_img_to") }
     static var homeImgTodaysCompleteFill: UIImage { .load(named: "home_img_todayscomplete_fill") }
     static var homeImgTodaysComplete: UIImage { .load(named: "home_img_todayscomplete") }
     static var introIcCheckFill: UIImage { .load(named: "intro_ic_check_fill") }
     static var introIcCheck: UIImage { .load(named: "intro_ic_check") }
     static var introImgCalender: UIImage { .load(named: "intro_img_calender") }
     static var introImgExplainMission: UIImage { .load(named: "intro_img_explain_mission") }
+    static var missionImgTextBorder: UIImage { .load(named: "mission_img_text_border") }
+    static var missionImgDecibelRectangle: UIImage { .load(named: "mission_img_decibel_rectangle") }
+    static var missionImgDecibel: UIImage { .load(named: "mission_img_decibel") }
+    static var missionImgPhotoRectangle: UIImage { .load(named: "mission_img_photo_rectangle") }
+    static var missionImgPhoto: UIImage { .load(named: "mission_img_photo") }
+    static var missionImgTextRectangle: UIImage { .load(named: "mission_img_text_rectangle") }
+    static var missionImgText: UIImage { .load(named: "mission_img_text") }
+    static var missionProgressFill: UIImage { .load(named: "mission_progress_fill") }
+    static var missionProgress: UIImage { .load(named: "mission_progress") }
     static var mypageIcBack: UIImage { .load(named: "mypage_ic_back") }
     static var mypageIcToggle: UIImage { .load(named: "mypage_ic_toggle") }
+    static var questionBtn: UIImage { .load(named: "question_btn") }
     static var talkingBtnQuestion: UIImage { .load(named: "talking_btn_question") }
+    static var talkingIcSend: UIImage { .load(named: "talking_ic_send") }
+    static var toBtnImageDisabled: UIImage { .load(named: "to_btn_image_disabled") }
+    static var toBtnImage: UIImage { .load(named: "to_btn_image") }
+    static var tomeLogo: UIImage { .load(named: "tome_logo") }
+    static var topbar: UIImage { .load(named: "topbar") }
     static var visitiorIcLock: UIImage { .load(named: "visitior_ic_lock") }
+    static var warningIc: UIImage { .load(named: "warning_ic") }
 }
 
 extension UIImage {

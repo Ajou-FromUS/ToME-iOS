@@ -64,4 +64,3 @@ extension UIDevice {
         return modelDictionary[hardwareString] ?? "Unknown iPhone - \(hardwareString)"
     }
 }
-

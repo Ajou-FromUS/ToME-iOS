@@ -40,12 +40,28 @@ extension UIFont {
         return UIFont.font(.pretendardMedium, ofSize: 16)
     }
     
+    @nonobjc class var newBody1: UIFont {
+        return UIFont.font(.leeSeoyun, ofSize: 24)
+    }
+    
     @nonobjc class var body2: UIFont {
         return UIFont.font(.pretendardMedium, ofSize: 12)
     }
     
+    @nonobjc class var newBody2: UIFont {
+        return UIFont.font(.leeSeoyun, ofSize: 20)
+    }
+    
     @nonobjc class var body3: UIFont {
         return UIFont.font(.pretendardMedium, ofSize: 10)
+    }
+    
+    @nonobjc class var newBody3: UIFont {
+        return UIFont.font(.leeSeoyun, ofSize: 16)
+    }
+    
+    @nonobjc class var newBody4: UIFont {
+        return UIFont.font(.leeSeoyun, ofSize: 14)
     }
     
     @nonobjc class var diaryYear: UIFont {
@@ -90,6 +106,7 @@ enum FontName: String {
     case coinyCyrillic = "Coiny-Cyrillic"
     case yDestreetL = "YdestreetL"
     case gMarketSansLight = "GmarketSansLight"
+    case leeSeoyun = "LeeSeoyun"
 }
 
 extension UIFont {
