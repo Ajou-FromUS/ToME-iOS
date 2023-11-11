@@ -42,6 +42,7 @@ final class MissionCompleteVC: UIViewController {
         setUI()
         setLayout()
         setAddTarget()
+        ToMEMusicManager.shared.playMusic(withTitle: "oneOfMissionComplete", loop: 0)
     }
 }
 
@@ -124,5 +125,4 @@ extension MissionCompleteVC {
             make.height.equalTo(53)
         }
     }
-    
 }

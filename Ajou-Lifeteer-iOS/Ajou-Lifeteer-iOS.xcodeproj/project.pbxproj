@@ -114,6 +114,11 @@
 		A3E4D30D2A5BF09000C7611C /* TalkingMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E4D30C2A5BF09000C7611C /* TalkingMainVC.swift */; };
 		A3EED07F2AFB3DD50093A431 /* ToMETextViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EED07E2AFB3DD50093A431 /* ToMETextViewManager.swift */; };
 		A3EED0832AFBBA650093A431 /* TalkingWithToVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EED0822AFBBA650093A431 /* TalkingWithToVC.swift */; };
+		A3F7F0CE2AFFF65F00DFCC3E /* bubble.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3F7F0CA2AFFF65E00DFCC3E /* bubble.mp3 */; };
+		A3F7F0CF2AFFF65F00DFCC3E /* homeBackgroundMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3F7F0CB2AFFF65F00DFCC3E /* homeBackgroundMusic.mp3 */; };
+		A3F7F0D02AFFF65F00DFCC3E /* oneOfMissionComplete.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3F7F0CC2AFFF65F00DFCC3E /* oneOfMissionComplete.mp3 */; };
+		A3F7F0D12AFFF65F00DFCC3E /* missionComplete.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3F7F0CD2AFFF65F00DFCC3E /* missionComplete.mp3 */; };
+		A3F7F0D32AFFF82000DFCC3E /* ToMEMusicManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F7F0D22AFFF82000DFCC3E /* ToMEMusicManager.swift */; };
 		A3F9C24A2AFC6094001409D8 /* TypingBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F9C2492AFC6094001409D8 /* TypingBubble.swift */; };
 		A3F9C24C2AFC60C1001409D8 /* BubbleCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F9C24B2AFC60C1001409D8 /* BubbleCircle.swift */; };
 		A3F9C24E2AFC60E7001409D8 /* TypingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F9C24D2AFC60E7001409D8 /* TypingIndicator.swift */; };
@@ -260,6 +265,11 @@
 		A3E4D30C2A5BF09000C7611C /* TalkingMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkingMainVC.swift; sourceTree = "<group>"; };
 		A3EED07E2AFB3DD50093A431 /* ToMETextViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToMETextViewManager.swift; sourceTree = "<group>"; };
 		A3EED0822AFBBA650093A431 /* TalkingWithToVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkingWithToVC.swift; sourceTree = "<group>"; };
+		A3F7F0CA2AFFF65E00DFCC3E /* bubble.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bubble.mp3; sourceTree = "<group>"; };
+		A3F7F0CB2AFFF65F00DFCC3E /* homeBackgroundMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = homeBackgroundMusic.mp3; sourceTree = "<group>"; };
+		A3F7F0CC2AFFF65F00DFCC3E /* oneOfMissionComplete.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = oneOfMissionComplete.mp3; sourceTree = "<group>"; };
+		A3F7F0CD2AFFF65F00DFCC3E /* missionComplete.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = missionComplete.mp3; sourceTree = "<group>"; };
+		A3F7F0D22AFFF82000DFCC3E /* ToMEMusicManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToMEMusicManager.swift; sourceTree = "<group>"; };
 		A3F9C2492AFC6094001409D8 /* TypingBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypingBubble.swift; sourceTree = "<group>"; };
 		A3F9C24B2AFC60C1001409D8 /* BubbleCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleCircle.swift; sourceTree = "<group>"; };
 		A3F9C24D2AFC60E7001409D8 /* TypingIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypingIndicator.swift; sourceTree = "<group>"; };
@@ -484,6 +494,7 @@
 			isa = PBXGroup;
 			children = (
 				A39294D42A52C91D00436A4F /* Assets.xcassets */,
+				A3F7F0C92AFFF64400DFCC3E /* Music */,
 				A39295002A52D14A00436A4F /* Fonts */,
 				A39294FF2A52D14100436A4F /* Lottie */,
 			);
@@ -594,6 +605,7 @@
 				A30FDED82AF920040088D98E /* ToMEPhotoManager.swift */,
 				A30FDEE72AF9F84A0088D98E /* ToMEDecibelMananger.swift */,
 				A3EED07E2AFB3DD50093A431 /* ToMETextViewManager.swift */,
+				A3F7F0D22AFFF82000DFCC3E /* ToMEMusicManager.swift */,
 			);
 			path = ToMEUtils;
 			sourceTree = "<group>";
@@ -898,6 +910,17 @@
 			path = DefaultDto;
 			sourceTree = "<group>";
 		};
+		A3F7F0C92AFFF64400DFCC3E /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				A3F7F0CA2AFFF65E00DFCC3E /* bubble.mp3 */,
+				A3F7F0CB2AFFF65F00DFCC3E /* homeBackgroundMusic.mp3 */,
+				A3F7F0CD2AFFF65F00DFCC3E /* missionComplete.mp3 */,
+				A3F7F0CC2AFFF65F00DFCC3E /* oneOfMissionComplete.mp3 */,
+			);
+			path = Music;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -978,14 +1001,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				A344EE012AA8E81100FD2AAA /* Pretendard-SemiBold.otf in Resources */,
+				A3F7F0CE2AFFF65F00DFCC3E /* bubble.mp3 in Resources */,
 				A36B36AE2ABBCB7F0008E9F2 /* ToMECheck.json in Resources */,
+				A3F7F0CF2AFFF65F00DFCC3E /* homeBackgroundMusic.mp3 in Resources */,
 				A30667152A5C0178006E7B9F /* Assets.xcassets in Resources */,
 				A34478E12A69164A002F1981 /* Pretendard-Bold.otf in Resources */,
 				A344EE052AA8E94300FD2AAA /* YdestreetL.otf in Resources */,
 				A34478DF2A69164A002F1981 /* GmarketSansLight.otf in Resources */,
 				A344EE032AA8E87700FD2AAA /* Coiny-Cyrillic.ttf in Resources */,
 				A3C6F6F62AF4CBB1008D0FF0 /* LeeSeoyun.otf in Resources */,
+				A3F7F0D12AFFF65F00DFCC3E /* missionComplete.mp3 in Resources */,
 				A34478DE2A69164A002F1981 /* Pretendard-Regular.otf in Resources */,
+				A3F7F0D02AFFF65F00DFCC3E /* oneOfMissionComplete.mp3 in Resources */,
 				A34478E02A69164A002F1981 /* Pretendard-Medium.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1048,6 +1075,7 @@
 				A3E4D3072A5BF04300C7611C /* HomeMainVC.swift in Sources */,
 				A30FDECB2AF7F80A0088D98E /* MissionMainVC.swift in Sources */,
 				A330D3F02AC0342800C1CC22 /* TalkingDetailVC.swift in Sources */,
+				A3F7F0D32AFFF82000DFCC3E /* ToMEMusicManager.swift in Sources */,
 				A3CF55DC2A5BCA5C00D19F00 /* calculateStatusBarHeight.swift in Sources */,
 				A3CF55AC2A5BBF1000D19F00 /* UITextView+.swift in Sources */,
 				A34478E72A698DBF002F1981 /* SignInKakaoDetailVC.swift in Sources */,

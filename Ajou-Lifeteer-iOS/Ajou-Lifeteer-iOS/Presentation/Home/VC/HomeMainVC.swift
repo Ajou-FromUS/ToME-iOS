@@ -58,6 +58,11 @@ final class HomeMainVC: UIViewController {
         super.viewDidAppear(true)
         self.hideTabBar(wantsToHide: false)
         setBubbleViewAnimation()
+        ToMEMusicManager.shared.playMusic(withTitle: "homeBackgroundMusic", loop: -1)   // 무한 반복
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        ToMEMusicManager.shared.stopMusic(withTitle: "homeBackgroundMusic")
     }
 }
 
@@ -67,6 +72,7 @@ extension HomeMainVC {
     @objc private func talkingWithToBubbleViewDidTap() {
         // 버튼이 눌릴 때 햅틱 피드백 제공
         feedbackGenerator.impactOccurred()
+        ToMEMusicManager.shared.playMusicWithTimeInterval(forTitle: "bubble", duration: 2)
         let talkingDetailVC = TalkingDetailVC()
         self.navigationController?.fadeTo(talkingDetailVC)
     }
@@ -74,6 +80,7 @@ extension HomeMainVC {
     @objc private func todaysMissionBubbleViewDidTap() {
         // 버튼이 눌릴 때 햅틱 피드백 제공
         feedbackGenerator.impactOccurred()
+        ToMEMusicManager.shared.playMusicWithTimeInterval(forTitle: "bubble", duration: 2)
         if isTalkedWithTo {
             let missionMainVC = MissionMainVC()
             self.navigationController?.fadeTo(missionMainVC)
