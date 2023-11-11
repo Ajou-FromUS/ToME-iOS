@@ -21,6 +21,7 @@ enum NaviType {
     
     case home // 홈에 존재하는 네비바
     case singleTitle // 타이틀이 한줄인 네비바
+    case singleTitleWithPopButton // 타이틀 한 줄 + 뒤로가기 버튼 (티오랑 대화하기)
 }
 
 final class CustomNavigationBar: UIView {
@@ -37,6 +38,16 @@ final class CustomNavigationBar: UIView {
     var centerTitleLabel = UILabel()
     private let backButton = UIButton()
     private let mindSetBIImageView = UIImageView()
+    
+    private let finishTalkingButton = UIButton(type: .custom).then {
+        $0.setTitle("대화 마치기", for: .normal)
+        $0.setTitleColor(.sub2, for: .normal)
+        $0.setBackgroundColor(.sub1, for: .normal)
+        $0.layer.cornerRadius = 5
+        $0.layer.borderWidth = 1
+        $0.layer.borderColor = UIColor.sub2.cgColor
+        $0.titleLabel?.font = UIFont(name: "LeeSeoYun", size: 14)
+    }
     
     private let logoLabel = UILabel().then {
         $0.text = "to Me"
@@ -66,6 +77,7 @@ final class CustomNavigationBar: UIView {
 extension CustomNavigationBar {
     private func setAddTarget() {
         self.backButton.addTarget(self, action: #selector(popToPreviousVC), for: .touchUpInside)
+        self.finishTalkingButton.addTarget(self, action: #selector(finishTalkingButtonDidTap), for: .touchUpInside)
     }
     
     @discardableResult
@@ -116,6 +128,10 @@ extension CustomNavigationBar {
     
     @objc private func backButtonDidTap() {
         self.backButtonClosure?()
+    }
+    
+    @objc private func finishTalkingButtonDidTap() {
+        self.vc?.navigationController?.popViewController(animated: false)
     }
     
     @objc private func missionButtonDidTap() {
@@ -172,6 +188,9 @@ extension CustomNavigationBar {
         case .singleTitle:
             setBackgroundUI()
             setTitleUI()
+        case .singleTitleWithPopButton:
+            setBackgroundUI()
+            setTitleUI()
         }
     }
     
@@ -191,6 +210,17 @@ extension CustomNavigationBar {
             setHomeLayout()
         case .singleTitle:
             setHomeLayout()
+        case .singleTitleWithPopButton:
+            setHomeLayout()
+            
+            self.addSubview(finishTalkingButton)
+            
+            finishTalkingButton.snp.makeConstraints { make in
+                make.top.equalTo(centerTitleLabel.snp.top)
+                make.trailing.equalToSuperview().inset(26)
+                make.height.equalTo(26)
+                make.width.equalTo(85)
+            }
         }
     }
     

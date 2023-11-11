@@ -16,7 +16,7 @@ extension UINavigationController {
         pushViewController(viewController, animated: false)
     }
     
-    func fadePop(_ viewController: UIViewController) {
+    func fadePop() {
         let transition: CATransition = CATransition()
         transition.duration = 1
         transition.type = CATransitionType.fade

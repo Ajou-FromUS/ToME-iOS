@@ -113,6 +113,11 @@
 		A3E4D30B2A5BF07F00C7611C /* ArchiveMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E4D30A2A5BF07F00C7611C /* ArchiveMainVC.swift */; };
 		A3E4D30D2A5BF09000C7611C /* TalkingMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E4D30C2A5BF09000C7611C /* TalkingMainVC.swift */; };
 		A3EED07F2AFB3DD50093A431 /* ToMETextViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EED07E2AFB3DD50093A431 /* ToMETextViewManager.swift */; };
+		A3EED0832AFBBA650093A431 /* TalkingWithToVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EED0822AFBBA650093A431 /* TalkingWithToVC.swift */; };
+		A3F9C24A2AFC6094001409D8 /* TypingBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F9C2492AFC6094001409D8 /* TypingBubble.swift */; };
+		A3F9C24C2AFC60C1001409D8 /* BubbleCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F9C24B2AFC60C1001409D8 /* BubbleCircle.swift */; };
+		A3F9C24E2AFC60E7001409D8 /* TypingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F9C24D2AFC60E7001409D8 /* TypingIndicator.swift */; };
+		A3F9C2502AFC619F001409D8 /* MessagesViewController+TypingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F9C24F2AFC619F001409D8 /* MessagesViewController+TypingIndicator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -254,6 +259,11 @@
 		A3E4D30A2A5BF07F00C7611C /* ArchiveMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveMainVC.swift; sourceTree = "<group>"; };
 		A3E4D30C2A5BF09000C7611C /* TalkingMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkingMainVC.swift; sourceTree = "<group>"; };
 		A3EED07E2AFB3DD50093A431 /* ToMETextViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToMETextViewManager.swift; sourceTree = "<group>"; };
+		A3EED0822AFBBA650093A431 /* TalkingWithToVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkingWithToVC.swift; sourceTree = "<group>"; };
+		A3F9C2492AFC6094001409D8 /* TypingBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypingBubble.swift; sourceTree = "<group>"; };
+		A3F9C24B2AFC60C1001409D8 /* BubbleCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleCircle.swift; sourceTree = "<group>"; };
+		A3F9C24D2AFC60E7001409D8 /* TypingIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypingIndicator.swift; sourceTree = "<group>"; };
+		A3F9C24F2AFC619F001409D8 /* MessagesViewController+TypingIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MessagesViewController+TypingIndicator.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -452,6 +462,10 @@
 				A39295012A52D17700436A4F /* UIKit+ */,
 				A39295032A52D19100436A4F /* Foundation+ */,
 				A39295042A52D19F00436A4F /* Combine+ */,
+				A3F9C2492AFC6094001409D8 /* TypingBubble.swift */,
+				A3F9C24B2AFC60C1001409D8 /* BubbleCircle.swift */,
+				A3F9C24D2AFC60E7001409D8 /* TypingIndicator.swift */,
+				A3F9C24F2AFC619F001409D8 /* MessagesViewController+TypingIndicator.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -831,6 +845,7 @@
 			children = (
 				A39295702A52D7AD00436A4F /* .gitkeep */,
 				A330D3F42AC29D4E00C1CC22 /* TalkingMessageVC.swift */,
+				A3EED0822AFBBA650093A431 /* TalkingWithToVC.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1010,6 +1025,7 @@
 				A3CF55E22A5BCAA700D19F00 /* JsonCoder.swift in Sources */,
 				A36B36A62AB41CEB0008E9F2 /* UINavigationController+.swift in Sources */,
 				A3EED07F2AFB3DD50093A431 /* ToMETextViewManager.swift in Sources */,
+				A3F9C24C2AFC60C1001409D8 /* BubbleCircle.swift in Sources */,
 				A34478E52A698D82002F1981 /* SignInVC.swift in Sources */,
 				A3CF55D02A5BC99E00D19F00 /* Publisher+Driver.swift in Sources */,
 				A3E4D3052A5BEEB200C7611C /* TabBarController.swift in Sources */,
@@ -1020,6 +1036,7 @@
 				A36B369C2AB068CA0008E9F2 /* ToMETimeFormatter.swift in Sources */,
 				A3CF55F42A5BCB7300D19F00 /* UserDefaultKeyList.swift in Sources */,
 				A3E4D3032A5BE90500C7611C /* ImageLiterals.swift in Sources */,
+				A3EED0832AFBBA650093A431 /* TalkingWithToVC.swift in Sources */,
 				A34478FE2A71794D002F1981 /* LastDetailLandingPageVC.swift in Sources */,
 				A3CF55B42A5BC1A700D19F00 /* UISwitch+.swift in Sources */,
 				A30FDEDF2AF93F460088D98E /* MissionCompleteVC.swift in Sources */,
@@ -1042,6 +1059,8 @@
 				A3CF55CE2A5BC97100D19F00 /* CancelBag.swift in Sources */,
 				A36B36AA2AB447DA0008E9F2 /* CustomSureToSavePopUpVC.swift in Sources */,
 				A3CF55EE2A5BCB2F00D19F00 /* setStatusBarBackgroundColor.swift in Sources */,
+				A3F9C24A2AFC6094001409D8 /* TypingBubble.swift in Sources */,
+				A3F9C24E2AFC60E7001409D8 /* TypingIndicator.swift in Sources */,
 				A34478F52A717777002F1981 /* FirstDetailLandingPageVC.swift in Sources */,
 				A306671D2A5C1689006E7B9F /* CustomAlertVC.swift in Sources */,
 				A3CF55D42A5BC9F400D19F00 /* addToolBar.swift in Sources */,
@@ -1054,6 +1073,7 @@
 				A3CF55C82A5BC93900D19F00 /* String+.swift in Sources */,
 				A330D3F52AC29D4E00C1CC22 /* TalkingMessageVC.swift in Sources */,
 				A34478FC2A71790D002F1981 /* ThirdDetailLandingPageVC.swift in Sources */,
+				A3F9C2502AFC619F001409D8 /* MessagesViewController+TypingIndicator.swift in Sources */,
 				A3CF55BE2A5BC8C600D19F00 /* UIDevice+.swift in Sources */,
 				A3E4D3012A5BDB9200C7611C /* FontLiterals.swift in Sources */,
 				A3CF55C62A5BC92900D19F00 /* Result+.swift in Sources */,
