@@ -3,4 +3,118 @@
    uuid = "78750A6F-7DCC-4198-9766-9DFCCC816B2C"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "ED347F6B-2708-4852-812E-66D21ADF3E1F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Ajou-Lifeteer-iOS/Presentation/SignIn/VC/SignInVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "196"
+            endingLineNumber = "196"
+            landmarkName = "safariViewController(_:initialLoadDidRedirectTo:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "ED347F6B-2708-4852-812E-66D21ADF3E1F - de4f6039b2ce3627"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Ajou_Lifeteer_iOS.SignInVC.safariViewController(_: __C.SFSafariViewController, initialLoadDidRedirectTo: Foundation.URL) -&gt; ()"
+                  moduleName = "Ajou-Lifeteer-iOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leejaehyun/Documents/GitHub/Lifeteer-iOS/Ajou-Lifeteer-iOS/Ajou-Lifeteer-iOS/Presentation/SignIn/VC/SignInVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "188"
+                  endingLineNumber = "188"
+                  offsetFromSymbolStart = "1784">
+               </Location>
+               <Location
+                  uuid = "ED347F6B-2708-4852-812E-66D21ADF3E1F - de4f6039b2ce372f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Ajou_Lifeteer_iOS.SignInVC.safariViewController(_: __C.SFSafariViewController, initialLoadDidRedirectTo: Foundation.URL) -&gt; ()"
+                  moduleName = "Ajou-Lifeteer-iOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leejaehyun/Documents/GitHub/Lifeteer-iOS/Ajou-Lifeteer-iOS/Ajou-Lifeteer-iOS/Presentation/SignIn/VC/SignInVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "196"
+                  endingLineNumber = "196"
+                  offsetFromSymbolStart = "1776">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9B38621C-8C4E-440E-AEAB-7335E2CF12B2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Ajou-Lifeteer-iOS/Presentation/SignIn/VC/SignInVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
+            landmarkName = "pushToTabBarController()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "9B38621C-8C4E-440E-AEAB-7335E2CF12B2 - 35ca39f776ac5127"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Ajou_Lifeteer_iOS.SignInVC.pushToTabBarController() -&gt; ()"
+                  moduleName = "Ajou-Lifeteer-iOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leejaehyun/Documents/GitHub/Lifeteer-iOS/Ajou-Lifeteer-iOS/Ajou-Lifeteer-iOS/Presentation/SignIn/VC/SignInVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "98"
+                  endingLineNumber = "98"
+                  offsetFromSymbolStart = "256">
+               </Location>
+               <Location
+                  uuid = "9B38621C-8C4E-440E-AEAB-7335E2CF12B2 - 35ca39f776ac5127"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Ajou_Lifeteer_iOS.SignInVC.pushToTabBarController() -&gt; ()"
+                  moduleName = "Ajou-Lifeteer-iOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leejaehyun/Documents/GitHub/Lifeteer-iOS/Ajou-Lifeteer-iOS/Ajou-Lifeteer-iOS/Presentation/SignIn/VC/SignInVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "98"
+                  endingLineNumber = "98"
+                  offsetFromSymbolStart = "104">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3DE7941A-A3D6-4325-86DC-5AD5586FE06F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Ajou-Lifeteer-iOS/Presentation/Splash/VC/SplashVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "checkDidSignIn()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

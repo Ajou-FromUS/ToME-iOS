@@ -45,6 +45,7 @@
 		A344EE012AA8E81100FD2AAA /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A344EE002AA8E81100FD2AAA /* Pretendard-SemiBold.otf */; };
 		A344EE032AA8E87700FD2AAA /* Coiny-Cyrillic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A344EE022AA8E87700FD2AAA /* Coiny-Cyrillic.ttf */; };
 		A344EE052AA8E94300FD2AAA /* YdestreetL.otf in Resources */ = {isa = PBXBuildFile; fileRef = A344EE042AA8E94300FD2AAA /* YdestreetL.otf */; };
+		A3496E0A2B010BB800FE3DC1 /* EtcRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3496E092B010BB800FE3DC1 /* EtcRouter.swift */; };
 		A36B36942AAF643E0008E9F2 /* CustomPopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36B36932AAF643E0008E9F2 /* CustomPopUpVC.swift */; };
 		A36B36962AAF66A40008E9F2 /* CustomProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36B36952AAF66A40008E9F2 /* CustomProgressView.swift */; };
 		A36B36982AAF68720008E9F2 /* CustomMessageBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36B36972AAF68720008E9F2 /* CustomMessageBubbleView.swift */; };
@@ -119,6 +120,12 @@
 		A3F7F0D02AFFF65F00DFCC3E /* oneOfMissionComplete.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3F7F0CC2AFFF65F00DFCC3E /* oneOfMissionComplete.mp3 */; };
 		A3F7F0D12AFFF65F00DFCC3E /* missionComplete.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3F7F0CD2AFFF65F00DFCC3E /* missionComplete.mp3 */; };
 		A3F7F0D32AFFF82000DFCC3E /* ToMEMusicManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F7F0D22AFFF82000DFCC3E /* ToMEMusicManager.swift */; };
+		A3F7F0DB2B00053F00DFCC3E /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F7F0DA2B00053F00DFCC3E /* Config.swift */; };
+		A3F7F0DD2B0005A600DFCC3E /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F7F0DC2B0005A600DFCC3E /* UserManager.swift */; };
+		A3F7F0DF2B00064100DFCC3E /* Providers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F7F0DE2B00064100DFCC3E /* Providers.swift */; };
+		A3F7F0E12B00067100DFCC3E /* AuthInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F7F0E02B00067100DFCC3E /* AuthInterceptor.swift */; };
+		A3F7F0E32B00071D00DFCC3E /* UserRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F7F0E22B00071D00DFCC3E /* UserRouter.swift */; };
+		A3F7F0E52B0007C600DFCC3E /* NetworkLoggerPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F7F0E42B0007C600DFCC3E /* NetworkLoggerPlugin.swift */; };
 		A3F9C24A2AFC6094001409D8 /* TypingBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F9C2492AFC6094001409D8 /* TypingBubble.swift */; };
 		A3F9C24C2AFC60C1001409D8 /* BubbleCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F9C24B2AFC60C1001409D8 /* BubbleCircle.swift */; };
 		A3F9C24E2AFC60E7001409D8 /* TypingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F9C24D2AFC60E7001409D8 /* TypingIndicator.swift */; };
@@ -163,6 +170,7 @@
 		A344EE002AA8E81100FD2AAA /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
 		A344EE022AA8E87700FD2AAA /* Coiny-Cyrillic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Coiny-Cyrillic.ttf"; sourceTree = "<group>"; };
 		A344EE042AA8E94300FD2AAA /* YdestreetL.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = YdestreetL.otf; sourceTree = "<group>"; };
+		A3496E092B010BB800FE3DC1 /* EtcRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EtcRouter.swift; sourceTree = "<group>"; };
 		A36B36932AAF643E0008E9F2 /* CustomPopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPopUpVC.swift; sourceTree = "<group>"; };
 		A36B36952AAF66A40008E9F2 /* CustomProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgressView.swift; sourceTree = "<group>"; };
 		A36B36972AAF68720008E9F2 /* CustomMessageBubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMessageBubbleView.swift; sourceTree = "<group>"; };
@@ -270,6 +278,12 @@
 		A3F7F0CC2AFFF65F00DFCC3E /* oneOfMissionComplete.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = oneOfMissionComplete.mp3; sourceTree = "<group>"; };
 		A3F7F0CD2AFFF65F00DFCC3E /* missionComplete.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = missionComplete.mp3; sourceTree = "<group>"; };
 		A3F7F0D22AFFF82000DFCC3E /* ToMEMusicManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToMEMusicManager.swift; sourceTree = "<group>"; };
+		A3F7F0DA2B00053F00DFCC3E /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		A3F7F0DC2B0005A600DFCC3E /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		A3F7F0DE2B00064100DFCC3E /* Providers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Providers.swift; sourceTree = "<group>"; };
+		A3F7F0E02B00067100DFCC3E /* AuthInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthInterceptor.swift; sourceTree = "<group>"; };
+		A3F7F0E22B00071D00DFCC3E /* UserRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRouter.swift; sourceTree = "<group>"; };
+		A3F7F0E42B0007C600DFCC3E /* NetworkLoggerPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLoggerPlugin.swift; sourceTree = "<group>"; };
 		A3F9C2492AFC6094001409D8 /* TypingBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypingBubble.swift; sourceTree = "<group>"; };
 		A3F9C24B2AFC60C1001409D8 /* BubbleCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleCircle.swift; sourceTree = "<group>"; };
 		A3F9C24D2AFC60E7001409D8 /* TypingIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypingIndicator.swift; sourceTree = "<group>"; };
@@ -606,6 +620,7 @@
 				A30FDEE72AF9F84A0088D98E /* ToMEDecibelMananger.swift */,
 				A3EED07E2AFB3DD50093A431 /* ToMETextViewManager.swift */,
 				A3F7F0D22AFFF82000DFCC3E /* ToMEMusicManager.swift */,
+				A3F7F0DC2B0005A600DFCC3E /* UserManager.swift */,
 			);
 			path = ToMEUtils;
 			sourceTree = "<group>";
@@ -624,6 +639,8 @@
 			isa = PBXGroup;
 			children = (
 				A39295522A52D71100436A4F /* .gitkeep */,
+				A3F7F0E22B00071D00DFCC3E /* UserRouter.swift */,
+				A3496E092B010BB800FE3DC1 /* EtcRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -632,6 +649,9 @@
 			isa = PBXGroup;
 			children = (
 				A39295502A52D70B00436A4F /* .gitkeep */,
+				A3F7F0DE2B00064100DFCC3E /* Providers.swift */,
+				A3F7F0E02B00067100DFCC3E /* AuthInterceptor.swift */,
+				A3F7F0E42B0007C600DFCC3E /* NetworkLoggerPlugin.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -653,6 +673,7 @@
 			isa = PBXGroup;
 			children = (
 				A39295422A52D6D600436A4F /* .gitkeep */,
+				A3F7F0DA2B00053F00DFCC3E /* Config.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -1053,6 +1074,7 @@
 				A36B36A62AB41CEB0008E9F2 /* UINavigationController+.swift in Sources */,
 				A3EED07F2AFB3DD50093A431 /* ToMETextViewManager.swift in Sources */,
 				A3F9C24C2AFC60C1001409D8 /* BubbleCircle.swift in Sources */,
+				A3F7F0DD2B0005A600DFCC3E /* UserManager.swift in Sources */,
 				A34478E52A698D82002F1981 /* SignInVC.swift in Sources */,
 				A3CF55D02A5BC99E00D19F00 /* Publisher+Driver.swift in Sources */,
 				A3E4D3052A5BEEB200C7611C /* TabBarController.swift in Sources */,
@@ -1061,10 +1083,12 @@
 				A39294D02A52C91C00436A4F /* ViewController.swift in Sources */,
 				A34478FA2A7178FB002F1981 /* SecondDetailLandingPageVC.swift in Sources */,
 				A36B369C2AB068CA0008E9F2 /* ToMETimeFormatter.swift in Sources */,
+				A3F7F0E12B00067100DFCC3E /* AuthInterceptor.swift in Sources */,
 				A3CF55F42A5BCB7300D19F00 /* UserDefaultKeyList.swift in Sources */,
 				A3E4D3032A5BE90500C7611C /* ImageLiterals.swift in Sources */,
 				A3EED0832AFBBA650093A431 /* TalkingWithToVC.swift in Sources */,
 				A34478FE2A71794D002F1981 /* LastDetailLandingPageVC.swift in Sources */,
+				A3F7F0DF2B00064100DFCC3E /* Providers.swift in Sources */,
 				A3CF55B42A5BC1A700D19F00 /* UISwitch+.swift in Sources */,
 				A30FDEDF2AF93F460088D98E /* MissionCompleteVC.swift in Sources */,
 				A34478F32A717679002F1981 /* LandingPageMainVC.swift in Sources */,
@@ -1089,6 +1113,7 @@
 				A3CF55EE2A5BCB2F00D19F00 /* setStatusBarBackgroundColor.swift in Sources */,
 				A3F9C24A2AFC6094001409D8 /* TypingBubble.swift in Sources */,
 				A3F9C24E2AFC60E7001409D8 /* TypingIndicator.swift in Sources */,
+				A3F7F0DB2B00053F00DFCC3E /* Config.swift in Sources */,
 				A34478F52A717777002F1981 /* FirstDetailLandingPageVC.swift in Sources */,
 				A306671D2A5C1689006E7B9F /* CustomAlertVC.swift in Sources */,
 				A3CF55D42A5BC9F400D19F00 /* addToolBar.swift in Sources */,
@@ -1110,6 +1135,7 @@
 				A3C6F6F82AF5383A008D0FF0 /* BubbleView.swift in Sources */,
 				A3CF55DE2A5BCA8500D19F00 /* calculateTopInset.swift in Sources */,
 				A3CF55B82A5BC87500D19F00 /* UILabel+.swift in Sources */,
+				A3F7F0E32B00071D00DFCC3E /* UserRouter.swift in Sources */,
 				A39294CC2A52C91C00436A4F /* AppDelegate.swift in Sources */,
 				A30FDEC92AF7F6780088D98E /* ToMEAnimationManager.swift in Sources */,
 				A3CF55EA2A5BCB0000D19F00 /* setImage.swift in Sources */,
@@ -1119,6 +1145,7 @@
 				A3CF55A82A5BBED200D19F00 /* UIViewController+.swift in Sources */,
 				A30FDEE82AF9F84A0088D98E /* ToMEDecibelMananger.swift in Sources */,
 				A3E4D2FB2A5BDAAA00C7611C /* ColorLiterals.swift in Sources */,
+				A3F7F0E52B0007C600DFCC3E /* NetworkLoggerPlugin.swift in Sources */,
 				A3CF55EC2A5BCB1400D19F00 /* setRootViewController.swift in Sources */,
 				A3CF55D62A5BCA0A00D19F00 /* adjusted+.swift in Sources */,
 				A330D4002AC2D4CE00C1CC22 /* MyPageMainVC.swift in Sources */,
@@ -1134,6 +1161,7 @@
 				A30FDED72AF8D4D40088D98E /* MissionDetailVC.swift in Sources */,
 				A3E4D30D2A5BF09000C7611C /* TalkingMainVC.swift in Sources */,
 				A39294CE2A52C91C00436A4F /* SceneDelegate.swift in Sources */,
+				A3496E0A2B010BB800FE3DC1 /* EtcRouter.swift in Sources */,
 				A36B369A2AAF79750008E9F2 /* MissionView.swift in Sources */,
 				A3CF55AA2A5BBEF700D19F00 /* UIView+.swift in Sources */,
 				A30667192A5C0DFB006E7B9F /* CustomButton.swift in Sources */,

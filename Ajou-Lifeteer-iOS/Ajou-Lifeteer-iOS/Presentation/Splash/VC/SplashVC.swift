@@ -48,7 +48,7 @@ final class SplashVC: UIViewController {
 extension SplashVC {
     
     /// setting animation
-
+    
     private func setLogoAnimation() {
         UIView.animate(withDuration: 0.7, delay: 0.5, options: .curveEaseOut, animations: {
             self.logoImageView.transform = CGAffineTransform(translationX: 0, y: -65)
@@ -67,18 +67,31 @@ extension SplashVC {
     }
     
     /// animation 이후 탭바 컨트롤러로 이동
-     
+    
     private func checkDidSignIn() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-            self.pushToTabBarController()
+            if UserManager.shared.hasAccessToken {
+                self.pushToTabBarController()
+            } else {
+                self.pushToSignInView()
+            }
         }
     }
+    
+    /// 토큰이 있을 경우, 로그인된 기존 유저이므로 홈화면으로 이동
     
     private func pushToTabBarController() {
         let tabBarController = TabBarController()
         guard let window = self.view.window else { return }
         ViewControllerUtils.setRootViewController(window: window, viewController: tabBarController,
                                                   withAnimation: true)
+    }
+    
+    /// 토큰이 없을 경우, 재로그인 필요하므로 로그인 화면으로 이동
+    
+    private func pushToSignInView() {
+        let signInVC = SignInVC()
+        self.navigationController?.pushViewController(signInVC, animated: true)
     }
 }
 
