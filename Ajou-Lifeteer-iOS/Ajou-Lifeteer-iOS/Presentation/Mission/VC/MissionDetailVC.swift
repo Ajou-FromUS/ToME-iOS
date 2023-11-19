@@ -9,12 +9,15 @@ import UIKit
 
 import SnapKit
 import Then
+import Lottie
 
 final class MissionDetailVC: UIViewController {
     
     // MARK: - Properties
 
     private var photoManager: ToMEPhotoManager?
+    
+    let customBlur = CustomBlur.shared
     
     var missionType = Int()
     
@@ -62,6 +65,8 @@ final class MissionDetailVC: UIViewController {
     
     var backButton = CustomButton(title: "다른 미션 보러가기", type: .fillWithGreyAndImage)
         .setImage(image: ImageLiterals.backBtnImage, disabledImage: nil)
+    
+    private let backgroundLottieView: LottieAnimationView = .init(name: "background")
 
     // MARK: - View Life Cycle
     
@@ -73,6 +78,11 @@ final class MissionDetailVC: UIViewController {
         setAddTarget()
         // PhotoManager 초기화
         photoManager = ToMEPhotoManager(vc: self)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        setAnimation()
     }
 }
 
@@ -142,6 +152,11 @@ extension MissionDetailVC {
         self.backButton.addTarget(self, action: #selector(popToPreviousVC), for: .touchUpInside)
     }
     
+    private func setAnimation() {
+        backgroundLottieView.play()
+        backgroundLottieView.loopMode = .loop
+    }
+    
     func pushToPhotoAlertController() {
         let photoAlertController = UIAlertController(title: "사진 업로드", message: nil, preferredStyle: .actionSheet)
         // 카메라 권한 확인 및 카메라 열기
@@ -165,9 +180,17 @@ extension MissionDetailVC {
         view.backgroundColor = .systemGray
         self.containerView.backgroundColor = .disabled2.withAlphaComponent(0.6)
         self.horizontalDevidedView.backgroundColor = .font3
+        customBlur.addBlurEffect(to: backgroundLottieView)
+        customBlur.setBlurIntensity(to: backgroundLottieView, intensity: 1)
     }
     
     private func setLayout() {
+        view.addSubviews(backgroundLottieView)
+        
+        backgroundLottieView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
+        
         view.addSubviews(naviBar, currentMissionCompleteView, containerView)
         
         naviBar.snp.makeConstraints { make in

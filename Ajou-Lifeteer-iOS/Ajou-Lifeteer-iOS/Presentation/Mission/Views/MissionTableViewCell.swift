@@ -12,10 +12,6 @@ import Then
 
 class MissionTableViewCell: UITableViewCell {
     
-    // MARK: - Properties
-
-    var missionType = Int()
-    
     // MARK: - UI Components
     
     private let containerView = UIView().then {
@@ -92,23 +88,19 @@ extension MissionTableViewCell {
             
         }
                 
-        if missionType == -1 {
-            nullMissionLayout()
-        } else {
-            existingMissionLayout()
-        }
+        missionType == -1 ? nullMissionLayout() : existingMissionLayout()
     }
     
     private func nullMissionLayout() {
         containerView.addSubviews(missionTitleLabel, missionTypeLabel)
         
         missionTitleLabel.snp.makeConstraints { make in
-            make.top.equalToSuperview().inset(23)
+            make.top.equalToSuperview().inset(25)
             make.centerX.equalToSuperview()
         }
         
         missionTypeLabel.snp.makeConstraints { make in
-            make.bottom.equalToSuperview().inset(23)
+            make.bottom.equalToSuperview().inset(25)
             make.centerX.equalToSuperview()
         }
     }

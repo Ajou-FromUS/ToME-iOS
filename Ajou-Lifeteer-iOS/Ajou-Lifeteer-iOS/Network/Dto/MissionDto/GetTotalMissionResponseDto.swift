@@ -26,7 +26,7 @@ struct Datum: Codable {
     let isCompleted: Bool?
     let modifiedAt: String?
     let id: Int?
-    let content: JSONNull?
+    let content: String?
     let createdAt: String?
     let mission: MissionList?
 
@@ -45,33 +45,6 @@ struct Datum: Codable {
 struct MissionList: Codable {
     let id, type: Int
     let title: String
-    let content: JSONNull?
+    let content: String?
     let emotion: Int
-}
-
-// MARK: - Encode/decode helpers
-
-class JSONNull: Codable, Hashable {
-
-    public static func == (lhs: JSONNull, rhs: JSONNull) -> Bool {
-        return true
-    }
-
-    public var hashValue: Int {
-        return 0
-    }
-
-    public init() {}
-
-    public required init(from decoder: Decoder) throws {
-        let container = try decoder.singleValueContainer()
-        if !container.decodeNil() {
-            throw DecodingError.typeMismatch(JSONNull.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for JSONNull"))
-        }
-    }
-
-    public func encode(to encoder: Encoder) throws {
-        var container = encoder.singleValueContainer()
-        try container.encodeNil()
-    }
 }

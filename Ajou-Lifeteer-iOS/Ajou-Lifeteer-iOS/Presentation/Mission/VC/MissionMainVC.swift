@@ -27,12 +27,14 @@ final class MissionMainVC: UIViewController {
     
     var missionList = [MissionList]()
     
+    var completedMissionCount: Int = 0
+    
     // MARK: - UI Components
     
     private lazy var naviBar = CustomNavigationBar(self, type: .singleTitle).setTitle("미션")
     
     /// top 부분, 미션 수행 개수를 적어서 넣어주기
-    private lazy var currentMissionCompleteView = CurrentMissionCompleteView(numberOfCompleteMission: 1)
+    private lazy var currentMissionCompleteView = CurrentMissionCompleteView(numberOfCompleteMission: completedMissionCount)
     
     private lazy var missionTableView = UITableView().then {
         $0.translatesAutoresizingMaskIntoConstraints = false
@@ -177,9 +179,10 @@ extension MissionMainVC {
                 if 200..<300 ~= status {
                     do {
                         let responseDto = try result.map(GetTotalMissionResponseDto.self)
-                        let missionListArray = responseDto.data.map { $0.mission ?? MissionList(id: 0, type: -1, title: "미션이 존재하지 않아요.", content: JSONNull(), emotion: 0) }
+                        let missionListArray = responseDto.data.map { $0.mission ?? MissionList(id: 0, type: -1, title: "미션이 존재하지 않아요.", content: String(), emotion: 0) }
+                        print("Mission List Array: \(missionListArray)")
+                        self.completedMissionCount = responseDto.data.filter { $0.isCompleted == true }.count
                         self.setMissionData(missionList: missionListArray)
-                        print("Z", missionListArray)
                     } catch {
                         print(error.localizedDescription)
                     }
