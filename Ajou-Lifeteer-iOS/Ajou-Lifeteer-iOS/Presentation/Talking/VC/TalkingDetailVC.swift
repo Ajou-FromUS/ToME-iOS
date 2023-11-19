@@ -45,7 +45,6 @@ final class TalkingDetailVC: UIViewController {
 //    
     private let talkingWithToVC = TalkingMessageVC()
     
-    
     // MARK: - View Life Cycle
 
     override func viewDidLoad() {

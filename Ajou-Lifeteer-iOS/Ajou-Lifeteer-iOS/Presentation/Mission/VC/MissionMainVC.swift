@@ -9,8 +9,11 @@ import UIKit
 
 import SnapKit
 import Then
+import Lottie
 
 final class MissionMainVC: UIViewController {
+    
+    
     
     // MARK: - Properties
     
@@ -23,6 +26,8 @@ final class MissionMainVC: UIViewController {
         MissionModel(missionType: 2, missionTitle: "오늘의 감사일기 적어보기")
     ]
     
+    let customBlur = CustomBlur.shared
+    
     // MARK: - UI Components
     
     private lazy var naviBar = CustomNavigationBar(self, type: .singleTitle).setTitle("미션")
@@ -34,6 +39,8 @@ final class MissionMainVC: UIViewController {
         $0.translatesAutoresizingMaskIntoConstraints = false
         $0.separatorStyle = .none
     }
+    
+    private let backgroundLottieView: LottieAnimationView = .init(name: "background")
     
     // MARK: - View Life Cycle
 
@@ -49,6 +56,7 @@ final class MissionMainVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         self.hideTabBar(wantsToHide: false)
+        setAnimation()
     }
 }
 
@@ -68,17 +76,30 @@ extension MissionMainVC {
                                   forCellReuseIdentifier: MissionTableViewCell.className
         )
     }
+    
+    private func setAnimation() {
+        backgroundLottieView.play()
+        backgroundLottieView.loopMode = .loop
+    }
 }
 
 // MARK: - UI & Layout
 
 extension MissionMainVC {
     private func setUI() {
-        view.backgroundColor = .systemGray
+        view.backgroundColor = .white
         missionTableView.backgroundColor = .clear
+        customBlur.addBlurEffect(to: backgroundLottieView)
+        customBlur.setBlurIntensity(to: backgroundLottieView, intensity: 1)
     }
     
     private func setLayout() {
+        view.addSubviews(backgroundLottieView)
+        
+        backgroundLottieView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
+        
         view.addSubviews(naviBar, currentMissionCompleteView, missionTableView)
         
         naviBar.snp.makeConstraints { make in
@@ -90,10 +111,11 @@ extension MissionMainVC {
         currentMissionCompleteView.snp.makeConstraints { make in
             make.top.equalTo(naviBar.snp.bottom).offset(20)
             make.centerX.equalToSuperview()
+            make.height.equalTo(100)
         }
         
         missionTableView.snp.makeConstraints { make in
-            make.top.equalTo(view.safeAreaLayoutGuide).offset(170)
+            make.top.equalTo(currentMissionCompleteView.snp.bottom).offset(30)
             make.leading.trailing.equalTo(view.safeAreaLayoutGuide).inset(27)
             make.height.equalTo(missionList.count * 94 + 20)
         }

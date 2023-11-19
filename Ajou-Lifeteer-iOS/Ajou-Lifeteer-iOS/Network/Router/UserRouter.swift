@@ -55,4 +55,3 @@ extension UserRouter: TargetType {
         return .successCodes
     }
 }
-

@@ -11,6 +11,8 @@ import Moya
 
 struct Providers {
     static let userProvider = MoyaProvider<UserRouter>(withAuth: true)
+    static let chatbotProvider = MoyaProvider<ChatbotRouter>(withAuth: true)
+    static let missionProvider = MoyaProvider<MissionRouter>(withAuth: true)
     static let etcProvider = MoyaProvider<EtcRouter>(withAuth: true)
 }
 

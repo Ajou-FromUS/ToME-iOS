@@ -54,7 +54,7 @@ extension TabBarController {
                                                           rootViewController: HomeMainVC())
         let statisticsMainNVC = templateNavigationController(unselectedImage: ImageLiterals.homeIcStatistics.withRenderingMode(.alwaysOriginal),
                                                                selectedImage: ImageLiterals.homeIcStatisticsFill.withRenderingMode(.alwaysOriginal),
-                                                               rootViewController: DiaryMainVC())
+                                                               rootViewController: StatisticsMainVC())
         let mypageMainNVC = templateNavigationController(unselectedImage: ImageLiterals.homeIcMypage.withRenderingMode(.alwaysOriginal),
                                                          selectedImage: ImageLiterals.homeIcMypageFill.withRenderingMode(.alwaysOriginal),
                                                              rootViewController: TalkingMainVC())

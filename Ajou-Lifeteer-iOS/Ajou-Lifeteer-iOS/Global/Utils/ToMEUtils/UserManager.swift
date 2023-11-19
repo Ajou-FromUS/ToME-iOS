@@ -70,13 +70,11 @@ final class UserManager {
                 let status = result.statusCode
                 if 200..<300 ~= status {
                     do {
-//                        let responseDto = try result.map(BaseResponse<GetNewTokenResponseDto>.self)
-//                        guard let data = responseDto.data else { return }
-//                        self.accessToken = data.accessToken
-//                        self.refreshToken = data.refreshToken
+                        let responseDto = try result.map(RefreshTokenResponseDto.self)
+                        self.accessToken = responseDto.accessToken
                         completion(.success(true))
                     } catch {
-                        print(error.localizedDescription)
+                        print("Error mapping response: \(error)")
                         completion(.failure(.networkFail))
                     }
                 }

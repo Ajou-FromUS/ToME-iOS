@@ -70,10 +70,21 @@ extension SplashVC {
     
     private func checkDidSignIn() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-            if UserManager.shared.hasAccessToken {
-                self.pushToTabBarController()
-            } else {
-                self.pushToSignInView()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                if UserManager.shared.hasAccessToken {
+                    UserManager.shared.getNewToken { [weak self] result in
+                        switch result {
+                        case .success:
+                            print("SplashVC-토큰 재발급 성공")
+                            self?.pushToTabBarController()
+                        case .failure(let error):
+                            print(error)
+                            self?.pushToSignInView()
+                        }
+                    }
+                } else {
+                    self.pushToSignInView()
+                }
             }
         }
     }

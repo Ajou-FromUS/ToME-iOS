@@ -9,6 +9,7 @@ import UIKit
 
 import SnapKit
 import Then
+import Lottie
 
 final class HomeMainVC: UIViewController {
     
@@ -43,6 +44,8 @@ final class HomeMainVC: UIViewController {
         $0.alpha = 0
     }
     
+    private let backgroundLottieView: LottieAnimationView = .init(name: "background")
+    
     // MARK: - View Life Cycle
     
     override func viewDidLoad() {
@@ -59,6 +62,7 @@ final class HomeMainVC: UIViewController {
         self.hideTabBar(wantsToHide: false)
         setBubbleViewAnimation()
         ToMEMusicManager.shared.playMusic(withTitle: "homeBackgroundMusic", loop: -1)   // 무한 반복
+        setAnimation()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -123,6 +127,11 @@ extension HomeMainVC {
             }
         }
     }
+    
+    private func setAnimation() {
+        backgroundLottieView.play()
+        backgroundLottieView.loopMode = .loop
+    }
 }
 
 // MARK: - UI & Layout
@@ -133,6 +142,12 @@ extension HomeMainVC {
     }
     
     private func setLayout() {
+        view.addSubview(backgroundLottieView)
+        
+        backgroundLottieView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
+        
         view.addSubviews(naviBar, talkingWithToBubbleView, todaysMissionBubbleView, toImageView)
         
         naviBar.snp.makeConstraints { make in

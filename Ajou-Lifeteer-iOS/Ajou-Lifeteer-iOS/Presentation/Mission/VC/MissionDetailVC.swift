@@ -179,6 +179,7 @@ extension MissionDetailVC {
         currentMissionCompleteView.snp.makeConstraints { make in
             make.top.equalTo(naviBar.snp.bottom).offset(20)
             make.centerX.equalToSuperview()
+            make.height.equalTo(100)
         }
         
         setContainerViewLayout()
@@ -200,7 +201,7 @@ extension MissionDetailVC {
     
     private func setContainerViewLayout() {
         containerView.snp.makeConstraints { make in
-            make.top.equalTo(view.safeAreaLayoutGuide).offset(170)
+            make.top.equalTo(currentMissionCompleteView.snp.bottom).offset(30)
             make.leading.trailing.equalTo(view.safeAreaLayoutGuide).inset(27)
         }
         

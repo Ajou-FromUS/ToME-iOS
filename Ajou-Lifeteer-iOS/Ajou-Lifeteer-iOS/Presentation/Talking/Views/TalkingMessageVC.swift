@@ -11,6 +11,7 @@ import SnapKit
 import Then
 import MessageKit
 import InputBarAccessoryView
+import Moya
 
 class CustomMessageCell: MessageContentCell {
     override init(frame: CGRect) {
@@ -23,6 +24,11 @@ class CustomMessageCell: MessageContentCell {
 }
 
 final class TalkingMessageVC: MessagesViewController {
+    
+    // MARK: - Providers
+    
+    private let chatbotProvider = Providers.chatbotProvider
+    
     // MARK: - Properties
     
     var messages = [Message]()
@@ -67,7 +73,6 @@ final class TalkingMessageVC: MessagesViewController {
         view.backgroundColor = .clear
         
         firstToDefaultMessage()
-        showTypingIndicator()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -121,14 +126,17 @@ extension TalkingMessageVC {
           }
     }
     
-    func showTypingIndicator() {
-        self.setTypingIndicatorViewHidden(false, animated: true)
-        
+    func setTypingIndicator(isHidden: Bool) {
+        self.setTypingIndicatorViewHidden(isHidden, animated: true)
     }
     
     private func firstToDefaultMessage() {
         let text = "안녕, 재현 님. 오늘 하루는 어떠셨는지 제게 알려주세요."
         
+        insertToMessage(text: text)
+    }
+    
+    private func insertToMessage(text: String) {
         // 메시지를 만들고 추가하는 로직을 수행합니다.
         let attributedText = NSAttributedString(
             string: text,
@@ -197,7 +205,6 @@ extension TalkingMessageVC: MessagesDataSource {
         }
         return nil
     }
-    
 }
 
 extension TalkingMessageVC: MessagesLayoutDelegate {
@@ -260,6 +267,40 @@ extension TalkingMessageVC: InputBarAccessoryViewDelegate {
         let message = Message(messageId: "To", kind: .attributedText(attributedText), sender: currentSender, sentDate: Date())
         
         insertNewMessage(message)
+        print(text)
+        postUsersContent(message: text)
+
         messageInputBar.inputTextView.text = String()
+    }
+}
+
+// MARK: - Networks
+
+extension TalkingMessageVC {
+    private func postUsersContent(message: String) {
+        setTypingIndicator(isHidden: false)
+        chatbotProvider.request(.sendMessage(content: message)) { [weak self] response in
+            guard let self = self else { return }
+            setTypingIndicator(isHidden: true)
+            switch response {
+            case .success(let result):
+                let status = result.statusCode
+                if 200..<300 ~= status {
+                    do {
+                        let responseDto = try result.map(PostUsersContentResponseDto.self)
+                        insertToMessage(text: responseDto.message)
+                    } catch {
+                        print(error.localizedDescription)
+                    }
+                }
+                if status >= 400 {
+                    print("400 error")
+                    self.showNetworkFailureToast()
+                }
+            case .failure(let error):
+                print(error.localizedDescription)
+                self.showNetworkFailureToast()
+            }
+        }
     }
 }

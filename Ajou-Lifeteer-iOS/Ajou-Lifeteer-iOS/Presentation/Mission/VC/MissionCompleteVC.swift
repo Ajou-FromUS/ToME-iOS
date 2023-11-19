@@ -9,6 +9,7 @@ import UIKit
 
 import SnapKit
 import Then
+import Lottie
 
 final class MissionCompleteVC: UIViewController {
 
@@ -16,7 +17,7 @@ final class MissionCompleteVC: UIViewController {
     
     private lazy var naviBar = CustomNavigationBar(self, type: .singleTitle).setTitle("미션")
     
-    private let missionCompleteImageView = UIView()
+    private let missionCompleteLottieView: LottieAnimationView = .init(name: "missionComplete")
     
     private let missionCompleteSubLabel = UILabel().then {
         $0.text = "오늘 하루도 수고 많았어요 :)"
@@ -43,6 +44,7 @@ final class MissionCompleteVC: UIViewController {
         setLayout()
         setAddTarget()
         ToMEMusicManager.shared.playMusic(withTitle: "oneOfMissionComplete", loop: 0)
+        setAnimation()
     }
 }
 
@@ -77,6 +79,10 @@ extension MissionCompleteVC {
         self.nextMissionButton.addTarget(self, action: #selector(popToMissionVC), for: .touchUpInside)
         self.backToHomeButton.addTarget(self, action: #selector(popToHomeVC), for: .touchUpInside)
     }
+    
+    private func setAnimation() {
+        missionCompleteLottieView.play()
+    }
 }
 
 // MARK: - UI & Layout
@@ -84,11 +90,11 @@ extension MissionCompleteVC {
 extension MissionCompleteVC {
     private func setUI() {
         view.backgroundColor = .systemGray
-        self.missionCompleteImageView.backgroundColor = .font3
+        self.missionCompleteLottieView.backgroundColor = .clear
     }
     
     private func setLayout() {
-        view.addSubviews(naviBar, missionCompleteImageView, missionCompleteSubLabel,
+        view.addSubviews(naviBar, missionCompleteLottieView, missionCompleteSubLabel,
                          missionCompleteTitleLabel, nextMissionButton, backToHomeButton)
         
         naviBar.snp.makeConstraints { make in
@@ -97,14 +103,14 @@ extension MissionCompleteVC {
             make.height.equalTo(140)
         }
         
-        missionCompleteImageView.snp.makeConstraints { make in
+        missionCompleteLottieView.snp.makeConstraints { make in
             make.top.equalTo(naviBar.snp.bottom).offset(113)
             make.width.height.equalTo(211)
             make.centerX.equalToSuperview()
         }
         
         missionCompleteSubLabel.snp.makeConstraints { make in
-            make.top.equalTo(missionCompleteImageView.snp.bottom).offset(28)
+            make.top.equalTo(missionCompleteLottieView.snp.bottom).offset(28)
             make.centerX.equalToSuperview()
         }
         

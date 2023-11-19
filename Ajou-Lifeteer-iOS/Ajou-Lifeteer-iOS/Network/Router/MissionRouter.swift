@@ -1,19 +1,19 @@
 //
-//  EtcRouter.swift
+//  MissionRouter.swift
 //  Ajou-Lifeteer-iOS
 //
-//  Created by 몽이 누나 on 11/12/23.
+//  Created by 몽이 누나 on 11/19/23.
 //
 
 import Foundation
 
 import Moya
 
-enum EtcRouter {
-    case getRefreshToken
+enum MissionRouter {
+    case getTotalMissions
 }
 
-extension EtcRouter: TargetType {
+extension MissionRouter: TargetType {
     var baseURL: URL {
         guard let url = URL(string: Config.baseURL) else {
             fatalError("baseURL could not be configured")
@@ -24,28 +24,28 @@ extension EtcRouter: TargetType {
     
     var path: String {
         switch self {
-        case .getRefreshToken:
-            return "/refresh-token"
+        case .getTotalMissions:
+            return "/mission"
         }
     }
     
     var method: Moya.Method {
         switch self {
-        case .getRefreshToken:
+        case .getTotalMissions:
             return .get
         }
     }
     
     var task: Moya.Task {
         switch self {
-        case .getRefreshToken:
+        case .getTotalMissions:
             return .requestPlain
         }
     }
     
     var headers: [String: String]? {
         switch self {
-        case .getRefreshToken:
+        case .getTotalMissions:
             return Config.headerWithAccessToken
         }
     }
