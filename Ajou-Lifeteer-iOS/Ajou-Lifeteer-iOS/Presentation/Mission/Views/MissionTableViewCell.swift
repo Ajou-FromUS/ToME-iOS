@@ -12,6 +12,10 @@ import Then
 
 class MissionTableViewCell: UITableViewCell {
     
+    // MARK: - Properties
+
+    var missionType = Int()
+    
     // MARK: - UI Components
     
     private let containerView = UIView().then {
@@ -41,7 +45,6 @@ class MissionTableViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setUI()
-        setLayout()
     }
     
     required init?(coder: NSCoder) {
@@ -52,19 +55,23 @@ class MissionTableViewCell: UITableViewCell {
 // MARK: - Methods
 
 extension MissionTableViewCell {
-    func setData(model: MissionModel) {
-        if model.missionType == 0 {
+    func setData(model: MissionList) {
+        if model.type == 0 {
             missionTypeLabel.text = "찰칵 미션"
             missionImageView.image = ImageLiterals.missionImgPhoto
-        } else if model.missionType == 1 {
+        } else if model.type == 1 {
             missionTypeLabel.text = "데시벨 미션"
             missionImageView.image = ImageLiterals.missionImgDecibel
-        } else {
+        } else if model.type == 2 {
             missionTypeLabel.text = "텍스트 미션"
             missionImageView.image = ImageLiterals.missionImgText
+        } else {    // model.type == -1로 넘어오는 경우, 즉 null
+            missionTypeLabel.text = "티오와 대화하여 오늘의 미션을 받아보세요."
+            self.isUserInteractionEnabled = false
         }
         
-        missionTitleLabel.text = model.missionTitle
+        missionTitleLabel.text = model.title
+        setLayout(missionType: model.type)
     }
 }
 
@@ -76,15 +83,37 @@ extension MissionTableViewCell {
         self.horizontalDevidedView.backgroundColor = .font3
     }
     
-    private func setLayout() {
-        self.addSubviews(containerView, missionImageView, missionTypeLabel, horizontalDevidedView, missionTitleLabel)
+    private func setLayout(missionType: Int) {
+        self.addSubviews(containerView)
         
         containerView.snp.makeConstraints { make in
             make.top.leading.trailing.equalToSuperview()
             make.height.equalTo(94)
             
         }
+                
+        if missionType == -1 {
+            nullMissionLayout()
+        } else {
+            existingMissionLayout()
+        }
+    }
+    
+    private func nullMissionLayout() {
+        containerView.addSubviews(missionTitleLabel, missionTypeLabel)
         
+        missionTitleLabel.snp.makeConstraints { make in
+            make.top.equalToSuperview().inset(23)
+            make.centerX.equalToSuperview()
+        }
+        
+        missionTypeLabel.snp.makeConstraints { make in
+            make.bottom.equalToSuperview().inset(23)
+            make.centerX.equalToSuperview()
+        }
+    }
+    
+    private func existingMissionLayout() {
         containerView.addSubviews(missionImageView, missionTypeLabel, horizontalDevidedView, missionTitleLabel)
         
         missionImageView.snp.makeConstraints { make in

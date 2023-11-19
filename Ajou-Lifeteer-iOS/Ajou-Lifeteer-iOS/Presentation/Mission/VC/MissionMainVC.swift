@@ -10,23 +10,22 @@ import UIKit
 import SnapKit
 import Then
 import Lottie
+import Moya
 
 final class MissionMainVC: UIViewController {
     
+    // MARK: - Providers
     
+    private let missionProvider = Providers.missionProvider
     
     // MARK: - Properties
     
     let cellHeight = 94 // 각 셀의 높이
     let spacing = 10 // 간격의 높이
 
-    var missionList: [MissionModel] = [
-        MissionModel(missionType: 0, missionTitle: "나무 사진찍기"),
-        MissionModel(missionType: 1, missionTitle: "50db까지 소리 지르기"),
-        MissionModel(missionType: 2, missionTitle: "오늘의 감사일기 적어보기")
-    ]
-    
     let customBlur = CustomBlur.shared
+    
+    var missionList = [MissionList]()
     
     // MARK: - UI Components
     
@@ -46,6 +45,7 @@ final class MissionMainVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        getTotalMissions()
         registerCell()
         setDeleagate()
         setDataSource()
@@ -80,6 +80,11 @@ extension MissionMainVC {
     private func setAnimation() {
         backgroundLottieView.play()
         backgroundLottieView.loopMode = .loop
+    }
+    
+    private func setMissionData(missionList: [MissionList]) {
+        self.missionList = missionList
+        self.missionTableView.reloadData()
     }
 }
 
@@ -117,7 +122,7 @@ extension MissionMainVC {
         missionTableView.snp.makeConstraints { make in
             make.top.equalTo(currentMissionCompleteView.snp.bottom).offset(30)
             make.leading.trailing.equalTo(view.safeAreaLayoutGuide).inset(27)
-            make.height.equalTo(missionList.count * 94 + 20)
+            make.height.equalTo(3 * 94 + 20)
         }
     }
 }
@@ -135,7 +140,7 @@ extension MissionMainVC: UITableViewDelegate {
             
         // 미션 상세 페이지로 이동
         let missionDetailVC = MissionDetailVC()
-        missionDetailVC.setData(missionType: self.missionList[indexPath.row].missionType, missionTitle: self.missionList[indexPath.row].missionTitle)
+        missionDetailVC.setData(missionType: self.missionList[indexPath.row].type, missionTitle: self.missionList[indexPath.row].title)
         self.navigationController?.fadeTo(missionDetailVC)
     }
 }
@@ -156,4 +161,37 @@ extension MissionMainVC: UITableViewDataSource {
         return missionTableViewCell
     }
     
+}
+
+// MARK: - Networks
+
+extension MissionMainVC {
+    private func getTotalMissions() {
+        LoadingIndicator.showLoading()
+        missionProvider.request(.getTotalMissions) { [weak self] response in
+            guard let self = self else { return }
+            LoadingIndicator.hideLoading()
+            switch response {
+            case .success(let result):
+                let status = result.statusCode
+                if 200..<300 ~= status {
+                    do {
+                        let responseDto = try result.map(GetTotalMissionResponseDto.self)
+                        let missionListArray = responseDto.data.map { $0.mission ?? MissionList(id: 0, type: -1, title: "미션이 존재하지 않아요.", content: JSONNull(), emotion: 0) }
+                        self.setMissionData(missionList: missionListArray)
+                        print("Z", missionListArray)
+                    } catch {
+                        print(error.localizedDescription)
+                    }
+                }
+                if status >= 400 {
+                    print("400 error")
+                    self.showNetworkFailureToast()
+                }
+            case .failure(let error):
+                print(error.localizedDescription)
+                self.showNetworkFailureToast()
+            }
+        }
+    }
 }

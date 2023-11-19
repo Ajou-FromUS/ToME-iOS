@@ -18,4 +18,16 @@ class ToMETimeFormatter {
         
         return formatter.string(from: date)
     }
+    
+    static func getCurrentDateToString(date: Date) -> String {
+        let formatter = DateFormatter()
+        
+        formatter.locale = Locale(identifier: "ko_kr")
+        formatter.timeZone = TimeZone(abbreviation: "KST")
+        
+        formatter.dateFormat = "yyyy-MM-dd"
+        
+        return formatter.string(from: date)
+    }
+
 }

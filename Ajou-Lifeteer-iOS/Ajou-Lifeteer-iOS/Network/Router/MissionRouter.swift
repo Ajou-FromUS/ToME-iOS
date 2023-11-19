@@ -25,7 +25,7 @@ extension MissionRouter: TargetType {
     var path: String {
         switch self {
         case .getTotalMissions:
-            return "/mission"
+            return "/user/mission/" + ToMETimeFormatter.getCurrentDateToString(date: Date())
         }
     }
     
