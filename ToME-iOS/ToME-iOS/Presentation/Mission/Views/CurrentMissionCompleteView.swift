@@ -43,7 +43,20 @@ final class CurrentMissionCompleteView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+}
 
+// MARK: - Methods
+
+extension CurrentMissionCompleteView {
+    /// 완성 미션 개수 변경
+    @discardableResult
+    public func changeNumberOfCompleteMission(_ numberOfCompleteMission: Int) -> Self {
+        setUI(numberOfCompleteMission)
+        // 레이아웃 업데이트를 위해 호출
+        setNeedsLayout()
+        layoutIfNeeded()
+        return self
+    }
 }
 
 // MARK: - UI & Layout

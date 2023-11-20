@@ -40,13 +40,19 @@ final class TalkingMessageVC: MessagesViewController {
                                                         sender: self.toSender, sentDate: Date())
     
     private let typingBubble = TypingBubble()
+    
+    let layout = MessagesCollectionViewFlowLayout()
+
+    var missionCount = Int()
 
     // MARK: - UI Components
     
     private lazy var naviBar = CustomNavigationBar(self, type: .singleTitleWithPopButton).setTitle("티오랑 대화하기")
-    
-    let layout = MessagesCollectionViewFlowLayout()
     private lazy var messageCollectionView = MessagesCollectionView(frame: .zero, collectionViewLayout: self.layout)
+    
+    private lazy var missionProgressImageView = UIImageView().then {
+        $0.image = ImageLiterals.missionCount0
+    }
 
     // MARK: - View Life Cycle
     
@@ -55,18 +61,26 @@ final class TalkingMessageVC: MessagesViewController {
         self.hideTabBar(wantsToHide: true)
         view.backgroundColor = .white
         
-        view.addSubview(naviBar)
+        view.addSubviews(naviBar, missionProgressImageView)
         
         naviBar.snp.makeConstraints { make in
             make.top.equalToSuperview()
             make.leading.trailing.equalTo(view.safeAreaLayoutGuide)
             make.height.equalTo(200)
         }
+        
+        missionProgressImageView.snp.makeConstraints { make in
+            make.trailing.equalToSuperview().inset(20)
+            make.top.equalTo(view.safeAreaLayoutGuide).inset(90)
+            make.width.equalTo(140)
+            make.height.equalTo(32)
+        }
             
         // 각 셀 설정
         if let layout = messagesCollectionView.collectionViewLayout as? MessagesCollectionViewFlowLayout {
             layout.setMessageOutgoingAvatarSize(.zero)
-            layout.setMessageIncomingAvatarSize(CGSize(width: 24, height: 24))
+            layout.setMessageIncomingAvatarSize(CGSize(width: 35, height: 35))
+            layout.setMessageIncomingAvatarPosition(.init(horizontal: .cellLeading, vertical: .messageBottom))
             layout.setMessageOutgoingMessageTopLabelAlignment(LabelAlignment(textAlignment: .right, textInsets: .zero))
             layout.setMessageIncomingMessageTopLabelAlignment(LabelAlignment(textAlignment: .left, textInsets: .zero))
             layout.sectionHeadersPinToVisibleBounds = true
@@ -78,7 +92,7 @@ final class TalkingMessageVC: MessagesViewController {
             // MessagesCollectionView에 사용자 지정 셀 등록
         self.messagesCollectionView.backgroundColor = .clear
         self.messagesCollectionView.register(CustomMessageCell.self)
-        self.messagesCollectionView.contentInset = UIEdgeInsets(top: 0, left: 10, bottom: 10, right: 10)
+        self.messagesCollectionView.contentInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
             
         // MessagesFlowLayout에서도 회전 적용
     
@@ -141,6 +155,7 @@ extension TalkingMessageVC {
         let text = "안녕, 재현 님. 오늘 하루는 어떠셨는지 제게 알려주세요."
         
         insertToMessage(text: text)
+        postUsersContent(message: nil)
     }
     
     private func insertToMessage(text: String) {
@@ -212,12 +227,27 @@ extension TalkingMessageVC: MessagesDataSource {
         }
         return nil
     }
+    
+    func cellBottomLabelAttributedText(for message: MessageType, at indexPath: IndexPath) -> NSAttributedString? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm"
+
+        let dateString = dateFormatter.string(from: message.sentDate)
+
+        return NSAttributedString(
+            string: dateString,
+            attributes: [
+                NSAttributedString.Key.font: UIFont.body3,
+                NSAttributedString.Key.foregroundColor: UIColor.font2
+            ]
+        )
+    }
 }
 
 extension TalkingMessageVC: MessagesLayoutDelegate {
     // 아래 여백
     func footerViewSize(for section: Int, in messagesCollectionView: MessagesCollectionView) -> CGSize {
-        return CGSize(width: 0, height: 0)
+        return CGSize(width: 10, height: 10)
     }
     
     // 말풍선 위 이름 나오는 곳의 height
@@ -253,8 +283,8 @@ extension TalkingMessageVC: MessagesDisplayDelegate {
     
     // 말풍선의 꼬리 모양 방향
     func messageStyle(for message: MessageType, at _: IndexPath, in _: MessagesCollectionView) -> MessageStyle {
-      let tail: MessageStyle.TailCorner = isFromCurrentSender(message: message) ? .bottomRight : .bottomLeft
-        return .bubbleTail(tail, .pointedEdge)
+        let tail: MessageStyle.TailCorner = isFromCurrentSender(message: message) ? .bottomRight : .bottomLeft
+        return .bubbleTailOutline(.font1, tail, .pointedEdge)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
@@ -263,8 +293,13 @@ extension TalkingMessageVC: MessagesDisplayDelegate {
             return UIEdgeInsets(top: 130, left: 8, bottom: 0, right: 8)
         } else {
             // 나머지 섹션에 대한 inset 설정
-            return UIEdgeInsets(top: 0, left: 8, bottom: 10, right: 8)
+            return UIEdgeInsets(top: 0, left: 8, bottom: 0, right: 8)
         }
+    }
+    
+    func configureAvatarView(_ avatarView: AvatarView, for message: MessageType, at _: IndexPath, in _: MessagesCollectionView) {
+        let avatar = Avatar(image: ImageLiterals.tomeIcon)
+        avatarView.set(avatar: avatar)
     }
 }
 
@@ -294,9 +329,9 @@ extension TalkingMessageVC: InputBarAccessoryViewDelegate {
 // MARK: - Networks
 
 extension TalkingMessageVC {
-    private func postUsersContent(message: String) {
+    private func postUsersContent(message: String?) {
         setTypingIndicator(isHidden: false)
-        chatbotProvider.request(.sendMessage(content: message)) { [weak self] response in
+        chatbotProvider.request(.sendMessage(content: message ?? nil)) { [weak self] response in
             guard let self = self else { return }
             setTypingIndicator(isHidden: true)
             switch response {
@@ -305,7 +340,14 @@ extension TalkingMessageVC {
                 if 200..<300 ~= status {
                     do {
                         let responseDto = try result.map(PostUsersContentResponseDto.self)
-                        insertToMessage(text: responseDto.message)
+                        guard let message = responseDto.message else {
+                            setMissionCountImageView(missionCount: responseDto.missionCount)
+                            self.missionCount = responseDto.missionCount
+                            return
+                        }
+                        insertToMessage(text: message)
+                        setMissionCountImageView(missionCount: responseDto.missionCount)
+                        self.missionCount = responseDto.missionCount
                     } catch {
                         print(error.localizedDescription)
                     }
@@ -317,6 +359,22 @@ extension TalkingMessageVC {
             case .failure(let error):
                 print(error.localizedDescription)
                 self.showNetworkFailureToast()
+            }
+        }
+    }
+    
+    private func setMissionCountImageView(missionCount: Int) {
+        if self.missionCount != missionCount {
+            
+            switch missionCount {
+            case 0:
+                self.missionProgressImageView.image = ImageLiterals.missionCount0
+            case 1:
+                self.missionProgressImageView.image = ImageLiterals.missionCount1
+            case 2:
+                self.missionProgressImageView.image = ImageLiterals.missionCount2
+            default:
+                self.missionProgressImageView.image = ImageLiterals.missionCount3
             }
         }
     }

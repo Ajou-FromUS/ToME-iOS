@@ -11,10 +11,13 @@ import Foundation
 
 struct PostUsersContentResponseDto: Codable {
     let statusCode: Int
-    let detail, message: String
+    let detail: String
+    let message: String?
+    let missionCount: Int
 
     enum CodingKeys: String, CodingKey {
         case statusCode = "status_code"
         case detail, message
+        case missionCount = "mission_count"
     }
 }

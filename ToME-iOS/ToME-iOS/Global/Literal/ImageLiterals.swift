@@ -62,6 +62,10 @@ enum ImageLiterals {
     static var introIcCheck: UIImage { .load(named: "intro_ic_check") }
     static var introImgCalender: UIImage { .load(named: "intro_img_calender") }
     static var introImgExplainMission: UIImage { .load(named: "intro_img_explain_mission") }
+    static var missionCount0: UIImage { .load(named: "mission_count_0") }
+    static var missionCount1: UIImage { .load(named: "mission_count_1") }
+    static var missionCount2: UIImage { .load(named: "mission_count_2") }
+    static var missionCount3: UIImage { .load(named: "mission_count_3") }
     static var missionImgTextBorder: UIImage { .load(named: "mission_img_text_border") }
     static var missionImgDecibelRectangle: UIImage { .load(named: "mission_img_decibel_rectangle") }
     static var missionImgDecibel: UIImage { .load(named: "mission_img_decibel") }
@@ -79,7 +83,10 @@ enum ImageLiterals {
     static var talkingIcSend: UIImage { .load(named: "talking_ic_send") }
     static var toBtnImageDisabled: UIImage { .load(named: "to_btn_image_disabled") }
     static var toBtnImage: UIImage { .load(named: "to_btn_image") }
+    static var tomeIcon: UIImage { .load(named: "tome_icon") }
     static var tomeLogo: UIImage { .load(named: "tome_logo") }
+    static var tomeSplashImage: UIImage { .load(named: "tome_splash_image") }
+    static var tomeSplashLogo: UIImage { .load(named: "tome_splash_logo") }
     static var topbar: UIImage { .load(named: "topbar") }
     static var visitiorIcLock: UIImage { .load(named: "visitior_ic_lock") }
     static var warningIc: UIImage { .load(named: "warning_ic") }

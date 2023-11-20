@@ -10,7 +10,7 @@ import Foundation
 import Moya
 
 enum ChatbotRouter {
-    case sendMessage(content: String) // 메세지 보내기
+    case sendMessage(content: String?) // 메세지 보내기
 }
 
 extension ChatbotRouter: TargetType {
@@ -39,7 +39,7 @@ extension ChatbotRouter: TargetType {
     var task: Moya.Task {
         switch self {
         case .sendMessage(let content):
-            return .requestParameters(parameters: ["content": content], encoding: JSONEncoding.default)
+            return .requestParameters(parameters: ["content": content ?? NSNull()], encoding: JSONEncoding.default)
         }
     }
     

@@ -14,22 +14,20 @@ final class SplashVC: UIViewController {
     
     // MARK: - UI Components
     
-    private let logoImageView = UIImageView().then {
-        $0.image = ImageLiterals.archiveIcStart
+    private let toMeImageView = UIImageView().then {
+        $0.image = ImageLiterals.tomeSplashImage
     }
     
     private let subTitleLabel = UILabel().then {
         $0.alpha = 0
-        $0.text = "마음을 정리하는 시간,"
-        $0.font = .body1
-        $0.textColor = .mainColor
+        $0.text = "나를 위한 웰니스 기록 서비스"
+        $0.font = .body2
+        $0.textColor = .sub3
     }
     
-    private let titleLabel = UILabel().then {
+    private let toMeLogoImageView = UIImageView().then {
         $0.alpha = 0
-        $0.text = "마음짓기"
-        $0.font = .body1
-        $0.textColor = .mainColor
+        $0.image = ImageLiterals.tomeSplashLogo
     }
     
     // MARK: - View Life Cycle
@@ -51,16 +49,11 @@ extension SplashVC {
     
     private func setLogoAnimation() {
         UIView.animate(withDuration: 0.7, delay: 0.5, options: .curveEaseOut, animations: {
-            self.logoImageView.transform = CGAffineTransform(translationX: 0, y: -65)
-        }, completion: { _ in
-            self.setLabelsAnimation()
-        })
-    }
-    
-    private func setLabelsAnimation() {
-        UIView.animate(withDuration: 0.5, animations: {
+            self.toMeImageView.transform = CGAffineTransform(translationX: -65, y: 0)
+            self.toMeLogoImageView.alpha = 1.0
             self.subTitleLabel.alpha = 1.0
-            self.titleLabel.alpha = 1.0
+            self.toMeLogoImageView.transform = CGAffineTransform(translationX: 75, y: 0)
+            self.subTitleLabel.transform = CGAffineTransform(translationX: 75, y: 0)
         }, completion: { _ in
             self.checkDidSignIn()
         })
@@ -118,22 +111,24 @@ extension SplashVC {
     }
     
     private func setLayout() {
-        view.addSubviews(logoImageView, subTitleLabel, titleLabel)
-        
-        logoImageView.snp.makeConstraints { make in
-            make.center.equalToSuperview()
-            make.width.equalTo(103)
-            make.height.equalTo(73)
-        }
+        view.addSubviews(subTitleLabel, toMeLogoImageView, toMeImageView)
         
         subTitleLabel.snp.makeConstraints { make in
-            make.top.equalTo(view.safeAreaLayoutGuide).offset(370)
+            make.centerY.equalToSuperview().offset(-20)
             make.centerX.equalToSuperview()
         }
         
-        titleLabel.snp.makeConstraints { make in
-            make.top.equalTo(subTitleLabel.snp.bottom).offset(5)
-            make.centerX.equalToSuperview()
+        toMeLogoImageView.snp.makeConstraints { make in
+            make.top.equalTo(subTitleLabel.snp.bottom).offset(10)
+            make.width.equalTo(89)
+            make.height.equalTo(29)
+            make.leading.equalTo(subTitleLabel.snp.leading).offset(-5)
+        }
+        
+        toMeImageView.snp.makeConstraints { make in
+            make.center.equalToSuperview()
+            make.width.equalTo(114)
+            make.height.equalTo(69)
         }
     }
 }

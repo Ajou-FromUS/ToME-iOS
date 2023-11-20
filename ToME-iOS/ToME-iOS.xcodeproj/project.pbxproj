@@ -522,8 +522,8 @@
 			children = (
 				A39295322A52D67100436A4F /* .gitkeep */,
 				A3E4D2FA2A5BDAAA00C7611C /* ColorLiterals.swift */,
-				A3E4D3002A5BDB9200C7611C /* FontLiterals.swift */,
 				A3E4D3022A5BE90500C7611C /* ImageLiterals.swift */,
+				A3E4D3002A5BDB9200C7611C /* FontLiterals.swift */,
 			);
 			path = Literal;
 			sourceTree = "<group>";
