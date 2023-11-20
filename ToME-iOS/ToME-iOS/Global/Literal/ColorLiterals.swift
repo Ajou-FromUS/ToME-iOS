@@ -83,6 +83,10 @@ extension UIColor {
     static var popUpBackground: UIColor {
         return UIColor(hex: "#545B73")
     }
+    
+    static var myPageBackground: UIColor {
+        return UIColor(hex: "#F8F8F8")
+    }
 }
 
 extension UIColor {

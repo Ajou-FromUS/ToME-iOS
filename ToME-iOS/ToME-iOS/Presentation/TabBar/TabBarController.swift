@@ -57,7 +57,7 @@ extension TabBarController {
                                                                rootViewController: StatisticsMainVC())
         let mypageMainNVC = templateNavigationController(unselectedImage: ImageLiterals.homeIcMypage.withRenderingMode(.alwaysOriginal),
                                                          selectedImage: ImageLiterals.homeIcMypageFill.withRenderingMode(.alwaysOriginal),
-                                                             rootViewController: TalkingMainVC())
+                                                             rootViewController: MyPageMainVC())
         
         /// 탭바 아이템과 타이틀 간의 간격 조정
         for tabBarInfo in [statisticsMainNVC, homeMainNVC, mypageMainNVC] {

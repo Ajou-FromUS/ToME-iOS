@@ -15,6 +15,7 @@ enum NaviType {
     case home // 홈에 존재하는 네비바
     case singleTitle // 타이틀이 한줄인 네비바
     case singleTitleWithPopButton // 타이틀 한 줄 + 뒤로가기 버튼 (티오랑 대화하기)
+    case singleTitleWithBackButton // 타이틀 한 줄 + 뒤로가기 버튼 (마이페이지)
 }
 
 final class CustomNavigationBar: UIView {
@@ -29,7 +30,6 @@ final class CustomNavigationBar: UIView {
     // MARK: - UI Components
     
     var centerTitleLabel = UILabel()
-    private let backButton = UIButton()
     private let mindSetBIImageView = UIImageView()
     
     private let navibarBackgroundView = UIImageView().then {
@@ -52,6 +52,10 @@ final class CustomNavigationBar: UIView {
     
     private let logoImageView = UIImageView().then {
         $0.image = ImageLiterals.tomeLogo
+    }
+    
+    private let backButton = UIButton(type: .custom).then {
+        $0.setImage(ImageLiterals.mypageIcBack, for: .normal)
     }
     
     // MARK: - initialization
@@ -162,6 +166,9 @@ extension CustomNavigationBar {
         case .singleTitleWithPopButton:
             setBackgroundUI()
             setTitleUI()
+        case .singleTitleWithBackButton:
+            setBackgroundUI()
+            setTitleUI()
         }
     }
     
@@ -187,6 +194,20 @@ extension CustomNavigationBar {
                 make.trailing.equalToSuperview().inset(26)
                 make.height.equalTo(26)
                 make.width.equalTo(85)
+            }
+        case .singleTitleWithBackButton:
+            self.addSubviews(backButton, centerTitleLabel)
+            
+            backButton.snp.makeConstraints { make in
+                make.top.equalToSuperview().inset(60)
+                make.leading.equalToSuperview().inset(27)
+                make.height.equalTo(16)
+                make.width.equalTo(8)
+            }
+            
+            centerTitleLabel.snp.makeConstraints { make in
+                make.top.equalTo(backButton.snp.bottom).offset(20)
+                make.leading.equalTo(backButton.snp.leading)
             }
         }
     }

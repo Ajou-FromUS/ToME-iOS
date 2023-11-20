@@ -62,6 +62,7 @@ enum ImageLiterals {
     static var introIcCheck: UIImage { .load(named: "intro_ic_check") }
     static var introImgCalender: UIImage { .load(named: "intro_img_calender") }
     static var introImgExplainMission: UIImage { .load(named: "intro_img_explain_mission") }
+    static var kakaoInquiryImg: UIImage { .load(named: "kakao_inquiry_img") }
     static var missionCount0: UIImage { .load(named: "mission_count_0") }
     static var missionCount1: UIImage { .load(named: "mission_count_1") }
     static var missionCount2: UIImage { .load(named: "mission_count_2") }

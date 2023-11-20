@@ -58,6 +58,9 @@
 		A353770E2B0A438700E90C3E /* CustomBlur.swift in Sources */ = {isa = PBXBuildFile; fileRef = A353770D2B0A438700E90C3E /* CustomBlur.swift */; };
 		A35377102B0A4A4600E90C3E /* MissionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A353770F2B0A4A4600E90C3E /* MissionRouter.swift */; };
 		A35377122B0A4B1C00E90C3E /* GetTotalMissionResponseDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35377112B0A4B1C00E90C3E /* GetTotalMissionResponseDto.swift */; };
+		A35377142B0B9DAB00E90C3E /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35377132B0B9DAB00E90C3E /* SettingTableViewCell.swift */; };
+		A35377162B0B9F4E00E90C3E /* SettingDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35377152B0B9F4E00E90C3E /* SettingDetailVC.swift */; };
+		A35377182B0BAC7400E90C3E /* InquiryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35377172B0BAC7400E90C3E /* InquiryView.swift */; };
 		A36B36982AAF68720008E9F2 /* CustomMessageBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36B36972AAF68720008E9F2 /* CustomMessageBubbleView.swift */; };
 		A36B369A2AAF79750008E9F2 /* MissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36B36992AAF79750008E9F2 /* MissionView.swift */; };
 		A36B369C2AB068CA0008E9F2 /* ToMETimeFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36B369B2AB068CA0008E9F2 /* ToMETimeFormatter.swift */; };
@@ -116,7 +119,6 @@
 		A3E4D3052A5BEEB200C7611C /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E4D3042A5BEEB200C7611C /* TabBarController.swift */; };
 		A3E4D3072A5BF04300C7611C /* HomeMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E4D3062A5BF04300C7611C /* HomeMainVC.swift */; };
 		A3E4D3092A5BF05E00C7611C /* StatisticsMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E4D3082A5BF05E00C7611C /* StatisticsMainVC.swift */; };
-		A3E4D30D2A5BF09000C7611C /* TalkingMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E4D30C2A5BF09000C7611C /* TalkingMainVC.swift */; };
 		A3EED07F2AFB3DD50093A431 /* ToMETextViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EED07E2AFB3DD50093A431 /* ToMETextViewManager.swift */; };
 		A3F7F0CE2AFFF65F00DFCC3E /* bubble.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3F7F0CA2AFFF65E00DFCC3E /* bubble.mp3 */; };
 		A3F7F0CF2AFFF65F00DFCC3E /* homeBackgroundMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3F7F0CB2AFFF65F00DFCC3E /* homeBackgroundMusic.mp3 */; };
@@ -186,6 +188,9 @@
 		A353770D2B0A438700E90C3E /* CustomBlur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBlur.swift; sourceTree = "<group>"; };
 		A353770F2B0A4A4600E90C3E /* MissionRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionRouter.swift; sourceTree = "<group>"; };
 		A35377112B0A4B1C00E90C3E /* GetTotalMissionResponseDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTotalMissionResponseDto.swift; sourceTree = "<group>"; };
+		A35377132B0B9DAB00E90C3E /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
+		A35377152B0B9F4E00E90C3E /* SettingDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingDetailVC.swift; sourceTree = "<group>"; };
+		A35377172B0BAC7400E90C3E /* InquiryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InquiryView.swift; sourceTree = "<group>"; };
 		A36B36972AAF68720008E9F2 /* CustomMessageBubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMessageBubbleView.swift; sourceTree = "<group>"; };
 		A36B36992AAF79750008E9F2 /* MissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionView.swift; sourceTree = "<group>"; };
 		A36B369B2AB068CA0008E9F2 /* ToMETimeFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToMETimeFormatter.swift; sourceTree = "<group>"; };
@@ -276,7 +281,6 @@
 		A3E4D3042A5BEEB200C7611C /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		A3E4D3062A5BF04300C7611C /* HomeMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMainVC.swift; sourceTree = "<group>"; };
 		A3E4D3082A5BF05E00C7611C /* StatisticsMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsMainVC.swift; sourceTree = "<group>"; };
-		A3E4D30C2A5BF09000C7611C /* TalkingMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkingMainVC.swift; sourceTree = "<group>"; };
 		A3EED07E2AFB3DD50093A431 /* ToMETextViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToMETextViewManager.swift; sourceTree = "<group>"; };
 		A3F7F0CA2AFFF65E00DFCC3E /* bubble.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bubble.mp3; sourceTree = "<group>"; };
 		A3F7F0CB2AFFF65F00DFCC3E /* homeBackgroundMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = homeBackgroundMusic.mp3; sourceTree = "<group>"; };
@@ -365,6 +369,7 @@
 			children = (
 				A330D3FD2AC2D45900C1CC22 /* .gitkeep */,
 				A330D3FF2AC2D4CE00C1CC22 /* MyPageMainVC.swift */,
+				A35377152B0B9F4E00E90C3E /* SettingDetailVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -373,6 +378,8 @@
 			isa = PBXGroup;
 			children = (
 				A330D3FB2AC2D44E00C1CC22 /* .gitkeep */,
+				A35377132B0B9DAB00E90C3E /* SettingTableViewCell.swift */,
+				A35377172B0BAC7400E90C3E /* InquiryView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -847,7 +854,6 @@
 			isa = PBXGroup;
 			children = (
 				A39295722A52D7B800436A4F /* .gitkeep */,
-				A3E4D30C2A5BF09000C7611C /* TalkingMainVC.swift */,
 				A330D3EF2AC0342800C1CC22 /* TalkingDetailVC.swift */,
 			);
 			path = VC;
@@ -1053,6 +1059,7 @@
 				A30FDED52AF8C6A00088D98E /* MissionTableViewCell.swift in Sources */,
 				A3CF55E22A5BCAA700D19F00 /* JsonCoder.swift in Sources */,
 				A36B36A62AB41CEB0008E9F2 /* UINavigationController+.swift in Sources */,
+				A35377162B0B9F4E00E90C3E /* SettingDetailVC.swift in Sources */,
 				A3EED07F2AFB3DD50093A431 /* ToMETextViewManager.swift in Sources */,
 				A3F9C24C2AFC60C1001409D8 /* BubbleCircle.swift in Sources */,
 				A3F7F0DD2B0005A600DFCC3E /* UserManager.swift in Sources */,
@@ -1120,6 +1127,7 @@
 				A3CF55B82A5BC87500D19F00 /* UILabel+.swift in Sources */,
 				A3F7F0E32B00071D00DFCC3E /* UserRouter.swift in Sources */,
 				A39294CC2A52C91C00436A4F /* AppDelegate.swift in Sources */,
+				A35377182B0BAC7400E90C3E /* InquiryView.swift in Sources */,
 				A30FDEC92AF7F6780088D98E /* ToMEAnimationManager.swift in Sources */,
 				A3CF55EA2A5BCB0000D19F00 /* setImage.swift in Sources */,
 				A34478E32A698554002F1981 /* SplashVC.swift in Sources */,
@@ -1135,6 +1143,7 @@
 				A30FDEE22AF9DA4D0088D98E /* MissionProceedVC.swift in Sources */,
 				A3CF55BA2A5BC88D00D19F00 /* UIImage+.swift in Sources */,
 				A34478F82A7178B7002F1981 /* DetailLandingPageVC.swift in Sources */,
+				A35377142B0B9DAB00E90C3E /* SettingTableViewCell.swift in Sources */,
 				A3CF55B62A5BC86100D19F00 /* UIStackView+.swift in Sources */,
 				A3CF55F02A5BCB4400D19F00 /* setTextLineHeight.swift in Sources */,
 				A3CF55DA2A5BCA4400D19F00 /* calculatePastTime.swift in Sources */,
@@ -1142,7 +1151,6 @@
 				A3CF55CA2A5BC94A00D19F00 /* URL+.swift in Sources */,
 				A30FDED72AF8D4D40088D98E /* MissionDetailVC.swift in Sources */,
 				A35377082B030E0000E90C3E /* MissionPerformanceStatusCVC.swift in Sources */,
-				A3E4D30D2A5BF09000C7611C /* TalkingMainVC.swift in Sources */,
 				A39294CE2A52C91C00436A4F /* SceneDelegate.swift in Sources */,
 				A3496E0A2B010BB800FE3DC1 /* EtcRouter.swift in Sources */,
 				A36B369A2AAF79750008E9F2 /* MissionView.swift in Sources */,
