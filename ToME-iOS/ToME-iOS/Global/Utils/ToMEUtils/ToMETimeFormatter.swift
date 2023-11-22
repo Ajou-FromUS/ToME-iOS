@@ -29,5 +29,37 @@ class ToMETimeFormatter {
         
         return formatter.string(from: date)
     }
-
+    
+    static func getYearAndMonthToString(date: Date) -> String {
+        let formatter = DateFormatter()
+        
+        formatter.locale = Locale(identifier: "ko_kr")
+        formatter.timeZone = TimeZone(abbreviation: "KST")
+        
+        formatter.dateFormat = "yyyy년 MM월"
+        
+        return formatter.string(from: date)
+    }
+    
+    static func getMonthToString(date: Date) -> String {
+        let formatter = DateFormatter()
+        
+        formatter.locale = Locale(identifier: "ko_kr")
+        formatter.timeZone = TimeZone(abbreviation: "KST")
+        
+        formatter.dateFormat = "MM"
+        
+        return formatter.string(from: date)
+    }
+    
+    static func getYearToString(date: Date) -> String {
+        let formatter = DateFormatter()
+        
+        formatter.locale = Locale(identifier: "ko_kr")
+        formatter.timeZone = TimeZone(abbreviation: "KST")
+        
+        formatter.dateFormat = "YYYY"
+        
+        return formatter.string(from: date)
+    }
 }

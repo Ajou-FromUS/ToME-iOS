@@ -36,8 +36,13 @@ extension SettingDetailVC {
     func setData(title: String) {
         self.naviBar.setTitle(title)
         
-        if title == "문의하기" {
+        switch title {
+        case "문의하기":
             setInquiryViewLayout()
+        case "계정 설정":
+            setAccountSettingViewLayout()
+        default:
+            return
         }
     }
 }
@@ -68,6 +73,18 @@ extension SettingDetailVC {
             make.top.equalTo(naviBar.snp.bottom).offset(10)
             make.leading.trailing.equalToSuperview().inset(27)
             make.bottom.equalTo(view.safeAreaLayoutGuide).inset(59)
+        }
+    }
+    
+    private func setAccountSettingViewLayout() {
+        let accountSettingView = AccountSettingView()
+        
+        view.addSubview(accountSettingView)
+        
+        accountSettingView.snp.makeConstraints { make in
+            make.top.equalTo(naviBar.snp.bottom).offset(10)
+            make.leading.trailing.equalToSuperview().inset(27)
+            make.height.equalTo(250)
         }
     }
 }

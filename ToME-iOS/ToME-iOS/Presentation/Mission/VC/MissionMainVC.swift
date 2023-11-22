@@ -184,7 +184,7 @@ extension MissionMainVC {
                         self.completedMissionCount = responseDto.data.filter { $0.isCompleted == true }.count
                         self.setMissionData(missionList: missionListArray)
                         self.currentMissionCompleteView.changeNumberOfCompleteMission(self.completedMissionCount)
-                    } catch {
+                    } catch { 
                         print(error.localizedDescription)
                     }
                 }

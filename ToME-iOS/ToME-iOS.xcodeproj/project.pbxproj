@@ -61,6 +61,7 @@
 		A35377142B0B9DAB00E90C3E /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35377132B0B9DAB00E90C3E /* SettingTableViewCell.swift */; };
 		A35377162B0B9F4E00E90C3E /* SettingDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35377152B0B9F4E00E90C3E /* SettingDetailVC.swift */; };
 		A35377182B0BAC7400E90C3E /* InquiryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35377172B0BAC7400E90C3E /* InquiryView.swift */; };
+		A353771A2B0BB0C900E90C3E /* AccountSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35377192B0BB0C900E90C3E /* AccountSettingView.swift */; };
 		A36B36982AAF68720008E9F2 /* CustomMessageBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36B36972AAF68720008E9F2 /* CustomMessageBubbleView.swift */; };
 		A36B369A2AAF79750008E9F2 /* MissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36B36992AAF79750008E9F2 /* MissionView.swift */; };
 		A36B369C2AB068CA0008E9F2 /* ToMETimeFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36B369B2AB068CA0008E9F2 /* ToMETimeFormatter.swift */; };
@@ -191,6 +192,7 @@
 		A35377132B0B9DAB00E90C3E /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
 		A35377152B0B9F4E00E90C3E /* SettingDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingDetailVC.swift; sourceTree = "<group>"; };
 		A35377172B0BAC7400E90C3E /* InquiryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InquiryView.swift; sourceTree = "<group>"; };
+		A35377192B0BB0C900E90C3E /* AccountSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSettingView.swift; sourceTree = "<group>"; };
 		A36B36972AAF68720008E9F2 /* CustomMessageBubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMessageBubbleView.swift; sourceTree = "<group>"; };
 		A36B36992AAF79750008E9F2 /* MissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionView.swift; sourceTree = "<group>"; };
 		A36B369B2AB068CA0008E9F2 /* ToMETimeFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToMETimeFormatter.swift; sourceTree = "<group>"; };
@@ -380,6 +382,7 @@
 				A330D3FB2AC2D44E00C1CC22 /* .gitkeep */,
 				A35377132B0B9DAB00E90C3E /* SettingTableViewCell.swift */,
 				A35377172B0BAC7400E90C3E /* InquiryView.swift */,
+				A35377192B0BB0C900E90C3E /* AccountSettingView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1065,6 +1068,7 @@
 				A3F7F0DD2B0005A600DFCC3E /* UserManager.swift in Sources */,
 				A35377102B0A4A4600E90C3E /* MissionRouter.swift in Sources */,
 				A34478E52A698D82002F1981 /* SignInVC.swift in Sources */,
+				A353771A2B0BB0C900E90C3E /* AccountSettingView.swift in Sources */,
 				A3CF55D02A5BC99E00D19F00 /* Publisher+Driver.swift in Sources */,
 				A3E4D3052A5BEEB200C7611C /* TabBarController.swift in Sources */,
 				A30FDED12AF806560088D98E /* CurrentMissionCompleteView.swift in Sources */,

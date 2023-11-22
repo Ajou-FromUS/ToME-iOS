@@ -80,6 +80,7 @@ enum ImageLiterals {
     static var mypageIcToggle: UIImage { .load(named: "mypage_ic_toggle") }
     static var navibarBackground: UIImage { .load(named: "navibar_background") }
     static var questionBtn: UIImage { .load(named: "question_btn") }
+    static var statisticsToImg: UIImage { .load(named: "statistics_to_img") }
     static var talkingBtnQuestion: UIImage { .load(named: "talking_btn_question") }
     static var talkingIcSend: UIImage { .load(named: "talking_ic_send") }
     static var toBtnImageDisabled: UIImage { .load(named: "to_btn_image_disabled") }

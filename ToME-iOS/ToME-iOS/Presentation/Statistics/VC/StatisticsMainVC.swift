@@ -14,7 +14,6 @@ final class StatisticsMainVC: UIViewController {
     
     // MARK: - Properties
     
-
     // MARK: - UI Components
     
     private lazy var naviBar = CustomNavigationBar(self, type: .singleTitle).setTitle("통계")
@@ -26,6 +25,7 @@ final class StatisticsMainVC: UIViewController {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.isScrollEnabled = true
         collectionView.showsVerticalScrollIndicator = false
+        collectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 50, right: 0)
         
         return collectionView
     }()
@@ -94,8 +94,20 @@ extension StatisticsMainVC: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let section = indexPath.section
         let screenWidth = UIScreen.main.bounds.width
-        return CGSize(width: screenWidth, height: 250)
+        
+        switch section {
+        case 0:
+            return CGSize(width: screenWidth, height: 112)
+        default:
+            return CGSize(width: screenWidth, height: 250)
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        let sectionInsets = UIEdgeInsets(top: 0, left: 0, bottom: 50, right: 0)
+        return sectionInsets
     }
 }
 
@@ -115,6 +127,13 @@ extension StatisticsMainVC: UICollectionViewDataSource {
                 let datePickerPopUpVC = CustomDatePickerPopUpVC(title: "월 선택")
                 datePickerPopUpVC.modalPresentationStyle = .overFullScreen
                 self?.present(datePickerPopUpVC, animated: false)
+                // 클로저 설정
+                datePickerPopUpVC.setCompletionClosure { selectedDate in
+                    let yearSubstring = ToMETimeFormatter.getYearToString(date: selectedDate)
+                    let monthSubstring = ToMETimeFormatter.getMonthToString(date: selectedDate)
+                    
+                    cell.setTitleLabel(year: String(yearSubstring), month: String(monthSubstring))
+                }
             }
             return cell
         case 1:
@@ -129,4 +148,3 @@ extension StatisticsMainVC: UICollectionViewDataSource {
         }
     }
 }
-

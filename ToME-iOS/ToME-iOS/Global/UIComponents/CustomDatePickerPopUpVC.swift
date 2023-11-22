@@ -12,6 +12,10 @@ import Then
 
 final class CustomDatePickerPopUpVC: UIViewController {
     
+    // MARK: - Properties
+
+    private var completionClosure: ((Date) -> Void)?
+    
     // MARK: - UI Components
     
     private lazy var containerView = UIView().then {
@@ -36,10 +40,10 @@ final class CustomDatePickerPopUpVC: UIViewController {
         let picker = UIDatePicker()
         picker.locale = Locale(identifier: "ko_KR") // 한국어로 설정
         picker.datePickerMode = .date
+        picker.maximumDate = Date()
         if #available(iOS 14.0, *) {
             picker.preferredDatePickerStyle = .wheels
         }
-
         return picker
     }()
     
@@ -60,13 +64,35 @@ final class CustomDatePickerPopUpVC: UIViewController {
         super.viewDidLoad()
         setUI()
         setLayout()
+        setAddTarget()
+    }
+}
+
+// MARK: - @objc Function
+
+extension CustomDatePickerPopUpVC {
+    @objc private func closeButtonDidTap() {
+        self.dismiss(animated: false)
+    }
+    
+    @objc private func completeButtonDidTap() {
+        let selectedDate = datePicker.date
+        completionClosure?(selectedDate)
+        self.dismiss(animated: false)
     }
 }
 
 // MARK: - Methods
 
 extension CustomDatePickerPopUpVC {
-
+    private func setAddTarget() {
+        self.closeButton.addTarget(self, action: #selector(closeButtonDidTap), for: .touchUpInside)
+        self.completeButton.addTarget(self, action: #selector(completeButtonDidTap), for: .touchUpInside)
+    }
+    
+    func setCompletionClosure(_ closure: @escaping (Date) -> Void) {
+        completionClosure = closure
+    }
 }
 
 // MARK: - UI & Layout
@@ -110,6 +136,5 @@ extension CustomDatePickerPopUpVC {
             make.leading.trailing.equalToSuperview().inset(27)
             make.height.equalTo(150)
         }
-
     }
 }

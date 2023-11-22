@@ -64,18 +64,6 @@ extension UIFont {
         return UIFont.font(.leeSeoyun, ofSize: 14)
     }
     
-    @nonobjc class var diaryYear: UIFont {
-        return UIFont.font(.coinyCyrillic, ofSize: 12)
-    }
-    
-    @nonobjc class var diaryMonth: UIFont {
-        return UIFont.font(.coinyCyrillic, ofSize: 24)
-    }
-    
-    @nonobjc class var diaryDay: UIFont {
-        return UIFont.font(.coinyCyrillic, ofSize: 48)
-    }
-    
     @nonobjc class var bubbleEmoji: UIFont {
         return UIFont.font(.pretendardMedium, ofSize: 24)
     }
@@ -95,7 +83,6 @@ extension UIFont {
     @nonobjc class var questionNumber: UIFont {
         return UIFont.font(.pretendardBold, ofSize: 36)
     }
-    
 }
 
 enum FontName: String {
