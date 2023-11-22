@@ -19,6 +19,8 @@ final class MyPageMainVC: UIViewController {
     let cellHeight = 53 // 각 셀의 높이
     let spacing = 12 // 간격의 높이
     
+    let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
+    
     // MARK: - UI Components
     
     private lazy var naviBar = CustomNavigationBar(self, type: .singleTitle).setTitle("마이페이지")
@@ -45,7 +47,14 @@ final class MyPageMainVC: UIViewController {
         $0.translatesAutoresizingMaskIntoConstraints = false
         $0.separatorStyle = .none
     }
-
+    
+    private lazy var versionString = UILabel().then {
+        guard let appVersion = appVersion else { return }
+        $0.text = "ver. \(appVersion)"
+        $0.font = .body2
+        $0.textColor = .font3
+    }
+    
     // MARK: - View Life Cycle
 
     override func viewDidLoad() {
@@ -89,7 +98,8 @@ extension MyPageMainVC {
     }
     
     private func setLayout() {
-        view.addSubviews(naviBar, myRecordButton, horizontalDividedView, settingLabel, settingTableView)
+        view.addSubviews(naviBar, myRecordButton, horizontalDividedView, settingLabel,
+                         settingTableView, versionString)
         
         naviBar.snp.makeConstraints { make in
             make.top.equalToSuperview()
@@ -118,6 +128,11 @@ extension MyPageMainVC {
             make.top.equalTo(settingLabel.snp.bottom).offset(18)
             make.leading.trailing.equalToSuperview().inset(27)
             make.height.equalTo(settingList.count * cellHeight + (settingList.count - 1) * spacing)
+        }
+        
+        versionString.snp.makeConstraints { make in
+            make.bottom.equalTo(view.safeAreaLayoutGuide).inset(20)
+            make.centerX.equalToSuperview()
         }
     }
 }
