@@ -150,7 +150,10 @@ extension MissionDetailVC {
     }
     
     @objc private func showToToButtonDidTap() {
-        self.patchImageMissionUpdate()
+//        self.patchImageMissionUpdate()
+        let missionCompleteVC = MissionCompleteVC()
+        missionCompleteVC.setData(missionType: self.missionType)
+        self.navigationController?.fadeTo(missionCompleteVC)
     }
 }
 

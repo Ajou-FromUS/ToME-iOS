@@ -14,7 +14,6 @@
 		A30ADC1F2B10F65A00985615 /* initClientDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30ADC1E2B10F65A00985615 /* initClientDto.swift */; };
 		A30ADC212B10FC2E00985615 /* StatisticsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30ADC202B10FC2E00985615 /* StatisticsRouter.swift */; };
 		A30ADC232B10FD8800985615 /* getMonthlyStatisticsDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30ADC222B10FD8800985615 /* getMonthlyStatisticsDto.swift */; };
-		A30ADC262B110E8800985615 /* DGCharts in Frameworks */ = {isa = PBXBuildFile; productRef = A30ADC252B110E8800985615 /* DGCharts */; };
 		A30ADC2C2B13234D00985615 /* missionComplete.json in Resources */ = {isa = PBXBuildFile; fileRef = A30ADC2B2B13234D00985615 /* missionComplete.json */; };
 		A30D5F952AFA95F400C276F0 /* CircularMissionProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30D5F942AFA95F400C276F0 /* CircularMissionProgressView.swift */; };
 		A30FDEC92AF7F6780088D98E /* ToMEAnimationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30FDEC82AF7F6780088D98E /* ToMEAnimationManager.swift */; };
@@ -29,8 +28,6 @@
 		A30FDEDF2AF93F460088D98E /* MissionCompleteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30FDEDE2AF93F460088D98E /* MissionCompleteVC.swift */; };
 		A30FDEE22AF9DA4D0088D98E /* MissionProceedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30FDEE12AF9DA4D0088D98E /* MissionProceedVC.swift */; };
 		A30FDEE82AF9F84A0088D98E /* ToMEDecibelMananger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30FDEE72AF9F84A0088D98E /* ToMEDecibelMananger.swift */; };
-		A32D7B642B1345E1001A0D9C /* DGChartsDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = A32D7B632B1345E1001A0D9C /* DGChartsDynamic */; };
-		A32D7B652B1345E1001A0D9C /* DGChartsDynamic in Embed Frameworks */ = {isa = PBXBuildFile; productRef = A32D7B632B1345E1001A0D9C /* DGChartsDynamic */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		A330D3F02AC0342800C1CC22 /* TalkingDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A330D3EF2AC0342800C1CC22 /* TalkingDetailVC.swift */; };
 		A330D3F32AC0362800C1CC22 /* MessageKit in Frameworks */ = {isa = PBXBuildFile; productRef = A330D3F22AC0362800C1CC22 /* MessageKit */; };
 		A330D3F52AC29D4E00C1CC22 /* TalkingMessageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A330D3F42AC29D4E00C1CC22 /* TalkingMessageVC.swift */; };
@@ -73,6 +70,7 @@
 		A36B369C2AB068CA0008E9F2 /* ToMETimeFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36B369B2AB068CA0008E9F2 /* ToMETimeFormatter.swift */; };
 		A36B36A62AB41CEB0008E9F2 /* UINavigationController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36B36A52AB41CEB0008E9F2 /* UINavigationController+.swift */; };
 		A36B36AE2ABBCB7F0008E9F2 /* ToMECheck.json in Resources */ = {isa = PBXBuildFile; fileRef = A36B36AD2ABBCB7F0008E9F2 /* ToMECheck.json */; };
+		A372FF8A2B1350F300F3466E /* DGCharts in Frameworks */ = {isa = PBXBuildFile; productRef = A372FF892B1350F300F3466E /* DGCharts */; };
 		A39294CC2A52C91C00436A4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39294CB2A52C91C00436A4F /* AppDelegate.swift */; };
 		A39294CE2A52C91C00436A4F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39294CD2A52C91C00436A4F /* SceneDelegate.swift */; };
 		A39294E12A52CBBF00436A4F /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = A39294E02A52CBBF00436A4F /* Moya */; };
@@ -151,7 +149,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				A32D7B652B1345E1001A0D9C /* DGChartsDynamic in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -329,14 +326,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A30ADC262B110E8800985615 /* DGCharts in Frameworks */,
+				A372FF8A2B1350F300F3466E /* DGCharts in Frameworks */,
 				A39294ED2A52CBF200436A4F /* Lottie in Frameworks */,
 				A30FDEDC2AF92ABA0088D98E /* Mantis in Frameworks */,
 				A39294E72A52CBD900436A4F /* SnapKit in Frameworks */,
 				A330D3F32AC0362800C1CC22 /* MessageKit in Frameworks */,
 				A39294E42A52CBCC00436A4F /* Kingfisher in Frameworks */,
 				A39294E12A52CBBF00436A4F /* Moya in Frameworks */,
-				A32D7B642B1345E1001A0D9C /* DGChartsDynamic in Frameworks */,
 				A39294EA2A52CBE400436A4F /* Then in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -995,8 +991,7 @@
 				A39294EC2A52CBF200436A4F /* Lottie */,
 				A330D3F22AC0362800C1CC22 /* MessageKit */,
 				A30FDEDB2AF92ABA0088D98E /* Mantis */,
-				A30ADC252B110E8800985615 /* DGCharts */,
-				A32D7B632B1345E1001A0D9C /* DGChartsDynamic */,
+				A372FF892B1350F300F3466E /* DGCharts */,
 			);
 			productName = "Ajou-Lifeteer-iOS";
 			productReference = A39294C82A52C91C00436A4F /* ToME-iOS.app */;
@@ -1034,7 +1029,7 @@
 				A39294EB2A52CBF200436A4F /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				A330D3F12AC0362800C1CC22 /* XCRemoteSwiftPackageReference "MessageKit" */,
 				A30FDEDA2AF92ABA0088D98E /* XCRemoteSwiftPackageReference "Mantis" */,
-				A30ADC242B110E8800985615 /* XCRemoteSwiftPackageReference "Charts" */,
+				A372FF882B1350F300F3466E /* XCRemoteSwiftPackageReference "Charts" */,
 			);
 			productRefGroup = A39294C92A52C91C00436A4F /* Products */;
 			projectDirPath = "";
@@ -1421,14 +1416,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		A30ADC242B110E8800985615 /* XCRemoteSwiftPackageReference "Charts" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/danielgindi/Charts.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.0;
-			};
-		};
 		A30FDEDA2AF92ABA0088D98E /* XCRemoteSwiftPackageReference "Mantis" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/guoyingtao/Mantis.git";
@@ -1443,6 +1430,14 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 4.0.0;
+			};
+		};
+		A372FF882B1350F300F3466E /* XCRemoteSwiftPackageReference "Charts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/danielgindi/Charts.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
 			};
 		};
 		A39294DF2A52CBBF00436A4F /* XCRemoteSwiftPackageReference "Moya" */ = {
@@ -1488,25 +1483,20 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		A30ADC252B110E8800985615 /* DGCharts */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A30ADC242B110E8800985615 /* XCRemoteSwiftPackageReference "Charts" */;
-			productName = DGCharts;
-		};
 		A30FDEDB2AF92ABA0088D98E /* Mantis */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A30FDEDA2AF92ABA0088D98E /* XCRemoteSwiftPackageReference "Mantis" */;
 			productName = Mantis;
 		};
-		A32D7B632B1345E1001A0D9C /* DGChartsDynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A30ADC242B110E8800985615 /* XCRemoteSwiftPackageReference "Charts" */;
-			productName = DGChartsDynamic;
-		};
 		A330D3F22AC0362800C1CC22 /* MessageKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A330D3F12AC0362800C1CC22 /* XCRemoteSwiftPackageReference "MessageKit" */;
 			productName = MessageKit;
+		};
+		A372FF892B1350F300F3466E /* DGCharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A372FF882B1350F300F3466E /* XCRemoteSwiftPackageReference "Charts" */;
+			productName = DGCharts;
 		};
 		A39294E02A52CBBF00436A4F /* Moya */ = {
 			isa = XCSwiftPackageProductDependency;
