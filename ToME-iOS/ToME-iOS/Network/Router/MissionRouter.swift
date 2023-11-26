@@ -8,11 +8,12 @@
 import Foundation
 
 import Moya
+import UIKit
 
 enum MissionRouter {
     case getTotalMissions
     case patchTextOrDecibelMissionUpdate(id: Int, content: String)
-    case patchImageMissionUpdate(id: Int, missionImage: NSData)
+    case patchImageMissionUpdate(id: Int, missionImage: UIImage)
 }
 
 extension MissionRouter: TargetType {
@@ -49,9 +50,7 @@ extension MissionRouter: TargetType {
         case .patchTextOrDecibelMissionUpdate(_, let content):
             return .requestParameters(parameters: ["content": content], encoding: JSONEncoding.default)
         case .patchImageMissionUpdate(_, let missionImage):
-            let formData = MultipartFormData(provider: .data(missionImage as Data),
-                                                     name: "mission_image", fileName: "image.jpeg", mimeType: "image/jpeg")
-            return .uploadMultipart([formData])
+            return .uploadMultipart([createMultipartFormData(image: missionImage)])
         }
     }
     
@@ -64,5 +63,15 @@ extension MissionRouter: TargetType {
     
     var validationType: ValidationType {
         return .successCodes
+    }
+}
+
+extension MissionRouter {
+    func createMultipartFormData(image: UIImage) -> MultipartFormData {
+        let formData = MultipartFormData(provider: .data(image.jpegData(compressionQuality: 1.0)!),
+                                         name: "mission_image",
+                                         fileName: "image.jpg",
+                                         mimeType: "image/jpeg")
+        return formData
     }
 }
