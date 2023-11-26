@@ -46,6 +46,7 @@ final class MyPageMainVC: UIViewController {
     private lazy var settingTableView = UITableView().then {
         $0.translatesAutoresizingMaskIntoConstraints = false
         $0.separatorStyle = .none
+        $0.isScrollEnabled = false
     }
     
     private lazy var versionString = UILabel().then {

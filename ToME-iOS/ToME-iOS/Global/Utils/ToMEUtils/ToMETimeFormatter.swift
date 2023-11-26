@@ -8,58 +8,35 @@
 import Foundation
 
 class ToMETimeFormatter {
+    static func format(date: Date, format: String) -> String {
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "ko_kr")
+        formatter.timeZone = TimeZone(abbreviation: "KST")
+        formatter.dateFormat = format
+        return formatter.string(from: date)
+    }
+
     static func getCurrentTimeToString(date: Date) -> String {
-        let formatter = DateFormatter()
-        
-        formatter.locale = Locale(identifier: "ko_kr")
-        formatter.timeZone = TimeZone(abbreviation: "KST")
-        
-        formatter.dateFormat = "yyyy.MM.dd HH:mm"
-        
-        return formatter.string(from: date)
+        return format(date: date, format: "yyyy.MM.dd HH:mm")
     }
-    
+
     static func getCurrentDateToString(date: Date) -> String {
-        let formatter = DateFormatter()
-        
-        formatter.locale = Locale(identifier: "ko_kr")
-        formatter.timeZone = TimeZone(abbreviation: "KST")
-        
-        formatter.dateFormat = "yyyy-MM-dd"
-        
-        return formatter.string(from: date)
+        return format(date: date, format: "yyyy-MM-dd")
+    }
+
+    static func getYearAndMonthToKorString(date: Date) -> String {
+        return format(date: date, format: "yyyy년 MM월")
     }
     
-    static func getYearAndMonthToString(date: Date) -> String {
-        let formatter = DateFormatter()
-        
-        formatter.locale = Locale(identifier: "ko_kr")
-        formatter.timeZone = TimeZone(abbreviation: "KST")
-        
-        formatter.dateFormat = "yyyy년 MM월"
-        
-        return formatter.string(from: date)
+    static func getYearAndMonthToHipenString(date: Date) -> String {
+        return format(date: date, format: "yyyy-MM")
     }
-    
+
     static func getMonthToString(date: Date) -> String {
-        let formatter = DateFormatter()
-        
-        formatter.locale = Locale(identifier: "ko_kr")
-        formatter.timeZone = TimeZone(abbreviation: "KST")
-        
-        formatter.dateFormat = "MM"
-        
-        return formatter.string(from: date)
+        return format(date: date, format: "MM")
     }
-    
+
     static func getYearToString(date: Date) -> String {
-        let formatter = DateFormatter()
-        
-        formatter.locale = Locale(identifier: "ko_kr")
-        formatter.timeZone = TimeZone(abbreviation: "KST")
-        
-        formatter.dateFormat = "YYYY"
-        
-        return formatter.string(from: date)
+        return format(date: date, format: "YYYY")
     }
 }

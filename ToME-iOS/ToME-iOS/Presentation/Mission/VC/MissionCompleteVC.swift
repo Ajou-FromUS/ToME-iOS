@@ -15,6 +15,8 @@ final class MissionCompleteVC: UIViewController {
 
     // MARK: - UI Components
     
+    let customBlur = CustomBlur.shared
+    
     private lazy var naviBar = CustomNavigationBar(self, type: .singleTitle).setTitle("미션")
     
     private let missionCompleteLottieView: LottieAnimationView = .init(name: "missionComplete")
@@ -26,7 +28,6 @@ final class MissionCompleteVC: UIViewController {
     }
     
     private let missionCompleteTitleLabel = UILabel().then {
-        $0.text = "오늘의 글쓰기 미션 완료"
         $0.font = .newBody1
         $0.textColor = .font1
     }
@@ -36,6 +37,8 @@ final class MissionCompleteVC: UIViewController {
     
     private lazy var backToHomeButton = CustomButton(title: "홈으로 돌아가기", type: .fillWithGrey)
     
+    private let backgroundLottieView: LottieAnimationView = .init(name: "background")
+    
     // MARK: - View Life Cycle
 
     override func viewDidLoad() {
@@ -44,6 +47,11 @@ final class MissionCompleteVC: UIViewController {
         setLayout()
         setAddTarget()
         ToMEMusicManager.shared.playMusic(withTitle: "oneOfMissionComplete", loop: 0)
+        setAnimation()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
         setAnimation()
     }
 }
@@ -83,6 +91,24 @@ extension MissionCompleteVC {
     private func setAnimation() {
         missionCompleteLottieView.play()
     }
+    
+    func setData(missionType: Int) {
+        
+        var missionTypeString = String()
+        
+        switch missionType {
+        case 0:
+            missionTypeString = "텍스트"
+        case 1:
+            missionTypeString = "사진"
+        case 2:
+            missionTypeString = "데시벨"
+        default:
+            return
+        }
+        
+        self.missionCompleteTitleLabel.text = "오늘의 \(missionTypeString) 미션 완료"
+    }
 }
 
 // MARK: - UI & Layout
@@ -91,9 +117,17 @@ extension MissionCompleteVC {
     private func setUI() {
         view.backgroundColor = .systemGray
         self.missionCompleteLottieView.backgroundColor = .clear
+        customBlur.addBlurEffect(to: backgroundLottieView)
+        customBlur.setBlurIntensity(to: backgroundLottieView, intensity: 1)
     }
     
     private func setLayout() {
+        view.addSubviews(backgroundLottieView)
+        
+        backgroundLottieView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
+        
         view.addSubviews(naviBar, missionCompleteLottieView, missionCompleteSubLabel,
                          missionCompleteTitleLabel, nextMissionButton, backToHomeButton)
         

@@ -11,17 +11,17 @@ import SnapKit
 import Then
 
 final class SelectMonthCVC: UICollectionViewCell {
-    
+
     // MARK: - Properties
-    
-    let userName = "몽이"
-    
+        
     var didSelectMonthButton: (() -> Void)?
     
-    private let todayString = ToMETimeFormatter.getYearAndMonthToString(date: Date())
+    private let todayString = ToMETimeFormatter.getYearAndMonthToKorString(date: Date())
     
     private let monthString = ToMETimeFormatter.getMonthToString(date: Date())
-        
+    
+    private let nickname: String? = UserManager.shared.nickname
+                                  
     // MARK: - UI Components
     
     private let horizontalDevidedView = UIView()
@@ -33,7 +33,11 @@ final class SelectMonthCVC: UICollectionViewCell {
     }
     
     private lazy var subTitleLabel = UILabel().then {
-        $0.text = "티오가 \(userName)의 \(monthString)월을 분석했어요."
+        if let unwrappedNickname = nickname {
+            $0.text = "티오가 \(unwrappedNickname)의 \(monthString)월을 분석했어요."
+        } else {
+            $0.text = "티오가 사용자의 \(monthString)월을 분석했어요."
+        }
         $0.textColor = .font1
         $0.font = UIFont.font(.leeSeoyun, ofSize: 12)
     }
@@ -77,7 +81,11 @@ extension SelectMonthCVC {
     
     func setTitleLabel(year: String, month: String) {
         self.titleLabel.text = "\(year)년 \(month)월"
-        self.subTitleLabel.text = "티오가 \(userName)의 \(month)월을 분석했어요."
+        if let unwrappedNickname = nickname {
+             self.subTitleLabel.text = "티오가 \(unwrappedNickname)의 \(monthString)월을 분석했어요."
+        } else {
+            self.subTitleLabel.text = "티오가 사용자의 \(monthString)월을 분석했어요."
+        }
     }
 }
 // MARK: - UI & Layout

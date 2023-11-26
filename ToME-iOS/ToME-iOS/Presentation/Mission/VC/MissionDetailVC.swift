@@ -10,8 +10,13 @@ import UIKit
 import SnapKit
 import Then
 import Lottie
+import Moya
 
 final class MissionDetailVC: UIViewController {
+    
+    // MARK: - Provider
+    
+    private let missionProvider = Providers.missionProvider
     
     // MARK: - Properties
 
@@ -21,16 +26,22 @@ final class MissionDetailVC: UIViewController {
     
     var missionType = Int()
     
+    var id = Int()
+    
     var startMissionButtonTitle: String = "미션 수행하러 가기"
     
     var backButtonTitle: String = "다른 미션 보러가기"
-        
+    
+    var completedMissionCount = Int()
+    
+    var imageData = NSData()
+            
     // MARK: - UI Components
     
     private lazy var naviBar = CustomNavigationBar(self, type: .singleTitle).setTitle("미션")
     
     /// top 부분, 미션 수행 개수를 적어서 넣어주기
-    private lazy var currentMissionCompleteView = CurrentMissionCompleteView(numberOfCompleteMission: 1)
+    private lazy var currentMissionCompleteView = CurrentMissionCompleteView(numberOfCompleteMission: completedMissionCount)
     
     private let containerView = UIView().then {
         $0.layer.cornerRadius = 10
@@ -50,7 +61,8 @@ final class MissionDetailVC: UIViewController {
     private let horizontalDevidedView = UIView()
     
     private let missionTitleLabel = UILabel().then {
-        $0.font = .newBody2
+        $0.numberOfLines = 2
+        $0.font = .newBody3
         $0.textColor = .font1
     }
     
@@ -61,7 +73,8 @@ final class MissionDetailVC: UIViewController {
     }
     
     var startMissionButton = CustomButton(title: "미션 수행하러 가기", type: .fillWithBlueAndImage)
-        .setImage(image: ImageLiterals.gallaryBtnImageFill, disabledImage: nil)
+    
+    var showToToButton = CustomButton(title: "티오에게 보여주기", type: .fillWithBlueAndImage).setImage(image: ImageLiterals.toBtnImage, disabledImage: ImageLiterals.toBtnImageDisabled)
     
     var backButton = CustomButton(title: "다른 미션 보러가기", type: .fillWithGreyAndImage)
         .setImage(image: ImageLiterals.backBtnImage, disabledImage: nil)
@@ -97,6 +110,18 @@ extension MissionDetailVC {
         pushToPhotoAlertController()
         // crop이 끝난 사진을 missionImageView의 image로 설정
         photoManager?.didFinishCropping = { croppedImage in
+            // 버튼을 완료 버튼으로 바꿔주기 위한 부분
+            self.startMissionButton.isHidden = true
+            self.setShowToToButtonLayout()
+            
+            // croppedImage를 Data로 변환
+            guard let imageData = croppedImage.jpegData(compressionQuality: 0.8) else {
+                print("Failed to convert image to data.")
+                return
+            }
+            
+            self.imageData = imageData as NSData  // UIImage를 NSData로 변환
+                        
             self.missionImageView.image = croppedImage
             self.missionImageView.layer.cornerRadius = 10
             self.currentMissionCompleteView.isHidden = true
@@ -118,37 +143,50 @@ extension MissionDetailVC {
     
     @objc private func startOtherButtonDidTap() {
         let missionProceedVC = MissionProceedVC()
-        missionProceedVC.missionType = self.missionType
-        missionProceedVC.missionTitleLabel.text = self.missionTitleLabel.text
+        missionProceedVC.setData(missionType: self.missionType,
+                                 missionTitle: self.missionTitleLabel.text ?? String(),
+                                 id: self.id)
         self.navigationController?.fadeTo(missionProceedVC)
+    }
+    
+    @objc private func showToToButtonDidTap() {
+        self.patchImageMissionUpdate()
     }
 }
 
 // MARK: - Methods
 
 extension MissionDetailVC {
-    func setData(missionType: Int, missionTitle: String) {
+    func setData(missionType: Int, missionTitle: String, completedMissionCount: Int, id: Int) {
         if missionType == 0 {
-            self.missionTypeLabel.text = "찰칵 미션"
-            self.missionImageView.image = ImageLiterals.missionImgPhotoRectangle
-        } else if missionType == 1 {
-            self.missionTypeLabel.text = "데시벨 미션"
-            self.missionImageView.image = ImageLiterals.missionImgDecibelRectangle
-        } else {
             self.missionTypeLabel.text = "텍스트 미션"
             self.missionImageView.image = ImageLiterals.missionImgTextRectangle
+            self.startMissionButton.setImage(image: ImageLiterals.missionIcTextFill, disabledImage: nil)
+        } else if missionType == 1 {
+            self.missionTypeLabel.text = "찰칵 미션"
+            self.missionImageView.image = ImageLiterals.missionImgPhotoRectangle
+            self.startMissionButton.setImage(image: ImageLiterals.gallaryBtnImageFill, disabledImage: nil)
+        } else {
+            self.missionTypeLabel.text = "데시벨 미션"
+            self.missionImageView.image = ImageLiterals.missionImgDecibelRectangle
+            self.startMissionButton.setImage(image: ImageLiterals.missionIcDecibelFill, disabledImage: nil)
         }
         self.missionType = missionType
         self.missionTitleLabel.text = missionTitle
+        missionTitleLabel.lineBreakMode = .byWordWrapping
+        missionTitleLabel.setLineSpacing(lineSpacing: 3)
+        self.completedMissionCount = completedMissionCount
+        self.id = id
     }
     
     func setAddTarget() {
-        if self.missionType == 0 {
+        if self.missionType == 1 {
             self.startMissionButton.addTarget(self, action: #selector(startPhotoMissionButtonDidTap), for: .touchUpInside)
         } else {
             self.startMissionButton.addTarget(self, action: #selector(startOtherButtonDidTap), for: .touchUpInside)
         }
         
+        self.showToToButton.addTarget(self, action: #selector(showToToButtonDidTap), for: .touchUpInside)
         self.backButton.addTarget(self, action: #selector(popToPreviousVC), for: .touchUpInside)
     }
     
@@ -224,7 +262,7 @@ extension MissionDetailVC {
     
     private func setContainerViewLayout() {
         containerView.snp.makeConstraints { make in
-            make.top.equalTo(currentMissionCompleteView.snp.bottom).offset(30)
+            make.top.equalTo(currentMissionCompleteView.snp.bottom).offset(10)
             make.leading.trailing.equalTo(view.safeAreaLayoutGuide).inset(27)
         }
         
@@ -251,10 +289,51 @@ extension MissionDetailVC {
         missionTitleLabel.snp.makeConstraints { make in
             make.top.equalTo(horizontalDevidedView.snp.bottom).offset(10)
             make.leading.equalTo(missionImageView.snp.leading)
+            make.trailing.equalTo(missionImageView.snp.trailing)
         }
         
         containerView.snp.makeConstraints { make in
             make.bottom.equalTo(missionTitleLabel.snp.bottom).offset(20)
+        }
+    }
+    
+    private func setShowToToButtonLayout() {
+        view.addSubview(showToToButton)
+        
+        showToToButton.snp.makeConstraints { make in
+            make.bottom.equalTo(backButton.snp.top).offset(-10)
+            make.leading.trailing.equalTo(view.safeAreaLayoutGuide).inset(27)
+            make.height.equalTo(53)
+        }
+    }
+}
+
+// MARK: - Network
+
+extension MissionDetailVC {
+    private func patchImageMissionUpdate() {
+        LoadingIndicator.showLoading()
+        missionProvider.request(.patchImageMissionUpdate(id: self.id, missionImage: self.imageData)) { [weak self] response in
+            guard let self = self else { return }
+            LoadingIndicator.hideLoading()
+            switch response {
+            case .success(let result):
+                let status = result.statusCode
+                if 200..<300 ~= status {
+                    do {
+                        print("미션 수행 완료")
+                    } catch {
+                        print(error.localizedDescription)
+                    }
+                }
+                if status >= 400 {
+                    print("400 error")
+                    self.showNetworkFailureToast()
+                }
+            case .failure(let error):
+                print(error.localizedDescription)
+                self.showNetworkFailureToast()
+            }
         }
     }
 }

@@ -100,7 +100,7 @@ extension CustomDatePickerPopUpVC {
 extension CustomDatePickerPopUpVC {
     private func setUI() {
         self.containerView.backgroundColor = .white
-        view.backgroundColor = .white
+        view.backgroundColor = .white.withAlphaComponent(0.7)
     }
     
     private func setLayout() {

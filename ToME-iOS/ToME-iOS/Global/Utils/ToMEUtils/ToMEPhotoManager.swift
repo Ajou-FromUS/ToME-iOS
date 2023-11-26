@@ -132,7 +132,7 @@ class ToMEPhotoManager: NSObject, UIImagePickerControllerDelegate, UINavigationC
         // 이미지 크롭을 시작합니다.
         let cropVC = Mantis.cropViewController(image: image)
         cropVC.delegate = self
-        cropVC.config.presetFixedRatioType = .alwaysUsingOnePresetFixedRatio(ratio: 1.0)
+        cropVC.config.presetFixedRatioType = .alwaysUsingOnePresetFixedRatio(ratio: 1.25)
         vc?.navigationController?.pushViewController(cropVC, animated: true)
         // 이미지 크롭 액션이 완료되면 iCloud에서 이미지를 가져옵니다.
     }

@@ -88,7 +88,7 @@ extension CustomNavigationBar {
         paragraphStyle.lineSpacing = 9
 
         let attributedText = NSAttributedString(
-            string: "\(name)야,\n오늘도 나랑 대화하자",
+            string: "To. 내 친구 \(name),\n오늘도 나랑 대화하자",
             attributes: [
                 NSAttributedString.Key.paragraphStyle: paragraphStyle,
                 NSAttributedString.Key.font: UIFont.newBody1,

@@ -35,6 +35,14 @@ final class MonthlyKeywordAnalysisCVC: UICollectionViewCell {
     }
 }
 
+// MARK: - Methods
+
+extension MonthlyKeywordAnalysisCVC {
+    func setData(image: String) {
+        self.monthlyKeywordImage.setImage(with: image)
+    }
+}
+
 // MARK: - UI & Layout
 
 extension MonthlyKeywordAnalysisCVC {

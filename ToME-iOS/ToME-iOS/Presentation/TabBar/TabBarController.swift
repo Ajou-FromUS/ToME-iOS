@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class TabBarController: UITabBarController {
+final class TabBarController: UITabBarController, UITabBarControllerDelegate {
     
     // MARK: - Properties
     
@@ -17,6 +17,7 @@ final class TabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.delegate = self
         setUI()
         setTabBarControllers()
         self.selectedIndex = 1
@@ -25,7 +26,7 @@ final class TabBarController: UITabBarController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
-        tabBar.frame.size.height = 100
+        tabBar.frame.size.height = 110
         tabBar.frame.origin.y = view.frame.height - 92
     }
 }
@@ -33,7 +34,6 @@ final class TabBarController: UITabBarController {
 // MARK: - Methods
 
 extension TabBarController {
-    
     private func setUI() {
         let appearance = UITabBarItem.appearance()
         let attributes: [NSAttributedString.Key: Any] = [
@@ -42,7 +42,6 @@ extension TabBarController {
         ]
         appearance.setTitleTextAttributes(attributes, for: .normal)
         
-        tabBar.backgroundColor = .clear
         tabBar.layer.cornerRadius = 15
         tabBar.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         tabBar.unselectedItemTintColor = .disabled1

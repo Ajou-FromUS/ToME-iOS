@@ -11,7 +11,7 @@ import SnapKit
 import Then
 
 class MissionTableViewCell: UITableViewCell {
-    
+
     // MARK: - UI Components
     
     private let containerView = UIView().then {
@@ -32,8 +32,10 @@ class MissionTableViewCell: UITableViewCell {
     private let horizontalDevidedView = UIView()
     
     private let missionTitleLabel = UILabel().then {
-        $0.font = .newBody2
+        $0.numberOfLines = 2
+        $0.font = .newBody3
         $0.textColor = .font1
+        
     }
     
     // MARK: - View Life Cycle
@@ -51,22 +53,24 @@ class MissionTableViewCell: UITableViewCell {
 // MARK: - Methods
 
 extension MissionTableViewCell {
-    func setData(model: MissionList) {
+    func setData(model: MissionList, idList: [Int]) {
         if model.type == 0 {
-            missionTypeLabel.text = "찰칵 미션"
-            missionImageView.image = ImageLiterals.missionImgPhoto
-        } else if model.type == 1 {
-            missionTypeLabel.text = "데시벨 미션"
-            missionImageView.image = ImageLiterals.missionImgDecibel
-        } else if model.type == 2 {
             missionTypeLabel.text = "텍스트 미션"
             missionImageView.image = ImageLiterals.missionImgText
+        } else if model.type == 1 {
+            missionTypeLabel.text = "찰칵 미션"
+            missionImageView.image = ImageLiterals.missionImgPhoto
+        } else if model.type == 2 {
+            missionTypeLabel.text = "데시벨 미션"
+            missionImageView.image = ImageLiterals.missionImgDecibel
         } else {    // model.type == -1로 넘어오는 경우, 즉 null
             missionTypeLabel.text = "티오와 대화하여 오늘의 미션을 받아보세요."
             self.isUserInteractionEnabled = false
         }
         
         missionTitleLabel.text = model.title
+        missionTitleLabel.lineBreakMode = .byWordWrapping
+        missionTitleLabel.setLineSpacing(lineSpacing: 3)
         setLayout(missionType: model.type)
     }
 }
@@ -115,20 +119,21 @@ extension MissionTableViewCell {
         }
         
         missionTypeLabel.snp.makeConstraints { make in
-            make.top.equalToSuperview().inset(20)
+            make.top.equalToSuperview().inset(17)
             make.leading.equalTo(missionImageView.snp.trailing).offset(15)
         }
         
         horizontalDevidedView.snp.makeConstraints { make in
-            make.top.equalTo(missionTypeLabel.snp.bottom).offset(8)
+            make.top.equalTo(missionTypeLabel.snp.bottom).offset(6)
             make.leading.equalTo(missionTypeLabel.snp.leading)
             make.height.equalTo(0.5)
             make.width.equalTo(97)
         }
         
         missionTitleLabel.snp.makeConstraints { make in
-            make.top.equalTo(horizontalDevidedView.snp.bottom).offset(10)
+            make.top.equalTo(horizontalDevidedView.snp.bottom).offset(6)
             make.leading.equalTo(missionTypeLabel.snp.leading)
+            make.trailing.equalToSuperview().inset(19)
         }
     }
     

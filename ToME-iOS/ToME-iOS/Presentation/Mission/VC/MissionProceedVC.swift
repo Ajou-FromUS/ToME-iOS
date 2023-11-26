@@ -9,14 +9,26 @@ import UIKit
 
 import SnapKit
 import Then
+import Lottie
+import Moya
 
 final class MissionProceedVC: UIViewController {
+    
+    // MARK: - Provider
+    
+    private let missionProvider = Providers.missionProvider
     
     // MARK: - Properties
     
     var missionType = Int()
     
+    var id = Int()
+    
+    var content = String()
+    
     private let decibelManager = ToMEDecibelMananger.shared
+    
+    private let customBlur = CustomBlur.shared
             
     // MARK: - UI Components
     
@@ -46,7 +58,8 @@ final class MissionProceedVC: UIViewController {
     private let horizontalDevidedView = UIView()
     
     var missionTitleLabel = UILabel().then {
-        $0.font = .newBody2
+        $0.numberOfLines = 2
+        $0.font = .newBody3
         $0.textColor = .font1
     }
     
@@ -84,7 +97,7 @@ final class MissionProceedVC: UIViewController {
     }
     
     private let textSubLabel = UILabel().then {
-        $0.text = "오늘 하루를 되돌아 보고, 감사일기를 적어보세요."
+        $0.text = "오늘 주어진 질문에 대해서 답을 적어보세요."
         $0.font = .body2
         $0.textColor = .font2
     }
@@ -98,16 +111,17 @@ final class MissionProceedVC: UIViewController {
     var backButton = CustomButton(title: "다른 미션 보러가기", type: .fillWithGreyAndImage)
                                                         .setImage(image: ImageLiterals.backBtnImage, disabledImage: nil)
     
+    private let backgroundLottieView: LottieAnimationView = .init(name: "background")
+    
     // MARK: - View Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setData()
         setUI()
         setLayout()
-        setMission()
         setAddTarget()
         setCompleteButtonEnabled()
+        setMission()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -115,7 +129,11 @@ final class MissionProceedVC: UIViewController {
         // 화면을 빠져나가면 데시벨 모니터링 중단
         decibelManager.stopMonitoringDecibels()
     }
-  
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        setAnimation()
+    }
 }
 
 // MARK: - @objc Function
@@ -132,7 +150,14 @@ extension MissionProceedVC {
     }
     
     @objc private func completeMissionButtonDidTap() {
+        if missionType == 0 {   // 텍스트 미션일 경우
+            self.content = self.missionTextView.text
+        }
+        
+        self.patchTextOrDecibelMissionUpdate()
+        
         let missionCompleteVC = MissionCompleteVC()
+        missionCompleteVC.setData(missionType: self.missionType)
         self.navigationController?.fadeTo(missionCompleteVC)
     }
 }
@@ -140,14 +165,20 @@ extension MissionProceedVC {
 // MARK: - Methods
 
 extension MissionProceedVC {
-    private func setData() {
-        if missionType == 1 {
+    func setData(missionType: Int, missionTitle: String, id: Int) {
+        if missionType == 2 {
             self.missionTypeLabel.text = "데시벨 미션"
             self.missionImageView.image = ImageLiterals.missionImgDecibel
         } else {
             self.missionTypeLabel.text = "텍스트 미션"
             self.missionImageView.image = ImageLiterals.missionImgText
         }
+        
+        self.missionType = missionType
+        self.missionTitleLabel.text = missionTitle
+        missionTitleLabel.lineBreakMode = .byWordWrapping
+        missionTitleLabel.setLineSpacing(lineSpacing: 5)
+        self.id = id
     }
     
     func setAddTarget() {
@@ -156,7 +187,7 @@ extension MissionProceedVC {
     }
     
     private func setMission() {
-        if missionType == 1 { // 데시벨 미션일 경우
+        if missionType == 2 { // 데시벨 미션일 경우
             setDecibelVisualization()
         }
     }
@@ -202,6 +233,11 @@ extension MissionProceedVC {
         self.completeMissionButton.isHidden = false
         self.backButton.isHidden = false
     }
+    
+    private func setAnimation() {
+        backgroundLottieView.play()
+        backgroundLottieView.loopMode = .loop
+    }
 }
 
 // MARK: - UI & Layout
@@ -212,9 +248,17 @@ extension MissionProceedVC {
         self.containerView.backgroundColor = .disabled2.withAlphaComponent(0.6)
         self.horizontalDevidedView.backgroundColor = .font3
         self.circularDecibelProgressView.backgroundColor = .clear
+        customBlur.addBlurEffect(to: backgroundLottieView)
+        customBlur.setBlurIntensity(to: backgroundLottieView, intensity: 1)
     }
     
     private func setLayout() {
+        view.addSubviews(backgroundLottieView)
+        
+        backgroundLottieView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
+        
         view.addSubviews(naviBar, middleLabel, containerView)
         
         naviBar.snp.makeConstraints { make in
@@ -256,9 +300,10 @@ extension MissionProceedVC {
         missionTitleLabel.snp.makeConstraints { make in
             make.top.equalTo(horizontalDevidedView.snp.bottom).offset(10)
             make.leading.equalTo(missionTypeLabel.snp.leading)
+            make.trailing.equalToSuperview().inset(27)
         }
        
-        if missionType == 1 {
+        if missionType == 2 {
             setDecibelMissionLayout()
         } else {
             setTextMisisonLayout()
@@ -286,7 +331,7 @@ extension MissionProceedVC {
         containerView.addSubviews(circularDecibelProgressView, missionSubLabel, decibelValueStackView)
         
         circularDecibelProgressView.snp.makeConstraints { make in
-            make.top.equalTo(missionTitleLabel.snp.bottom).offset(52)
+            make.top.equalTo(missionTitleLabel.snp.bottom).offset(40)
             make.leading.trailing.equalToSuperview().inset(97)
             make.height.equalTo(circularDecibelProgressView.snp.width)
         }
@@ -321,6 +366,36 @@ extension MissionProceedVC {
         
         containerView.snp.makeConstraints { make in
             make.bottom.equalTo(missionTextView.snp.bottom).offset(40)
+        }
+    }
+}
+
+// MARK: - Network
+
+extension MissionProceedVC {
+    private func patchTextOrDecibelMissionUpdate() {
+        LoadingIndicator.showLoading()
+        missionProvider.request(.patchTextOrDecibelMissionUpdate(id: self.id, content: self.content)) { [weak self] response in
+            guard let self = self else { return }
+            LoadingIndicator.hideLoading()
+            switch response {
+            case .success(let result):
+                let status = result.statusCode
+                if 200..<300 ~= status {
+                    do {
+                        print("미션 수행 완료")
+                    } catch {
+                        print(error.localizedDescription)
+                    }
+                }
+                if status >= 400 {
+                    print("400 error")
+                    self.showNetworkFailureToast()
+                }
+            case .failure(let error):
+                print(error.localizedDescription)
+                self.showNetworkFailureToast()
+            }
         }
     }
 }

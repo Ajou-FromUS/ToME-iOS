@@ -10,19 +10,25 @@ import UIKit
 import SnapKit
 import Then
 import Lottie
+import Moya
 
 final class HomeMainVC: UIViewController {
     
+    // MARK: - Providers
+    
+    private let userProvider = Providers.userProvider
+    
     // MARK: - Properties
 
-    var isTalkedWithTo: Bool = true
+    var hasMissionToday = Bool() // 사용자가 오늘 미션을 했는가?
+    var nickname = String()
     
     // 햅틱 피드백 제너레이터
     let feedbackGenerator = UIImpactFeedbackGenerator(style: .light)
     
     // MARK: - UI Components
-    
-    private lazy var naviBar = CustomNavigationBar(self, type: .home).setUserName("세상에서제일귀여운몽이누나")
+
+    private lazy var naviBar = CustomNavigationBar(self, type: .home)
     
     private lazy var talkingWithToBubbleView = BubbleView(type: .talkingWithTO).then {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(talkingWithToBubbleViewDidTap))
@@ -50,19 +56,19 @@ final class HomeMainVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setNavibarAnimation()
         setUI()
         setLayout()
         setAddTarget()
         setHaptic()
+        setAnimation()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         self.hideTabBar(wantsToHide: false)
+        initClient()
         setBubbleViewAnimation()
         ToMEMusicManager.shared.playMusic(withTitle: "homeBackgroundMusic", loop: -1)   // 무한 반복
-        setAnimation()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -85,7 +91,7 @@ extension HomeMainVC {
         // 버튼이 눌릴 때 햅틱 피드백 제공
         feedbackGenerator.impactOccurred()
         ToMEMusicManager.shared.playMusicWithTimeInterval(forTitle: "bubble", duration: 2)
-        if isTalkedWithTo {
+        if hasMissionToday {
             let missionMainVC = MissionMainVC()
             self.navigationController?.fadeTo(missionMainVC)
         } else {
@@ -185,6 +191,41 @@ extension HomeMainVC {
             make.top.equalToSuperview().inset(94)
             make.leading.trailing.equalTo(view.safeAreaLayoutGuide).inset(27)
             make.height.equalTo(65)
+        }
+    }
+}
+
+// MARK: - Network
+
+extension HomeMainVC {
+    private func initClient() {
+        LoadingIndicator.showLoading()
+        userProvider.request(.initClient) { [weak self] response in
+            guard let self = self else { return }
+            LoadingIndicator.hideLoading()
+            switch response {
+            case .success(let result):
+                let status = result.statusCode
+                if 200..<300 ~= status {
+                    do {
+                        let responseDto = try result.map(initClientDto.self)
+                        self.nickname = responseDto.data.nickname
+                        self.hasMissionToday = responseDto.data.hasMissionToday
+                        UserManager.shared.nickname = self.nickname
+                        self.naviBar.setUserName(self.nickname)
+                        setNavibarAnimation()
+                    } catch {
+                        print(error.localizedDescription)
+                    }
+                }
+                if status >= 400 {
+                    print("400 error")
+                    self.showNetworkFailureToast()
+                }
+            case .failure(let error):
+                print(error.localizedDescription)
+                self.showNetworkFailureToast()
+            }
         }
     }
 }

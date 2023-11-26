@@ -29,6 +29,8 @@ final class MissionMainVC: UIViewController {
     
     var completedMissionCount: Int = 0
     
+    var idList = [Int]()
+    
     // MARK: - UI Components
     
     private lazy var naviBar = CustomNavigationBar(self, type: .singleTitle).setTitle("미션")
@@ -39,6 +41,7 @@ final class MissionMainVC: UIViewController {
     private lazy var missionTableView = UITableView().then {
         $0.translatesAutoresizingMaskIntoConstraints = false
         $0.separatorStyle = .none
+        $0.isScrollEnabled = false
     }
     
     private let backgroundLottieView: LottieAnimationView = .init(name: "background")
@@ -122,7 +125,7 @@ extension MissionMainVC {
         }
         
         missionTableView.snp.makeConstraints { make in
-            make.top.equalTo(currentMissionCompleteView.snp.bottom).offset(30)
+            make.top.equalTo(currentMissionCompleteView.snp.bottom).offset(10)
             make.leading.trailing.equalTo(view.safeAreaLayoutGuide).inset(27)
             make.height.equalTo(3 * 94 + 20)
         }
@@ -137,12 +140,15 @@ extension MissionMainVC: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let cell = tableView.cellForRow(at: indexPath) as? MissionTableViewCell else { return }
-        guard let selectedRecords = tableView.indexPathsForSelectedRows else { return }
+        guard tableView.cellForRow(at: indexPath) is MissionTableViewCell else { return }
+        guard tableView.indexPathsForSelectedRows != nil else { return }
             
         // 미션 상세 페이지로 이동
         let missionDetailVC = MissionDetailVC()
-        missionDetailVC.setData(missionType: self.missionList[indexPath.row].type, missionTitle: self.missionList[indexPath.row].title)
+        missionDetailVC.setData(missionType: self.missionList[indexPath.row].type, 
+                                missionTitle: self.missionList[indexPath.row].title,
+                                completedMissionCount: self.completedMissionCount,
+                                id: self.idList[indexPath.row])
         self.navigationController?.fadeTo(missionDetailVC)
     }
 }
@@ -157,7 +163,7 @@ extension MissionMainVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let missionTableViewCell = tableView.dequeueReusableCell(withIdentifier: MissionTableViewCell.className, for: indexPath)
                     as? MissionTableViewCell else { return UITableViewCell() }
-        missionTableViewCell.setData(model: missionList[indexPath.row])
+        missionTableViewCell.setData(model: missionList[indexPath.row], idList: self.idList)
         missionTableViewCell.backgroundColor = .clear
         missionTableViewCell.selectionStyle = .none
         return missionTableViewCell
@@ -180,7 +186,7 @@ extension MissionMainVC {
                     do {
                         let responseDto = try result.map(GetTotalMissionResponseDto.self)
                         let missionListArray = responseDto.data.map { $0.mission ?? MissionList(id: 0, type: -1, title: "미션이 존재하지 않아요.", content: String(), emotion: 0) }
-                        print("Mission List Array: \(missionListArray)")
+                        self.idList = responseDto.data.compactMap { $0.id }
                         self.completedMissionCount = responseDto.data.filter { $0.isCompleted == true }.count
                         self.setMissionData(missionList: missionListArray)
                         self.currentMissionCompleteView.changeNumberOfCompleteMission(self.completedMissionCount)

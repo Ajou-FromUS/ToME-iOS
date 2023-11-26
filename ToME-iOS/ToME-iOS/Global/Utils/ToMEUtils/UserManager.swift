@@ -22,6 +22,7 @@ final class UserManager {
     
     @UserDefaultWrapper<String>(key: "accessToken") public var accessToken
     @UserDefaultWrapper<String>(key: "refreshToken") public var refreshToken
+    @UserDefaultWrapper<String>(key: "nickname") public var nickname
 
     var hasAccessToken: Bool { return self.accessToken != nil }
     

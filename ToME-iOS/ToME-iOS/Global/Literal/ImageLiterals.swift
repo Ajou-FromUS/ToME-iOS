@@ -33,8 +33,6 @@ enum ImageLiterals {
     static var homeIcArchive: UIImage { .load(named: "home_ic_archive") }
     static var homeIcConversationFill: UIImage { .load(named: "home_ic_conversation_fill") }
     static var homeIcConversation: UIImage { .load(named: "home_ic_conversation") }
-    static var homeIcDiaryFill: UIImage { .load(named: "home_ic_diary_fill") }
-    static var homeIcDiary: UIImage { .load(named: "home_ic_diary") }
     static var homeIcHome: UIImage { .load(named: "home_ic_home") }
     static var homeIcHomeFill: UIImage { .load(named: "home_ic_home_fill") }
     static var homeBtnMissionAlarm: UIImage { .load(named: "home_btn_mission_alarm") }
@@ -67,6 +65,10 @@ enum ImageLiterals {
     static var missionCount1: UIImage { .load(named: "mission_count_1") }
     static var missionCount2: UIImage { .load(named: "mission_count_2") }
     static var missionCount3: UIImage { .load(named: "mission_count_3") }
+    static var missionIcDecibelFill: UIImage { .load(named: "mission_ic_decibel_fill") }
+    static var missionIcDecibel: UIImage { .load(named: "mission_ic_decibel") }
+    static var missionIcTextFill: UIImage { .load(named: "mission_ic_text_fill") }
+    static var missionIcText: UIImage { .load(named: "mission_ic_text") }
     static var missionImgTextBorder: UIImage { .load(named: "mission_img_text_border") }
     static var missionImgDecibelRectangle: UIImage { .load(named: "mission_img_decibel_rectangle") }
     static var missionImgDecibel: UIImage { .load(named: "mission_img_decibel") }

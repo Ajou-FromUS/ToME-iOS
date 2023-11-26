@@ -21,6 +21,7 @@ struct GetTotalMissionResponseDto: Codable {
 }
 
 // MARK: - Datum
+
 struct Datum: Codable {
     let uid, missionID: Int?
     let isCompleted: Bool?
@@ -42,6 +43,7 @@ struct Datum: Codable {
 }
 
 // MARK: - MissionList
+
 struct MissionList: Codable {
     let id, type: Int
     let title: String

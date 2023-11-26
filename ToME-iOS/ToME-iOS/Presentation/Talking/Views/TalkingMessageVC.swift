@@ -77,14 +77,22 @@ final class TalkingMessageVC: MessagesViewController {
         }
             
         // 각 셀 설정
-        if let layout = messagesCollectionView.collectionViewLayout as? MessagesCollectionViewFlowLayout {
-            layout.setMessageOutgoingAvatarSize(.zero)
-            layout.setMessageIncomingAvatarSize(CGSize(width: 35, height: 35))
-            layout.setMessageIncomingAvatarPosition(.init(horizontal: .cellLeading, vertical: .messageBottom))
-            layout.setMessageOutgoingMessageTopLabelAlignment(LabelAlignment(textAlignment: .right, textInsets: .zero))
-            layout.setMessageIncomingMessageTopLabelAlignment(LabelAlignment(textAlignment: .left, textInsets: .zero))
-            layout.sectionHeadersPinToVisibleBounds = true
-        }
+            if let layout = messagesCollectionView.collectionViewLayout as? MessagesCollectionViewFlowLayout {
+                layout.setMessageOutgoingAvatarSize(.zero)
+                layout.setMessageIncomingAvatarSize(CGSize(width: 35, height: 35))
+                layout.setMessageIncomingAvatarPosition(.init(horizontal: .cellLeading, vertical: .messageBottom))
+                layout.setMessageOutgoingMessageTopLabelAlignment(LabelAlignment(textAlignment: .right, textInsets: .zero))
+                layout.setMessageIncomingMessageTopLabelAlignment(LabelAlignment(textAlignment: .left, textInsets: .zero))
+                layout.sectionHeadersPinToVisibleBounds = true
+                
+                // 1. 아이템의 크기 설정
+//                layout.itemSize = CGSize(width: messagesCollectionView.bounds.width - 20, height: 100)
+
+                // 2. 콘텐츠와 인셋 고려
+                let contentInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+                layout.sectionInset = contentInset
+                layout.minimumLineSpacing = 10
+            }
 
         configureMessagesCollectionView()
         configureMessageInputBar()
@@ -92,13 +100,11 @@ final class TalkingMessageVC: MessagesViewController {
             // MessagesCollectionView에 사용자 지정 셀 등록
         self.messagesCollectionView.backgroundColor = .clear
         self.messagesCollectionView.register(CustomMessageCell.self)
-        self.messagesCollectionView.contentInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
-            
-        // MessagesFlowLayout에서도 회전 적용
-    
+                
         view.backgroundColor = .white
         
         firstToDefaultMessage()
+        addTapGesture()
     }
 }
 
@@ -152,7 +158,7 @@ extension TalkingMessageVC {
     }
     
     private func firstToDefaultMessage() {
-        let text = "안녕, 재현 님. 오늘 하루는 어떠셨는지 제게 알려주세요."
+        let text = "안녕, 재현 님.\n오늘 하루는 어떠셨는지 제게 알려주세요."
         
         insertToMessage(text: text)
         postUsersContent(message: nil)
@@ -290,7 +296,7 @@ extension TalkingMessageVC: MessagesDisplayDelegate {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         if section == 0 {
             // 첫 번째 섹션에 대한 inset 설정
-            return UIEdgeInsets(top: 130, left: 8, bottom: 0, right: 8)
+            return UIEdgeInsets(top: 150, left: 8, bottom: 0, right: 8)
         } else {
             // 나머지 섹션에 대한 inset 설정
             return UIEdgeInsets(top: 0, left: 8, bottom: 0, right: 8)

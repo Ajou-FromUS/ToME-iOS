@@ -9,10 +9,19 @@ import UIKit
 
 import SnapKit
 import Then
+import Moya
 
 final class StatisticsMainVC: UIViewController {
     
+    // MARK: - Provider
+    
+    private let statisticsProvider = Providers.statisticsProvider
+    
     // MARK: - Properties
+    
+    private let currentYearAndMonth = ToMETimeFormatter.getYearAndMonthToHipenString(date: Date())
+    
+    private var statisticsData: monthlyStatisticsData?
     
     // MARK: - UI Components
     
@@ -34,11 +43,24 @@ final class StatisticsMainVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        getMonthlyStatistics(yearAndMonth: self.currentYearAndMonth)
         setUI()
         setLayout()
         setDelegate()
         register()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+       super.viewDidAppear(animated)
+       
+       setTabBarBackgroundColor(.white)
+   }
+   
+   override func viewWillDisappear(_ animated: Bool) {
+       super.viewWillDisappear(animated)
+       
+       setTabBarBackgroundColor(.clear)
+   }
 }
 
 // MARK: - Methods
@@ -58,6 +80,13 @@ extension StatisticsMainVC {
                                                forCellWithReuseIdentifier: MonthlyEmotionAnalysisCVC.className)
         self.statisticsCollectionView.register(MissionPerformanceStatusCVC.self,
                                                forCellWithReuseIdentifier: MissionPerformanceStatusCVC.className)
+    }
+    
+    
+    private func setTabBarBackgroundColor(_ color: UIColor) {
+        if let tabBarController = tabBarController as? TabBarController {
+            tabBarController.tabBar.backgroundColor = color
+        }
     }
 }
 
@@ -123,6 +152,7 @@ extension StatisticsMainVC: UICollectionViewDataSource {
         switch section {
         case 0:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SelectMonthCVC.className, for: indexPath) as? SelectMonthCVC else { return UICollectionViewCell()}
+            
             cell.didSelectMonthButton = { [weak self] in
                 let datePickerPopUpVC = CustomDatePickerPopUpVC(title: "월 선택")
                 datePickerPopUpVC.modalPresentationStyle = .overFullScreen
@@ -131,20 +161,59 @@ extension StatisticsMainVC: UICollectionViewDataSource {
                 datePickerPopUpVC.setCompletionClosure { selectedDate in
                     let yearSubstring = ToMETimeFormatter.getYearToString(date: selectedDate)
                     let monthSubstring = ToMETimeFormatter.getMonthToString(date: selectedDate)
-                    
                     cell.setTitleLabel(year: String(yearSubstring), month: String(monthSubstring))
+                    self?.getMonthlyStatistics(yearAndMonth: "\(yearSubstring)-\(monthSubstring)")
                 }
             }
             return cell
         case 1:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MonthlyKeywordAnalysisCVC.className, for: indexPath) as? MonthlyKeywordAnalysisCVC else { return UICollectionViewCell()}
+            guard let statisticsData = self.statisticsData else { return cell }
+            cell.setData(image: statisticsData.keywordCloudImageURL)
             return cell
         case 2:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MonthlyEmotionAnalysisCVC.className, for: indexPath) as? MonthlyEmotionAnalysisCVC else { return UICollectionViewCell()}
+            guard let statisticsData = self.statisticsData else { return cell }
+            cell.setData(model: statisticsData.emotionPercentages)
             return cell
         default:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MissionPerformanceStatusCVC.className, for: indexPath) as? MissionPerformanceStatusCVC else { return UICollectionViewCell()}
+            guard let statisticsData = self.statisticsData else { return cell }
+            cell.setData(list: statisticsData.completedMissionCounts)
             return cell
+        }
+    }
+}
+
+// MARK: - Network
+
+extension StatisticsMainVC {
+    private func getMonthlyStatistics(yearAndMonth: String) {
+        LoadingIndicator.showLoading()
+        statisticsProvider.request(.getMonthlyStatistic(yearAndMonth: yearAndMonth)) { [weak self] response in
+            guard let self = self else { return }
+            LoadingIndicator.hideLoading()
+            switch response {
+            case .success(let result):
+                let status = result.statusCode
+                if 200..<300 ~= status {
+                    do {
+                        let responseDto = try result.map(getMonthlyStatisticsDto.self)
+                        let data = responseDto.data
+                        self.statisticsData = data
+                        statisticsCollectionView.reloadData()
+                    } catch {
+                        print(error.localizedDescription)
+                    }
+                }
+                if status >= 400 {
+                    print("400 error")
+                    self.showNetworkFailureToast()
+                }
+            case .failure(let error):
+                print(error.localizedDescription)
+                self.showNetworkFailureToast()
+            }
         }
     }
 }
