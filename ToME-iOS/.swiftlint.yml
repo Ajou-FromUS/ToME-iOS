@@ -1,0 +1,17 @@
+disabled_rules:
+  - trailing_whitespace
+  - identifier_name
+  - line_length
+  - type_name
+  - legacy_constructor
+  - unused_setter_value
+
+included:
+  - ToME-iOS
+excluded:
+  # AppDelegate, SceneDelegate file 무시
+  - ToME-iOS/Global/Supports/AppDelegate.swift
+  - ToME-iOS/Global/Supports/SceneDelegate.swift
+
+force_cast: warning
+
