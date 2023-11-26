@@ -27,15 +27,13 @@ final class MissionDetailVC: UIViewController {
     var missionType = Int()
     
     var id = Int()
-    
+        
     var startMissionButtonTitle: String = "미션 수행하러 가기"
     
     var backButtonTitle: String = "다른 미션 보러가기"
     
     var completedMissionCount = Int()
-    
-    var imageData = NSData()
-            
+                
     // MARK: - UI Components
     
     private lazy var naviBar = CustomNavigationBar(self, type: .singleTitle).setTitle("미션")
@@ -113,15 +111,7 @@ extension MissionDetailVC {
             // 버튼을 완료 버튼으로 바꿔주기 위한 부분
             self.startMissionButton.isHidden = true
             self.setShowToToButtonLayout()
-            
-            // croppedImage를 Data로 변환
-            guard let imageData = croppedImage.jpegData(compressionQuality: 0.8) else {
-                print("Failed to convert image to data.")
-                return
-            }
-            
-            self.imageData = imageData as NSData  // UIImage를 NSData로 변환
-                        
+                                    
             self.missionImageView.image = croppedImage
             self.missionImageView.layer.cornerRadius = 10
             self.currentMissionCompleteView.isHidden = true
@@ -150,7 +140,7 @@ extension MissionDetailVC {
     }
     
     @objc private func showToToButtonDidTap() {
-//        self.patchImageMissionUpdate()
+        self.patchImageMissionUpdate()
         let missionCompleteVC = MissionCompleteVC()
         missionCompleteVC.setData(missionType: self.missionType)
         self.navigationController?.fadeTo(missionCompleteVC)
@@ -316,7 +306,7 @@ extension MissionDetailVC {
 extension MissionDetailVC {
     private func patchImageMissionUpdate() {
         LoadingIndicator.showLoading()
-        missionProvider.request(.patchImageMissionUpdate(id: self.id, missionImage: self.imageData)) { [weak self] response in
+        missionProvider.request(.patchImageMissionUpdate(id: self.id, missionImage: self.missionImageView.image ?? UIImage())) { [weak self] response in
             guard let self = self else { return }
             LoadingIndicator.hideLoading()
             switch response {
