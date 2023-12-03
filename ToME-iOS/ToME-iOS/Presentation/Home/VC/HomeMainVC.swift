@@ -111,10 +111,6 @@ extension HomeMainVC {
         todaysMissionBubbleView.layer.add(floatingAnimation, forKey: "floatingAnimation")
     }
     
-    private func setNavibarAnimation() {
-        ToMEAnimationManager.createSequentialTextAnimation(label: naviBar.centerTitleLabel, text: naviBar.centerTitleLabel.text ?? String())
-    }
-    
     private func setHaptic() {
         // 햅틱 피드백 준비
         feedbackGenerator.prepare()
@@ -213,7 +209,6 @@ extension HomeMainVC {
                         self.hasMissionToday = responseDto.data.hasMissionToday
                         UserManager.shared.nickname = self.nickname
                         self.naviBar.setUserName(self.nickname)
-                        setNavibarAnimation()
                     } catch {
                         print(error.localizedDescription)
                     }
