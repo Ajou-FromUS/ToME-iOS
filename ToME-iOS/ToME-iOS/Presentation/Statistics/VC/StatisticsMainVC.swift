@@ -82,7 +82,6 @@ extension StatisticsMainVC {
                                                forCellWithReuseIdentifier: MissionPerformanceStatusCVC.className)
     }
     
-    
     private func setTabBarBackgroundColor(_ color: UIColor) {
         if let tabBarController = tabBarController as? TabBarController {
             tabBarController.tabBar.backgroundColor = color

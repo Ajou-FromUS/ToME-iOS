@@ -22,6 +22,12 @@ final class MonthlyKeywordAnalysisCVC: UICollectionViewCell {
     
     private lazy var monthlyKeywordImage = UIImageView()
     
+    private let emptyLabel = UILabel().then {
+        $0.text = "키워드 분석은 2일 이상 티오와 대화해야 볼 수 있어요."
+        $0.font = .body2
+        $0.textColor = .font2
+    }
+    
     // MARK: - Life Cycles
     
     override init(frame: CGRect) {
@@ -39,7 +45,11 @@ final class MonthlyKeywordAnalysisCVC: UICollectionViewCell {
 
 extension MonthlyKeywordAnalysisCVC {
     func setData(image: String) {
-        self.monthlyKeywordImage.setImage(with: image)
+        self.monthlyKeywordImage.setImage(with: image, accessDeniedHandler: {
+            print("Access denied")
+            self.monthlyKeywordImage.isHidden = true
+            self.setEmptyLayout()
+        })
     }
 }
 
@@ -64,6 +74,14 @@ extension MonthlyKeywordAnalysisCVC {
             make.height.equalTo(155)
             make.width.equalTo(206)
             make.bottom.equalToSuperview().inset(30)
+        }
+    }
+    
+    private func setEmptyLayout() {
+        self.addSubviews(emptyLabel)
+        
+        emptyLabel.snp.makeConstraints { make in
+            make.center.equalToSuperview()
         }
     }
 }

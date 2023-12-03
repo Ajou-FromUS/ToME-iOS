@@ -9,26 +9,29 @@ import UIKit
 import Kingfisher
 
 public extension UIImageView {
-    func setImage(with urlString: String, placeholder: String? = nil, completion: ((UIImage?) -> Void)? = nil) {
-        let cache = ImageCache.default
-        if urlString == "" {
-            // URL 빈 이미지로 넘겨 받았을 경우, 아래에 UIImage에 기본 사진을 추가 하면 된다.
-            self.image = UIImage()
-        } else {
-            cache.retrieveImage(forKey: urlString) { result in
-                result.success { imageCache in
-                    if let image = imageCache.image {
-                        self.image = image
-                        completion?(image)
-                    } else {
-                        self.setNewImage(with: urlString, placeholder: placeholder, completion: completion)
-                    }
-                }.catch { _ in
-                    self.setNewImage(with: urlString, placeholder: placeholder, completion: completion)
-                }
-            }
-        }
-    }
+    func setImage(with urlString: String, placeholder: String? = nil,
+                  completion: ((UIImage?) -> Void)? = nil, accessDeniedHandler: (() -> Void)? = nil) {
+         let cache = ImageCache.default
+         if urlString == "" {
+             // URL 빈 이미지로 넘겨 받았을 경우, 아래에 UIImage에 기본 사진을 추가 하면 된다.
+             self.image = UIImage()
+         } else {
+             cache.retrieveImage(forKey: urlString) { result in
+                 result.success { imageCache in
+                     if let image = imageCache.image {
+                         self.image = image
+                         completion?(image)
+                     } else {
+                         accessDeniedHandler?() // Access denied 시 처리
+//                         self.setNewImage(with: urlString, placeholder: placeholder, completion: completion)
+                     }
+                 }.catch { _ in
+                     self.setNewImage(with: urlString, placeholder: placeholder, completion: completion)
+                     
+                 }
+             }
+         }
+     }
     
     private func setNewImage(with urlString: String, placeholder: String? = "img_placeholder", completion: ((UIImage?) -> Void)? = nil) {
         guard let url = URL(string: urlString) else { return }

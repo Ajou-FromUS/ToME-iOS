@@ -28,7 +28,6 @@
 		A30FDEDF2AF93F460088D98E /* MissionCompleteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30FDEDE2AF93F460088D98E /* MissionCompleteVC.swift */; };
 		A30FDEE22AF9DA4D0088D98E /* MissionProceedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30FDEE12AF9DA4D0088D98E /* MissionProceedVC.swift */; };
 		A30FDEE82AF9F84A0088D98E /* ToMEDecibelMananger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30FDEE72AF9F84A0088D98E /* ToMEDecibelMananger.swift */; };
-		A330D3F02AC0342800C1CC22 /* TalkingDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A330D3EF2AC0342800C1CC22 /* TalkingDetailVC.swift */; };
 		A330D3F32AC0362800C1CC22 /* MessageKit in Frameworks */ = {isa = PBXBuildFile; productRef = A330D3F22AC0362800C1CC22 /* MessageKit */; };
 		A330D3F52AC29D4E00C1CC22 /* TalkingMessageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A330D3F42AC29D4E00C1CC22 /* TalkingMessageVC.swift */; };
 		A330D3F72AC2A26900C1CC22 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = A330D3F62AC2A26900C1CC22 /* Message.swift */; };
@@ -175,7 +174,6 @@
 		A30FDEDE2AF93F460088D98E /* MissionCompleteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionCompleteVC.swift; sourceTree = "<group>"; };
 		A30FDEE12AF9DA4D0088D98E /* MissionProceedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionProceedVC.swift; sourceTree = "<group>"; };
 		A30FDEE72AF9F84A0088D98E /* ToMEDecibelMananger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToMEDecibelMananger.swift; sourceTree = "<group>"; };
-		A330D3EF2AC0342800C1CC22 /* TalkingDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkingDetailVC.swift; sourceTree = "<group>"; };
 		A330D3F42AC29D4E00C1CC22 /* TalkingMessageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkingMessageVC.swift; sourceTree = "<group>"; };
 		A330D3F62AC2A26900C1CC22 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		A330D3FB2AC2D44E00C1CC22 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
@@ -887,7 +885,7 @@
 			isa = PBXGroup;
 			children = (
 				A39295722A52D7B800436A4F /* .gitkeep */,
-				A330D3EF2AC0342800C1CC22 /* TalkingDetailVC.swift */,
+				A330D3F42AC29D4E00C1CC22 /* TalkingMessageVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -896,7 +894,6 @@
 			isa = PBXGroup;
 			children = (
 				A39295702A52D7AD00436A4F /* .gitkeep */,
-				A330D3F42AC29D4E00C1CC22 /* TalkingMessageVC.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1126,7 +1123,6 @@
 				A3CF55F62A5BCB8A00D19F00 /* UserDefaultWrapper.swift in Sources */,
 				A3E4D3072A5BF04300C7611C /* HomeMainVC.swift in Sources */,
 				A30FDECB2AF7F80A0088D98E /* MissionMainVC.swift in Sources */,
-				A330D3F02AC0342800C1CC22 /* TalkingDetailVC.swift in Sources */,
 				A3F7F0D32AFFF82000DFCC3E /* ToMEMusicManager.swift in Sources */,
 				A3CF55DC2A5BCA5C00D19F00 /* calculateStatusBarHeight.swift in Sources */,
 				A3CF55AC2A5BBF1000D19F00 /* UITextView+.swift in Sources */,
