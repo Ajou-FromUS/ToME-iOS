@@ -22,7 +22,6 @@ class ToMEDecibelMananger: NSObject, AVAudioRecorderDelegate {
     
     override init() {
         super.init()
-        requestAudioAuthorization()
     }
     
     // MARK: - Methods

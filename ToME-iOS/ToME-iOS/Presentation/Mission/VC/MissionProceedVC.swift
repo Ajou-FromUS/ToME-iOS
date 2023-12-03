@@ -188,6 +188,7 @@ extension MissionProceedVC {
     
     private func setMission() {
         if missionType == 2 { // 데시벨 미션일 경우
+            decibelManager.requestAudioAuthorization()
             setDecibelVisualization()
         }
     }
