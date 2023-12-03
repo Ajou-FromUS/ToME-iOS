@@ -108,6 +108,8 @@ final class TalkingMessageVC: MessagesViewController {
     }
 }
 
+// MARK: - Methods
+
 extension TalkingMessageVC {
     private func configureMessagesCollectionView() {
         messagesCollectionView.messagesDataSource = self
@@ -194,12 +196,30 @@ extension TalkingMessageVC {
             self.messagesCollectionView.scrollToLastItem(animated: true)
         }
     }
+    
     func isLastSectionVisible() -> Bool {
       guard !messages.isEmpty else { return false }
 
       let lastIndexPath = IndexPath(item: 0, section: messages.count - 1)
 
       return messagesCollectionView.indexPathsForVisibleItems.contains(lastIndexPath)
+    }
+    
+    
+    private func setMissionCountImageView(missionCount: Int) {
+        if self.missionCount != missionCount {
+            
+            switch missionCount {
+            case 0:
+                self.missionProgressImageView.image = ImageLiterals.missionCount0
+            case 1:
+                self.missionProgressImageView.image = ImageLiterals.missionCount1
+            case 2:
+                self.missionProgressImageView.image = ImageLiterals.missionCount2
+            default:
+                self.missionProgressImageView.image = ImageLiterals.missionCount3
+            }
+        }
     }
 }
 
@@ -337,9 +357,11 @@ extension TalkingMessageVC: InputBarAccessoryViewDelegate {
 extension TalkingMessageVC {
     private func postUsersContent(message: String?) {
         setTypingIndicator(isHidden: false)
+        self.messageInputBar.isUserInteractionEnabled = false
         chatbotProvider.request(.sendMessage(content: message ?? nil)) { [weak self] response in
             guard let self = self else { return }
             setTypingIndicator(isHidden: true)
+            self.messageInputBar.isUserInteractionEnabled = true
             switch response {
             case .success(let result):
                 let status = result.statusCode
@@ -365,22 +387,6 @@ extension TalkingMessageVC {
             case .failure(let error):
                 print(error.localizedDescription)
                 self.showNetworkFailureToast()
-            }
-        }
-    }
-    
-    private func setMissionCountImageView(missionCount: Int) {
-        if self.missionCount != missionCount {
-            
-            switch missionCount {
-            case 0:
-                self.missionProgressImageView.image = ImageLiterals.missionCount0
-            case 1:
-                self.missionProgressImageView.image = ImageLiterals.missionCount1
-            case 2:
-                self.missionProgressImageView.image = ImageLiterals.missionCount2
-            default:
-                self.missionProgressImageView.image = ImageLiterals.missionCount3
             }
         }
     }
