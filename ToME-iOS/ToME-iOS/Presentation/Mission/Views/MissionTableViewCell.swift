@@ -53,7 +53,7 @@ class MissionTableViewCell: UITableViewCell {
 // MARK: - Methods
 
 extension MissionTableViewCell {
-    func setData(model: MissionList, idList: [Int]) {
+    func setData(model: MissionList, idList: [Int], isCompleted: Bool) {
         if model.type == 0 {
             missionTypeLabel.text = "텍스트 미션"
             missionImageView.image = ImageLiterals.missionImgText
@@ -72,6 +72,20 @@ extension MissionTableViewCell {
         missionTitleLabel.lineBreakMode = .byWordWrapping
         missionTitleLabel.setLineSpacing(lineSpacing: 3)
         setLayout(missionType: model.type)
+        
+        if isCompleted {
+            isMissionCompleted()
+        }
+    }
+    
+    func isMissionCompleted() {
+        self.isUserInteractionEnabled = false
+        self.missionImageView.image = ImageLiterals.missionImgCompletde
+        self.containerView.backgroundColor = .sub1
+        self.containerView.layer.borderColor = UIColor.mainColor.cgColor
+        self.containerView.layer.borderWidth = 1
+        self.missionTypeLabel.textColor = .font4
+        self.horizontalDevidedView.backgroundColor = .font4
     }
 }
 
@@ -124,7 +138,7 @@ extension MissionTableViewCell {
         }
         
         horizontalDevidedView.snp.makeConstraints { make in
-            make.top.equalTo(missionTypeLabel.snp.bottom).offset(6)
+            make.top.equalTo(missionTypeLabel.snp.bottom).offset(5)
             make.leading.equalTo(missionTypeLabel.snp.leading)
             make.height.equalTo(0.5)
             make.width.equalTo(97)

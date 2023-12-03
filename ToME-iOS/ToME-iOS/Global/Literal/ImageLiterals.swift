@@ -69,6 +69,7 @@ enum ImageLiterals {
     static var missionIcDecibel: UIImage { .load(named: "mission_ic_decibel") }
     static var missionIcTextFill: UIImage { .load(named: "mission_ic_text_fill") }
     static var missionIcText: UIImage { .load(named: "mission_ic_text") }
+    static var missionImgCompletde: UIImage { .load(named: "mission_img_completed") }
     static var missionImgTextBorder: UIImage { .load(named: "mission_img_text_border") }
     static var missionImgDecibelRectangle: UIImage { .load(named: "mission_img_decibel_rectangle") }
     static var missionImgDecibel: UIImage { .load(named: "mission_img_decibel") }

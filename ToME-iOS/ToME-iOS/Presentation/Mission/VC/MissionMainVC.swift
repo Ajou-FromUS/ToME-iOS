@@ -28,6 +28,8 @@ final class MissionMainVC: UIViewController {
     var missionList = [MissionList]()
     
     var completedMissionCount: Int = 0
+
+    var completedMissionList = [Bool]()
     
     var idList = [Int]()
     
@@ -163,7 +165,9 @@ extension MissionMainVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let missionTableViewCell = tableView.dequeueReusableCell(withIdentifier: MissionTableViewCell.className, for: indexPath)
                     as? MissionTableViewCell else { return UITableViewCell() }
-        missionTableViewCell.setData(model: missionList[indexPath.row], idList: self.idList)
+        missionTableViewCell.setData(model: missionList[indexPath.row], 
+                                     idList: self.idList,
+                                     isCompleted: completedMissionList[indexPath.row])
         missionTableViewCell.backgroundColor = .clear
         missionTableViewCell.selectionStyle = .none
         return missionTableViewCell
@@ -188,6 +192,7 @@ extension MissionMainVC {
                         let missionListArray = responseDto.data.map { $0.mission ?? MissionList(id: 0, type: -1, title: "미션이 존재하지 않아요.", content: String(), emotion: 0) }
                         self.idList = responseDto.data.compactMap { $0.id }
                         self.completedMissionCount = responseDto.data.filter { $0.isCompleted == true }.count
+                        self.completedMissionList = responseDto.data.compactMap { $0.isCompleted }
                         self.setMissionData(missionList: missionListArray)
                         self.currentMissionCompleteView.changeNumberOfCompleteMission(self.completedMissionCount)
                     } catch { 
