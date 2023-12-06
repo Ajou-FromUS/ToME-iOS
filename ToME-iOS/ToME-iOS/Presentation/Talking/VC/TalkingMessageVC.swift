@@ -160,7 +160,8 @@ extension TalkingMessageVC {
     }
     
     private func firstToDefaultMessage() {
-        let text = "안녕, 재현 님.\n오늘 하루는 어떠셨는지 제게 알려주세요."
+        guard let nickname = UserManager.shared.nickname else { return }
+        let text = "안녕, \(nickname) 님.\n오늘 하루는 어떠셨는지 제게 알려주세요."
         
         insertToMessage(text: text)
         postUsersContent(message: nil)

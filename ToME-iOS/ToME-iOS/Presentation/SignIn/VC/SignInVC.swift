@@ -12,15 +12,17 @@ import SnapKit
 import Moya
 import SafariServices
 
+@frozen
+enum LoginType {
+    case kakao
+    case apple
+}
+
 final class SignInVC: UIViewController {
     
     // MARK: - Providers
     
     private let userProvider = Providers.userProvider
-    
-    // MARK: - Properties
-
-    private var isProcessingRedirect = false
     
     // MARK: - UI Components
     
@@ -58,7 +60,7 @@ final class SignInVC: UIViewController {
     private lazy var appleLoginButton = CustomButton(title: "Apple로 로그인", type: .fillWithBlue).then {
         $0.setColor(bgColor: UIColor(hex: "232323"), disableColor: .disabled1, titleColor: .white)
     }
-    
+        
     // MARK: - View Life Cycle
 
     override func viewDidLoad() {
@@ -73,7 +75,11 @@ final class SignInVC: UIViewController {
 
 extension SignInVC {
     @objc func touchUpKakaoLoginButton() {
-        pushToFuroKakaoLoginVC()
+        pushToFuroLoginVC(type: .kakao)
+    }
+    
+    @objc func touchUpAppleLoginButton() {
+//        pushToFuroLoginVC(type: .apple)
     }
 }
 
@@ -82,13 +88,24 @@ extension SignInVC {
 extension SignInVC {
     private func setAddTarget() {
         self.kakaoLoginButton.addTarget(self, action: #selector(touchUpKakaoLoginButton), for: .touchUpInside)
+        self.appleLoginButton.addTarget(self, action: #selector(touchUpAppleLoginButton), for: .touchUpInside)
     }
 
-    private func pushToFuroKakaoLoginVC() {
-        let kakaoFuroLoginUrl = NSURL(string: Config.kakaoFuroLoginURL)
-        lazy var kakaoLoginVC: SFSafariViewController = SFSafariViewController(url: kakaoFuroLoginUrl! as URL)
-        kakaoLoginVC.delegate = self
-        self.present(kakaoLoginVC, animated: true, completion: nil)
+    private func pushToFuroLoginVC(type: LoginType) {
+        switch type {
+        case .kakao:
+            let furoLoginUrl = NSURL(string: Config.kakaoFuroLoginURL)
+            lazy var furoLoginVC: SFSafariViewController = SFSafariViewController(url: furoLoginUrl! as URL)
+            furoLoginVC.delegate = self
+            self.present(furoLoginVC, animated: true, completion: nil)
+
+        case .apple:
+            return
+//            let furoLoginUrl = NSURL(string: Config.appleFuroLoginURL)
+//            lazy var furoLoginVC: SFSafariViewController = SFSafariViewController(url: furoLoginUrl! as URL)
+//            furoLoginVC.delegate = self
+//            self.present(furoLoginVC, animated: true, completion: nil)
+        }
     }
     
     private func pushToTabBarController() {
@@ -96,6 +113,11 @@ extension SignInVC {
         guard let window = self.view.window else { return }
         ViewControllerUtils.setRootViewController(window: window, viewController: tabBarController,
                                                   withAnimation: true)
+    }
+    
+    private func pushToRegisterVC() {
+        let registerVC = RegisterVC()
+        self.navigationController?.pushViewController(registerVC, animated: false)
     }
     
     /// 로그인 통신
@@ -115,12 +137,11 @@ extension SignInVC {
                     if let responseJSON = responseJSON as? [String: Any],
                        let accessToken = responseJSON["access_token"] as? String,
                        let refreshToken = responseJSON["refresh_token"] as? String {
-                        self.isProcessingRedirect = true
 
                         DispatchQueue.main.async {
                             UserManager.shared.updateToken(accessToken: accessToken, refreshToken: refreshToken, isKakao: true)
                             print("Login success")
-                            self.pushToTabBarController()    // 메인 화면으로 이동
+                            self.pushToRegisterVC()   // 회원가입으로 이동
                         }
                     } else {
                         print("Access token or refresh token not found or is nil.")
@@ -134,7 +155,6 @@ extension SignInVC {
             }
         }
     }
-
 }
 
 // MARK: - UI & Layout
@@ -190,10 +210,11 @@ extension SignInVC {
 extension SignInVC: SFSafariViewControllerDelegate {
     func safariViewController(_ controller: SFSafariViewController, initialLoadDidRedirectTo URL: URL) {
         /// 승인 완료 후 Redirection
-        if !isProcessingRedirect && URL.absoluteString.contains(Config.redirectURL) && URL.absoluteString.contains("code=") {
+        print("redirect: ", URL.absoluteString)
+        if  URL.absoluteString.contains(Config.redirectURL) {
             let code = URL.absoluteString.components(separatedBy: "code=").last!
-            pushToFuroLogin(withCode: code)
             controller.dismiss(animated: true, completion: nil) // redirect 이후 dismiss
+            pushToFuroLogin(withCode: code)
         }
     }
 }

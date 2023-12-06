@@ -64,6 +64,8 @@
 		A35377162B0B9F4E00E90C3E /* SettingDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35377152B0B9F4E00E90C3E /* SettingDetailVC.swift */; };
 		A35377182B0BAC7400E90C3E /* InquiryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35377172B0BAC7400E90C3E /* InquiryView.swift */; };
 		A353771A2B0BB0C900E90C3E /* AccountSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35377192B0BB0C900E90C3E /* AccountSettingView.swift */; };
+		A366ED922B20AEF300AA0E45 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A366ED912B20AEF300AA0E45 /* WebKit.framework */; };
+		A366ED942B20B65300AA0E45 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A366ED932B20B65300AA0E45 /* RegisterVC.swift */; };
 		A36B36982AAF68720008E9F2 /* CustomMessageBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36B36972AAF68720008E9F2 /* CustomMessageBubbleView.swift */; };
 		A36B369A2AAF79750008E9F2 /* MissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36B36992AAF79750008E9F2 /* MissionView.swift */; };
 		A36B369C2AB068CA0008E9F2 /* ToMETimeFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36B369B2AB068CA0008E9F2 /* ToMETimeFormatter.swift */; };
@@ -211,6 +213,8 @@
 		A35377152B0B9F4E00E90C3E /* SettingDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingDetailVC.swift; sourceTree = "<group>"; };
 		A35377172B0BAC7400E90C3E /* InquiryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InquiryView.swift; sourceTree = "<group>"; };
 		A35377192B0BB0C900E90C3E /* AccountSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSettingView.swift; sourceTree = "<group>"; };
+		A366ED912B20AEF300AA0E45 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		A366ED932B20B65300AA0E45 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		A36B36972AAF68720008E9F2 /* CustomMessageBubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMessageBubbleView.swift; sourceTree = "<group>"; };
 		A36B36992AAF79750008E9F2 /* MissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionView.swift; sourceTree = "<group>"; };
 		A36B369B2AB068CA0008E9F2 /* ToMETimeFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToMETimeFormatter.swift; sourceTree = "<group>"; };
@@ -254,6 +258,7 @@
 		A392956E2A52D78E00436A4F /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		A39295702A52D7AD00436A4F /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		A39295722A52D7B800436A4F /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		A3A964F12B1CC57000FC7C28 /* ToME-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "ToME-iOS.entitlements"; sourceTree = "<group>"; };
 		A3C6F6F52AF4CBB1008D0FF0 /* LeeSeoyun.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = LeeSeoyun.otf; sourceTree = "<group>"; };
 		A3C6F6F72AF5383A008D0FF0 /* BubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleView.swift; sourceTree = "<group>"; };
 		A3CF55A72A5BBED200D19F00 /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
@@ -324,6 +329,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A366ED922B20AEF300AA0E45 /* WebKit.framework in Frameworks */,
 				A372FF8A2B1350F300F3466E /* DGCharts in Frameworks */,
 				A39294ED2A52CBF200436A4F /* Lottie in Frameworks */,
 				A30FDEDC2AF92ABA0088D98E /* Mantis in Frameworks */,
@@ -379,6 +385,7 @@
 		A32D7B622B1345D4001A0D9C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A366ED912B20AEF300AA0E45 /* WebKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -434,6 +441,7 @@
 		A39294CA2A52C91C00436A4F /* ToME-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				A3A964F12B1CC57000FC7C28 /* ToME-iOS.entitlements */,
 				A39294F12A52D08300436A4F /* Global */,
 				A39294F22A52D08E00436A4F /* Network */,
 				A39294F32A52D0A200436A4F /* Presentation */,
@@ -806,6 +814,7 @@
 			children = (
 				A392955C2A52D73800436A4F /* .gitkeep */,
 				A34478E42A698D82002F1981 /* SignInVC.swift */,
+				A366ED932B20B65300AA0E45 /* RegisterVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -1149,6 +1158,7 @@
 				A36B36982AAF68720008E9F2 /* CustomMessageBubbleView.swift in Sources */,
 				A3CF55C82A5BC93900D19F00 /* String+.swift in Sources */,
 				A330D3F52AC29D4E00C1CC22 /* TalkingMessageVC.swift in Sources */,
+				A366ED942B20B65300AA0E45 /* RegisterVC.swift in Sources */,
 				A34478FC2A71790D002F1981 /* ThirdDetailLandingPageVC.swift in Sources */,
 				A3F9C2502AFC619F001409D8 /* MessagesViewController+TypingIndicator.swift in Sources */,
 				A3CF55BE2A5BC8C600D19F00 /* UIDevice+.swift in Sources */,
@@ -1335,11 +1345,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "ToME-iOS/ToME-iOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6HZXVG38W6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "ToME-iOS/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "카메라 접근 권한";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "마이크 접근 권한";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "사진 접근 권한";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIStatusBarStyle = "";
@@ -1351,7 +1365,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "dlwogus0128.ToME-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fromus.ToME-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -1364,11 +1378,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "ToME-iOS/ToME-iOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6HZXVG38W6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "ToME-iOS/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "카메라 접근 권한";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "마이크 접근 권한";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "사진 접근 권한";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIStatusBarStyle = "";
@@ -1380,7 +1398,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "dlwogus0128.ToME-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fromus.ToME-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

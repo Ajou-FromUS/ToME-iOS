@@ -12,6 +12,7 @@ import Moya
 enum UserRouter {
     case authenticate(code: String) // Furo를 통해 가입
     case initClient
+    case createUser(nickname: String)
 }
 
 extension UserRouter: TargetType {
@@ -23,7 +24,7 @@ extension UserRouter: TargetType {
             }
             
             return url
-        case .initClient:
+        case .initClient, .createUser:
             guard let url = URL(string: Config.baseURL) else {
                 fatalError("baseURL could not be configured")
             }
@@ -38,12 +39,14 @@ extension UserRouter: TargetType {
             return "/sessions/code/authenticate"
         case .initClient:
             return "/"
+        case .createUser:
+            return "/user"
         }
     }
     
     var method: Moya.Method {
         switch self {
-        case .authenticate:
+        case .authenticate, .createUser:
             return .post
         case . initClient:
             return .get
@@ -56,6 +59,8 @@ extension UserRouter: TargetType {
             return .requestParameters(parameters: ["code": code], encoding: URLEncoding.httpBody)
         case .initClient:
             return .requestPlain
+        case .createUser(let nickname):
+            return .requestParameters(parameters: ["nickname": nickname], encoding: JSONEncoding.default)
         }
     }
     
@@ -64,7 +69,7 @@ extension UserRouter: TargetType {
         case .authenticate:
             return ["Content-Type": "application/x-www-form-urlencoded",
                     "origin": Config.redirectURL]
-        case .initClient:
+        case .initClient, .createUser:
             return Config.headerWithAccessToken
         }
     }

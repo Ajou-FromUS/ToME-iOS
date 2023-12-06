@@ -468,5 +468,68 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C911EA5D-1874-4C2E-ADD3-830E0AC53F5C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ToME-iOS/Presentation/SignIn/VC/SignInVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "216"
+            endingLineNumber = "216"
+            landmarkName = "safariViewController(_:initialLoadDidRedirectTo:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C911EA5D-1874-4C2E-ADD3-830E0AC53F5C - b7a4d97a07d5061e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ToME_iOS.SignInVC.safariViewController(_: __C.SFSafariViewController, initialLoadDidRedirectTo: Foundation.URL) -&gt; ()"
+                  moduleName = "ToME-iOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leejaehyun/Documents/GitHub/ToME-iOS/ToME-iOS/ToME-iOS/Presentation/SignIn/VC/SignInVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "211"
+                  endingLineNumber = "211"
+                  offsetFromSymbolStart = "384">
+               </Location>
+               <Location
+                  uuid = "C911EA5D-1874-4C2E-ADD3-830E0AC53F5C - b7a4d97a07d506bb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ToME_iOS.SignInVC.safariViewController(_: __C.SFSafariViewController, initialLoadDidRedirectTo: Foundation.URL) -&gt; ()"
+                  moduleName = "ToME-iOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leejaehyun/Documents/GitHub/ToME-iOS/ToME-iOS/ToME-iOS/Presentation/SignIn/VC/SignInVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "208"
+                  endingLineNumber = "208"
+                  offsetFromSymbolStart = "1408">
+               </Location>
+               <Location
+                  uuid = "C911EA5D-1874-4C2E-ADD3-830E0AC53F5C - b7a4d97a07d5065c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ToME_iOS.SignInVC.safariViewController(_: __C.SFSafariViewController, initialLoadDidRedirectTo: Foundation.URL) -&gt; ()"
+                  moduleName = "ToME-iOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leejaehyun/Documents/GitHub/ToME-iOS/ToME-iOS/ToME-iOS/Presentation/SignIn/VC/SignInVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "209"
+                  endingLineNumber = "209"
+                  offsetFromSymbolStart = "1224">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

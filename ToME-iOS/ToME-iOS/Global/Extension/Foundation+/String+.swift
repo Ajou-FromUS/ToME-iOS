@@ -64,4 +64,18 @@ extension String {
             return dateFormatter.string(from: self.toDate())
         }
     }
+    
+    // 한글만 입력 가능하게
+    func hasCharacters() -> Bool {
+        do {
+            let regex = try NSRegularExpression(pattern: "^[a-zA-Z가-힣ㄱ-ㅎㅏ-ㅣ\\s]$", options: .caseInsensitive)
+            if let _ = regex.firstMatch(in: self, options: NSRegularExpression.MatchingOptions.reportCompletion, range: NSMakeRange(0, self.count)) {
+                return true
+            }
+        } catch {
+            print(error.localizedDescription)
+            return false
+        }
+        return false
+    }
 }
