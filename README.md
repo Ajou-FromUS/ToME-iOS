@@ -74,11 +74,14 @@
 
 라이브러리 | 사용 목적 | Version | Management Tool
 :---------:|:----------:|:---------: |:---------:
- Moya | 서버 통신 | 15.0.0 | SPM
+ Moya | 서버 통신 | 15.0.3 | SPM
  SnapKit | UI Layout | 5.6.0 | SPM
  Then | UI 선언 | 3.0.0 | SPM
  Kingfisher | 이미지 처리 | 7.4.1| SPM
  Lottie  | 애니메이션 파일 활용 | 4.1.3 | SPM
+ MessageKit  | 채팅 화면 구현 | 4.2.0 | SPM
+ DGCharts  | 미션/통계 차트 구현 | 5.0.0 | SPM
+ Mantis  | 사진 크롭 | 1.9.0 | SPM
  
  <br>
 
